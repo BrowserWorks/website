@@ -1,0 +1,27 @@
+---
+import Page from '~/components/ContentPage.svelte'
+import type { locales } from '~/i18n/locales'
+import Layout from '~/layouts/Content.astro'
+import { getCollectionEntries } from '~/lib/collection'
+
+const { collection: collectionParam, lang } = Astro.params
+
+const collection = collectionParam as 'docs' | 'download' | 'support'
+
+const pages = await getCollectionEntries(collection, lang as keyof typeof locales)
+
+if (!pages.length) return Astro.redirect(`/${lang}/`)
+---
+
+<Layout
+	{collection}
+	headings={pages.reduce((acc, curr) => [...acc, ...(curr?.headings || [])], [])}
+>
+	{
+		pages.map(({ data, href, Content }) => (
+			<Page title={data.title} subtitle={data?.subtitle}>
+				<Content />
+			</Page>
+		))
+	}
+</Layout>

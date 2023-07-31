@@ -1,0 +1,24 @@
+---
+title: Download Waterfox
+subtitle: We love open-source.
+label: Index
+---
+import Downloads from '~/components/Downloads.svelte';
+
+<Downloads lang="en" client:idle>
+    <span slot="beforeDownloads">
+        ## Downloads
+    </span>
+</Downloads>
+
+## Verify the releases
+
+```shell
+cat $DOWNLOADED_FILE.sha512
+# Output of cat command here.
+
+shasum -a 512 $DOWNLOADED_FILE
+# Output of shasum command here.
+
+# If the output of both commands is the same, the file is likely to be safe.
+```

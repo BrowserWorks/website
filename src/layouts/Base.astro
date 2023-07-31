@@ -1,0 +1,192 @@
+---
+import { twMerge } from 'tailwind-merge'
+import '~/assets/global.scss'
+import ImgWaterfox from '~/assets/waterfox-icon.svg'
+import ImgLogo from '~/assets/waterfox-logo.svg'
+import Icon from '~/components/Icon.svelte'
+import Navbar from '~/components/Navbar.svelte'
+import Navigation from '~/components/Navigation.svelte'
+import Search from '~/components/Search.svelte'
+import { footerNavigation, policiesNavigation } from '~/config'
+import type { locales } from '~/i18n/locales'
+import { localizeUrl, useTranslations, type Key } from '~/i18n/utils'
+import { createNavigation } from '~/lib/navigation'
+
+export interface Props {
+	title?: string
+	description?: string
+	image?: string
+	bgColor?: 'crystal' | 'white'
+}
+
+const { lang: detectedLang } = Astro.params
+
+const lang = detectedLang as keyof typeof locales
+const t = useTranslations(lang)
+
+const navItems = (await createNavigation({
+	lang,
+	useContentNav: true,
+	useNav: true,
+	isActive: (item) => Astro.url.pathname === item.href,
+	ignoreChilds: (item) => item.key === 'releases'
+})) as any
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+const { title = t('meta.title'), description = t('meta.description'), image, bgColor } = Astro.props
+---
+
+<html {lang}>
+	<head>
+		<!-- Global Metadata -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		{image && <meta property="og:image" content={new URL(image, Astro.url)} />}
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		{image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
+
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="w-full font-body font-light leading-relaxed text-deepsea">
+		<header
+			class={twMerge('relative flex flex-col items-center', bgColor === 'crystal' && 'bg-crystal')}
+		>
+			<!-- Top bar -->
+			<div
+				class="grid w-full grid-cols-[4rem_1fr_4rem] px-4 py-8 lg:grid-cols-[1fr_1fr_1fr] lg:px-10 lg:py-10 xl:z-10"
+			>
+				<!-- Nav -->
+				<Navbar client:idle>
+					<Navigation
+						client:idle
+						items={navItems}
+						theme={bgColor === 'crystal' ? 'dark' : 'light'}
+						{lang}
+					/>
+				</Navbar>
+
+				<!-- Logo -->
+				<div class="z-10 flex items-center justify-center">
+					<a href={`/${lang}/`} rel="prefetch" role="button" tabindex="0">
+						<img src={ImgLogo} alt={t('alt.logo', 'Waterfox')} width="207" height="40" />
+					</a>
+				</div>
+
+				<!-- Search -->
+				<div class="relative flex items-center justify-end">
+					<Search {lang} client:idle />
+				</div>
+			</div>
+
+			<slot name="header" />
+		</header>
+
+		<main class="min-h-[calc(100vh-7.75rem)]">
+			<slot />
+		</main>
+
+		<!-- Footer -->
+		<footer class="bg-deepsea px-6 text-white md:px-12">
+			<div class="mx-auto flex w-full max-w-7xl flex-col gap-8 pb-14 pt-16 lg:pb-16 lg:pt-24">
+				<div class="flex flex-col gap-10 max-lg:items-center lg:flex-row lg:gap-12">
+					<div>
+						<img src={ImgWaterfox} width="92" height="65" alt={t('alt.logo', 'Waterfox')} />
+					</div>
+					<nav class="flex grow flex-col gap-4 max-lg:items-center lg:gap-6">
+						<ul class="flex items-center text-base">
+							{
+								footerNavigation.map(({ href, key }, index) => (
+									<li
+										class={twMerge(
+											'font-semibold',
+											index < footerNavigation.length - 1 &&
+												"after:relative after:px-6 after:content-['|']"
+										)}
+									>
+										<a
+											href={href.startsWith('http') ? href : localizeUrl(href, lang)}
+											rel={href.startsWith('http') ? 'noopener nofollow' : 'prefetch'}
+											target={href.startsWith('http') ? '_blank' : '_self'}
+											class="hover:text-aqua"
+										>
+											{t(key as Key)}
+										</a>
+									</li>
+								))
+							}
+						</ul>
+						<ul class="flex items-center gap-x-6 text-sm">
+							{
+								policiesNavigation.map(({ href, key }, index) => (
+									<li>
+										<a
+											href={href.startsWith('http') ? href : localizeUrl(href, lang)}
+											rel={href.startsWith('http') ? 'noopener nofollow' : 'prefetch'}
+											target={href.startsWith('http') ? '_blank' : '_self'}
+											class="hover:text-aqua"
+										>
+											{t(key as Key)}
+										</a>
+									</li>
+								))
+							}
+						</ul>
+					</nav>
+					<div class="flex flex-row gap-4">
+						<Search {lang} mode="icon" client:idle />
+						<a
+							href="https://twitter.com/Waterfoxproject"
+							rel="noopener nofollow"
+							target="_blank"
+							class="flex hover:text-aqua"
+						>
+							<Icon name="twitter" class="h-[21px] w-[21px]" />
+							<span class="absolute left-[-10000px] top-auto h-[1px] w-[1px] overflow-hidden">
+								{t('nav.twitter')}
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="h-[2px] w-full bg-white max-lg:hidden"></div>
+				<div class="grid text-center text-sm text-aqua lg:grid-cols-2">
+					<div class="lg:text-left [&_span]:text-red-400" set:html={t('footer.madewith')} />
+					<div class="lg:text-right" set:html={t('footer.copyright')} />
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

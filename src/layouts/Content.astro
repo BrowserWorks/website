@@ -1,0 +1,85 @@
+---
+import { twMerge } from 'tailwind-merge'
+import Navigation from '~/components/Navigation.svelte'
+import type { locales } from '~/i18n/locales'
+import { localizeUrl, useTranslations } from '~/i18n/utils'
+import Base from '~/layouts/Base.astro'
+import { createNavigation } from '~/lib/navigation'
+
+export interface Props {
+	collection: 'docs' | 'download' | 'support' | 'blog'
+	headings?: any[]
+}
+
+const { slug: activeSlug, lang: detectedLang } = Astro.params
+const lang = detectedLang as keyof typeof locales
+const { collection, headings: collectionHeadings } = Astro.props
+
+const t = useTranslations(lang as any)
+
+const headings = collectionHeadings?.filter((h) => h.depth === 2) || []
+
+const navItems = (
+	await createNavigation({
+		lang,
+		useContentNav: collection,
+		isActive: (item) => activeSlug === item.slug,
+		ignoreChilds: (item) => item.key === 'releases'
+	})
+).filter((item: any) => item.label !== 'Index')
+---
+
+<Base>
+	<div class="mx-auto my-6 flex max-w-7xl gap-20 px-6 lg:my-20">
+		{
+			navItems?.length > 0 && (
+				<div
+					class={twMerge(
+						'sticky-nav top-10 flex flex-col gap-6 self-start max-lg:hidden lg:w-[17rem]'
+					)}
+				>
+					<a
+						href={localizeUrl(`/${collection}`, lang)}
+						rel="prefetch"
+						class="font-montserrat text-lg font-bold hover:text-deepblue"
+					>
+						{t(`content.${collection}`)}
+					</a>
+
+					<Navigation
+						client:idle
+						class="flex flex-col gap-4 text-base lg:text-sm"
+						template="sidebar"
+						items={navItems}
+					/>
+				</div>
+			)
+		}
+
+		<div class={twMerge('mb-12 flex w-full grow flex-col gap-12 lg:mb-20 lg:flex')}>
+			<slot />
+		</div>
+
+		{
+			headings.length > 0 && (
+				<div
+					class={twMerge(
+						'sticky-nav top-10 flex flex-col gap-6 self-start text-base max-lg:hidden lg:w-[17rem] lg:text-sm'
+					)}
+				>
+					<span class="font-montserrat text-lg font-bold">{t('content.onthispage')}</span>
+
+					<ul class="flex flex-col gap-4 text-base lg:text-sm">
+						{headings?.map((heading) => (
+							<li>
+								<a href={`#${heading.slug}`} class="hover:text-deepblue">
+									{heading.text}
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			)
+		}
+	</div>
+</Base>

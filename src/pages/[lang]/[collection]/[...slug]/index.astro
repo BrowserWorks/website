@@ -1,0 +1,27 @@
+---
+import { CollectionEntry, getEntryBySlug } from 'astro:content'
+import Page from '~/components/ContentPage.svelte'
+import type { locales } from '~/i18n/locales'
+import Layout from '~/layouts/Content.astro'
+import { getCollectionEntries } from '~/lib/collection'
+
+const { lang, collection: collectionParam, slug } = Astro.params
+
+const collection = collectionParam as 'docs' | 'download' | 'support'
+
+let page: any = (await getEntryBySlug(collection, [lang, slug].join('/'))) as unknown as
+	| CollectionEntry<'docs'>
+	| CollectionEntry<'download'>
+	| CollectionEntry<'support'>
+
+if (!page) page = (await getCollectionEntries(collection, lang as keyof typeof locales))?.at(0)
+if (!page) return Astro.redirect(`/${lang}/`)
+
+const { Content, headings } = await page.render()
+---
+
+<Layout {collection} {headings}>
+	<Page title={page.data.title} subtitle={page.data?.subtitle}>
+		<Content />
+	</Page>
+</Layout>

@@ -1,0 +1,31 @@
+---
+import Post from '~/components/ContentPost.svelte'
+import type { locales } from '~/i18n/locales'
+import Layout from '~/layouts/Content.astro'
+import { getCollectionEntries } from '~/lib/collection'
+
+const { lang } = Astro.params
+
+const posts = await getCollectionEntries('blog', lang as keyof typeof locales)
+
+if (!posts.length) return Astro.redirect(`/${lang}/`)
+---
+
+<Layout collection="blog">
+	{
+		posts.map(({ data, href, formattedDate, Content, remarkPluginFrontmatter }) => (
+			<Post
+				title={data.title}
+				titleLink={href}
+				author={data.author}
+				authorTitle={data.authorTitle}
+				authorLink={data.authorUrl}
+				authorImageSrc={data.authorImageUrl}
+				pubDate={formattedDate}
+				readingTime={remarkPluginFrontmatter?.minutesRead}
+			>
+				<Content />
+			</Post>
+		))
+	}
+</Layout>

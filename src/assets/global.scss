@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html, body {
+        @apply w-full;
+    }
+
+    @keyframes wobble {
+        33% {
+            transform: translateX(-50px);
+        }
+
+        66% {
+            transform: translateX(50px);
+        }
+    }
+
+    @keyframes up {
+        0% {
+            opacity: 0;
+        }
+
+        10%,
+        90% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateY(-1024px);
+        }
+    }
+
+    .message {
+        @apply px-4 py-0.5 rounded-xl border-l-8;
+
+        &.is-info {
+            @apply bg-azure/10 border-azure;
+        }
+        &.is-important {
+            @apply bg-gold/10 border-gold;
+        }
+    }
+
+    .markdown {
+        @apply prose font-body font-light prose-deepsea flex max-w-[72ch] flex-col prose-h2:mt-[1.8em] prose-h2:mb-[0.7em] prose-h2:text-2xl lg:prose-h2:text-3xl prose-h3:text-xl lg:prose-h3:text-2xl prose-hr:border-mist prose-hr:border-t-2 prose-headings:font-montserrat prose-pre:rounded-2xl;
+
+        & :not(pre) > code {
+            @apply rounded-md bg-frost/20 px-2 py-1 font-normal border-[1px] border-indigo/80 before:hidden after:hidden lg:whitespace-nowrap;
+        }
+    }
+
+    .sticky-nav {
+        @media screen and ( min-height: 800px ) {
+            @apply sticky;
+        }
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+    .text-pretty {
+        text-wrap: pretty;
+    }
+}
+
+// algolia
+.aa-Autocomplete {
+    @apply w-[18rem] rounded-full overflow-hidden border-0 bg-white shadow-md  transition-all hover:shadow-lg max-lg:hidden;
+
+    .aa-DetachedSearchButton {
+        @apply border-0 p-2;
+        
+        &:focus {
+            @apply shadow-none;
+        }
+    }
+
+    .aa-DetachedSearchButtonPlaceholder {
+        @apply text-base text-deepsea;
+    }
+
+    .aa-SubmitIcon {
+        @apply text-deepsea;
+    }
+}
+.aa-InputWrapperPrefix {
+    @apply justify-center;
+}
+.aa-Detached {
+    @apply overflow-auto;
+}
+.aa-DetachedOverlay {
+    .aa-DetachedContainer {
+        @apply rounded-3xl overflow-hidden shadow-2xl bg-white max-xl:top-24;
+
+        .aa-DetachedFormContainer {
+            @apply border-0 py-3;
+
+            .aa-Form {
+                @apply rounded-full bg-white shadow-md transition-all hover:shadow-lg border-[1px] border-deepsea/10;
+
+                &:focus-within {
+                    @apply outline-none border-indigo;
+                }
+
+                .aa-Input {
+                    @apply text-deepsea;
+                }
+
+                .aa-SubmitButton {
+                    @apply flex justify-center items-center;
+                    
+                    .aa-SubmitIcon {
+                        @apply text-deepsea;
+                    }
+                }
+            }
+            .aa-DetachedCancelButton {
+                @apply hidden;
+            }
+        }
+
+        .aa-Panel {
+            @apply bg-transparent;
+
+            .aa-GradientBottom {
+                @apply bg-none;
+            }
+            
+            .aa-List {
+                @apply flex flex-col gap-2;
+
+                .aa-Item {
+                    @apply text-deepsea bg-crystal/60 rounded-xl;
+
+                    .aa-ItemWrapper {
+                        @apply flex items-center gap-2 px-2 py-4;
+
+                        .aa-ItemContent {
+                            @apply flex grow items-center gap-2;
+
+                            .aa-ItemIcon {
+                                @apply shadow-none bg-transparent border-none text-deepsea bg-opacity-100;
+                            }
+
+                            .aa-ItemContentTitle {
+                                @apply text-inherit font-medium text-base;
+
+                                mark {
+                                    @apply bg-azure text-white;
+                                }
+                            }
+
+                            .aa-ItemContentDescription {
+                                @apply text-inherit text-sm;
+
+                                mark {
+                                    @apply bg-azure text-white;
+                                }
+                            }
+                        }
+
+                        .aa-ItemActionButton svg {
+                            @apply text-white;
+                        }
+                    }
+
+                    &[aria-selected=true] {
+                        @apply bg-deepblue/90 text-white;
+
+                        .aa-ItemWrapper .aa-ItemIcon {
+                            @apply text-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

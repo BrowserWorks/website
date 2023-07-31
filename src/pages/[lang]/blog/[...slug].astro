@@ -1,0 +1,32 @@
+---
+import { getEntryBySlug } from 'astro:content'
+import Post from '~/components/ContentPost.svelte'
+import type { locales } from '~/i18n/locales'
+import Layout from '~/layouts/Content.astro'
+
+const { lang: detectedLang, slug } = Astro.params
+const lang = detectedLang as keyof typeof locales
+
+const post = await getEntryBySlug('blog', [lang, slug].join('/'))
+
+if (!post) {
+	return Astro.redirect(`/${lang}/`)
+}
+
+const formattedDate = post.data.pubDate.toLocaleDateString(lang, { dateStyle: 'long' })
+const { Content, remarkPluginFrontmatter } = await post.render()
+---
+
+<Layout collection="blog">
+	<Post
+		title={post.data.title}
+		pubDate={formattedDate}
+		author={post.data.author}
+		authorTitle={post.data.authorTitle}
+		authorLink={post.data.authorUrl}
+		authorImageSrc={post.data.authorImageUrl}
+		readingTime={remarkPluginFrontmatter?.minutesRead}
+	>
+		<Content />
+	</Post>
+</Layout>

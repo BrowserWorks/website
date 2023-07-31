@@ -1,0 +1,273 @@
+---
+import Button from '~/components/Button.svelte'
+import Icon from '~/components/Icon.svelte'
+import Browser from '~/components/home/BrowserUI.svelte'
+import ComparisonTable from '~/components/home/ComparisonTable.svelte'
+import Faq from '~/components/home/Faq.svelte'
+import FeatureCard from '~/components/home/FeatureCard.svelte'
+import Lottie from '~/components/home/Lottie.svelte'
+import Section from '~/components/home/Section.svelte'
+import Water from '~/components/home/Water.svelte'
+import type { locales } from '~/i18n/locales'
+import { localizeUrl, useTranslations, type Key } from '~/i18n/utils'
+import Layout from '~/layouts/Base.astro'
+import { getCollectionEntries } from '~/lib/collection'
+
+const { lang: detectedLang } = Astro.params
+const lang = detectedLang as keyof typeof locales
+const t = useTranslations(lang as any)
+
+const faq =
+	(await getCollectionEntries('docs', lang)).find((item) => item.data?.id === 'faq')
+		?.remarkPluginFrontmatter?.json || []
+---
+
+<Layout bgColor="crystal">
+	<!-- Home header -->
+	<div
+		slot="header"
+		class="mt-4 flex w-full flex-col items-center gap-8 overflow-hidden px-6 lg:mt-20 lg:gap-12 lg:pb-48"
+	>
+		<!-- Background Water -->
+		<Water class="z-0" bubbleQty={12} client:idle />
+
+		<!-- Heading -->
+		<div class="z-10 flex w-full flex-col items-center justify-center gap-5 text-center">
+			<h1 class="text-balance font-montserrat text-4xl font-bold lg:text-5xl">
+				{t('home.title')}
+			</h1>
+			<p class="text-balance font-montserrat text-lg font-normal">{t('home.subtitle')}</p>
+			<Button href={localizeUrl('/download', lang)}>{t('cta.download')}</Button>
+		</div>
+
+		<!-- Browser View -->
+		<div class="relative z-10 mx-auto block w-full max-w-[1276px] overflow-visible md:px-8">
+			<Browser
+				locales={{
+					mobileImageAlt: t('browser.mobileImageAlt'),
+					tab: t('browser.tab'),
+					searchbar: t('browser.searchbar'),
+					import: t('browser.import'),
+					search: t('browser.search'),
+					cta: t('browser.cta')
+				}}
+			/>
+		</div>
+	</div>
+
+	<!-- Features -->
+	<Section>
+		<div class="mx-auto grid grid-cols-1 gap-7 lg:grid-cols-2 lg:gap-14">
+			{
+				['trackers', 'privatemode', 'containertabs', 'switching', 'data'].map((feature) => (
+					<FeatureCard
+						title={t(`feature.${feature}.title` as Key)}
+						content={t(`feature.${feature}.content` as Key)}
+						alt={t('alt.illustration', t(`feature.${feature}.title` as Key))}
+						lottie={feature}
+						cols={feature === 'data' ? 2 : 1}
+						client:idle
+					/>
+				))
+			}
+		</div>
+
+		<Button href={localizeUrl('/download', lang)}>{t('cta.download')}</Button>
+	</Section>
+
+	<Section color="deepsea">
+		<!-- Comparison table -->
+		<div class="flex w-full flex-col items-center gap-8 lg:gap-12">
+			<h2
+				class="text-center font-montserrat text-4xl font-bold leading-tight text-white lg:text-5xl"
+			>
+				{t('comparison.title')}
+			</h2>
+
+			<div>
+				<ComparisonTable
+					locales={{
+						included: t('comparison.included'),
+						excluded: t('comparison.excluded')
+					}}
+					features={{
+						[t('comparison.1')]: {
+							waterfox: true,
+							chrome: false,
+							edge: false,
+							safari: false
+						},
+						[t('comparison.2')]: {
+							waterfox: true,
+							chrome: false,
+							edge: false,
+							safari: true
+						},
+						[t('comparison.3')]: {
+							waterfox: true,
+							chrome: false,
+							edge: false,
+							safari: false
+						},
+						[t('comparison.4')]: {
+							waterfox: true,
+							chrome: false,
+							edge: false,
+							safari: false
+						},
+						[t('comparison.5')]: {
+							waterfox: false,
+							chrome: true,
+							edge: true,
+							safari: true
+						}
+					}}
+					client:idle
+				/>
+			</div>
+		</div>
+
+		<!-- Reviews -->
+		<div class="flex w-full flex-col items-center gap-8 lg:gap-12">
+			<h2 class="font-montserrat text-4xl font-bold leading-tight text-white lg:text-5xl">
+				{t('reviews.title')}
+			</h2>
+
+			<div class="mx-auto grid max-w-6xl grid-cols-1 gap-7 lg:grid-cols-3 lg:gap-14">
+				{
+					Array.from({ length: 3 }, (_, i) => i + 1).map((review) => (
+						<div class="group/review rounded-[1.5rem] bg-white px-12 py-8 shadow-lg transition-all duration-200 max-lg:max-w-[32rem] md:hover:scale-105 md:hover:shadow-2xl">
+							<div class="flex flex-col gap-6">
+								<div class="flex items-center justify-center gap-1">
+									{Array.from(Array(t(`review.${review}.stars` as Key)).keys()).map((n) => (
+										<Icon
+											name="star"
+											class="text-gold transition-colors md:group-hover/review:text-sand"
+											style={`transition-delay:${40 + n * 20}ms;`}
+										/>
+									))}
+								</div>
+								<p
+									class="text-balance text-center"
+									set:html={`"${t(`review.${review}.content` as Key)}"`}
+								/>
+							</div>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</Section>
+
+	<!-- Download -->
+	<Section
+		class="grid grid-cols-[auto] gap-4 after:absolute after:left-1/2 after:top-full after:block after:h-[3px] after:w-[calc(100%-4rem)] after:max-w-7xl after:-translate-x-1/2 after:bg-indigo after:bg-gradient-to-r after:from-indigo after:via-indigo after:to-mist after:content-[''] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12"
+	>
+		<div class="mx-auto h-full w-full max-w-[38rem] max-lg:max-w-[32rem]">
+			<Lottie
+				file="surf"
+				alt={t('alt.illustration', t('surf.title'))}
+				width={800}
+				height={600}
+				autoplay={true}
+				client:idle
+			/>
+		</div>
+		<div
+			class="flex h-full w-full flex-col items-center justify-center gap-6 max-lg:text-center lg:items-start"
+		>
+			<h2 class="text-balance font-montserrat text-4xl font-bold leading-tight lg:text-5xl">
+				{t('surf.title')}
+			</h2>
+			<div class="flex flex-col items-center gap-8 lg:items-start">
+				<p class="text-balance text-lg" set:html={t('surf.content')} />
+				<Button href={localizeUrl('/download', lang)}>
+					{t('cta.download')}
+				</Button>
+			</div>
+		</div>
+	</Section>
+
+	<!-- Featured on -->
+	<Section class="gap-6 lg:gap-12">
+		<h2 class="font-montserrat text-4xl font-bold leading-tight lg:text-5xl">
+			{t('featured.title')}
+		</h2>
+		<div
+			class="grid w-full max-w-6xl grid-cols-1 items-start gap-6 max-lg:text-center lg:grid-cols-3 lg:gap-12"
+		>
+			<div class="flex flex-col gap-8 py-4">
+				<p class="grow text-lg" set:html={`"${t('featured.bestReviews')}"`} />
+				<div class="lg:mb-4">
+					<img
+						src="/images/best-reviews-logo.png"
+						class="max-lg:mx-auto"
+						width="211"
+						height="46"
+						alt={t('alt.logo', 'Best Reviews')}
+					/>
+				</div>
+			</div>
+			<div class="flex flex-col gap-8 py-4">
+				<p class="text-balance grow text-lg" set:html={`"${t('featured.topNewReview')}"`} />
+				<div class="lg:mb-4">
+					<img
+						src="/images/top-new-review-logo.png"
+						class="max-lg:mx-auto"
+						width="178"
+						height="45.5"
+						alt={t('alt.logo', 'Top New review')}
+					/>
+				</div>
+			</div>
+			<div class="flex flex-col gap-8 py-4">
+				<p class="grow text-lg" set:html={`"${t('featured.hostingAdvice')}"`} />
+				<div class="lg:mb-4">
+					<img
+						src="/images/hosting-advice-logo.png"
+						class="max-lg:mx-auto"
+						width="270"
+						height="33"
+						alt={t('alt.logo', 'Hosting Advice')}
+					/>
+				</div>
+			</div>
+		</div>
+	</Section>
+
+	<!-- Download -->
+	<Section color="frost" padding="tight" class="grid lg:grid-cols-[0.9fr_1fr] lg:gap-6">
+		<div class="mx-auto h-full w-full max-w-[40rem] max-lg:row-start-2 max-lg:max-w-[32rem]">
+			<Lottie
+				file="splash"
+				alt={t('alt.illustration', t('splash.title'))}
+				width={800}
+				height={600}
+				autoplay={true}
+				client:idle
+			/>
+		</div>
+		<div
+			class="flex h-full w-full flex-col items-center justify-center gap-8 max-lg:row-start-1 max-lg:-mb-8 max-lg:text-center lg:items-start lg:pb-24"
+		>
+			<h2
+				class="font-montserrat text-4xl font-bold leading-tight lg:text-5xl"
+				set:html={t('splash.title')}
+			/>
+			<Button href={localizeUrl('/download', lang)}>{t('cta.download')}</Button>
+		</div>
+	</Section>
+
+	<!-- FAQ -->
+	<Section color="crystal" width="5xl">
+		<!-- Background Water -->
+		<Water bubbleQty={7} bubbleSize="large" bgAlign="top" client:idle />
+
+		<div class="z-10 flex flex-col items-center gap-8">
+			<h2 class="font-montserrat text-4xl font-bold leading-tight lg:text-5xl">
+				{t('faq.title')}
+			</h2>
+			<Faq items={faq} client:idle />
+		</div>
+	</Section>
+</Layout>

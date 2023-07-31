@@ -1,0 +1,19 @@
+---
+title: Télécharger Waterfox
+subtitle: Nous aimons l'open-source
+label: Index
+---
+import Downloads from '~/components/Downloads.svelte';
+
+<Downloads lang="fr" client:idle>
+    <span slot="beforeDownloads">
+        ## Téléchargements
+    </span>
+</Downloads>
+
+## Verifier les téléchargements
+
+```shell
+cat $DOWNLOADED_FILE.sha512
+shasum -a 512 $DOWNLOADED_FILE
+```
