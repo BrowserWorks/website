@@ -116,6 +116,7 @@
 				bind:focused
 				class="w-full"
 				showChevron
+				searchable={false}
 				on:clear={reset}
 				on:focus={() => (listOpen = true)}
 			>
