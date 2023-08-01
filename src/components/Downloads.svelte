@@ -5,6 +5,7 @@
 	import { twMerge } from 'tailwind-merge'
 	import Button from '~/components/Button.svelte'
 	import Icon from '~/components/Icon.svelte'
+	import { downloadLinks } from '~/config'
 	import GithubReleases from '~/generated/releases.json'
 	import { useTranslations } from '~/i18n/utils'
 
@@ -32,11 +33,10 @@
 
 		for (let idx = 0; idx < GithubReleases.length; idx++) {
 			const release = GithubReleases[idx]
-			const v = release.tag_name
 
-			const windows = `https://cdn1.waterfox.net/waterfox/releases/${v}/WINNT_x86_64/Waterfox%20Setup%20${v}.exe`
-			const macOS = `https://cdn1.waterfox.net/waterfox/releases/${v}/Darwin_x86_64-aarch64/Waterfox%20${v}.dmg`
-			const linux = `https://cdn1.waterfox.net/waterfox/releases/${v}/Linux_x86_64/waterfox-${v}.tar.bz2`
+			const windows = downloadLinks.windows(release.tag_name)
+			const macOS = downloadLinks.macOS(release.tag_name)
+			const linux = downloadLinks.linux(release.tag_name)
 
 			allItems.push({
 				label: release.name,
