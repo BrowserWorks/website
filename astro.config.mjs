@@ -8,6 +8,8 @@ import sitemap from '@astrojs/sitemap'
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
 import { defineConfig } from 'astro/config'
+import { globSync } from 'glob'
+import { join, parse } from 'path'
 import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis'
 import remarkDirective from 'remark-directive'
 import remarkToc from 'remark-toc'
@@ -15,9 +17,30 @@ import { remarkAdmonitions } from './scripts/remark-admonitions.mjs'
 import { remarkJson } from './scripts/remark-json.mjs'
 import { remarkReadingTime } from './scripts/remark-reading-time.mjs'
 
+// Sitemap config
+const site = 'https://www.waterfox.net'
+const defaultLocale = 'en'
+const locales = { en: 'en', fr: 'fr' }
+const customPages = []
+
+// Sitemap build
+globSync('./src/content/**/*.{md,mdx}').forEach((filePath) => {
+	const fileParts = filePath
+		?.split('/content/')?.[1]
+		?.replace(/^\/|\/$/g, '')
+		?.split('/')
+	const [category, lang, ...rest] = fileParts.map((p) => parse(p).name)
+	const id = [category, ...rest].join('/')
+	const url = site + '/' + join(lang, category, ...rest) + '/'
+	const idx = customPages.findIndex((page) => page.id === id)
+
+	if (idx > -1) customPages[idx].links.push({ url, lang })
+	else customPages.push({ id, links: [{ url, lang }] })
+})
+
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://www.waterfox.net',
+	site: site,
 	build: {
 		inlineStylesheets: 'auto'
 	},
@@ -33,7 +56,17 @@ export default defineConfig({
 		svelte(),
 		prefetch(),
 		partytown(),
-		sitemap()
+		sitemap({
+			customPages: customPages.map(
+				({ links }) => links.find((link) => link.lang === defaultLocale).url
+			),
+			i18n: { defaultLocale, locales },
+			serialize(item) {
+				const page = customPages.find(({ links }) => links.find((link) => link.url === item.url))
+				if (page) item.links = page.links
+				return item
+			}
+		})
 	],
 	schema: rssSchema,
 	output: 'server',
