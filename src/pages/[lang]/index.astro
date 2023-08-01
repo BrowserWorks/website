@@ -1,5 +1,6 @@
 ---
 import Button from '~/components/Button.svelte'
+import DownloadButton from '~/components/DownloadButton.svelte'
 import Icon from '~/components/Icon.svelte'
 import Browser from '~/components/home/BrowserUI.svelte'
 import ComparisonTable from '~/components/home/ComparisonTable.svelte'
@@ -37,7 +38,7 @@ const faq =
 				{t('home.title')}
 			</h1>
 			<p class="text-balance font-montserrat text-lg font-normal">{t('home.subtitle')}</p>
-			<Button href={localizeUrl('/download', lang)}>{t('cta.download')}</Button>
+			<DownloadButton {lang} client:idle />
 		</div>
 
 		<!-- Browser View -->
