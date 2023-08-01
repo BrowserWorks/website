@@ -42,7 +42,7 @@ Create a `.env` file inside the root directory with the below (fill in the blank
 PUBLIC_ALGOLIA_APP_ID=
 PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY=
 PUBLIC_ALGOLIA_INDEX_NAME=
-ALGOLIA_WRITE_API_KEY=
+ALGOLIA_ADMIN_API_KEY=
 ```
 
 ### 3. Start the local dev server
@@ -180,7 +180,7 @@ PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY=
 PUBLIC_ALGOLIA_INDEX_NAME=
 
 # only required to run the Algolia sync during build
-ALGOLIA_WRITE_API_KEY=
+ALGOLIA_ADMIN_API_KEY=
 ```
 
 ### 3. Deploy on Cloudflare Pages

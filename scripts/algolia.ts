@@ -66,7 +66,7 @@ async function sync() {
 
 		const client = algoliasearch(
 			String(process.env.PUBLIC_ALGOLIA_APP_ID),
-			String(process.env.ALGOLIA_WRITE_API_KEY)
+			String(process.env.ALGOLIA_ADMIN_API_KEY)
 		)
 
 		const index = client.initIndex(String(process.env.PUBLIC_ALGOLIA_INDEX_NAME))
