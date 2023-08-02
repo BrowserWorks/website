@@ -88,7 +88,7 @@ export default {
 	'comparison.2': 'Anti Tracking',
 	'comparison.3': 'Container Tabs',
 	'comparison.4': 'Private Tabs',
-	'comparison.5': 'Telemetry Collection',
+	'comparison.5': 'No Telemetry Collection',
 
 	/** reviews section **/
 	'reviews.title': 'Reviews',
