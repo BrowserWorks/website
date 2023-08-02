@@ -1,5 +1,76 @@
 [
   {
+    "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/114628039",
+    "assets_url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/114628039/assets",
+    "upload_url": "https://uploads.github.com/repos/WaterfoxCo/Waterfox/releases/114628039/assets{?name,label}",
+    "html_url": "https://github.com/WaterfoxCo/Waterfox/releases/tag/G5.1.10",
+    "id": 114628039,
+    "author": {
+      "login": "github-actions[bot]",
+      "id": 41898282,
+      "node_id": "MDM6Qm90NDE4OTgyODI=",
+      "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+      "html_url": "https://github.com/apps/github-actions",
+      "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+      "type": "Bot",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOAX_his4G1RXH",
+    "tag_name": "G5.1.10",
+    "target_commitish": "2730828eb4374cd841e4eafa53f8ef15b8a9998d",
+    "name": "G5.1.10",
+    "draft": false,
+    "prerelease": false,
+    "created_at": "2023-07-31T15:04:22Z",
+    "published_at": "2023-08-01T10:16:19Z",
+    "assets": [],
+    "tarball_url": "https://api.github.com/repos/WaterfoxCo/Waterfox/tarball/G5.1.10",
+    "zipball_url": "https://api.github.com/repos/WaterfoxCo/Waterfox/zipball/G5.1.10",
+    "body": "",
+    "reactions": {
+      "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/114628039/reactions",
+      "total_count": 5,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 5,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.10/WINNT_x86_64/Waterfox%20Setup%20G5.1.10.exe",
+        "hash": "1de4b83f5b139f529e14a48d04d8b36f4e7cae6c0106cf0bd2935cc93b9b3f38c286821749e1f572783d304d0c3588fed3e075526b1bf392140af88f61f78aa7"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.10/Darwin_x86_64-aarch64/Waterfox%20G5.1.10.dmg",
+        "hash": "98fba227ff660bcd8bc9d16805e9a4def572bd342c96866c60bdfe6e4d926f1c29c14aff3467ab417e01d2ff1ccf4189427f2fbc422f70f72c5a9335b4116e58"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.10/Linux_x86_64/waterfox-G5.1.10.tar.bz2",
+        "hash": "9bfc04243afeacebe36c254b62d5a4f4abf01a6fc5e895b745644c38aca7ff62d106660ed5b882d13e89b8492ee1f7c23baca2ccb50690b5d95c3ce41b1b44d4"
+      }
+    ]
+  },
+  {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/113627827",
     "assets_url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/113627827/assets",
     "upload_url": "https://uploads.github.com/repos/WaterfoxCo/Waterfox/releases/113627827/assets{?name,label}",
@@ -39,16 +110,36 @@
     "body": "The first Beta release of G6! With the never-ending focus on improving privacy and performance, this release is be a tasty one. \r\n\r\n### New Features\r\n* Waterfox now uses Oblivious DNS[^1] by default, a privacy preserving method for DNS queries.\r\n\r\n### Performance Improvements\r\n* Waterfox is now compiled with PGO[^2] on Windows and macOS.\r\n* Waterfox is now compiled with a polyhedral optimiser[^3].\r\n\r\n### Misc.\r\n* Some bugs may be carried over from G5, please report them!\r\n* Themes have been updated, which should fix various bugs.\r\n* Waterfox is now based on ESR115.\r\n\r\n### Upcoming Changes\r\n* Waterfox's logo will potentially be updated in an upcoming beta release, so keep an eye out.\r\n* Alongside an update to the logo, the website is also getting a fresh lick of paint.\r\n* Some more performance oriented upgrades are in testing, but may not make it for final release.\r\n* Waterfox for Android's feature set has been finalised, but requires updating to the latest components. This is in progress and is due for release. iOS is now in the pipeline as well.\r\n* Privacy enhancements to some of the most popular search engines (wink wink, nudge nudge) are also in the pipeline, with more to be revealed soon. \r\n* Linux deserves some love too, and optimisations are in the works for the final release.\r\n* A complete revamp of the config options set by default is also on it's way.\r\n\r\nApologies for the delay on this release, setting up the privacy relay for ODNS as well as creating the toolchain for polly support took longer than anticipated. Waterfox's independence also contributed to the delay of this release, but it is a delay worth celebrating 🥳\r\n\r\n---\r\n\r\n<a href=\"https://cdn1.waterfox.net/waterfox/releases/G6.0b1/Linux_x86_64/waterfox-G6.0b1.tar.bz2\"><img src=\"https://github.com/WaterfoxCo/Waterfox/assets/4728920/ed2d5869-94ad-43e9-a8b0-51da0937b8e4\" width=\"16\" height=\"16\" /> Download for Linux</a>\r\n<a href=\"https://cdn1.waterfox.net/waterfox/releases/G6.0b1/Darwin_x86_64-aarch64/Waterfox%20G6.0b1.dmg\"><img src=\"https://github.com/WaterfoxCo/Waterfox/assets/4728920/ed2d5869-94ad-43e9-a8b0-51da0937b8e4\" width=\"16\" height=\"16\" /> Download for macOS</a>\r\n<a href=\"https://cdn1.waterfox.net/waterfox/releases/G6.0b1/WINNT_x86_64/Waterfox%20Setup%20G6.0b1.exe\"><img src=\"https://github.com/WaterfoxCo/Waterfox/assets/4728920/ed2d5869-94ad-43e9-a8b0-51da0937b8e4\" width=\"16\" height=\"16\" /> Download for Windows</a>\r\n\r\n---\r\n\r\n[^1]: With regular DNS, your DNS queries are sent in plain text, allowing your internet provider to easily see every website you request.\r\n\r\n    DNS over HTTPS encrypts your DNS queries with HTTPS, so your internet provider cannot read the contents. However, they can still see that you are making requests to a DNS server, and potentially correlate timing information to identify sites.\r\n\r\n    Oblivious DNS goes further by routing encrypted queries through proxy servers in a way that obscures the true intended domain. Your internet provider cannot associate queries with specific sites you visit.\r\n\r\n    So both Oblivious DNS and DNS over HTTPS prevent spying on the specific domains you lookup. But Oblivious DNS better hides the fact that you are making any query for a given site at all. It adds an extra layer of indirection and privacy protection.\r\n\r\n    The main advantage of Oblivious DNS over DNS over HTTPS is that it better prevents network-level tracking of your web browsing habits by your ISP or others running the network infrastructure. It hides the act of looking up a site in the first place.\r\n\r\n[^2]: When you use a web browser, it has to perform a lot of repetitive tasks - like rendering web pages, running JavaScript code, and parsing CSS. These tasks follow certain patterns each time you use the browser.\r\n\r\n    PGO allows the compiler to detect these patterns and optimize the browser code. \r\n\r\n    The result is a web browser optimized for real-world use, not just theoretical usage. Web pages will render faster, scripts will run faster, and the browser will feel much more snappy and responsive.\r\n    \r\n[^3]: As previously mentioned, when you use a web browser, it has to repeat similar tasks over and over - like rendering webpage elements, running JavaScript code, scrolling the page, and displaying videos.\r\n\r\n    These tasks involve loops, where the browser does the same kind of work over and over. Polyhedral optimisation makes the browser's loops run faster by reorganizing them. It finds the best way to access data repeatedly in the most efficient order.\r\n\r\n    For example, when scrolling a page with lots of images, polyhedral optimisation could optimise the loops that decode and display the image data. It finds the fastest way to reuse image data in the CPU cache.\r\n\r\n    This means scrolling feels much smoother. The images decode quicker as you scroll up and down. The browser feels snappier.\r\n\r\n    So in simple terms, polyhedral optimisation tunes the browser's inner loops to make maximum use of the CPU and memory. This speeds up repetitive tasks like rendering, scrolling, and video playback that rely on loops. The end result is a faster, smoother browsing experience for the user.",
     "reactions": {
       "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/113627827/reactions",
-      "total_count": 19,
-      "+1": 9,
+      "total_count": 28,
+      "+1": 13,
       "-1": 0,
       "laugh": 0,
-      "hooray": 7,
+      "hooray": 8,
       "confused": 0,
-      "heart": 3,
-      "rocket": 0,
+      "heart": 5,
+      "rocket": 2,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G6.0b1/WINNT_x86_64/Waterfox%20Setup%20G6.0b1.exe",
+        "hash": "9dc7a321dcc267036bc49b1e6f84091cf398c5bae98ceed6f1343644d0455181209d9f8ee2d4fc857628ebea1fa83f90b7fa7451e93e20d8a46c536de4cde6d8"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G6.0b1/Darwin_x86_64-aarch64/Waterfox%20G6.0b1.dmg",
+        "hash": "f49afbf9b8bd51ff8f2c0747b83a850ffe6000f8dfb7fdd1ebdd656005207366687cf3cda380ca624c45fa6f3beb2d2378e6922bf51a8c949cbf4ce9df61d83c"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G6.0b1/Linux_x86_64/waterfox-G6.0b1.tar.bz2",
+        "hash": "0e1695092ccd9f98bc757aea6328dea19535040d3fab9220015174edfbde46af5be24d36d840c6cd173a1a0f4f2b0819e439e989f225397683e88edb67831528"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/110905478",
@@ -90,16 +181,36 @@
     "body": "",
     "reactions": {
       "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/110905478/reactions",
-      "total_count": 7,
-      "+1": 7,
+      "total_count": 11,
+      "+1": 8,
       "-1": 0,
       "laugh": 0,
-      "hooray": 0,
+      "hooray": 1,
       "confused": 0,
-      "heart": 0,
-      "rocket": 0,
+      "heart": 1,
+      "rocket": 1,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.9/WINNT_x86_64/Waterfox%20Setup%20G5.1.9.exe",
+        "hash": "d65e5cf2e38280006c915d21cc43f65cf941cbd42b1cafc093fa92c8b7a932bb8a567eb8c381c5774d488119766d621e30b6a7037312494073f866a74718e20f"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.9/Darwin_x86_64-aarch64/Waterfox%20G5.1.9.dmg",
+        "hash": "666895e517a78d3de3f537075f273f58e6f6c126935d6e03716c846d6729f9f97605de315d4ef7c1406157d6efae416f9efcb1dec2dca7b0cbceda847ee3135c"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.9/Linux_x86_64/waterfox-G5.1.9.tar.bz2",
+        "hash": "8b6f258548a376cac44a7467335034fcb5276c237cd0c7955fd183df836907e83e7e23ff6f19d0b86df2db1eb1a87a3e442e602fe7688ad62eabc149863615e1"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/107417105",
@@ -150,7 +261,27 @@
       "heart": 0,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.8/WINNT_x86_64/Waterfox%20Setup%20G5.1.8.exe",
+        "hash": "70ecb1feb3da49b68a9905b7b29dcfe74410470ca616805b2033ea24b7426b17afd79838e4106364c63bbbf06957dca479df1166593c19eb87717a41e77c5dca"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.8/Darwin_x86_64-aarch64/Waterfox%20G5.1.8.dmg",
+        "hash": "8183aae5c6c2a55425c397283f6697f53083915b25970bf7ce7fe181ce9792f13eba24416797bbf10bc5c92e295d64c24929f5d900dfb21a967019bb8488c451"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.8/Linux_x86_64/waterfox-G5.1.8.tar.bz2",
+        "hash": "cf55de23da8c2dcbb1101f2730c0c9e0ba3823ca4af4ac4d5820872b3ab38c8a85048d16682a908015e62a57908a8652433fc934c53aaaa5a7ee90fda61b88da"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/103663299",
@@ -201,7 +332,27 @@
       "heart": 0,
       "rocket": 0,
       "eyes": 1
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.7/WINNT_x86_64/Waterfox%20Setup%20G5.1.7.exe",
+        "hash": "54f50819f14c70e3e07ed8f7c360ebbb0b4a68f656907ca62a45cfe4f0cd07a207916fa7d0085c0988df4dee08216b8fbcb7816f03a63f8535cf1d7db5a4a00d"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.7/Darwin_x86_64-aarch64/Waterfox%20G5.1.7.dmg",
+        "hash": "2961fde3fa373dca3e6bd913b505025c0fba88d7889e59c661621aa114f72db82d88d9a9e2c52ede0183dfe9680c513671201f32c9b98ebb388173ed0107811f"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.7/Linux_x86_64/waterfox-G5.1.7.tar.bz2",
+        "hash": "1e596472417ccfd1fef7328a4cd2812572ad1eecba19d3bcabdd6bcd5431ad6a91558a0c74e3aa634b0a499e9d253a99761c07f722deb885de3036a8381ce6f6"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/102402428",
@@ -252,7 +403,27 @@
       "heart": 0,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.6/WINNT_x86_64/Waterfox%20Setup%20G5.1.6.exe",
+        "hash": "36b7409029d3f87ebde450a640aa59591f794e675ca1844232f7c8b986571581328beeee99888cf6e66c319b9fff1d0d47b621868b805021f54eeca345d39414"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.6/Darwin_x86_64-aarch64/Waterfox%20G5.1.6.dmg",
+        "hash": "96c694f2f3e43f1196d84d7d2f7baab614c0eda3fb334dc30afa04d2649e101b958d75b902ce8ca6d68a42d2234abc933b86e00ee06adb3edbb5245d2fd2b72c"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.6/Linux_x86_64/waterfox-G5.1.6.tar.bz2",
+        "hash": "1be1be56b10a3754d366955771b7dd2f5169148e27eff0cde2a4da2d578b8c392b621bcb72d5ae2d0f5a741ef7598544903f7e24f25cc2009119f7f90b8381a2"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/99404509",
@@ -303,7 +474,27 @@
       "heart": 0,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.5/WINNT_x86_64/Waterfox%20Setup%20G5.1.5.exe",
+        "hash": "0eb48943e77668117ba68c1224e7c4ce6892ef0f1357ae663ad24a40e77312e2bb8ec39efe066675e70b8a6eff78945fc57747d2f9c22825278ebc44c6954500"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.5/Darwin_x86_64-aarch64/Waterfox%20G5.1.5.dmg",
+        "hash": "bdc0cc9ae6eb1accb0830a5eaf6ad359e980c8a486db8e83ee1e35713cae0c4332059e84f0abfa2a53ba8039c4806688487ad54e26e703016dba546677eba055"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.5/Linux_x86_64/waterfox-G5.1.5.tar.bz2",
+        "hash": "67a6fafbd5f62e68a003cfea931aadcb163ab7e8af3c65e92ce725b802a77f6e0073862a6bb9080466356b86454e96a9093262b8dd6f1c2a6bb7f92aa42c4e43"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/96834167",
@@ -354,7 +545,27 @@
       "heart": 0,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.4/WINNT_x86_64/Waterfox%20Setup%20G5.1.4.exe",
+        "hash": "b94f4dbdf88bd2b6cef591d3c03b864f0fd2cc4583a5ad708b0602185c71cbc037407b02187d2d9a0707d275fbfecda0a66231dc73d72314a35f2d14cfa9347f"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.4/Darwin_x86_64-aarch64/Waterfox%20G5.1.4.dmg",
+        "hash": "224fe73ec53d09be2f61b58135cf23851ce19046e5f46ca5f9e35d9454ee4d4fc392866ef86e4be52e132543a9b27f32603598853f17dfae8aa9884b7646d9b6"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.4/Linux_x86_64/waterfox-G5.1.4.tar.bz2",
+        "hash": "3963355c54ab072030f0e5a25d5a2712d2657610a6dd66b65c3ffcc0fdcc2004f9b60ad7e76f8b2a6a2d1ae42756a000123d85e06ef304aa21647af403df3aad"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/93030012",
@@ -405,7 +616,27 @@
       "heart": 0,
       "rocket": 0,
       "eyes": 3
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.3/WINNT_x86_64/Waterfox%20Setup%20G5.1.3.exe",
+        "hash": "421799a996fc6ace3a900105c2a961f316251a03fd914a1983998447b811ce5bea6b5a97cf9b04a7a32dbc5b564e23c2d2e7d78a16b302ef3d4852578a438be9"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.3/Darwin_x86_64-aarch64/Waterfox%20G5.1.3.dmg",
+        "hash": "f9fc92b6b19d0ed859685e69260601ae55bbc17b7ef8522be30ca768a943971be5b54db3a8f9c97817eeb21b0fe0b9c64b25b3d751a64aaa04e8d841a3a27fdf"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.3/Linux_x86_64/waterfox-G5.1.3.tar.bz2",
+        "hash": "6a18f62fd9326611be55426c45871a8fa35cd347c9197a82e575027b25371cb59c638bb2257b890e4da3cae0fb0cadc29293620ccf0e37337696cdb5df817c67"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/89256169",
@@ -456,7 +687,27 @@
       "heart": 0,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.2/WINNT_x86_64/Waterfox%20Setup%20G5.1.2.exe",
+        "hash": "652e110065df8a553170eeb9ae31ae4d7c2383daec5dae7fc0280d8d50647faedd34f039c923a6ca9d8dbf3ffb26fcb92c2547a09f83fead4c232501e7a78cf7"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.2/Darwin_x86_64-aarch64/Waterfox%20G5.1.2.dmg",
+        "hash": "686481a9f5974249e797fab5b5cc83fcb1234b241bff49f80cb9e5ac848779e5f0008ec16ea545495e0c878cc5d0de74009ae16d2b7b9f7d2490ee16697ec94d"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.2/Linux_x86_64/waterfox-G5.1.2.tar.bz2",
+        "hash": "fc4b0ee914b3750014b47b8627a5e9bbc9ca624bec264b1d40fe807747eed072bac97166f59da755db18fe9ee0f0d11366420203abb78b0790bd751f5efb14af"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/86039327",
@@ -507,7 +758,27 @@
       "heart": 2,
       "rocket": 1,
       "eyes": 1
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.1/WINNT_x86_64/Waterfox%20Setup%20G5.1.1.exe",
+        "hash": "44bc574d6b14467a54742c047a622716581ae453f03acceeafaa7a14e5b116c828c670feaf37d4a2c9c2f815fd86a015150f2423f7b73d72c16be5c6396257b3"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.1/Darwin_x86_64-aarch64/Waterfox%20G5.1.1.dmg",
+        "hash": "5bb6c253c9d38ee3432e0cafa1b72da24f14c6c64e44c9febc1111ab70e12495b9389e67b8a22164099a81f5fd9747af0f3f3912762b7001a5362be97e3b7881"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1.1/Linux_x86_64/waterfox-G5.1.1.tar.bz2",
+        "hash": "96c66b2e61f5a9956c115927acfa768ed1d6cd6ed813ab253b861651f8fef5f02b24ee3ab0a7b1b2855a1c34d49182405c5e38ec68b7dc81a367b2e3c38e6bee"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/82963568",
@@ -558,7 +829,27 @@
       "heart": 0,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1/WINNT_x86_64/Waterfox%20Setup%20G5.1.exe",
+        "hash": "fd3fac7d2ec11305e88885baa054d4dc9c3d271a2c141c170c098f39911cdd90346742b3fbf69bf5b0bca1f15b4910d543944abbafc1cac225520511bf95db3a"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1/Darwin_x86_64-aarch64/Waterfox%20G5.1.dmg",
+        "hash": "9e56ed880f9d5b594a0488ada1883485af015d7e8e8fb32d20fd8dd0a4e84d1122015f459ee0738bcc3d2b4bfb3a9accc87ca08845bc49a99e30e1754fec7811"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.1/Linux_x86_64/waterfox-G5.1.tar.bz2",
+        "hash": "1432c9d2d7c5a3de78768b69d6ac8d5696993fd648704d342c8e741b5e3fd4c712599c271abf5175ced3199378390b811cd064fc2248dc87fff7b9e9e65f1c90"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/80329199",
@@ -609,7 +900,27 @@
       "heart": 2,
       "rocket": 2,
       "eyes": 3
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0.2/WINNT_x86_64/Waterfox%20Setup%20G5.0.2.exe",
+        "hash": "112e5b772fb5a4b454d7112c9c3525694247616ec09d37acbffe295d5365a5146b914bac7ce1240d5dba0cc6fb52747204b88fff6a0341af511b948149ee2202"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0.2/Darwin_x86_64-aarch64/Waterfox%20G5.0.2.dmg",
+        "hash": "9d77da8601b7d501a2de21abb8513b3ee319ceb437c7fec7e11fd89e73a9876c22f785ca58a20443dcf338c3f89cc57678c23fba9926645606428f64af477377"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0.2/Linux_x86_64/waterfox-G5.0.2.tar.bz2",
+        "hash": "4341295bc6d6bb4b2e5309518730bfde11a51d23678d722fd06c028ac7e661d5b06f703e2e209adfa17cf14a9720a6724c06a1b9dd026136926a699ca43f7d78"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/78941966",
@@ -660,7 +971,27 @@
       "heart": 2,
       "rocket": 3,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0.1/WINNT_x86_64/Waterfox%20Setup%20G5.0.1.exe",
+        "hash": "128d4b45ec87153ee590fe55924d46f9ab54cb0924bcb94fc4bfd7693d97806fb09f4c714d9576e092b500c060c15f7a484fb3f9de4bf48f82dbd4478fc3b0d8"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0.1/Darwin_x86_64-aarch64/Waterfox%20G5.0.1.dmg",
+        "hash": "b57d2d701dbc1a0a315367a289a29b57b11ac01587d0f60c68ae7907fd48e54478ac4c789b1aa52c3277d44f1739f3f3c8337f2810708a4ee770175aa4ed5dd5"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0.1/Linux_x86_64/waterfox-G5.0.1.tar.bz2",
+        "hash": "05007d3804ee579520351a340df106550f6949592d4efe0bdbffc94eb99ad626c17b45c498e52057b86e7089f80561d62f9e9bf6fd20abe86c2dc3668e4444fd"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/78454351",
@@ -711,7 +1042,27 @@
       "heart": 4,
       "rocket": 2,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0/WINNT_x86_64/Waterfox%20Setup%20G5.0.exe",
+        "hash": "dd46b759f1774a1da80ab138b3eb3359fc974a46f9764ef174d37098a777bb07992666bfefc7313c094aaa9cf5ba64f38ffeffb338ad68dee52aa37308454aec"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0/Darwin_x86_64-aarch64/Waterfox%20G5.0.dmg",
+        "hash": "b179fcc8f81b1cd35d0ab7a2aab23e5fefa7100b465fd28d6a425664ab7b0a0a04d4b849ea92c38f6d49a2602ff01d40fec1ab42a83767d0f37f86809579ff5e"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0/Linux_x86_64/waterfox-G5.0.tar.bz2",
+        "hash": "8075aff8aa99f94bc9f8f0c72b5744dab6f690d8e6ac10f8fc7d912c34ccecde1d122132395be3761f51bb9e9df7a17f2c0237bdf7fb4a067e18ce53071b0bfc"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/77984787",
@@ -762,7 +1113,27 @@
       "heart": 6,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b5/WINNT_x86_64/Waterfox%20Setup%20G5.0b5.exe",
+        "hash": "bea375174a7bc653808233db1c6ad6b4ba1cb1b6416480e888099311188c4731509e3fbbc92c688a42c217f491f86797cacb6190afe02a7564bc8e1797c7ce05"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b5/Darwin_x86_64-aarch64/Waterfox%20G5.0b5.dmg",
+        "hash": "3022932db0bcfddcba794e2aca22e64753e2d51e4e4e16ae3a050e0baeede15554a3a6372eb4c49d09bf97e0199e37c520fbcbbbd04e24bd19d73adda34e6880"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b5/Linux_x86_64/waterfox-G5.0b5.tar.bz2",
+        "hash": "7445377511f3b28275bcd63a4bd92c3b80027c500e59edc27dfbea1d5b7e01ec5a7f6670e3986e8293f275cb6e869912e09c7b75d51696ff711eb72ce2dfa61b"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/77684209",
@@ -813,7 +1184,27 @@
       "heart": 0,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b4/WINNT_x86_64/Waterfox%20Setup%20G5.0b4.exe",
+        "hash": "98c7e53ba8b58c357f40b2ba5134784553adc0e3f49c8fc916604262c230df703943aa4f48ee188183fb43cf08f7352028c4a4c1b9575d803c9801de0e816f1e"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b4/Darwin_x86_64-aarch64/Waterfox%20G5.0b4.dmg",
+        "hash": "6981e1e28bc032ce7142eec012056bc9d1a53f94060c1608087d8902573ebf3e0bd1fa3159fbd22c3b33cb4b85a251f17b113b06358f75d5dff268bfd52085fd"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b4/Linux_x86_64/waterfox-G5.0b4.tar.bz2",
+        "hash": "3c6eb6f72b287ecffaaaa68e1e27dadeba92ec5852c28b7af4d68c5845ebb4f64c3494bfd8393d9a539538dfa5cd072f6d2cd7f3424ab9038e772c2fce4139b1"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/77650576",
@@ -864,7 +1255,27 @@
       "heart": 0,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b3/WINNT_x86_64/Waterfox%20Setup%20G5.0b3.exe",
+        "hash": "5401937850a49cc63425db686763d6f2109c37b2db79f75f42edafb762a265c9fa02755f23b84ace772121a02c22279fb3444b1e1915a77c45b6a603548175a6"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b3/Darwin_x86_64-aarch64/Waterfox%20G5.0b3.dmg",
+        "hash": "998fa3b06848d46602be1a58f57e61b68fb9bb71c40e07d8a15916300f910905b66e9efad33f80008646ae60854dca1e52d3375e4c6a43b4f09fed58e84d0be8"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b3/Linux_x86_64/waterfox-G5.0b3.tar.bz2",
+        "hash": "31766721776f2c3b673eb31e8e28db0a8fe2d7b1b8a79e79b5ce87c7958d178c9f174a8a21c6d2cd91e2535a23059bfb32a22063ab0fa6bf2442636fcf76bdb8"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/76396842",
@@ -915,7 +1326,27 @@
       "heart": 0,
       "rocket": 1,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b2/WINNT_x86_64/Waterfox%20Setup%20G5.0b2.exe",
+        "hash": "5702a213ab245783f5eab0ace120e0509bcfd2f094c5fc40a6d65032d892cdb362be9db01363ce9704a7a857239831cf4f1c8051af7d8d524cde6b40b3307ba1"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b2/Darwin_x86_64-aarch64/Waterfox%20G5.0b2.dmg",
+        "hash": "f00e1aebe79ea038c7578ffd868fe2924966368aa89c2c2f039f2fa3fc458b5ce7a78fe5c7166a9f3cc8a238970a9926cbfa544ef82411e9c84d7cba8eb1b3c2"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b2/Linux_x86_64/waterfox-G5.0b2.tar.bz2",
+        "hash": "7e21dece1bc181ca5e6cfcf7a7d7300ae26a3417946bc26a60883d83cf3faa2ce2805a270391c5f3ad7586dafe0bfb5785d95d25af2a88b11ba512ae18c16d53"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/74303100",
@@ -966,7 +1397,27 @@
       "heart": 3,
       "rocket": 0,
       "eyes": 7
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b1/WINNT_x86_64/Waterfox%20Setup%20G5.0b1.exe",
+        "hash": "0f1f622fea90a938dafccd70bdefc09f4e1d63da0f569e37f0d5ceff19f32779bf0ed72dfc529e14b90af6af233c2e2cb510c15a324288bbcbfc3430ba878b02"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b1/Darwin_x86_64-aarch64/Waterfox%20G5.0b1.dmg",
+        "hash": "32399df59fadeb7c82c5480cbddbd052d7820bbe85eabd6908ecc8ecd1defe2bfb7ce2c66727ebe912a66aab9a61b7a4ed632bd232e73bd8114acb658667793e"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G5.0b1/Linux_x86_64/waterfox-G5.0b1.tar.bz2",
+        "hash": "4ad42b55ee6d228af8efccbdd5edae4419d333708f60c2db045f8cc6fc7d5f8794da19dad100990abfc3634bdbbc89ac1c23ea94434bc0d2a4578236d7504dbf"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/75231314",
@@ -1066,7 +1517,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 82892946,
-        "download_count": 11624,
+        "download_count": 11642,
         "created_at": "2022-08-24T14:18:48Z",
         "updated_at": "2022-08-24T14:18:53Z",
         "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.1.5/waterfox-G4.1.5.en-US.linux-x86_64.tar.bz2"
@@ -1100,7 +1551,7 @@
         "content_type": "application/x-apple-diskimage",
         "state": "uploaded",
         "size": 79742964,
-        "download_count": 3853,
+        "download_count": 3859,
         "created_at": "2022-08-24T14:18:41Z",
         "updated_at": "2022-08-24T14:18:46Z",
         "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.1.5/Waterfox.G4.1.5.ARM.Setup.dmg"
@@ -1168,7 +1619,7 @@
         "content_type": "application/vnd.microsoft.portable-executable",
         "state": "uploaded",
         "size": 67002656,
-        "download_count": 65014,
+        "download_count": 65023,
         "created_at": "2022-08-24T14:18:24Z",
         "updated_at": "2022-08-24T14:18:28Z",
         "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.1.5/Waterfox.G4.1.5.Setup.exe"
@@ -1188,7 +1639,27 @@
       "heart": 1,
       "rocket": 1,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.5/WINNT_x86_64/Waterfox%20Setup%20G4.1.5.exe",
+        "hash": "b4feadff8bc641d9ca702afcbcb9391412d0028c65f243c9e0276ecaf0db2b75ca551c9cfc0d45886b9770052cbe0ac2c3c65455b3d9407f4b7192afc71adba2"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.5/Darwin_x86_64-aarch64/Waterfox%20G4.1.5.dmg",
+        "hash": "39df50f197ffc27aec38ed9915c95b9ecbbb95cab307a0c5beb66ea6888c2ef2fb7b9c47d5abebccb4fc36e9f8755609a5e975295a1a64ea6a73c3e1bd6f260a"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.5/Linux_x86_64/waterfox-G4.1.5.tar.bz2",
+        "hash": "41630b7db1b6c053b18d56a5f39e8f92315ffe39ade3f1d56fc619b48341b026313e7d2bc48446a024f6b0a9dc6839f451517c8ac90ca2afecf3821eb036d5f4"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/73144643",
@@ -1390,7 +1861,7 @@
         "content_type": "application/vnd.microsoft.portable-executable",
         "state": "uploaded",
         "size": 67029048,
-        "download_count": 42188,
+        "download_count": 42189,
         "created_at": "2022-07-29T09:40:54Z",
         "updated_at": "2022-07-29T09:41:17Z",
         "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.1.4/Waterfox.G4.1.4.Setup.exe"
@@ -1410,7 +1881,27 @@
       "heart": 0,
       "rocket": 2,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.4/WINNT_x86_64/Waterfox%20Setup%20G4.1.4.exe",
+        "hash": "53a1ba169d605051ce79d25b3228b102c70664b27cc9f96de02d717f6bd57a09bde8146a15f064ddfc34946a0a3429e3d3ec7386c5b059405d472b2d3e74b8e2"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.4/Darwin_x86_64-aarch64/Waterfox%20G4.1.4.dmg",
+        "hash": "de20eb7d4e70e8f19393e04b98e423a1e8828001361c6be84cc9d390de803f6526d461de2e203d9dc7046103c5a737dd3a8f9fa82d3a1a146880bbf80de9b836"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.4/Linux_x86_64/waterfox-G4.1.4.tar.bz2",
+        "hash": "856da7a2b6be80c7e51dffaea67b7f5ca2d112201af4035104bc126aabe99be13b04c252a78e8cae41ae560c1c9039c039e612a653c7cc1794e7438f02700e92"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/71784299",
@@ -1632,7 +2123,27 @@
       "heart": 0,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.3.2/WINNT_x86_64/Waterfox%20Setup%20G4.1.3.2.exe",
+        "hash": "8c0e2e70af2eadff6b7986c6d762c1e4b380d4f5c5e8aabdc69b27c12830f10e2baf867839a9a48a3574e7c50684898b1b22284d9744759b7474b1e3640d218e"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.3.2/Darwin_x86_64-aarch64/Waterfox%20G4.1.3.2.dmg",
+        "hash": "f69f9086c97d3a587262c1a9d8a657eee28187fa8ac39546327fc367588ae22545631456c975f2f9cfa57b00533763153f36f23241519ce2791208fa6b27ef81"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.3.2/Linux_x86_64/waterfox-G4.1.3.2.tar.bz2",
+        "hash": "d8a8f9facc571dde8f779897e1701ead5614e9702921bb8707dfe50b1bf78826fd051413ec21a05474e8aa5a828383621f8a7b8ae811246fee843399e2917eb6"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/70468623",
@@ -1834,7 +2345,7 @@
         "content_type": "application/vnd.microsoft.portable-executable",
         "state": "uploaded",
         "size": 67005600,
-        "download_count": 35939,
+        "download_count": 35946,
         "created_at": "2022-06-24T09:01:47Z",
         "updated_at": "2022-06-24T09:01:51Z",
         "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.1.3.1/Waterfox.G4.1.3.1.Setup.exe"
@@ -1854,7 +2365,27 @@
       "heart": 5,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.3.1/WINNT_x86_64/Waterfox%20Setup%20G4.1.3.1.exe",
+        "hash": "9fe9e9de19fe6ead0959059427a97e13f72fbbe2ce199951cf99c1abf2213a57f56a389142c6ed50ae0bb7aeb3c44693bcb2b8a11b40004ddf90fd409e466658"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.3.1/Darwin_x86_64-aarch64/Waterfox%20G4.1.3.1.dmg",
+        "hash": "ce498b9e1dea8c96230463c33fb758cb8e6513fc08cf7950b6bdb0134823eed24963245e345b7b6091a2917473c06fffc2d2ff3bd2d465b39fb6320b0da11bfa"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.3.1/Linux_x86_64/waterfox-G4.1.3.1.tar.bz2",
+        "hash": "1d9669e892aa661aa90ea433beac2626ddae35d7a4cf959146d3e7596cc0c794d141607f31ea981106c54930fa92244ec645103642accb28057bb7b4a4436ef0"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/70395646",
@@ -2056,7 +2587,7 @@
         "content_type": "application/vnd.microsoft.portable-executable",
         "state": "uploaded",
         "size": 67004424,
-        "download_count": 7237,
+        "download_count": 7286,
         "created_at": "2022-06-23T13:53:03Z",
         "updated_at": "2022-06-23T13:53:06Z",
         "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.1.3/Waterfox.G4.1.3.Setup.exe"
@@ -2076,7 +2607,27 @@
       "heart": 0,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.3/WINNT_x86_64/Waterfox%20Setup%20G4.1.3.exe",
+        "hash": "a2ac968d949e4edf267b1787a380c68a1eb96de4a54d8dbc52aa5303697d7d8b9e530ff0d545668157274fdc4f4ca47410fc943b6e5e56cecdc52f43403fba70"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.3/Darwin_x86_64-aarch64/Waterfox%20G4.1.3.dmg",
+        "hash": "67d3b6fc64d1c9a1564e2b03db0ce830264529d3cfa1759c2fc6b62d27f49deb9f80a1fca31df31e077010c58273fec68cfe436bc4f8e46b2659bc34e4d94b1f"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.3/Linux_x86_64/waterfox-G4.1.3.tar.bz2",
+        "hash": "25598a188d0ed4ab9a8f46ed9d10783cb9c1f696ef515b45847428ca88e8c9f877eae86e163f8fea6d3598d49f3a50fd565eb655af9bc0282cecb1f1600d8435"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/67905903",
@@ -2278,7 +2829,7 @@
         "content_type": "application/vnd.microsoft.portable-executable",
         "state": "uploaded",
         "size": 66883960,
-        "download_count": 44328,
+        "download_count": 44334,
         "created_at": "2022-05-26T10:26:16Z",
         "updated_at": "2022-05-26T10:26:19Z",
         "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.1.2.1/Waterfox.G4.1.2.1.Setup.exe"
@@ -2298,7 +2849,27 @@
       "heart": 0,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.2.1/WINNT_x86_64/Waterfox%20Setup%20G4.1.2.1.exe",
+        "hash": "75a3ce81f5e068a817536499f688923435bf64f68d2e142194f88d1c4e731fc422cbf9e8fb25616bcea62ff51949bb9a09b8661b55081b8a3dd596f2e87f86ea"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.2.1/Darwin_x86_64-aarch64/Waterfox%20G4.1.2.1.dmg",
+        "hash": "8fae1639ab49a5a2615db662c0a691bb43b95a5976c3e73a04686c832c02c2b3ec532d11c8e9ba69d41e49a4f4c89ce9dd6e4ff86b1734ec1087ee28a525204c"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.2.1/Linux_x86_64/waterfox-G4.1.2.1.tar.bz2",
+        "hash": "824591537d46b60f1dd58d503a7acf6ed7675d208f820ddc9f0a8f70bd07e9e4689ada809f2f23a6e836cc3b445b9cbae07753d799f8fdd3a22edc45bbb673fb"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/65926404",
@@ -2500,7 +3071,7 @@
         "content_type": "application/vnd.microsoft.portable-executable",
         "state": "uploaded",
         "size": 66872504,
-        "download_count": 30724,
+        "download_count": 30729,
         "created_at": "2022-05-03T14:07:10Z",
         "updated_at": "2022-05-03T14:07:13Z",
         "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.1.2/Waterfox.G4.1.2.Setup.exe"
@@ -2520,7 +3091,27 @@
       "heart": 2,
       "rocket": 0,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.2/WINNT_x86_64/Waterfox%20Setup%20G4.1.2.exe",
+        "hash": "16ff01887b62e255e2f8106b314fb5c83816958f7002db79fd0e61183ecc823ae18b97078c9824ae1c0beee7f9c66c259dbb57f761bc185640337db35c0fb330"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.2/Darwin_x86_64-aarch64/Waterfox%20G4.1.2.dmg",
+        "hash": "0989cb45e9e8b0a85c55f96f840e8e71b42a2e697c8169c1dc92698e10293ceed5e5afbae7c13c12ed974acb5d3a6537ab6111c7b0ee4f88a33666260fc99a6a"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.2/Linux_x86_64/waterfox-G4.1.2.tar.bz2",
+        "hash": "6a6ad75062979d0e51fb3a815b2fb83f0ddcc92b47962c80953158381fc15fd46af7480b592ce048cf656d49c18cf0f88d956f50b1fbf6a627872b069c52ded2"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/64852117",
@@ -2722,7 +3313,7 @@
         "content_type": "application/vnd.microsoft.portable-executable",
         "state": "uploaded",
         "size": 66859496,
-        "download_count": 18058,
+        "download_count": 18066,
         "created_at": "2022-04-20T14:28:06Z",
         "updated_at": "2022-04-20T14:28:10Z",
         "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.1.1.1/Waterfox.G4.1.1.1.Setup.exe"
@@ -2742,7 +3333,27 @@
       "heart": 3,
       "rocket": 3,
       "eyes": 0
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.1.1/WINNT_x86_64/Waterfox%20Setup%20G4.1.1.1.exe",
+        "hash": "c5bcabc6a26268f6a1296c3e6fbc9049859cdb7c0b81d19797589231c775a1359fd4439f02ff413285e081e8832ab673d5afb2999e2f146a3da3a48b8a1fa699"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.1.1/Darwin_x86_64-aarch64/Waterfox%20G4.1.1.1.dmg",
+        "hash": "e4db727a000e94c1a4153eb6c8566f57a6d778417eb980d5fa07dbd4d13ddf6f407e3a0306596d9ad816ad72fe632305d7e6feb20a3a1e261dc6286dd366c550"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.1.1/Linux_x86_64/waterfox-G4.1.1.1.tar.bz2",
+        "hash": "0c97ad79c15134c9abf7c1a64633818fd70aa3ec779b96f26977bbf435aaf965026c1ed8dcccb66957df854bbe42c368f118bfe22143447a9e4aaa79f659ce6d"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/64246763",
@@ -2944,7 +3555,7 @@
         "content_type": "application/vnd.microsoft.portable-executable",
         "state": "uploaded",
         "size": 66858496,
-        "download_count": 14700,
+        "download_count": 14708,
         "created_at": "2022-04-12T13:47:41Z",
         "updated_at": "2022-04-12T13:47:45Z",
         "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.1.1/Waterfox.G4.1.1.Setup.exe"
@@ -2964,7 +3575,27 @@
       "heart": 4,
       "rocket": 5,
       "eyes": 3
-    }
+    },
+    "downloads": [
+      {
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.1/WINNT_x86_64/Waterfox%20Setup%20G4.1.1.exe",
+        "hash": "9465cd24c3081935464a7b7c40d06bde9b33f5d1b447d2c5dbea26a557941b7c514b6cca14186d5f4903b39eb18aebed458fcda7865e930e0dd39afb1b8deec8"
+      },
+      {
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.1/Darwin_x86_64-aarch64/Waterfox%20G4.1.1.dmg",
+        "hash": "adfb4bda7e60e89d0a13d9359afd9873681f47457ffcc450a5fedd972c6168ac3839fceaf23fd188f696153693a48cd540ac4fd0b5847fb0757050471448e85a"
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.1/Linux_x86_64/waterfox-G4.1.1.tar.bz2",
+        "hash": "fb0c727dbfc16df8d4b6941525e15eff96ad76c9d8f5240069ad37e89aa2530ef6e0344ebfc329cdc595b23ed332f6944d2e8737d307d7ae566a3befc8178cd7"
+      }
+    ]
   },
   {
     "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/63725414",
@@ -3098,7 +3729,7 @@
         "content_type": "application/x-diskcopy",
         "state": "uploaded",
         "size": 79574621,
-        "download_count": 449,
+        "download_count": 451,
         "created_at": "2022-04-07T13:13:53Z",
         "updated_at": "2022-04-07T13:14:58Z",
         "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.1.0/Waterfox.G4.1.0.ARM.Setup.dmg"
@@ -3166,7 +3797,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 66864688,
-        "download_count": 8532,
+        "download_count": 8538,
         "created_at": "2022-04-07T13:15:13Z",
         "updated_at": "2022-04-07T13:17:05Z",
         "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.1.0/Waterfox.G4.1.0.Setup.exe"
@@ -3187,229 +3818,26 @@
       "rocket": 0,
       "eyes": 0
     },
-    "mentions_count": 1
-  },
-  {
-    "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/61130196",
-    "assets_url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/61130196/assets",
-    "upload_url": "https://uploads.github.com/repos/WaterfoxCo/Waterfox/releases/61130196/assets{?name,label}",
-    "html_url": "https://github.com/WaterfoxCo/Waterfox/releases/tag/G4.0.8",
-    "id": 61130196,
-    "author": {
-      "login": "github-actions[bot]",
-      "id": 41898282,
-      "node_id": "MDM6Qm90NDE4OTgyODI=",
-      "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/github-actions%5Bbot%5D",
-      "html_url": "https://github.com/apps/github-actions",
-      "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
-      "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
-      "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
-      "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
-      "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
-      "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
-      "type": "Bot",
-      "site_admin": false
-    },
-    "node_id": "RE_kwDOAX_his4DpMXU",
-    "tag_name": "G4.0.8",
-    "target_commitish": "current",
-    "name": "G4.0.8",
-    "draft": false,
-    "prerelease": false,
-    "created_at": "2022-03-07T09:22:10Z",
-    "published_at": "2022-03-07T10:33:09Z",
-    "assets": [
+    "mentions_count": 1,
+    "downloads": [
       {
-        "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/assets/58786815",
-        "id": 58786815,
-        "node_id": "RA_kwDOAX_his4DgQP_",
-        "name": "Install.Waterfox.exe",
-        "label": "Install Waterfox.exe",
-        "uploader": {
-          "login": "github-actions[bot]",
-          "id": 41898282,
-          "node_id": "MDM6Qm90NDE4OTgyODI=",
-          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
-          "html_url": "https://github.com/apps/github-actions",
-          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
-          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
-          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
-          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
-          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
-          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
-          "type": "Bot",
-          "site_admin": false
-        },
-        "content_type": "application/vnd.microsoft.portable-executable",
-        "state": "uploaded",
-        "size": 503896,
-        "download_count": 14763,
-        "created_at": "2022-03-07T10:33:16Z",
-        "updated_at": "2022-03-14T14:18:23Z",
-        "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.0.8/Install.Waterfox.exe"
+        "id": "windows",
+        "label": "Windows",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.0/WINNT_x86_64/Waterfox%20Setup%20G4.1.0.exe",
+        "hash": "fcafd3b44b59f1ac15d6567b6f3ba02e6d42a65d0c924e85e6a9a003e27d0a6118a3e6c51e221dd34220b031ef7aa3de4b160af975951c82463c0d114c647d93"
       },
       {
-        "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/assets/58786827",
-        "id": 58786827,
-        "node_id": "RA_kwDOAX_his4DgQQL",
-        "name": "waterfox-G4.0.8.en-US.linux-x86_64.tar.bz2",
-        "label": "",
-        "uploader": {
-          "login": "github-actions[bot]",
-          "id": 41898282,
-          "node_id": "MDM6Qm90NDE4OTgyODI=",
-          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
-          "html_url": "https://github.com/apps/github-actions",
-          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
-          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
-          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
-          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
-          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
-          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
-          "type": "Bot",
-          "site_admin": false
-        },
-        "content_type": "application/zip",
-        "state": "uploaded",
-        "size": 82935535,
-        "download_count": 8727,
-        "created_at": "2022-03-07T10:33:30Z",
-        "updated_at": "2022-03-07T10:33:34Z",
-        "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.0.8/waterfox-G4.0.8.en-US.linux-x86_64.tar.bz2"
+        "id": "macos",
+        "label": "macOS",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.0/Darwin_x86_64-aarch64/Waterfox%20G4.1.0.dmg",
+        "hash": "cc24d37944bcadaaa12d1b510bdbdeb1c82f7f2f8227985406e94e6833c430dd1e18f96d3ca3a95e867504b93ea79e00d2fc8e723ad9c5b62e924476b2addeda"
       },
       {
-        "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/assets/58786823",
-        "id": 58786823,
-        "node_id": "RA_kwDOAX_his4DgQQH",
-        "name": "Waterfox.G4.0.8.ARM.Setup.dmg",
-        "label": "",
-        "uploader": {
-          "login": "github-actions[bot]",
-          "id": 41898282,
-          "node_id": "MDM6Qm90NDE4OTgyODI=",
-          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
-          "html_url": "https://github.com/apps/github-actions",
-          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
-          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
-          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
-          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
-          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
-          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
-          "type": "Bot",
-          "site_admin": false
-        },
-        "content_type": "application/x-apple-diskimage",
-        "state": "uploaded",
-        "size": 79521480,
-        "download_count": 1855,
-        "created_at": "2022-03-07T10:33:24Z",
-        "updated_at": "2022-03-07T10:33:28Z",
-        "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.0.8/Waterfox.G4.0.8.ARM.Setup.dmg"
-      },
-      {
-        "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/assets/58786817",
-        "id": 58786817,
-        "node_id": "RA_kwDOAX_his4DgQQB",
-        "name": "Waterfox.G4.0.8.Setup.dmg",
-        "label": "",
-        "uploader": {
-          "login": "github-actions[bot]",
-          "id": 41898282,
-          "node_id": "MDM6Qm90NDE4OTgyODI=",
-          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
-          "html_url": "https://github.com/apps/github-actions",
-          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
-          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
-          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
-          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
-          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
-          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
-          "type": "Bot",
-          "site_admin": false
-        },
-        "content_type": "application/x-apple-diskimage",
-        "state": "uploaded",
-        "size": 85202462,
-        "download_count": 4180,
-        "created_at": "2022-03-07T10:33:18Z",
-        "updated_at": "2022-03-07T10:33:23Z",
-        "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.0.8/Waterfox.G4.0.8.Setup.dmg"
-      },
-      {
-        "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/assets/58786813",
-        "id": 58786813,
-        "node_id": "RA_kwDOAX_his4DgQP9",
-        "name": "Waterfox.G4.0.8.Setup.exe",
-        "label": "",
-        "uploader": {
-          "login": "github-actions[bot]",
-          "id": 41898282,
-          "node_id": "MDM6Qm90NDE4OTgyODI=",
-          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
-          "html_url": "https://github.com/apps/github-actions",
-          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
-          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
-          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
-          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
-          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
-          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
-          "type": "Bot",
-          "site_admin": false
-        },
-        "content_type": "application/vnd.microsoft.portable-executable",
-        "state": "uploaded",
-        "size": 66868640,
-        "download_count": 53928,
-        "created_at": "2022-03-07T10:33:11Z",
-        "updated_at": "2022-03-07T10:33:14Z",
-        "browser_download_url": "https://github.com/WaterfoxCo/Waterfox/releases/download/G4.0.8/Waterfox.G4.0.8.Setup.exe"
+        "id": "linux",
+        "label": "Linux",
+        "link": "https://cdn1.waterfox.net/waterfox/releases/G4.1.0/Linux_x86_64/waterfox-G4.1.0.tar.bz2",
+        "hash": "ba40454a048ee8b704bda819a23a471947b4ebb6fc7936ed0b95edff1fe79e9923a3109c3ebffc9dd6fde4e99b335b81518c1fc4764d1fc7caf39854daf19a6c"
       }
-    ],
-    "tarball_url": "https://api.github.com/repos/WaterfoxCo/Waterfox/tarball/G4.0.8",
-    "zipball_url": "https://api.github.com/repos/WaterfoxCo/Waterfox/zipball/G4.0.8",
-    "body": "✨ New\r\n\r\n* Added a toggle on `about:preferences` to force light/dark mode with Lepton theme.\r\n\r\n✔ Fixed\r\n\r\n* Private tab will now correctly not store search suggestions and recently closed tabs.\r\n* Private tab icon will now only appear in Lepton theme, so should no longer appear on themes that do not have context menu icons.\r\n* Forcing dark mode in Lepton with `ui.systemUsesDarkTheme` on Linux distros should now work.\r\n\r\nℹ️ Changed\r\n\r\n* None.\r\n\r\n❌ Unresolved\r\n\r\n* Addon version numbers are not displayed next to their title in `about:addons`.\r\n* Auto updates can still not be completely stopped. PR is ready but we are just doing additional checks to ensure nothing breaks.\r\n\r\nContributors: @adamp01, @MrAlex94",
-    "reactions": {
-      "url": "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/61130196/reactions",
-      "total_count": 8,
-      "+1": 6,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 2,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "mentions_count": 2
+    ]
   }
 ]
