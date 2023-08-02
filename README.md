@@ -172,7 +172,7 @@ Inside your Cloudflare deploy setup, add the below environment variables:
 
 ```shell
 # required for the build
-NODE_VERSION=v16.13.0
+NODE_VERSION=v18.17.0
 
 # required for Algolia search
 PUBLIC_ALGOLIA_APP_ID=
