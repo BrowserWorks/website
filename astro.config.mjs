@@ -16,11 +16,10 @@ import remarkToc from 'remark-toc'
 import { remarkAdmonitions } from './scripts/remark-admonitions.mjs'
 import { remarkJson } from './scripts/remark-json.mjs'
 import { remarkReadingTime } from './scripts/remark-reading-time.mjs'
+import { defaultLang, languages } from './src/i18n/locales'
 
 // Sitemap config
 const site = 'https://www.waterfox.net'
-const defaultLocale = 'en'
-const locales = { en: 'en', fr: 'fr' }
 const customPages = []
 
 // Sitemap build
@@ -58,9 +57,15 @@ export default defineConfig({
 		partytown(),
 		sitemap({
 			customPages: customPages.map(
-				({ links }) => links.find((link) => link.lang === defaultLocale).url
+				({ links }) => links.find((link) => link.lang === defaultLang).url
 			),
-			i18n: { defaultLocale, locales },
+			i18n: {
+				defaultLocale: defaultLang,
+				locales: Object.keys(languages).reduce((acc, key) => {
+					acc[key] = key
+					return acc
+				}, {})
+			},
 			serialize(item) {
 				const page = customPages.find(({ links }) => links.find((link) => link.url === item.url))
 				if (page) item.links = page.links

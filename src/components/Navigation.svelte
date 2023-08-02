@@ -3,7 +3,7 @@
 	import { twMerge } from 'tailwind-merge'
 	import Dropdown from '~/components/Dropdown.svelte'
 	import Icon from '~/components/Icon.svelte'
-	import { languages, locales } from '~/i18n/locales'
+	import { defaultLang, languages, locales } from '~/i18n/locales'
 	import { localizeUrl, useTranslations } from '~/i18n/utils'
 	import { orderBy, parseSemVer } from '~/lib/orderBy'
 
@@ -22,7 +22,7 @@
 	export let theme: 'dark' | 'light' = 'light'
 	export let parentKey: string | undefined = undefined
 	export let items: Item[] = []
-	export let lang: string = 'en'
+	export let lang: string = defaultLang
 	export let depth: number = 1
 
 	export { className as class }

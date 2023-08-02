@@ -1,7 +1,7 @@
 import { getCollection } from 'astro:content'
 import '~/assets/global.scss'
 import { navigation } from '~/config'
-import type { locales } from '~/i18n/locales'
+import { defaultLang, type locales } from '~/i18n/locales'
 import { localizeUrl, useTranslations, type Key } from '~/i18n/utils'
 import { parseCollectionEntry } from '~/lib/collection'
 
@@ -35,7 +35,7 @@ type GetNavParams = {
 
 export async function createNavigation(opts?: NavOptions) {
 	const navOptions = {
-		lang: opts?.lang ?? 'en',
+		lang: opts?.lang ?? defaultLang,
 		isActive: typeof opts?.isActive === 'function' ? opts?.isActive : () => false,
 		ignoreChilds: typeof opts?.ignoreChilds === 'function' ? opts?.ignoreChilds : () => false
 	}

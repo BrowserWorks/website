@@ -5,12 +5,13 @@
 	import { onMount } from 'svelte'
 	import { twMerge } from 'tailwind-merge'
 	import Icon from '~/components/Icon.svelte'
+	import { defaultLang } from '~/i18n/locales'
 	import { useTranslations } from '~/i18n/utils'
 
 	let searchboxEl: HTMLElement
 	let algolia: AutocompleteApi<any>
 
-	export let lang: string = 'en'
+	export let lang: string = defaultLang
 	export let mode: 'icon' | 'default' = 'default'
 
 	const t = useTranslations(lang as any)

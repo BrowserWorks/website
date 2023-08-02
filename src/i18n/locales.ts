@@ -1,5 +1,5 @@
-import en from '~/i18n/locales/en'
-import fr from '~/i18n/locales/fr'
+import en from './locales/en'
+import fr from './locales/fr'
 
 export const languages = {
 	en: 'English',
