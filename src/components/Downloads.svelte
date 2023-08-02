@@ -7,9 +7,10 @@
 	import Icon from '~/components/Icon.svelte'
 	import { downloadLinks } from '~/config'
 	import GithubReleases from '~/generated/releases.json'
+	import { defaultLang } from '~/i18n/locales'
 	import { useTranslations } from '~/i18n/utils'
 
-	export let lang: string = 'en'
+	export let lang: string = defaultLang
 
 	const t = useTranslations(lang as any)
 

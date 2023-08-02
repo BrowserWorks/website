@@ -1,14 +1,15 @@
 import rss from '@astrojs/rss'
 import MarkdownIt from 'markdown-it'
 import sanitizeHtml from 'sanitize-html'
+import { defaultLang } from '~/i18n/locales'
 import { useTranslations } from '~/i18n/utils'
 import { getCollectionEntries } from '~/lib/collection'
 
 const parser = new MarkdownIt()
 
 export async function get(context) {
-	const blog = await getCollectionEntries('blog', 'en')
-	const t = useTranslations('en')
+	const blog = await getCollectionEntries('blog', defaultLang)
+	const t = useTranslations(defaultLang)
 
 	return rss({
 		title: t('rss.blog.title'),
