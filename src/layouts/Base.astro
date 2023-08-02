@@ -1,6 +1,7 @@
 ---
 import { twMerge } from 'tailwind-merge'
 import '~/assets/global.scss'
+import '~/assets/montserrat/Montserrat.css'
 import ImgWaterfox from '~/assets/waterfox-icon.svg'
 import ImgLogo from '~/assets/waterfox-logo.svg'
 import Icon from '~/components/Icon.svelte'
@@ -73,13 +74,6 @@ const { title = t('meta.title'), description = t('meta.description'), image, bgC
 		<meta name="msapplication-TileColor" content="#ffffff" />
 		<meta name="theme-color" content="#ffffff" />
 
-		<!-- Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@300;400;500&display=swap"
-			rel="stylesheet"
-		/>
 	</head>
 	<body class="w-full font-body font-light leading-relaxed text-deepsea">
 		<header

@@ -14,7 +14,7 @@
 <div class={twMerge('absolute left-0 top-0 h-full w-full overflow-hidden', className)}>
 	<div
 		class={twMerge(
-			"absolute left-1/2 top-1/2 h-[110%] w-[110%] -translate-x-1/2 -translate-y-1/2 bg-[url('/images/water.png')] bg-cover bg-center lg:h-[120%] lg:w-[120%]",
+			"absolute left-1/2 top-1/2 h-[110%] w-[110%] -translate-x-1/2 -translate-y-1/2 bg-[url('/images/water.svg')] bg-cover bg-center lg:h-[120%] lg:w-[120%]",
 			bgAlign === 'center' ? 'bg-center' : 'bg-top'
 		)}
 	/>

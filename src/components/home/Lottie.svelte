@@ -54,8 +54,8 @@
 	style="aspect-ratio:{width}/{height};"
 >
 	{#if !useLottie}
-		<div class="w-full h-full p-2 lg:p-6">
-			<img src="/images/{file}.png" class="w-full" {width} {height} {alt} />
+		<div class="h-full w-full p-2 lg:p-6">
+			<img src="/images/{file}.svg" class="w-full" {width} {height} {alt} />
 		</div>
 	{/if}
 </div>
