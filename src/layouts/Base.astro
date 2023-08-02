@@ -1,7 +1,7 @@
 ---
 import { twMerge } from 'tailwind-merge'
+import '~/assets/fonts.css'
 import '~/assets/global.scss'
-import '~/assets/montserrat/Montserrat.css'
 import ImgWaterfox from '~/assets/waterfox-icon.svg'
 import ImgLogo from '~/assets/waterfox-logo.svg'
 import Icon from '~/components/Icon.svelte'
@@ -73,7 +73,6 @@ const { title = t('meta.title'), description = t('meta.description'), image, bgC
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 		<meta name="msapplication-TileColor" content="#ffffff" />
 		<meta name="theme-color" content="#ffffff" />
-
 	</head>
 	<body class="w-full font-body font-light leading-relaxed text-deepsea">
 		<header
