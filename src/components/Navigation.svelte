@@ -9,7 +9,7 @@
 
 	type Item = {
 		type?: 'link' | 'language-picker'
-		key: string
+		key?: string
 		href?: string
 		label?: string
 		slug?: string

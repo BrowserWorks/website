@@ -67,7 +67,7 @@ const faq =
 						alt={t('alt.illustration', t(`feature.${feature}.title` as Key))}
 						lottie={feature}
 						cols={feature === 'data' ? 2 : 1}
-						client:idle
+						client:visible
 					/>
 				))
 			}
@@ -170,7 +170,7 @@ const faq =
 				width={800}
 				height={600}
 				autoplay={true}
-				client:idle
+				client:visible
 			/>
 		</div>
 		<div
@@ -244,7 +244,7 @@ const faq =
 				width={800}
 				height={600}
 				autoplay={true}
-				client:idle
+				client:visible
 			/>
 		</div>
 		<div
@@ -267,7 +267,7 @@ const faq =
 			<h2 class="font-montserrat text-4xl font-bold leading-tight lg:text-5xl">
 				{t('faq.title')}
 			</h2>
-			<Faq items={faq} client:idle />
+			<Faq items={faq} client:visible />
 		</div>
 	</Section>
 </Layout>

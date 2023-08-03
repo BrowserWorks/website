@@ -1,11 +1,8 @@
 <script lang="ts">
-	import type { AnimationItem, LottiePlayer } from 'lottie-web'
-	import { onDestroy, onMount } from 'svelte'
+	import { onMount } from 'svelte'
 	import { UAParser } from 'ua-parser-js'
 
-	let targetEl: HTMLElement
-	let lottieAnim: AnimationItem
-	let lottie: LottiePlayer
+	let lottieEl: any
 	let useLottie = true
 
 	export let file: string
@@ -15,45 +12,33 @@
 	export let height: number
 
 	export function play() {
-		if (useLottie) lottieAnim?.play()
+		if (useLottie) lottieEl?.play()
 	}
 
 	export function pause() {
-		if (useLottie) lottieAnim?.pause()
+		if (useLottie) lottieEl?.pause()
 	}
 
 	onMount(async () => {
 		const { browser } = UAParser(navigator.userAgent)
-
 		useLottie = Boolean(['chrome', 'edge', 'brave'].includes(browser.name.toLowerCase()))
-
-		if (useLottie) {
-			lottie = (await import('lottie-web')) as unknown as LottiePlayer
-
-			lottieAnim = lottie.loadAnimation({
-				container: targetEl,
-				renderer: 'svg',
-				loop: true,
-				autoplay,
-				path: `/lottie/${file}.json`
-			})
-
-			lottieAnim?.setSpeed(1.1)
-		}
-	})
-
-	onDestroy(() => {
-		if (useLottie) lottieAnim?.destroy()
 	})
 </script>
 
-<div
-	bind:this={targetEl}
-	role="figure"
-	class="lottie h-full w-full"
-	style="aspect-ratio:{width}/{height};"
->
-	{#if !useLottie}
+<div role="figure" class="lottie h-full w-full" style="aspect-ratio:{width}/{height};">
+	{#if useLottie}
+		<lottie-player
+			bind:this={lottieEl}
+			src={`/lottie/${file}.json`}
+			background="Transparent"
+			speed="1.1"
+			style="width:100%; height:100%"
+			direction="1"
+			mode="normal"
+			loop
+			autoplay={autoplay ?? undefined}
+		/>
+	{:else}
 		<div class="h-full w-full p-2 lg:p-6">
 			<img src="/images/{file}.svg" class="w-full" {width} {height} {alt} />
 		</div>

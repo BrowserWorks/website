@@ -73,6 +73,12 @@ const { title = t('meta.title'), description = t('meta.description'), image, bgC
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 		<meta name="msapplication-TileColor" content="#ffffff" />
 		<meta name="theme-color" content="#ffffff" />
+
+		<!-- Lottie -->
+		<script
+			src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"
+			async
+			defer></script>
 	</head>
 	<body class="w-full font-body font-light leading-relaxed text-deepsea">
 		<header
@@ -160,7 +166,7 @@ const { title = t('meta.title'), description = t('meta.description'), image, bgC
 						</ul>
 					</nav>
 					<div class="flex flex-row gap-4">
-						<Search {lang} mode="icon" client:idle />
+						<Search {lang} mode="icon" client:visible />
 						<a
 							href="https://twitter.com/Waterfoxproject"
 							rel="noopener nofollow"
