@@ -25,9 +25,10 @@
 	onMount(async () => {
 		const { browser } = UAParser(navigator.userAgent)
 
-		useAnimations = Boolean(
-			['chrome', 'edge', 'brave', 'firefox'].includes(browser.name.toLowerCase())
-		)
+		// useAnimations = Boolean(
+		// 	['chrome', 'edge', 'brave', 'firefox'].includes(browser.name.toLowerCase())
+		// )
+		useAnimations = false
 
 		if (useAnimations) {
 			if (autoplay) play()
