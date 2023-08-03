@@ -5,14 +5,11 @@
 - [Astro](https://docs.astro.build)
 - [TailwindCSS](https://tailwindcss.com/docs/installation)
 - [Svelte](https://svelte.dev/docs/introduction)
-- [Algolia (+autocomplete.js)](https://www.algolia.com/doc/ui-libraries/autocomplete/introduction/what-is-autocomplete/)
 
 ## 🗂️ Project Structure
 
 ```shell
 ├── public/            # Static assets
-├── scripts/           # Scripts executed at build-time
-│   ├── algolia.ts     # Algolia sync script
 ├── src/
 │   ├── assets/        # SVG files + Global styles
 │   ├── components/    # Svelte components
@@ -42,7 +39,6 @@ Create a `.env` file inside the root directory with the below (fill in the blank
 PUBLIC_ALGOLIA_APP_ID=
 PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY=
 PUBLIC_ALGOLIA_INDEX_NAME=
-ALGOLIA_ADMIN_API_KEY=
 ```
 
 ### 3. Start the local dev server
@@ -61,7 +57,6 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm run dev`          | Starts local dev server                          |
 | `pnpm run build`        | Build your production site to `./dist/`          |
 | `pnpm run preview`      | Preview your build locally, before deploying     |
-| `pnpm run algolia`      | Sync pages content with Algolia                  |
 | `pnpm run github`       | Pull latest Github releases (for Downloads)      |
 | `pnpm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `pnpm run astro --help` | Get help using the Astro CLI                     |
@@ -148,11 +143,9 @@ pubDate: July 4 2023
 3. Inside the top `<script>` section, find and edit the `const mobileImageSrc = '...'` variable with your new image path (e.g. `/images/waterfox-mobile-ui.png`).
 4. If any styling update is required, find `<div id="rwd-mobile-ui" ... >` inside the same file.
 
-### How to sync content with Algolia?
+### How to sync content with DocSearch?
 
-1. Make sure environment variables are pointing to your Algolia account and search index.
-2. Run `pnpm run algolia`.
-3. If not already done, configure your index by adding an **Attribute for faceting** on the `lang` attribute (not searchable).
+1. Crawls need to be managed [manually](https://docsearch.algolia.com/docs/manage-your-crawls/).
 
 ## 🚀 Deploy on Cloudflare Pages
 
@@ -164,7 +157,7 @@ The current project is already set up to deploy on Cloudflare Pages using [@astr
 - **Build command:** `npm run build`
 - **Build output directory:** `/dist`
 
-> To pull the latest Github releases and sync content with Algolia at build time, you can use the following **Build command** instead: `npm run github && npm run build && npm run algolia` (order is important).
+> To pull the latest Github releases, you can use the following **Build command** instead: `npm run github && npm run build` (order is important).
 
 ### 2. Define environment variables
 
@@ -178,9 +171,6 @@ NODE_VERSION=v18.17.0
 PUBLIC_ALGOLIA_APP_ID=
 PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY=
 PUBLIC_ALGOLIA_INDEX_NAME=
-
-# only required to run the Algolia sync during build
-ALGOLIA_ADMIN_API_KEY=
 ```
 
 ### 3. Deploy on Cloudflare Pages
