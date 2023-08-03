@@ -17,10 +17,10 @@ let page: any = (await getEntryBySlug(collection, [lang, slug].join('/'))) as un
 if (!page) page = (await getCollectionEntries(collection, lang as keyof typeof locales))?.at(0)
 if (!page) return Astro.redirect(`/${lang}/`)
 
-const { Content, headings } = await page.render()
+const { Content, headings, remarkPluginFrontmatter } = await page.render()
 ---
 
-<Layout {collection} {headings}>
+<Layout {collection} {headings} jsonLD={remarkPluginFrontmatter?.jsonLD}>
 	<Page title={page.data.title} subtitle={page.data?.subtitle}>
 		<Content />
 	</Page>

@@ -23,6 +23,7 @@ const docs = defineCollection({
 		title: z.string(),
 		subtitle: z.string().optional(),
 		label: z.string(),
+		jsonLD: z.any().optional(),
 		pubDate: z
 			.string()
 			.or(z.date())
@@ -37,7 +38,8 @@ const support = defineCollection({
 		id: z.string().optional(),
 		title: z.string(),
 		subtitle: z.string().optional(),
-		label: z.string()
+		label: z.string(),
+		jsonLD: z.any().optional()
 	})
 })
 
@@ -47,7 +49,8 @@ const download = defineCollection({
 		id: z.string().optional(),
 		title: z.string(),
 		subtitle: z.string().optional(),
-		label: z.string()
+		label: z.string(),
+		jsonLD: z.any().optional()
 	})
 })
 

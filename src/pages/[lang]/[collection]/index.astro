@@ -16,9 +16,10 @@ if (!pages.length) return Astro.redirect(`/${lang}/`)
 <Layout
 	{collection}
 	headings={pages.reduce((acc, curr) => [...acc, ...(curr?.headings || [])], [])}
+	jsonLD={pages.map((p) => p?.remarkPluginFrontmatter?.jsonLD)}
 >
 	{
-		pages.map(({ data, href, Content }) => (
+		pages.map(({ data, Content }) => (
 			<Page title={data.title} subtitle={data?.subtitle}>
 				<Content />
 			</Page>

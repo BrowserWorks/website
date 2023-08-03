@@ -18,6 +18,7 @@ export interface Props {
 	description?: string
 	image?: string
 	bgColor?: 'crystal' | 'white'
+	jsonLD?: any | any[]
 }
 
 const { lang: detectedLang } = Astro.params
@@ -34,7 +35,21 @@ const navItems = (await createNavigation({
 })) as any
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
-const { title = t('meta.title'), description = t('meta.description'), image, bgColor } = Astro.props
+
+const {
+	title = t('meta.title'),
+	description = t('meta.description'),
+	image,
+	bgColor,
+	jsonLD
+} = Astro.props
+
+const jsonLDs: any[] =
+	typeof jsonLD !== 'undefined' && !Array.isArray(jsonLD)
+		? [jsonLD]
+		: typeof jsonLD !== 'undefined' && Array.isArray(jsonLD)
+		? jsonLD
+		: []
 ---
 
 <html {lang}>
@@ -73,6 +88,9 @@ const { title = t('meta.title'), description = t('meta.description'), image, bgC
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 		<meta name="msapplication-TileColor" content="#ffffff" />
 		<meta name="theme-color" content="#ffffff" />
+
+		<!-- Structured data -->
+		{jsonLDs.map((json) => <script type="application/ld+json" set:html={JSON.stringify(json)} />)}
 
 		<!-- Lottie -->
 		<script
