@@ -1,5 +1,4 @@
 ---
-import Button from '~/components/Button.svelte'
 import DownloadButton from '~/components/DownloadButton.svelte'
 import Icon from '~/components/Icon.svelte'
 import Browser from '~/components/home/BrowserUI.svelte'
@@ -10,7 +9,7 @@ import Lottie from '~/components/home/Lottie.svelte'
 import Section from '~/components/home/Section.svelte'
 import Water from '~/components/home/Water.svelte'
 import type { locales } from '~/i18n/locales'
-import { localizeUrl, useTranslations, type Key } from '~/i18n/utils'
+import { useTranslations, type Key } from '~/i18n/utils'
 import Layout from '~/layouts/Base.astro'
 import { getCollectionEntries } from '~/lib/collection'
 
@@ -73,7 +72,7 @@ const faq =
 			}
 		</div>
 
-		<Button href={localizeUrl('/download', lang)}>{t('cta.download')}</Button>
+		<DownloadButton {lang} client:idle />
 	</Section>
 
 	<Section color="deepsea">
@@ -181,9 +180,7 @@ const faq =
 			</h2>
 			<div class="flex flex-col items-center gap-8 lg:items-start">
 				<p class="text-balance text-lg" set:html={t('surf.content')} />
-				<Button href={localizeUrl('/download', lang)}>
-					{t('cta.download')}
-				</Button>
+				<DownloadButton {lang} client:idle />
 			</div>
 		</div>
 	</Section>
@@ -254,7 +251,7 @@ const faq =
 				class="font-montserrat text-4xl font-bold leading-tight lg:text-5xl"
 				set:html={t('splash.title')}
 			/>
-			<Button href={localizeUrl('/download', lang)}>{t('cta.download')}</Button>
+			<DownloadButton {lang} client:idle />
 		</div>
 	</Section>
 

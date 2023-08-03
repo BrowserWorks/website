@@ -64,11 +64,11 @@ const policiesNavigation = [
 // download links
 const downloadLinks = {
 	windows: (version: string) =>
-		`https://cdn1.waterfox.net/waterfox/releases/${version}/WINNT_x86_64/Waterfox%20Setup%20${version}.exe`,
+		`https://cdn1.waterfox.net/waterfox/releases/latest/windows-stub`,
 	macOS: (version: string) =>
-		`https://cdn1.waterfox.net/waterfox/releases/${version}/Darwin_x86_64-aarch64/Waterfox%20${version}.dmg`,
+		`https://cdn1.waterfox.net/waterfox/releases/latest/macos`,
 	linux: (version: string) =>
-		`https://cdn1.waterfox.net/waterfox/releases/${version}/Linux_x86_64/waterfox-${version}.tar.bz2`
+		`https://cdn1.waterfox.net/waterfox/releases/latest/linux`
 }
 
 export { downloadLinks, footerNavigation, navigation, policiesNavigation }
