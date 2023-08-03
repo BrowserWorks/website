@@ -1,7 +1,6 @@
 import cloudflare from '@astrojs/cloudflare'
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import mdx from '@astrojs/mdx'
-import partytown from '@astrojs/partytown'
 import prefetch from '@astrojs/prefetch'
 import { rssSchema } from '@astrojs/rss'
 import sitemap from '@astrojs/sitemap'
@@ -54,7 +53,6 @@ export default defineConfig({
 		mdx(),
 		svelte(),
 		prefetch(),
-		partytown(),
 		sitemap({
 			customPages: customPages.map(
 				({ links }) => links.find((link) => link.lang === defaultLang).url
