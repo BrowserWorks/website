@@ -25,7 +25,9 @@
 	onMount(async () => {
 		const { browser } = UAParser(navigator.userAgent)
 
-		useAnimations = Boolean(['chrome', 'edge', 'brave'].includes(browser.name.toLowerCase()))
+		useAnimations = Boolean(
+			['chrome', 'edge', 'brave', 'firefox'].includes(browser.name.toLowerCase())
+		)
 
 		if (useAnimations) {
 			if (autoplay) play()
@@ -47,9 +49,9 @@
 	style="aspect-ratio:{width}/{height};"
 >
 	{#if useAnimations}
-		<lottie-player
+		<dotlottie-player
 			bind:this={player}
-			src={`/lottie/${file}.json`}
+			src={`/lottie/${file}.lottie`}
 			background="Transparent"
 			speed="1"
 			class="h-full w-full"
