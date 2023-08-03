@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
+	import { twMerge } from 'tailwind-merge'
 	import { UAParser } from 'ua-parser-js'
 
-	let lottieEl: any
-	let useLottie = true
+	let player: any
+	let useAnimations = true
+	let loaded = false
+	let fallbackImg: HTMLImageElement
 
 	export let file: string
 	export let alt = ''
@@ -12,35 +15,49 @@
 	export let height: number
 
 	export function play() {
-		if (useLottie) lottieEl?.play()
+		if (useAnimations && typeof player !== 'undefined') player?.play()
 	}
 
 	export function pause() {
-		if (useLottie) lottieEl?.pause()
+		if (useAnimations && typeof player !== 'undefined') player?.pause()
 	}
 
 	onMount(async () => {
 		const { browser } = UAParser(navigator.userAgent)
-		useLottie = Boolean(['chrome', 'edge', 'brave'].includes(browser.name.toLowerCase()))
+
+		useAnimations = Boolean(['chrome', 'edge', 'brave'].includes(browser.name.toLowerCase()))
+
+		if (useAnimations) {
+			if (autoplay) play()
+			loaded = true
+		} else {
+			const newImg = new Image()
+			newImg.onload = async () => {
+				fallbackImg.src = newImg.src
+				loaded = true
+			}
+			newImg.src = `/images/${file}.svg`
+		}
 	})
 </script>
 
-<div role="figure" class="lottie h-full w-full" style="aspect-ratio:{width}/{height};">
-	{#if useLottie}
+<div
+	role="figure"
+	class={twMerge('lottie h-full w-full opacity-0', loaded && 'opacity-100')}
+	style="aspect-ratio:{width}/{height};"
+>
+	{#if useAnimations}
 		<lottie-player
-			bind:this={lottieEl}
+			bind:this={player}
 			src={`/lottie/${file}.json`}
 			background="Transparent"
-			speed="1.1"
-			style="width:100%; height:100%"
-			direction="1"
-			mode="normal"
+			speed="1"
+			class="h-full w-full"
 			loop
-			autoplay={autoplay ?? undefined}
 		/>
 	{:else}
-		<div class="h-full w-full p-2 lg:p-6">
-			<img src="/images/{file}.svg" class="w-full" {width} {height} {alt} />
+		<div class={twMerge('h-full w-full opacity-0 transition-opacity', loaded && 'opacity-100')}>
+			<img bind:this={fallbackImg} class="h-full w-full object-contain" {width} {height} {alt} />
 		</div>
 	{/if}
 </div>
