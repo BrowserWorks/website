@@ -20,9 +20,8 @@ if (!pages.length) return Astro.redirect(`/${lang}/docs/`)
 
 <Layout collection="docs">
 	{
-		pages.map(({ data, href, Content }) => (
+		pages.map(({ data, href }) => (
 			<Page title={data.title} subtitle={data?.subtitle} titleLink={href}>
-				<Content />
 			</Page>
 		))
 	}
