@@ -20,16 +20,17 @@
 		"titleBar.inactiveForeground": "#e7e7e799"
 	},
 	"peacock.color": "#3A72EB",
-
 	// astro
 	"files.associations": {
 		"*.mdx": "markdown"
 	},
 	"css.lint.unknownAtRules": "ignore",
 	"scss.lint.unknownAtRules": "ignore",
-	"eslint.validate": ["astro"],
+	"eslint.validate": [
+		"astro"
+	],
 	"[astro]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "astro-build.astro-vscode"
 	},
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
@@ -37,7 +38,11 @@
 	"[typescript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"prettier.documentSelectors": ["**/*.astro", "**/*.svelte", "**/*.ts"],
+	"prettier.documentSelectors": [
+		"**/*.astro",
+		"**/*.svelte",
+		"**/*.ts"
+	],
 	"editor.formatOnSave": true,
 	"prettier.enable": true,
 	"editor.codeActionsOnSave": {
