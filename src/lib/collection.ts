@@ -2,8 +2,13 @@ import { getCollection } from 'astro:content'
 import type { locales } from '~/i18n/locales'
 
 export function parseCollectionEntry(entry: any, collection: string) {
-	const [lang, ...rest] = entry.slug.split('/')
+	const [locale, ...rest] = entry.slug.split('/')
 	const slug = rest.join('/')
+	const localeCodes = locale.split('-')
+	const lang =
+		localeCodes.length === 2
+			? `${localeCodes[0].toLowerCase()}-${localeCodes[1].toUpperCase()}`
+			: locale
 	const key = String(rest?.at(-1))
 	const dir = rest?.at(-2)
 	const href = `/${[lang, collection, ...rest].join('/')}/`
