@@ -10,7 +10,7 @@ async function pull() {
 		const releases: any[] = []
 
 		for (let idx = 0; idx < json.length; idx++) {
-			const release = json[idx]
+			let release = json[idx]
 
 			const windows = downloadLinks.windows(release.tag_name)
 			const macOS = downloadLinks.macOS(release.tag_name)
@@ -36,7 +36,12 @@ async function pull() {
 					hash: await sha512(linux + '.sha512')
 				}
 			]
-
+			// for (var k in release) {
+			// 	if (k !== 'id' && k !== 'name' && k !== 'tag_name' && k !== 'published_at' && k !== 'downloads') {
+			// 		delete release[k];
+			// 	}
+			// }
+			release = (({ id, prerelease, name, tag_name, published_at, downloads }) => ({ id, prerelease, name, tag_name, published_at, downloads }))(release);
 			releases.push(release)
 		}
 

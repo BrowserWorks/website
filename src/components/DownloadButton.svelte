@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte'
 	import { UAParser } from 'ua-parser-js'
 	import Button from '~/components/Button.svelte'
-	import { downloadLinks } from '~/config'
+	import { latestLinks } from '~/config'
 	// import GithubReleases from '~/generated/releases.json'
 	import { defaultLang } from '~/i18n/locales'
 	import { localizeUrl, useTranslations } from '~/i18n/utils'
@@ -23,14 +23,11 @@
 
 		// https://faisalman.github.io/ua-parser-js-docs/v2/api/ua-parser-js/get-os.html
 		if (isMacOS) {
-			// href = downloadLinks.macOS(latest.tag_name)
-			href = downloadLinks.macOS('')
+			href = latestLinks.macOS()
 		} else if (isWindows) {
-			// href = downloadLinks.windows(latest.tag_name)
-			href = downloadLinks.windows('')
+			href = latestLinks.windows()
 		} else if (isLinux) {
-			// href = downloadLinks.linux(latest.tag_name)
-			href = downloadLinks.linux('')
+			href = latestLinks.linux()
 		}
 	})
 </script>
