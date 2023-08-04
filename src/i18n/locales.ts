@@ -2,7 +2,7 @@ import en_US from './locales/en-US'
 import fr_FR from './locales/fr-FR'
 
 export const languages = {
-	'en-US': 'English',
+	'en-US': 'English (US)',
 	'fr-FR': 'Français'
 }
 

@@ -1,13 +1,13 @@
 export default {
 	/** meta */
-	'meta.title': 'Waterfox, Free Web Browser',
+	'meta.title': 'Waterfox - The free, open and private browser',
 	'meta.description': 'Waterfox is a popular open source web browser.',
 
 	/** RSS */
 	'rss.blog.title': 'Waterfox Blog',
-	'rss.blog.description': 'Waterfox, Free Web Browser Blog',
+	'rss.blog.description': 'The Waterfox blog, news and updates.',
 	'rss.releases.title': 'Waterfox Releases',
-	'rss.releases.description': 'Waterfox, Free Web Browser Releases',
+	'rss.releases.description': 'The latest Waterfox releases.',
 
 	/** alt images tags */
 	'alt.logo': (name: string) => `${name} logo`,
@@ -20,7 +20,7 @@ export default {
 	'browser.import': 'Import bookmarks..',
 	'browser.search': 'Search the web',
 	'browser.cta':
-		'Make Waterfox<span class="max-lg:hidden">&nbsp;</span><br class="lg:hidden" />Your Own!',
+		'Make Waterfox<span class="max-lg:hidden">&nbsp;</span><br class="lg:hidden" />Yours!',
 
 	/** content */
 	'content.onthispage': 'On this page',
@@ -51,18 +51,18 @@ export default {
 	'cta.download': 'Download Waterfox',
 
 	/** footer **/
-	'footer.madewith': 'Made with <span>♥</span> love in Venice, CA & Guelph, ON',
-	'footer.copyright': `&copy; ${new Date().getFullYear()} System1 LLC.<span class="lg:hidden">&nbsp;</span><br class="max-lg:hidden" />All Rights Reserved.`,
+	'footer.madewith': 'Made in London, UK 🇬🇧.',
+	'footer.copyright': `&copy; ${new Date().getFullYear()} BrowserWorks Ltd.<span class="lg:hidden">&nbsp;</span><br class="max-lg:hidden" />Independent and grassroots.`,
 
 	/** home **/
-	'home.title': 'Safe, Fast, and Private',
-	'home.subtitle': 'Get speed, safety, and privacy every time you browse.',
+	'home.title': 'Fast and Private',
+	'home.subtitle': 'Get privacy out of the box with Waterfox.',
 
 	/** features section **/
 	// trackers
-	'feature.trackers.title': 'Block Online Trackers',
+	'feature.trackers.title': 'No More Spying',
 	'feature.trackers.content':
-		"Waterfox's Enhanced Tracking Protection safeguards your privacy while you surf. It blocks trackers from following you around  and collecting data about your browsing habits and interests without interfering with site operation. It also protects you from malicious programs like malware that drain your battery.",
+		"Waterfox comes with built in tracking protection by default. Waterfox also offers Oblivious DNS, which makes it harder for your ISP to track your website connections, keeping what you do online private.",
 	// privatemode
 	'feature.privatemode.title': 'Private Tabs with Private Search',
 	'feature.privatemode.content':
@@ -70,7 +70,7 @@ export default {
 	// containertabs
 	'feature.containertabs.title': 'Stay Organized With Container Tabs',
 	'feature.containertabs.content':
-		'You can launch a private tab to browse privately and anonymously anywhere in your browser without the need to open a Private Window first.',
+		'Container tabs help you organize your browsing by separating your work, shopping or personal browsing. You can even assign a different color to each container tab to help you identify them.',
 	// switching
 	'feature.switching.title': 'Switching is Easy',
 	'feature.switching.content':
@@ -78,7 +78,7 @@ export default {
 	// data
 	'feature.data.title': "We don't collect your data",
 	'feature.data.content':
-		"Unlike other browsers What you do within your browser stays with you. We don't need to know. Telemetry is disabled within the browser - and only limited data collection is used to keep your browser up to date and secure. Read more in the Privacy Policy.",
+		"Unlike other browsers What you do within your browser stays with you. We don't need to know. Telemetry is disabled within the browser - and only limited data collection is used to keep your browser up to date and secure.",
 
 	/** comparison table **/
 	'comparison.title': 'Privacy Comes Standard',
@@ -104,7 +104,7 @@ export default {
 	/** download section (surf) **/
 	'surf.title': 'Stop Worrying, and Safely Surf the Web!',
 	'surf.content':
-		'Call out the creepy stuff/private tabs - maybe through a graphic or high contrast section?',
+		'Surf knowing that your data is safe, your privacy is respected, and you are in control. Other browsers have you opt-in to privacy settings, but Waterfox has them on by default.',
 
 	/** featured on section **/
 	'featured.title': 'Featured On',
