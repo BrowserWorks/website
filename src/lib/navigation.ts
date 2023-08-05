@@ -35,7 +35,7 @@ type GetNavParams = {
 
 export async function createNavigation(opts?: NavOptions) {
 	const navOptions = {
-		lang: opts?.lang ?? defaultLang,
+		lang: (opts?.lang ?? defaultLang) as keyof typeof locales,
 		isActive: typeof opts?.isActive === 'function' ? opts?.isActive : () => false,
 		ignoreChilds: typeof opts?.ignoreChilds === 'function' ? opts?.ignoreChilds : () => false
 	}
