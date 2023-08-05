@@ -1,6 +1,6 @@
 ---
 import Page from '~/components/ContentPage.svelte'
-import type { locales } from '~/i18n/locales'
+import { defaultLang, type locales } from '~/i18n/locales'
 import Layout from '~/layouts/Content.astro'
 import { getCollectionEntries } from '~/lib/collection'
 
@@ -8,7 +8,10 @@ const { collection: collectionParam, lang } = Astro.params
 
 const collection = collectionParam as 'docs' | 'download' | 'support'
 
-const pages = await getCollectionEntries(collection, lang as keyof typeof locales)
+let pages = await getCollectionEntries(collection, lang as keyof typeof locales)
+
+if (!pages.length && lang?.toLowerCase() !== defaultLang?.toLowerCase())
+	pages = await getCollectionEntries(collection, defaultLang as keyof typeof locales)
 
 if (!pages.length) return Astro.redirect(`/${lang}/`)
 ---

@@ -1,3 +1,8 @@
 ---
-return Astro.redirect('/en-US/docs/about-waterfox/')
+import type { locales } from '~/i18n/locales'
+
+const { lang: detectedLang } = Astro.params
+const lang = detectedLang as keyof typeof locales
+
+return Astro.redirect(`/${lang}/docs/about-waterfox/`)
 ---

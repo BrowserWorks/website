@@ -1,13 +1,17 @@
 ---
 import { getEntryBySlug } from 'astro:content'
 import Post from '~/components/ContentPost.svelte'
-import type { locales } from '~/i18n/locales'
+import { defaultLang, type locales } from '~/i18n/locales'
 import Layout from '~/layouts/Content.astro'
 
 const { lang: detectedLang, slug } = Astro.params
 const lang = detectedLang as keyof typeof locales
 
-const post = await getEntryBySlug('blog', [lang, slug].join('/'))
+let post = await getEntryBySlug('blog', [lang?.toLowerCase(), slug].join('/'))
+
+if (!post && lang?.toLowerCase() !== defaultLang?.toLowerCase()) {
+	post = await getEntryBySlug('blog', [defaultLang?.toLowerCase(), slug].join('/'))
+}
 
 if (!post) {
 	return Astro.redirect(`/${lang}/`)
