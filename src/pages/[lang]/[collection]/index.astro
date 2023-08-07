@@ -1,10 +1,15 @@
 ---
 import Page from '~/components/ContentPage.svelte'
-import { defaultLang, type locales } from '~/i18n/locales'
+import { defaultLang, languages, type locales } from '~/i18n/locales'
 import Layout from '~/layouts/Content.astro'
 import { getCollectionEntries } from '~/lib/collection'
 
 const { collection: collectionParam, lang } = Astro.params
+
+if (!lang || (!languages?.[lang] && lang !== defaultLang)) {
+	const redirectUrl = [defaultLang, lang, collectionParam]
+	return Astro.redirect(`/${redirectUrl.join('/')}/`)
+}
 
 const collection = collectionParam as 'docs' | 'download' | 'support'
 

@@ -1,4 +1,4 @@
-import { defaultLang, locales } from '~/i18n/locales'
+import { defaultLang, languages, locales } from '~/i18n/locales'
 
 export type Key = keyof (typeof locales)[typeof defaultLang]
 
@@ -19,4 +19,12 @@ export function useTranslations(lang: keyof typeof locales) {
 		const k = locales?.[lang]?.[key] || locales?.[defaultLang]?.[key] || key
 		return typeof k === 'function' ? (k as Function)(...args) : k
 	}
+}
+
+export function unlocalizeUrl(url: URL | string) {
+	if (!url) return url
+	const parts = typeof url === 'string' ? url.split('/') : url.pathname.split('/')
+	return `/${[...parts.filter(Boolean).filter((p) => !Object.keys(languages).includes(p))].join(
+		'/'
+	)}/`
 }

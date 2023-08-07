@@ -8,7 +8,7 @@ import FeatureCard from '~/components/home/FeatureCard.svelte'
 import Lottie from '~/components/home/Lottie.svelte'
 import Section from '~/components/home/Section.svelte'
 import Water from '~/components/home/Water.svelte'
-import type { locales } from '~/i18n/locales'
+import { defaultLang, languages, type locales } from '~/i18n/locales'
 import { useTranslations, type Key } from '~/i18n/utils'
 import Layout from '~/layouts/Base.astro'
 import { getCollectionEntries } from '~/lib/collection'
@@ -16,6 +16,11 @@ import { getCollectionEntries } from '~/lib/collection'
 const { lang: detectedLang } = Astro.params
 const lang = detectedLang as keyof typeof locales
 const t = useTranslations(lang as any)
+
+if (!lang || (!languages?.[lang] && lang !== defaultLang)) {
+	const redirectUrl = [defaultLang, lang]
+	return Astro.redirect(`/${redirectUrl.join('/')}/`)
+}
 
 const faq =
 	(await getCollectionEntries('docs', lang)).find((item) => item.data?.id === 'faq')

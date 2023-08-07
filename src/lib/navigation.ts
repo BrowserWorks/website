@@ -81,18 +81,25 @@ async function getContentNavigationItems({ isActive, lang, useContentNav }: GetN
 			const navItem = navigation[idx]
 
 			if (navItem?.content) {
-				;(await getCollection(navItem.content as any)).forEach((page) => {
+				const pages = await getCollection(navItem.content as any)
+
+				pages.forEach((page) => {
 					const attrs = parseCollectionEntry(page, navItem.content)
 					const parentKey = attrs?.parent ? attrs.parent : navItem.key
+					const pageIndex = contentNavigation.findIndex((p) => p.key === attrs.key)
+					const pageData = {
+						...page,
+						...attrs,
+						isActive: isActive(attrs),
+						parentKey,
+						grandParentKey: navItem.key
+					}
 
-					if (attrs.lang === lang)
-						contentNavigation.push({
-							...page,
-							...attrs,
-							isActive: isActive(attrs),
-							parentKey,
-							grandParentKey: navItem.key
-						})
+					if ((attrs.lang === lang || attrs.lang === defaultLang) && pageIndex === -1) {
+						contentNavigation.push(pageData)
+					} else if (attrs.lang === lang && pageIndex > -1) {
+						contentNavigation[pageIndex] = pageData
+					}
 				})
 			}
 		}
@@ -100,14 +107,14 @@ async function getContentNavigationItems({ isActive, lang, useContentNav }: GetN
 		;(await getCollection(useContentNav as any)).forEach((page) => {
 			const attrs = parseCollectionEntry(page, useContentNav)
 			const parentKey = attrs?.parent
+			const pageIndex = contentNavigation.findIndex((p) => p.key === attrs.key)
+			const pageData = { ...page, ...attrs, isActive: isActive(attrs), parentKey }
 
-			if (attrs.lang === lang)
-				contentNavigation.push({
-					...page,
-					...attrs,
-					isActive: isActive(attrs),
-					parentKey
-				})
+			if ((attrs.lang === lang || attrs.lang === defaultLang) && pageIndex === -1) {
+				contentNavigation.push(pageData)
+			} else if (attrs.lang === lang && pageIndex > -1) {
+				contentNavigation[pageIndex] = pageData
+			}
 		})
 	}
 
@@ -149,6 +156,7 @@ function createNavigationTree(
 					label: t(`content.${item.parentKey}` as Key),
 					key: item.parentKey,
 					href: urlParts.slice(0, urlParts.length - 2).join('/') + '/',
+					lang: item.lang,
 					childs: []
 				}
 

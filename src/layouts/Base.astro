@@ -10,7 +10,7 @@ import Navigation from '~/components/Navigation.svelte'
 import Search from '~/components/Search.svelte'
 import { footerNavigation, policiesNavigation } from '~/config'
 import type { locales } from '~/i18n/locales'
-import { localizeUrl, useTranslations, type Key } from '~/i18n/utils'
+import { localizeUrl, unlocalizeUrl, useTranslations, type Key } from '~/i18n/utils'
 import { createNavigation } from '~/lib/navigation'
 
 export interface Props {
@@ -30,7 +30,7 @@ const navItems = (await createNavigation({
 	lang,
 	useContentNav: true,
 	useNav: true,
-	isActive: (item) => Astro.url.pathname === item.href,
+	isActive: (item) => unlocalizeUrl(Astro.url.pathname) === unlocalizeUrl(item.href),
 	ignoreChilds: (item) => item.key === 'releases'
 })) as any
 
@@ -108,9 +108,9 @@ const jsonLDs: any[] =
 				class="grid w-full grid-cols-[4rem_1fr_4rem] px-4 py-8 lg:grid-cols-[1fr_1fr_1fr] lg:px-10 lg:py-10 xl:z-10"
 			>
 				<!-- Nav -->
-				<Navbar client:idle>
+				<Navbar client:load>
 					<Navigation
-						client:idle
+						client:load
 						items={navItems}
 						theme={bgColor === 'crystal' ? 'dark' : 'light'}
 						{lang}

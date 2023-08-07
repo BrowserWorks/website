@@ -16,7 +16,7 @@ let pages = orderBy(
 )
 
 if (!pages.length && lang?.toLowerCase() !== defaultLang?.toLowerCase()) {
-	orderBy(
+	pages = orderBy(
 		(await getCollectionEntries('docs', defaultLang as keyof typeof locales)).filter(
 			(page) => page.parent === 'releases'
 		),
@@ -30,8 +30,13 @@ if (!pages.length) return Astro.redirect(`/${lang}/docs/`)
 
 <Layout collection="docs">
 	{
-		pages.map(({ data, href }) => (
-			<Page title={data.title} subtitle={data?.subtitle} titleLink={href}>
+		pages.map(({ data, href, Content }) => (
+			<Page
+				title={data.title}
+				subtitle={data?.subtitle}
+				titleLink={href?.replace(defaultLang, lang)}
+			>
+				<Content />
 			</Page>
 		))
 	}

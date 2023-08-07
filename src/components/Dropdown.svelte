@@ -22,7 +22,7 @@
 
 	{#if expanded}
 		<div
-			class="absolute left-1/2 mt-2 w-32 rounded-md bg-frost p-4 max-xl:-translate-x-1/2 xl:left-0 xl:bg-white xl:shadow-lg"
+			class="min-w-32 absolute left-1/2 mt-2 rounded-md bg-frost p-4 max-xl:-translate-x-1/2 xl:left-0 xl:bg-white xl:shadow-lg"
 		>
 			<slot name="items" />
 		</div>

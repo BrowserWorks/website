@@ -11,6 +11,7 @@
 		type?: 'link' | 'language-picker'
 		key?: string
 		href?: string
+		lang?: string
 		label?: string
 		slug?: string
 		isActive?: boolean
@@ -124,7 +125,7 @@
 						</section>
 					{/if}
 				{:else}
-					<Dropdown class="flex items-center gap-2">
+					<Dropdown class="flex items-center gap-2 whitespace-nowrap">
 						{lang && languages?.[lang]}
 
 						<Icon
@@ -139,7 +140,7 @@
 							<ul class="flex flex-col gap-2">
 								{#each langSwitcher.filter(([locale]) => locale !== lang) as [locale, label]}
 									<li>
-										<a href={localizeUrl(pageUrl, locale)} rel="prefetch">
+										<a href={localizeUrl(pageUrl, locale)} class="whitespace-nowrap" rel="prefetch">
 											{label}
 										</a>
 									</li>
@@ -184,8 +185,10 @@
 					</section>
 				{/if}
 			{:else if item?.type !== 'language-picker'}
+				{@const isFallbackLangItem = lang !== defaultLang && item?.lang === defaultLang}
+				{@const href = isFallbackLangItem ? item?.href?.replace(defaultLang, lang) : item?.href}
 				<a
-					href={item?.href}
+					{href}
 					class={twMerge(
 						'text-pretty hover:text-deepblue',
 						item?.isActive && 'text-deepblue',
@@ -195,6 +198,9 @@
 					)}
 				>
 					{item?.label}
+					{#if isFallbackLangItem}
+						<sup class="ml-0.5">{defaultLang.split('-')?.[0]}</sup>
+					{/if}
 				</a>
 			{/if}
 		</li>

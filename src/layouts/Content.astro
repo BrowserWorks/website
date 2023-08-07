@@ -2,7 +2,7 @@
 import { twMerge } from 'tailwind-merge'
 import Navigation from '~/components/Navigation.svelte'
 import type { locales } from '~/i18n/locales'
-import { localizeUrl, useTranslations } from '~/i18n/utils'
+import { localizeUrl, unlocalizeUrl, useTranslations } from '~/i18n/utils'
 import Base from '~/layouts/Base.astro'
 import { createNavigation } from '~/lib/navigation'
 
@@ -24,7 +24,7 @@ const navItems = (
 	await createNavigation({
 		lang,
 		useContentNav: collection,
-		isActive: (item) => activeSlug === item.slug,
+		isActive: (item) => unlocalizeUrl(Astro.url.pathname) === unlocalizeUrl(item.href),
 		ignoreChilds: (item) => item.key === 'releases'
 	})
 ).filter((item: any) => item.label !== 'Index')
@@ -52,6 +52,7 @@ const navItems = (
 						class="flex flex-col gap-4 text-base lg:text-sm"
 						template="sidebar"
 						items={navItems}
+						{lang}
 					/>
 				</div>
 			)
