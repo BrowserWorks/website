@@ -36,11 +36,17 @@
     .message {
         @apply px-4 py-0.5 rounded-xl border-l-8;
 
-        &.is-info {
+        &.message-note {
             @apply bg-azure/10 border-azure;
         }
-        &.is-important {
+        &.message-tip {
+            @apply bg-turquoise/10 border-turquoise;
+        }
+        &.message-caution {
             @apply bg-gold/10 border-gold;
+        }
+        &.message-danger {
+            @apply bg-red-400/10 border-red-400;
         }
     }
 

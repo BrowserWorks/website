@@ -2,8 +2,15 @@ import { h } from 'hastscript'
 import { visit } from 'unist-util-visit'
 
 const acceptableCalloutTypes = {
-	info: { cssClass: 'is-info', iconClass: 'info-circle' },
-	important: { cssClass: 'is-important', iconClass: 'exclamation-triangle' }
+	// defaults (note, tip, caution, danger)
+	note: { cssClass: 'message-note' },
+	tip: { cssClass: 'message-tip' },
+	caution: { cssClass: 'message-caution' },
+	danger: { cssClass: 'message-danger' },
+
+	// synonyms
+	info: { cssClass: 'message-note' },
+	important: { cssClass: 'message-caution' }
 }
 
 export function remarkAdmonitions() {
@@ -26,21 +33,6 @@ export function remarkAdmonitions() {
 				data.hName = tagName
 				data.hProperties = h(tagName, { class: `message ${boxInfo.cssClass}` }).properties
 
-				// Creating the icon.
-				const icon = h('i')
-				const iconData = icon.data || (icon.data = {})
-				iconData.hName = 'i'
-				iconData.hProperties = h('i', {
-					class: `far fa-${boxInfo.iconClass} md-callout-icon`
-				}).properties
-
-				// Creating the icon's column.
-				const iconWrapper = h('div')
-				const iconWrapperData = iconWrapper.data || (iconWrapper.data = {})
-				iconWrapperData.hName = 'div'
-				iconWrapperData.hProperties = h('div', { class: 'column is-narrow' }).properties
-				iconWrapper.children = [icon]
-
 				// Creating the content's column.
 				const contentColWrapper = h('div')
 				const contentColWrapperData = contentColWrapper.data || (contentColWrapper.data = {})
@@ -53,7 +45,7 @@ export function remarkAdmonitions() {
 				const columnsWrapperData = columnsWrapper.data || (columnsWrapper.data = {})
 				columnsWrapperData.hName = 'div'
 				columnsWrapperData.hProperties = h('div', { class: 'columns' }).properties
-				columnsWrapper.children = [iconWrapper, contentColWrapper]
+				columnsWrapper.children = [contentColWrapper]
 
 				// Creating the wrapper for the callout's content.
 				const contentWrapper = h('div')
