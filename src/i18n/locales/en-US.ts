@@ -2,6 +2,9 @@ export default {
 	/** meta */
 	'meta.title': 'Waterfox - The free, open and private browser',
 	'meta.description': 'Waterfox is a popular open source web browser.',
+	'blog.meta.title': 'Waterfox Blog',
+	'blog.meta.description': 'The Waterfox blog, news and updates.',
+	'releases.meta.title': 'Waterfox Release Notes',
 
 	/** RSS */
 	'rss.blog.title': 'Waterfox Blog',
@@ -55,7 +58,7 @@ export default {
 	'footer.copyright': `&copy; ${new Date().getFullYear()} BrowserWorks Ltd.<span class="lg:hidden">&nbsp;</span><br class="max-lg:hidden" />Independent and grassroots.`,
 
 	/** home **/
-	'home.title': 'Fast and Private',
+	'home.title': 'Fast and Private Web Browser',
 	'home.subtitle': 'Get privacy out of the box with Waterfox.',
 
 	/** features section **/

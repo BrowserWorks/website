@@ -1,5 +1,5 @@
 ---
 title: Waterfox Support Docs
-subtitle: Hello world!
-label: Index
+label: Support
+description: Support documentation for Waterfox.
 ---
