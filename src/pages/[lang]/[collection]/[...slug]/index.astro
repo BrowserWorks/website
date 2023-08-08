@@ -33,7 +33,13 @@ if (!page) return Astro.redirect(`/${lang}/`)
 const { Content, headings, remarkPluginFrontmatter } = await page.render()
 ---
 
-<Layout {collection} {headings} jsonLD={remarkPluginFrontmatter?.jsonLD}>
+<Layout
+	{collection}
+	{headings}
+	title={remarkPluginFrontmatter?.title}
+	description={remarkPluginFrontmatter?.description}
+	jsonLD={remarkPluginFrontmatter?.jsonLD}
+>
 	<Page title={page.data.title} subtitle={page.data?.subtitle}>
 		<Content />
 	</Page>

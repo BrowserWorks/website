@@ -26,7 +26,11 @@ const formattedDate = post.data.pubDate.toLocaleDateString(lang, { dateStyle: 'l
 const { Content, remarkPluginFrontmatter } = await post.render()
 ---
 
-<Layout collection="blog">
+<Layout
+	collection="blog"
+	title={remarkPluginFrontmatter?.title}
+	description={remarkPluginFrontmatter?.description}
+>
 	<Post
 		title={post.data.title}
 		pubDate={formattedDate}

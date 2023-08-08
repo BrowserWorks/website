@@ -9,12 +9,14 @@ import { createNavigation } from '~/lib/navigation'
 export interface Props {
 	collection: 'docs' | 'download' | 'support' | 'blog'
 	headings?: any[]
+	title?: string
+	description?: string
 	jsonLD?: any | any[]
 }
 
-const { slug: activeSlug, lang: detectedLang } = Astro.params
+const { lang: detectedLang } = Astro.params
 const lang = detectedLang as keyof typeof locales
-const { collection, headings: collectionHeadings, jsonLD } = Astro.props
+const { collection, headings: collectionHeadings, jsonLD, title, description } = Astro.props
 
 const t = useTranslations(lang as any)
 
@@ -30,7 +32,7 @@ const navItems = (
 ).filter((item: any) => item.label !== 'Index')
 ---
 
-<Base {jsonLD}>
+<Base {jsonLD} {title} {description}>
 	<div class="mx-auto my-6 flex max-w-7xl gap-20 px-6 lg:my-20">
 		{
 			navItems?.length > 0 && (

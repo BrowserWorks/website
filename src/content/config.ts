@@ -5,6 +5,7 @@ const blog = defineCollection({
 	schema: z.object({
 		id: z.string().optional(),
 		title: z.string(),
+		description: z.string().optional(),
 		author: z.string(),
 		authorTitle: z.string(),
 		authorUrl: z.string().optional(),
@@ -21,6 +22,7 @@ const docs = defineCollection({
 	schema: z.object({
 		id: z.string().optional(),
 		title: z.string(),
+		description: z.string().optional(),
 		subtitle: z.string().optional(),
 		label: z.string(),
 		jsonLD: z.any().optional(),
@@ -37,6 +39,7 @@ const support = defineCollection({
 	schema: z.object({
 		id: z.string().optional(),
 		title: z.string(),
+		description: z.string().optional(),
 		subtitle: z.string().optional(),
 		label: z.string(),
 		jsonLD: z.any().optional()
@@ -48,6 +51,7 @@ const download = defineCollection({
 	schema: z.object({
 		id: z.string().optional(),
 		title: z.string(),
+		description: z.string().optional(),
 		subtitle: z.string().optional(),
 		label: z.string(),
 		jsonLD: z.any().optional()
