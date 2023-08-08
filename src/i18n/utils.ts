@@ -14,9 +14,11 @@ export function localizeUrl(url: URL | string, lang: string) {
 	return `/${[lang, ...parts.filter(Boolean)].join('/')}/`
 }
 
-export function useTranslations(lang: keyof typeof locales) {
+export function useTranslations(lang: keyof typeof locales, opts?: { useKeyAsFallack?: boolean }) {
 	return function t(key: Key, ...args: string[]): string {
-		const k = locales?.[lang]?.[key] || locales?.[defaultLang]?.[key] || key
+		const v = locales?.[lang]?.[key] || locales?.[defaultLang]?.[key]
+		const f = opts?.useKeyAsFallack ? key : undefined
+		const k = v || f
 		return typeof k === 'function' ? (k as Function)(...args) : k
 	}
 }

@@ -1,11 +1,13 @@
 ---
 import Page from '~/components/ContentPage.svelte'
 import { defaultLang, type locales } from '~/i18n/locales'
+import { useTranslations, type Key } from '~/i18n/utils'
 import Layout from '~/layouts/Content.astro'
 import { getCollectionEntries } from '~/lib/collection'
 import { orderBy, parseSemVer } from '~/lib/orderBy'
 
-const { lang } = Astro.params
+const { lang: detectedLang } = Astro.params
+const lang = detectedLang as keyof typeof locales
 
 let pages = orderBy(
 	(await getCollectionEntries('docs', lang as keyof typeof locales)).filter(
@@ -26,9 +28,13 @@ if (!pages.length && lang?.toLowerCase() !== defaultLang?.toLowerCase()) {
 }
 
 if (!pages.length) return Astro.redirect(`/${lang}/docs/`)
+
+const t = useTranslations(lang, { useKeyAsFallack: false })
+const title = t('releases.meta.title' as Key)
+const description = t('releases.meta.description' as Key)
 ---
 
-<Layout collection="docs">
+<Layout {title} {description} collection="docs">
 	{
 		pages.map(({ data, href, Content }) => (
 			<Page

@@ -1,10 +1,12 @@
 ---
 import Page from '~/components/ContentPage.svelte'
 import { defaultLang, languages, type locales } from '~/i18n/locales'
+import { useTranslations, type Key } from '~/i18n/utils'
 import Layout from '~/layouts/Content.astro'
 import { getCollectionEntries } from '~/lib/collection'
 
-const { collection: collectionParam, lang } = Astro.params
+const { collection: collectionParam, lang: detectedLang } = Astro.params
+const lang = detectedLang as keyof typeof locales
 
 if (!lang || (!languages?.[lang] && lang !== defaultLang)) {
 	const redirectUrl = [defaultLang, lang, collectionParam]
@@ -19,18 +21,39 @@ if (!pages.length && lang?.toLowerCase() !== defaultLang?.toLowerCase())
 	pages = await getCollectionEntries(collection, defaultLang as keyof typeof locales)
 
 if (!pages.length) return Astro.redirect(`/${lang}/`)
+
+const firstPage = pages?.[0]
+const t = useTranslations(lang, { useKeyAsFallack: false })
+const title = t(`${collection}.meta.title` as Key)
+const description = t(`${collection}.meta.description` as Key)
 ---
 
-<Layout
-	{collection}
-	headings={pages.reduce((acc, curr) => [...acc, ...(curr?.headings || [])], [])}
-	jsonLD={pages.map((p) => p?.remarkPluginFrontmatter?.jsonLD)}
->
-	{
-		pages.map(({ data, Content }) => (
-			<Page title={data.title} subtitle={data?.subtitle}>
-				<Content />
+{
+	pages.length > 1 ? (
+		<Layout
+			{title}
+			{description}
+			{collection}
+			headings={pages.reduce((acc, curr) => [...acc, ...(curr?.headings || [])], [])}
+			jsonLD={pages.map((p) => p?.remarkPluginFrontmatter?.jsonLD)}
+		>
+			{pages.map(({ data, Content }) => (
+				<Page title={data.title} subtitle={data?.subtitle}>
+					<Content />
+				</Page>
+			))}
+		</Layout>
+	) : (
+		<Layout
+			{collection}
+			headings={firstPage?.headings}
+			title={firstPage?.remarkPluginFrontmatter?.title}
+			description={firstPage?.remarkPluginFrontmatter?.description}
+			jsonLD={firstPage?.remarkPluginFrontmatter?.jsonLD}
+		>
+			<Page title={firstPage?.data.title} subtitle={firstPage?.data?.subtitle}>
+				<firstPage.Content />
 			</Page>
-		))
-	}
-</Layout>
+		</Layout>
+	)
+}
