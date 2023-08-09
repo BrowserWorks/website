@@ -83,7 +83,7 @@
 				{#if !selection.stable}
 					<div>
 						<span class="rounded-lg bg-yellow-200 px-2 py-1 text-xs font-medium text-yellow-800">
-							{t('downloads.unstable')}
+							{t('downloads.prerelease')}
 						</span>
 					</div>
 				{:else if selection.label === latest?.label}
@@ -102,7 +102,7 @@
 				{#if !item.stable}
 					<div>
 						<span class="rounded-lg bg-yellow-200 px-2 py-1 text-xs font-medium text-yellow-800">
-							{t('downloads.unstable')}
+							{t('downloads.prerelease')}
 						</span>
 					</div>
 				{:else if item.label === latest?.label}
