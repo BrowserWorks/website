@@ -48,7 +48,6 @@
 		"@types/sanitize-html": "^2.9.0",
 		"glob": "^10.3.3",
 		"gray-matter": "^4.0.3",
-		"hash-wasm": "^4.9.0",
 		"prettier": "^2.8.8",
 		"prettier-plugin-astro": "^0.10.0",
 		"prettier-plugin-svelte": "^2.10.1",

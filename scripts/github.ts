@@ -1,7 +1,16 @@
-import { writeFile } from 'fs/promises'
-import { sha512 } from 'hash-wasm'
-import { join } from 'path'
-import { downloadLinks } from '../src/config'
+import { writeFile } from 'fs/promises';
+import { join } from 'path';
+import { downloadLinks } from '../src/config';
+
+async function readHash(url) {
+	try {
+	  const response = await fetch(url);
+	  const text = await response.text();
+	  return text;
+	} catch (error) {
+	  console.error(error);
+	}
+  }
 
 async function pull() {
 	try {
@@ -21,19 +30,19 @@ async function pull() {
 					id: 'windows',
 					label: 'Windows',
 					link: windows,
-					hash: await sha512(windows + '.sha512')
+					hash: await readHash(windows + '.sha512')
 				},
 				{
 					id: 'macos',
 					label: 'macOS',
 					link: macOS,
-					hash: await sha512(macOS + '.sha512')
+					hash: await readHash(macOS + '.sha512')
 				},
 				{
 					id: 'linux',
 					label: 'Linux',
 					link: linux,
-					hash: await sha512(linux + '.sha512')
+					hash: await readHash(linux + '.sha512')
 				}
 			]
 			// for (var k in release) {
