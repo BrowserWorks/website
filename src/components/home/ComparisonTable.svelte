@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { twMerge } from 'tailwind-merge'
+	import WaterfoxLogo from '~/assets/icons/browser/waterfox.svg'
 	import Icon from '~/components/Icon.svelte'
 
 	const browsers = {
@@ -38,14 +39,25 @@
 				<th scope="col">
 					<div class="flex h-full flex-col items-center justify-end gap-2 py-6">
 						<div class="flex items-center justify-center">
-							<img
-								src="/images/{browser.toLowerCase()}.png"
-								aria-hidden="true"
-								alt="{browser} browser icon"
-								class="w-[13vw] lg:w-[118px]"
-								width="236"
-								height="192"
-							/>
+							{#if browser == 'Waterfox'}
+								<img
+									src={WaterfoxLogo}
+									aria-hidden="true"
+									alt="{browser} browser icon"
+									class="w-[13vw] lg:w-[118px]"
+									width="236"
+									height="192"
+								/>
+							{:else}
+								<img
+									src="/images/{browser.toLowerCase()}.svg"
+									aria-hidden="true"
+									alt="{browser} browser icon"
+									class="w-[13vw] lg:w-[118px]"
+									width="236"
+									height="192"
+								/>
+							{/if}
 						</div>
 						<div class="font-montserrat text-xs font-bold md:text-base lg:text-lg">
 							{browser}
