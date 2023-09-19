@@ -98,7 +98,7 @@
 		<div
 			class="flex grow flex-col items-center justify-center gap-[40px] bg-[#F9F9FB] p-[40px] lg:min-h-[630px]"
 		>
-			<img src={ImgLogo} alt="Waterfox" width="128" height="86" />
+			<img src={ImgLogo.src} alt="Waterfox" width="128" height="86" />
 
 			<div
 				class="flex w-full max-w-[590px] items-center justify-center gap-[10px] rounded-[8px] bg-white p-[16px] shadow-md"

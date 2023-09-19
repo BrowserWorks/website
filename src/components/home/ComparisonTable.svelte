@@ -41,7 +41,7 @@
 						<div class="flex items-center justify-center">
 							{#if browser == 'Waterfox'}
 								<img
-									src={WaterfoxLogo}
+									src={WaterfoxLogo.src}
 									aria-hidden="true"
 									alt="{browser} browser icon"
 									class="w-[13vw] lg:w-[118px]"

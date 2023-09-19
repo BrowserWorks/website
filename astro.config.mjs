@@ -73,5 +73,10 @@ export default defineConfig({
 	],
 	schema: rssSchema,
 	output: 'server',
-	adapter: cloudflare()
+	adapter: cloudflare(),
+	image: {
+		service: {
+			entrypoint: 'astro/assets/services/noop'
+		}
+	}
 })
