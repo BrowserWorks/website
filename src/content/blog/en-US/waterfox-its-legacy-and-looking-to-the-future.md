@@ -4,7 +4,7 @@ pubDate: April 28 2018
 author: Alex Kontos
 authorTitle: Founder
 authorUrl: https://github.com/MrAlex94
-authorImageUrl: https://avatars.githubusercontent.com/u/4728920?v=4
+authorImageUrl: /images/alex.jpg
 ---
 
 The 27th of March 2018 marked 7 years since the first release of Waterfox, first posted on the [OCN](http://overclock.net/) forums. It has been quite a journey, not one I had envisioned myself taking.

@@ -4,7 +4,7 @@ pubDate: May 12 2015
 author: Alex Kontos
 authorTitle: Founder
 authorUrl: https://github.com/MrAlex94
-authorImageUrl: https://avatars.githubusercontent.com/u/4728920?v=4
+authorImageUrl: /images/alex.jpg
 ---
 
 Hello everyone! I’m the developer of Waterfox, Alex Kontos. 4 Years ago on the 27th of March I released the very first build of Waterfox for everyone to try out. It was posted over at the lovely community of Overclock.net and since then Waterfox has become known around the world.

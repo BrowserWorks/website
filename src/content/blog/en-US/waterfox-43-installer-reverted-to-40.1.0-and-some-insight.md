@@ -4,7 +4,7 @@ pubDate: January 9 2016
 author: Alex Kontos
 authorTitle: Founder
 authorUrl: https://github.com/MrAlex94
-authorImageUrl: https://avatars.githubusercontent.com/u/4728920?v=4
+authorImageUrl: /images/alex.jpg
 ---
 
 Waterfox 43 for Mac, Portable Edition and existing Waterfox/Firefox users unaffected. Just a delay on the installers until the bugs get fixed.

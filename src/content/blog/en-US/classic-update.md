@@ -4,7 +4,7 @@ pubDate: October 28 2021
 author: Alex Kontos
 authorTitle: Founder
 authorUrl: https://github.com/MrAlex94
-authorImageUrl: https://avatars.githubusercontent.com/u/4728920?v=4
+authorImageUrl: /images/alex.jpg
 ---
 
 Since Waterfox Classic and Waterfox Current (now G4) diverged, they have both have separate goals.

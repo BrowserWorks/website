@@ -4,7 +4,7 @@ pubDate: February 14 2020
 author: Alex Kontos
 authorTitle: Founder
 authorUrl: https://github.com/MrAlex94
-authorImageUrl: https://avatars.githubusercontent.com/u/4728920?v=4
+authorImageUrl: /images/alex.jpg
 ---
 
 Waterfox now has funding and a development team, so Waterfox can finally start to grow!

@@ -4,7 +4,7 @@ pubDate: March 27 2020
 author: Alex Kontos
 authorTitle: Founder
 authorUrl: https://github.com/MrAlex94
-authorImageUrl: https://avatars.githubusercontent.com/u/4728920?v=4
+authorImageUrl: /images/alex.jpg
 ---
 
 Waterfox is now entering its tenth year of service. A big thank you to everyone from myself for the support over the years and a shout out to all the code contributors over the years as well!

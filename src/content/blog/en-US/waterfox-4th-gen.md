@@ -4,7 +4,7 @@ pubDate: October 19 2021
 author: Alex Kontos
 authorTitle: Founder
 authorUrl: https://github.com/MrAlex94
-authorImageUrl: https://avatars.githubusercontent.com/u/4728920?v=4
+authorImageUrl: /images/alex.jpg
 ---
 
 View Release Notes for [G4.0.0](/en/docs/releases/g400)
