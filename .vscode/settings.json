@@ -1,0 +1,48 @@
+{
+	// peacock
+	"workbench.colorCustomizations": {
+		"activityBar.activeBackground": "#6893f0",
+		"activityBar.background": "#6893f0",
+		"activityBar.foreground": "#15202b",
+		"activityBar.inactiveForeground": "#15202b99",
+		"activityBarBadge.background": "#ae1143",
+		"activityBarBadge.foreground": "#e7e7e7",
+		"commandCenter.border": "#e7e7e799",
+		"sash.hoverBorder": "#6893f0",
+		"statusBar.background": "#3a72eb",
+		"statusBar.foreground": "#e7e7e7",
+		"statusBarItem.hoverBackground": "#6893f0",
+		"statusBarItem.remoteBackground": "#3a72eb",
+		"statusBarItem.remoteForeground": "#e7e7e7",
+		"titleBar.activeBackground": "#3a72eb",
+		"titleBar.activeForeground": "#e7e7e7",
+		"titleBar.inactiveBackground": "#3a72eb99",
+		"titleBar.inactiveForeground": "#e7e7e799"
+	},
+	// astro
+	"files.associations": {
+		"*.mdx": "markdown"
+	},
+	"css.lint.unknownAtRules": "ignore",
+	"scss.lint.unknownAtRules": "ignore",
+	"eslint.validate": [
+		"astro"
+	],
+	"[astro]": {
+		"editor.defaultFormatter": "astro-build.astro-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"prettier.documentSelectors": [
+		"**/*.astro",
+		"**/*.ts"
+	],
+	"editor.formatOnSave": true,
+	"prettier.enable": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.fixAll.prettier": true,
+		"source.organizeImports": true
+	}
+}
