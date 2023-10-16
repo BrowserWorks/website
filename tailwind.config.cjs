@@ -1,13 +1,15 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const starlightPlugin = require('@astrojs/starlight-tailwind')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	plugins: [starlightPlugin()],
 	theme: {
 		extend: {
 			fontFamily: {
 				body: [...defaultTheme.fontFamily.sans],
-				montserrat: ['Montserrat', ...defaultTheme.fontFamily.sans],
+				montserrat: ['Montserrat', ...defaultTheme.fontFamily.sans]
 			},
 			colors: {
 				deepsea: '#053361',
@@ -62,6 +64,5 @@ module.exports = {
 				}
 			})
 		}
-	},
-	plugins: [require('@tailwindcss/typography')]
+	}
 }
