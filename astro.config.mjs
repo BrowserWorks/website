@@ -38,12 +38,12 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Policies',
-					autogenerate: { directory: '/docs/policies/' }
+					autogenerate: { directory: 'docs/policies' }
 				},
 				{
 					label: 'Releases',
 					collapsed: true,
-					autogenerate: { directory: '/docs/releases/' }
+					autogenerate: { directory: 'docs/releases' }
 				}
 			]
 		}),
