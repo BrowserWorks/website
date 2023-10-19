@@ -1,15 +1,10 @@
-<script lang="ts">
-	import { twMerge } from 'tailwind-merge'
+---
+import { twMerge } from 'tailwind-merge'
 
-	let className = ''
+const { class: className, id, color, width = '7xl', padding = 'normal' } = Astro.props
 
-	export let id: string | undefined = undefined
-	export let color: 'white' | 'deepsea' | 'frost' | 'crystal' = 'white'
-	export let width: '5xl' | '7xl' = '7xl'
-	export let padding: 'normal' | 'tight' = 'normal'
-
-	export { className as class }
-</script>
+export { className as class }
+---
 
 <section
 	{id}
