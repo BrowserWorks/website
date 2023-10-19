@@ -1,15 +1,15 @@
-<script lang="ts">
-	import { twMerge } from 'tailwind-merge'
-	import Bubbles from '~/components/home/Bubbles.svelte'
+---
+import { twMerge } from 'tailwind-merge'
+import Bubbles from '~/components/home/Bubbles.astro'
 
-	let className = ''
+const { class: className } = Astro.props
 
-	export { className as class }
+export { className as class }
 
-	export let bubbleQty: number | undefined = undefined
-	export let bubbleSize: 'small' | 'large' = 'small'
-	export let bgAlign: 'center' | 'top' = 'center'
-</script>
+export let bubbleQty: number | undefined = undefined
+export let bubbleSize: 'small' | 'large' = 'small'
+export let bgAlign: 'center' | 'top' = 'center'
+---
 
 <div class={twMerge('absolute left-0 top-0 h-full w-full overflow-hidden', className)}>
 	<div
@@ -17,7 +17,8 @@
 			"absolute left-1/2 top-1/2 h-[110%] w-[110%] -translate-x-1/2 -translate-y-1/2 bg-[url('/images/water.svg')] bg-cover bg-center lg:h-[120%] lg:w-[120%]",
 			bgAlign === 'center' ? 'bg-center' : 'bg-top'
 		)}
-	/>
+	>
+	</div>
 
 	<!-- Bubbles -->
 	<Bubbles

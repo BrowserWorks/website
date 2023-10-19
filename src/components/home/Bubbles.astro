@@ -1,0 +1,65 @@
+---
+import { twMerge } from 'tailwind-merge';
+const { class: className } = Astro.props;
+export let width = 621
+export let height = 1024
+export let qty: number = 13
+export let size: 'small' | 'large' = 'small'
+const smallBubbles = Math.round(qty * 0.7)
+const largeBubbles = Math.round(qty * 0.3)
+
+function random(min: number, max: number) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+const bubblesL = Array.from({length: largeBubbles}).map((_, i) => {
+  const d = size === 'small' ? random(18, 32) : random(48, 62)
+  return {
+    d,
+    animation: `up ${random(12, 20)}s ${random(100 * i, 250 * i * 2)}ms infinite`,
+    transform: `translateY(${height}px)`
+  }
+})
+
+const bubblesS = Array.from({length: smallBubbles}).map((_, i) => {
+  const d = size === 'small' ? random(18, 32) : random(48, 62)
+  return {
+    d,
+    animation: `up ${random(12, 20)}s ${random(100 * i, 250 * i * 2)}ms infinite`,
+    transform: `translateY(${height}px)`
+  }
+})
+
+export { bubblesL, bubblesS, className as class };
+---
+
+<div
+	class={twMerge('h-[10rem] w-full overflow-visible', className)}
+	style={`max-width:${width}px;`}
+>
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox={`0 0 ${width} ${height}`}
+		class="h-auto w-full overflow-visible"
+	>
+    <g class="overflow-visible" stroke-width="5">
+		{bubblesL.map((bubble) => (
+		  <g style=`animation: ${bubble.animation}; transform: ${bubble.transform};` class="opacity-0">
+			<g style=`animation: ${bubble.animation}; transform: translate(${random(0, width)}px, ${height}px);`>
+			  <circle cx={bubble.d} cy={bubble.d} r={bubble.d} class="scale-100 fill-none stroke-white" style=`animation: wobble ${random(6, 8)}s infinite ease-in-out;` />
+			</g>
+		  </g>
+		))}
+	  </g>
+	<g class="overflow-visible" stroke-width="2">
+		{bubblesS.map((bubble) => (
+			<g style=`animation: ${bubble.animation}; transform: ${bubble.transform};` class="opacity-0">
+				<g style=`animation: ${bubble.animation}; transform: translate(${random(0, width)}px, ${height}px);`>
+				<circle cx={bubble.d} cy={bubble.d} r={bubble.d} class="scale-100 fill-none stroke-white" style=`animation: wobble ${random(6, 8)}s infinite ease-in-out;` />
+				</g>
+			</g>
+			))}
+		</g>
+	</g>
+	</svg>
+</div>
