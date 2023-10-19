@@ -1,0 +1,27 @@
+---
+import Button from '~/components/Button.svelte'
+const href = '/downloads'
+---
+
+<Button {href}>Download</Button>
+
+<!-- The script runs on the client side, so we need to replace the value of the element -->
+<script>
+	import { UAParser } from 'ua-parser-js'
+	import { latestLinks } from '~/config'
+
+	const parser = UAParser(navigator.userAgent)
+	const os = parser.os.name.toLowerCase()
+	const isMacOS = ['macos'].includes(os)
+	const isWindows = ['windows'].includes(os)
+	const isLinux = ['ubuntu', 'linux', 'unix', 'gnu', 'fedora'].includes(os)
+
+	// https://faisalman.github.io/ua-parser-js-docs/v2/api/ua-parser-js/get-os.html
+	if (isMacOS) {
+		document.getElementById('download')?.setAttribute('href', latestLinks.macOS())
+	} else if (isWindows) {
+		document.getElementById('download')?.setAttribute('href', latestLinks.windows())
+	} else if (isLinux) {
+		document.getElementById('download')?.setAttribute('href', latestLinks.linux())
+	}
+</script>

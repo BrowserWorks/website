@@ -1,6 +1,6 @@
 ---
 import Layout from '~/components/Base.astro'
-import DownloadButton from '~/components/DownloadButton.svelte'
+import DownloadButton from '~/components/DownloadButton.astro'
 import Icon from '~/components/Icon.svelte'
 import Browser from '~/components/home/BrowserUI.astro'
 import ComparisonTable from '~/components/home/ComparisonTable.svelte'
@@ -26,7 +26,7 @@ import { strings, type Key } from '~/strings'
 				{strings[`home.title`]}
 			</h1>
 			<p class="text-balance font-montserrat text-lg font-normal">{strings[`home.subtitle`]}</p>
-			<DownloadButton client:idle />
+			<DownloadButton />
 		</div>
 
 		<!-- Browser View -->
@@ -61,7 +61,7 @@ import { strings, type Key } from '~/strings'
 			}
 		</div>
 
-		<DownloadButton client:idle />
+		<DownloadButton />
 	</Section>
 
 	<Section color="deepsea">
@@ -169,7 +169,7 @@ import { strings, type Key } from '~/strings'
 			</h2>
 			<div class="flex flex-col items-center gap-8 lg:items-start">
 				<p class="text-balance text-lg" set:html={strings[`surf.content`]} />
-				<DownloadButton client:idle />
+				<DownloadButton />
 			</div>
 		</div>
 	</Section>
@@ -240,7 +240,7 @@ import { strings, type Key } from '~/strings'
 				class="font-montserrat text-4xl font-bold leading-tight lg:text-5xl"
 				set:html={strings[`splash.title`]}
 			/>
-			<DownloadButton client:idle />
+			<DownloadButton />
 		</div>
 	</Section>
 </Layout>
