@@ -37,6 +37,10 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
+					label: 'Blog',
+					autogenerate: { directory: 'blog' }
+				},
+				{
 					label: 'Policies',
 					autogenerate: { directory: 'docs/policies' }
 				},

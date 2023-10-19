@@ -5,6 +5,7 @@ import Sidebar from '@astrojs/starlight/components/Sidebar.astro'
 import type { Props } from '@astrojs/starlight/props'
 
 import DownloadsPage from './DownloadsPage.astro'
+import Footer from './Footer.astro'
 import Home from './Home.astro'
 
 // Check if we are on the hompage
@@ -21,10 +22,13 @@ const isDownloads = Astro.props.slug === 'downloads'
 	) : isDownloads ? (
 		<DownloadsPage {...Astro.props} />
 	) : (
-		<PageFrame {...Astro.props}>
-			<Header slot="header" {...Astro.props} />
-			<Sidebar slot="sidebar" {...Astro.props} />
-			<slot />
-		</PageFrame>
+		<>
+			<PageFrame {...Astro.props}>
+				<Header slot="header" {...Astro.props} />
+				<Sidebar slot="sidebar" {...Astro.props} />
+				<slot />
+			</PageFrame>
+			<Footer class="relative z-10" />
+		</>
 	)
 }

@@ -2,11 +2,8 @@
 import Header from '@astrojs/starlight/components/Header.astro'
 import { twMerge } from 'tailwind-merge'
 import '~/assets/global.scss'
-import ImgWaterfox from '~/assets/waterfox-icon.svg'
-import Icon from '~/components/Icon.svelte'
-import { footerNavigation, policiesNavigation } from '~/config'
 import '~/fonts/fonts.css'
-import { strings, type Key } from '~/strings'
+import Footer from './Footer.astro'
 
 const { bgColor } = Astro.props
 ---
@@ -31,71 +28,4 @@ const { bgColor } = Astro.props
 	<slot />
 </main>
 
-<!-- Footer -->
-<footer class="tailwind-preflight bg-deepsea px-6 text-white md:px-12">
-	<div class="mx-auto flex w-full max-w-7xl flex-col gap-8 pb-14 pt-16 lg:pb-16 lg:pt-24">
-		<div class="flex flex-col gap-10 max-lg:items-center lg:flex-row lg:gap-12">
-			<div>
-				<img src={ImgWaterfox.src} width="92" height="65" alt={strings[`alt.logo` as Key]} />
-			</div>
-			<nav class="flex grow flex-col gap-4 max-lg:items-center lg:gap-6">
-				<ul class="flex items-center text-base">
-					{
-						footerNavigation.map(({ href, key }, index) => (
-							<li
-								class={twMerge(
-									'font-semibold',
-									index < footerNavigation.length - 1 &&
-										"after:relative after:px-6 after:content-['|']"
-								)}
-							>
-								<a
-									href={href.startsWith('http') ? href : href}
-									rel={href.startsWith('http') ? 'noopener nofollow' : 'prefetch'}
-									target={href.startsWith('http') ? '_blank' : '_self'}
-									class="hover:text-aqua"
-								>
-									{strings[key as Key]}
-								</a>
-							</li>
-						))
-					}
-				</ul>
-				<ul class="flex items-center gap-x-6 text-sm">
-					{
-						policiesNavigation.map(({ href, key }, index) => (
-							<li>
-								<a
-									href={href.startsWith('http') ? href : href}
-									rel={href.startsWith('http') ? 'noopener nofollow' : 'prefetch'}
-									target={href.startsWith('http') ? '_blank' : '_self'}
-									class="hover:text-aqua"
-								>
-									{strings[key as Key]}
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</nav>
-			<div class="flex flex-row gap-4">
-				<a
-					href="https://twitter.com/Waterfoxproject"
-					rel="noopener nofollow"
-					target="_blank"
-					class="flex hover:text-aqua"
-				>
-					<Icon name="twitter" class="h-[21px] w-[21px]" />
-					<span class="absolute left-[-10000px] top-auto h-[1px] w-[1px] overflow-hidden">
-						{strings[`nav.twitter`]}
-					</span>
-				</a>
-			</div>
-		</div>
-		<div class="h-[2px] w-full bg-white max-lg:hidden"></div>
-		<div class="grid text-center text-sm text-aqua lg:grid-cols-2">
-			<div class="lg:text-left [&_span]:text-red-400" set:html={strings[`footer.madewith`]} />
-			<div class="lg:text-right" set:html={strings[`footer.copyright`]} />
-		</div>
-	</div>
-</footer>
+<Footer />
