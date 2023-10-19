@@ -23,7 +23,7 @@ export default defineConfig({
 				MarkdownContent: 'starlight-blog/overrides/MarkdownContent.astro',
 				PageFrame: '~/components/CustomPageFrame.astro',
 				Sidebar: 'starlight-blog/overrides/Sidebar.astro',
-				ThemeSelect: 'starlight-blog/overrides/ThemeSelect.astro'
+				ThemeSelect: '~/components/NavBar.astro'
 			},
 			title: 'Waterfox',
 			logo: {
@@ -32,7 +32,7 @@ export default defineConfig({
 			},
 			social: {
 				github: 'https://github.com/WaterfoxCo/Waterfox',
-				mastodon: 'https://mastodon.social/home',
+				mastodon: 'https://mastodon.social/@Waterfox',
 				twitter: 'https://twitter.com/Waterfoxproject'
 			},
 			sidebar: [
