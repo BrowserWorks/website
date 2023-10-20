@@ -35,7 +35,7 @@
 	)}
 >
 	<CardThreeD
-		class="rounded-[1.5rem] border-[1px] border-transparent bg-white shadow-lg max-lg:border-gray-100 md:hover:border-gray-100 md:hover:shadow-2xl"
+		class="rounded-[1.5rem] border-[1px] border-transparent bg-white dark:bg-slate-800 shadow-lg max-lg:border-gray-100 md:hover:border-gray-100 md:hover:shadow-2xl"
 		on:mouseenter={onMouseEnter}
 		on:mouseleave={onMouseLeave}
 		disabled={isMobile}

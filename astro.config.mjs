@@ -29,7 +29,8 @@ export default defineConfig({
 			title: 'Waterfox',
 			logo: {
 				replacesTitle: true,
-				src: '~/assets/waterfox-logo.svg'
+				light: '~/assets/waterfox-logo.svg',
+				dark: '~/assets/waterfox-logo-dark.svg'
 			},
 			social: {
 				github: 'https://github.com/WaterfoxCo/Waterfox',

@@ -49,7 +49,7 @@
     }
 
     .markdown {
-        @apply prose font-body font-light prose-deepsea flex max-w-[72ch] flex-col prose-h2:mt-[1.8em] prose-h2:mb-[0.7em] prose-h2:text-2xl lg:prose-h2:text-3xl prose-h3:text-xl lg:prose-h3:text-2xl prose-hr:border-mist prose-hr:border-t-2 prose-headings:font-montserrat prose-pre:rounded-2xl;
+        @apply prose font-body font-light dark:prose-invert flex max-w-[72ch] flex-col prose-h2:mt-[1.8em] prose-h2:mb-[0.7em] prose-h2:text-2xl lg:prose-h2:text-3xl prose-h3:text-xl lg:prose-h3:text-2xl prose-hr:border-mist prose-hr:border-t-2 prose-headings:font-montserrat prose-pre:rounded-2xl;
 
         & :not(pre) > code {
             @apply rounded-md bg-frost/20 px-2 py-1 font-normal border-[1px] border-indigo/80 before:hidden after:hidden lg:whitespace-nowrap;

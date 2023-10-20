@@ -20,7 +20,7 @@
 	rel={href && href?.startsWith('http') ? 'noopener nofollow' : href ? 'prefetch' : undefined}
 	target={href && href?.startsWith('http') ? '_blank' : '_self'}
 	class={twMerge(
-		'whitespace-nowrap rounded-full bg-gold px-7 py-4 font-montserrat text-lg font-semibold no-underline transition-all hover:scale-105 hover:bg-sand lg:text-xl',
+		'whitespace-nowrap rounded-full bg-gold px-7 py-4 font-montserrat text-lg dark:text-deepsea font-semibold no-underline transition-all hover:scale-105 hover:bg-sand lg:text-xl',
 		className
 	)}
 	{...$$restProps}

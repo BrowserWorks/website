@@ -60,6 +60,10 @@
 <div class="relative flex w-full flex-col gap-8">
 	<div class="relative flex w-full max-w-[24rem] items-center lg:ml-2">
 		<Select
+			--background="var(--sl-color-bg)"
+			--list-background="var(--sl-color-bg)"
+			--item-hover-bg="var(--sl-color-bg-accent)"
+			--item-hover-color="var(--sl-color-bg)"
 			{items}
 			bind:value={selected}
 			bind:listOpen
@@ -111,7 +115,7 @@
 	</div>
 
 	<div
-		class="flex w-full flex-col gap-3 rounded-[1.5rem] border-[1px] border-indigo/5 px-8 py-6 shadow-lg lg:flex-row"
+		class="flex w-full flex-col gap-3 rounded-[1.5rem] border-[1px] border-indigo/80 bg-frost/20 px-8 py-6 shadow-lg lg:flex-row"
 	>
 		<div class="flex grow flex-col">
 			<span class="text-sm">Date</span>

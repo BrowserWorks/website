@@ -10,9 +10,9 @@ const { title, subtitle } = Astro.props.entry.data
 	<Page {title} {subtitle}>
 		<div class={twMerge('mb-12 flex w-full grow flex-col gap-12 lg:mb-20 lg:flex')}>
 			<Downloads client:idle>
-				<span slot="beforeDownloads"><h2>Links</h2></span>
+				<span slot="beforeDownloads"><h2 class="text-[var(--sl-color-text)]">Links</h2></span>
 			</Downloads>
-			<h2>Minimum System Requirements</h2>
+			<h2 class="text-[var(--sl-color-text)]">Minimum System Requirements</h2>
 
 			<table>
 				<thead>

@@ -16,7 +16,7 @@
 			itemprop="mainEntity"
 			itemtype="https://schema.org/Question"
 			class={twMerge(
-				'w-full rounded-3xl bg-white text-lg shadow-lg transition-colors',
+				'w-full rounded-3xl bg-white dark:bg-slate-800 text-lg shadow-lg transition-colors',
 				!item?.expanded && 'hover:bg-crystal'
 			)}
 		>

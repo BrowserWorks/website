@@ -30,7 +30,7 @@
 	}))
 </script>
 
-<table class="h-full overflow-hidden rounded-[1.5rem] border-none bg-white shadow-lg">
+<table class="h-full overflow-hidden rounded-[1.5rem] border-none bg-white dark:bg-slate-800 shadow-lg">
 	<thead>
 		<tr>
 			<td />

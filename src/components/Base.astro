@@ -7,7 +7,10 @@ const { bgColor } = Astro.props
 ---
 
 <header
-	class={twMerge('relative flex flex-col items-center', bgColor === 'crystal' && 'bg-crystal')}
+	class={twMerge(
+		'relative flex flex-col items-center',
+		bgColor === 'crystal' && 'bg-crystal' && `dark:bg-deepsea`
+	)}
 >
 	<!-- Top bar -->
 	<div
