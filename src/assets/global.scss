@@ -7,6 +7,21 @@
         @apply w-full;
     }
 
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Montserrat", system-ui, sans-serif;
+    }
+
+    .site-title {
+        height: unset;
+    }
+
+    [data-has-sidebar] header {
+        border-bottom: 1px solid transparent;
+        background-color: transparent;
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+    }
+
     @keyframes wobble {
         33% {
             transform: translateX(-50px);

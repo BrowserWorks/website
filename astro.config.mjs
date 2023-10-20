@@ -25,10 +25,11 @@ export default defineConfig({
 				Sidebar: 'starlight-blog/overrides/Sidebar.astro',
 				ThemeSelect: '~/components/NavBar.astro'
 			},
+			customCss: ['~/assets/global.scss', '~/fonts/fonts.css'],
 			title: 'Waterfox',
 			logo: {
 				replacesTitle: true,
-				src: './src/assets/waterfox-logo.svg'
+				src: '~/assets/waterfox-logo.svg'
 			},
 			social: {
 				github: 'https://github.com/WaterfoxCo/Waterfox',

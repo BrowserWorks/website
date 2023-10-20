@@ -165,7 +165,7 @@
 				</div>
 			</div>
 			<div>
-				<Button href={link} class="flex items-center justify-center gap-2 py-2 text-sm lg:text-sm">
+				<Button href={link} class="tailwind-preflight flex items-center justify-center gap-2 py-2 text-sm lg:text-sm">
 					<Icon name="download" class="-ml-1 flex h-[18px] w-[18px]" />Download
 					{selected?.label}
 				</Button>
