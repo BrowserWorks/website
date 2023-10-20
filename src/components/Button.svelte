@@ -14,6 +14,7 @@
 	on:click|stopPropagation
 	on:keydown
 	{href}
+	id='download'
 	type={!href ? type : undefined}
 	role={href ? 'link' : 'button'}
 	rel={href && href?.startsWith('http') ? 'noopener nofollow' : href ? 'prefetch' : undefined}
