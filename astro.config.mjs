@@ -25,6 +25,13 @@ export default defineConfig({
 				Sidebar: 'starlight-blog/overrides/Sidebar.astro',
 				ThemeSelect: '~/components/NavBar.astro'
 			},
+			defaultLocale: 'root', // optional
+			locales: {
+				root: {
+					label: 'English',
+					lang: 'en-US' // lang is required for root locales
+				}
+			},
 			customCss: ['~/assets/global.scss', '~/fonts/fonts.css'],
 			title: 'Waterfox',
 			logo: {
@@ -38,10 +45,6 @@ export default defineConfig({
 				twitter: 'https://twitter.com/Waterfoxproject'
 			},
 			sidebar: [
-				{
-					label: 'Blog',
-					autogenerate: { directory: 'blog' }
-				},
 				{
 					label: 'Policies',
 					autogenerate: { directory: 'docs/policies' }
