@@ -1,0 +1,42 @@
+---
+import type { Props } from '@astrojs/starlight/props'
+
+import StarlightSidebar from '@astrojs/starlight/components/Sidebar.astro'
+
+const { sidebar } = Astro.props
+const { slug } = Astro.params
+
+var filteredSublist
+if (slug?.includes('blog')) {
+	filteredSublist = sidebar.filter((group) => {
+		const entries = group.entries.filter((entry) => {
+			return entry.type === 'link' && entry.href?.includes('blog')
+		})
+
+		if (entries.length > 0) {
+			return {
+				...group,
+				entries
+			}
+		}
+	})
+	console.log(JSON.stringify('Blog ' + filteredSublist))
+} else {
+	filteredSublist = sidebar.filter((group) => {
+		const entries = group.entries.filter((entry) => {
+			return entry.type === 'link' && !entry.href?.includes('blog')
+		})
+
+		if (entries.length > 0) {
+			return {
+				...group,
+				entries
+			}
+		}
+	})
+	console.log(JSON.stringify('Not Blog ' + filteredSublist))
+}
+console.log('Used value ' + JSON.stringify(filteredSublist))
+---
+
+<StarlightSidebar {...{ ...Astro.props, sidebar: filteredSublist }} />

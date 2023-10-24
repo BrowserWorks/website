@@ -22,7 +22,8 @@ export default defineConfig({
 			components: {
 				MarkdownContent: 'starlight-blog/overrides/MarkdownContent.astro',
 				PageFrame: '~/components/CustomPageFrame.astro',
-				Sidebar: 'starlight-blog/overrides/Sidebar.astro',
+				Sidebar: '~/components/Sidebar.astro',
+				// Sidebar: 'starlight-blog/overrides/Sidebar.astro',
 				ThemeSelect: '~/components/NavBar.astro'
 			},
 			defaultLocale: 'root', // optional
@@ -45,6 +46,10 @@ export default defineConfig({
 				twitter: 'https://twitter.com/Waterfoxproject'
 			},
 			sidebar: [
+				{
+					label: 'Blog',
+					autogenerate: { directory: 'blog' }
+				},
 				{
 					label: 'Policies',
 					autogenerate: { directory: 'docs/policies' }
