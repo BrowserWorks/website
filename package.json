@@ -3,8 +3,11 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "predev": "bun run src/utils/github.ts",
     "dev": "astro dev",
+    "prestart": "bun run src/utils/github.ts",
     "start": "astro dev",
+    "prebuild": "bun run src/utils/github.ts",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
