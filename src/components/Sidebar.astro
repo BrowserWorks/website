@@ -1,7 +1,7 @@
 ---
 import type { Props } from '@astrojs/starlight/props'
 
-import StarlightSidebar from '@astrojs/starlight/components/Sidebar.astro'
+import StarlightSidebar from 'starlight-blog/overrides/Sidebar.astro'
 
 const { sidebar } = Astro.props
 const { slug } = Astro.params
@@ -20,7 +20,6 @@ if (slug?.includes('blog')) {
 			}
 		}
 	})
-	console.log(JSON.stringify('Blog ' + filteredSublist))
 } else {
 	filteredSublist = sidebar.filter((group) => {
 		const entries = group.entries.filter((entry) => {
@@ -34,9 +33,7 @@ if (slug?.includes('blog')) {
 			}
 		}
 	})
-	console.log(JSON.stringify('Not Blog ' + filteredSublist))
 }
-console.log('Used value ' + JSON.stringify(filteredSublist))
 ---
 
-<StarlightSidebar {...{ ...Astro.props, sidebar: filteredSublist }} />
+<StarlightSidebar {...Astro.props} sidebar={filteredSublist} />
