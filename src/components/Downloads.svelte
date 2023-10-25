@@ -152,7 +152,7 @@
 >
 	{#each selected?.downloads || [] as { id, label, link, hash }}
 		{@const uuid = `${label} - ${hash}`}
-		<div class="grid w-full gap-x-20 max-lg:gap-y-2 lg:grid-cols-[60%_1fr]">
+		<div class="grid w-full gap-x-20 max-lg:gap-y-2 lg:grid-cols-[50%_1fr]">
 			<div class="grid grid-cols-[1fr_auto] items-center lg:grid-cols-[1fr_auto] lg:gap-x-20">
 				<div class="flex items-center gap-2 font-bold">
 					<Icon name={id} class="inline-flex h-[18px] w-[18px] align-bottom" />
