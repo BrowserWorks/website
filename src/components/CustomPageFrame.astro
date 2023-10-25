@@ -1,0 +1,30 @@
+---
+import Header from '@astrojs/starlight/components/Header.astro'
+import PageFrame from '@astrojs/starlight/components/PageFrame.astro'
+import Sidebar from '@astrojs/starlight/components/Sidebar.astro'
+import type { Props } from '@astrojs/starlight/props'
+
+import DownloadsPage from './DownloadsPage.astro'
+import Home from './Home.astro'
+
+// Check if we are on the hompage
+const isHomepage = Astro.props.slug === ''
+const isDownloads = Astro.props.slug === 'downloads'
+
+// If we are, render a custom component
+// If not, render the default page frame
+---
+
+{
+	isHomepage ? (
+		<Home />
+	) : isDownloads ? (
+		<DownloadsPage {...Astro.props} />
+	) : (
+		<PageFrame {...Astro.props}>
+			<Header slot="header" {...Astro.props} />
+			<Sidebar slot="sidebar" {...Astro.props} />
+			<slot />
+		</PageFrame>
+	)
+}

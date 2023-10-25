@@ -1,0 +1,55 @@
+---
+title: Download
+description: Free and open source
+---
+
+## Minimum System Requirements
+
+<table>
+	<thead>
+		<tr>
+			<th></th>
+			<th>Windows</th>
+			<th>macOS</th>
+			<th>Linux</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>OS Version</td>
+			<td>7</td>
+			<td>Big Sur (11.0)</td>
+			<td>glibc 2.17</td>
+		</tr>
+		<tr>
+			<td>Processor</td>
+			<td>Intel Core 2 or AMD FX</td>
+			<td>Intel Core i or Apple Silicon</td>
+			<td>Intel Core 2 or AMD FX</td>
+		</tr>
+		<tr>
+			<td>RAM</td>
+			<td>2 GiB</td>
+			<td>2 GiB</td>
+			<td>2 GiB</td>
+		</tr>
+		<tr>
+			<td>Storage</td>
+			<td>500 MiB</td>
+			<td>500 MiB</td>
+			<td>500 MiB</td>
+		</tr>
+	</tbody>
+</table>
+
+## Verify the releases
+
+```shell
+cat $DOWNLOADED_FILE.sha512
+# Output of cat command here.
+
+shasum -a 512 $DOWNLOADED_FILE
+# Output of shasum command here.
+
+# If the output of both commands is the same, the file is likely to be safe.
+```

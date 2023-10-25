@@ -1,0 +1,55 @@
+---
+import { twMerge } from 'tailwind-merge'
+import Layout from '~/components/Base.astro'
+import Page from '~/components/ContentPage.svelte'
+import Downloads from '~/components/Downloads.svelte'
+const { title, subtitle } = Astro.props.entry.data
+---
+
+<Layout>
+	<Page {title} {subtitle}>
+		<div class={twMerge('mb-12 flex w-full grow flex-col gap-12 lg:mb-20 lg:flex')}>
+			<Downloads client:idle>
+				<span slot="beforeDownloads"><h2>Links</h2></span>
+			</Downloads>
+			<h2>Minimum System Requirements</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+						<th>Windows</th>
+						<th>macOS</th>
+						<th>Linux</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>OS Version</td>
+						<td>7</td>
+						<td>Big Sur (11.0)</td>
+						<td>glibc 2.17</td>
+					</tr>
+					<tr>
+						<td>Processor</td>
+						<td>Intel Core 2 or AMD FX</td>
+						<td>Intel Core i or Apple Silicon</td>
+						<td>Intel Core 2 or AMD FX</td>
+					</tr>
+					<tr>
+						<td>RAM</td>
+						<td>2 GiB</td>
+						<td>2 GiB</td>
+						<td>2 GiB</td>
+					</tr>
+					<tr>
+						<td>Storage</td>
+						<td>500 MiB</td>
+						<td>500 MiB</td>
+						<td>500 MiB</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</Page>
+</Layout>

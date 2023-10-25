@@ -1,6 +1,7 @@
 import starlight from '@astrojs/starlight'
 import { defineConfig } from 'astro/config'
 import blog from 'starlight-blog'
+import svelte from '@astrojs/svelte'
 
 import tailwind from '@astrojs/tailwind'
 
@@ -20,33 +21,33 @@ export default defineConfig({
 		starlight({
 			components: {
 				MarkdownContent: 'starlight-blog/overrides/MarkdownContent.astro',
+				PageFrame: '~/components/CustomPageFrame.astro',
 				Sidebar: 'starlight-blog/overrides/Sidebar.astro',
 				ThemeSelect: 'starlight-blog/overrides/ThemeSelect.astro'
 			},
-			customCss: ['./src/assets/global.scss'],
-			title: 'My Docs',
+			title: 'Waterfox',
+			logo: {
+				replacesTitle: true,
+				src: './src/assets/waterfox-logo.svg'
+			},
 			social: {
-				github: 'https://github.com/withastro/starlight'
+				github: 'https://github.com/WaterfoxCo/Waterfox',
+				mastodon: 'https://mastodon.social/home',
+				twitter: 'https://twitter.com/Waterfoxproject'
 			},
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{
-							label: 'Example Guide',
-							link: '/guides/example/'
-						}
-					]
+					label: 'Policies',
+					autogenerate: { directory: '/docs/policies/' }
 				},
 				{
-					label: 'Reference',
-					autogenerate: {
-						directory: 'reference'
-					}
+					label: 'Releases',
+					collapsed: true,
+					autogenerate: { directory: '/docs/releases/' }
 				}
 			]
 		}),
+		svelte(),
 		tailwind({
 			applyBaseStyles: false
 		})

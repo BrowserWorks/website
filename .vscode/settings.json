@@ -44,5 +44,6 @@
 		"source.fixAll.eslint": true,
 		"source.fixAll.prettier": true,
 		"source.organizeImports": true
-	}
+	},
+	"typescript.tsdk": "node_modules/typescript/lib"
 }
