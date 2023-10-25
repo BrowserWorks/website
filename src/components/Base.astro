@@ -2,16 +2,9 @@
 import Header from '@astrojs/starlight/components/Header.astro'
 import { twMerge } from 'tailwind-merge'
 import Footer from './Footer.astro'
-
-const { bgColor } = Astro.props
 ---
 
-<header
-	class={twMerge(
-		'relative flex flex-col items-center',
-		bgColor === 'crystal' && 'bg-crystal' && `dark:bg-deepsea`
-	)}
->
+<header class={twMerge('relative flex flex-col items-center bg-crystal dark:bg-deepsea')}>
 	<!-- Top bar -->
 	<div
 		class="z-15 py-0.75 lg:py-0.75 grid h-16 w-full grid-cols-[auto] px-1 lg:z-20 lg:grid-cols-[auto] lg:px-1.5 xl:z-20"

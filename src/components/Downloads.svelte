@@ -115,7 +115,7 @@
 	</div>
 
 	<div
-		class="flex w-full flex-col gap-3 rounded-[1.5rem] border-[1px] border-indigo/80 bg-frost/20 px-8 py-6 shadow-lg lg:flex-row"
+		class="flex w-full flex-col gap-3 rounded-[1.5rem] border-[1px] bg-frost/20 px-8 py-6 shadow-lg lg:flex-row"
 	>
 		<div class="flex grow flex-col">
 			<span class="text-sm">Date</span>
@@ -148,7 +148,7 @@
 </div>
 
 <div
-	class="flex w-full flex-col gap-y-4 rounded-[1.5rem] border-[1px] border-indigo/80 bg-frost/20 px-8 py-6 shadow-xl"
+	class="flex w-full flex-col gap-y-4 rounded-[1.5rem] border-[1px] bg-frost/20 px-8 py-6 shadow-xl"
 >
 	{#each selected?.downloads || [] as { id, label, link, hash }}
 		{@const uuid = `${label} - ${hash}`}
