@@ -22,6 +22,7 @@ export default defineConfig({
 			components: {
 				MarkdownContent: 'starlight-blog/overrides/MarkdownContent.astro',
 				PageFrame: '~/components/CustomPageFrame.astro',
+				Pagination: '~/components/Pagination.astro',
 				Sidebar: '~/components/Sidebar.astro',
 				// Sidebar: 'starlight-blog/overrides/Sidebar.astro',
 				ThemeSelect: '~/components/NavBar.astro'

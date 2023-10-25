@@ -1,0 +1,10 @@
+---
+import StarlightPagination from '@astrojs/starlight/components/Pagination.astro'
+import type { Props } from '@astrojs/starlight/props'
+
+const isBlogPage = Astro.props.slug.includes('blog')
+
+console.log(isBlogPage)
+---
+
+{isBlogPage ? '' : <StarlightPagination {...Astro.props} />}
