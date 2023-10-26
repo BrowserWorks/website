@@ -47,10 +47,10 @@ export default defineConfig({
 				twitter: 'https://twitter.com/Waterfoxproject'
 			},
 			sidebar: [
-				{
-					label: 'Blog',
-					autogenerate: { directory: 'blog' }
-				},
+				// {
+				// 	label: 'Blog',
+				// 	autogenerate: { directory: 'blog' }
+				// },
 				{
 					label: 'Policies',
 					autogenerate: { directory: 'docs/policies' }
