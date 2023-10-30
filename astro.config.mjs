@@ -47,13 +47,9 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: 'Policies',
-					autogenerate: { directory: 'docs/policies' }
-				},
-				{
-					label: 'Releases',
+					label: 'Docs',
 					collapsed: true,
-					autogenerate: { directory: 'docs/releases' }
+					autogenerate: { directory: 'docs' }
 				}
 			]
 		}),

@@ -1,0 +1,19 @@
+---
+title: Index
+description: Documentation related to Waterfox.
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components'
+
+Welcome to the Waterfox documentation page. You are able to view release notes, various policies and find out more about the project.
+
+<LinkCard
+	title="About Waterfox"
+	description="Learn a little bit about the history of Waterfox."
+	href="about-waterfox/"
+/>
+<LinkCard title="FAQ" description="Frequently Asked Questions related to Waterfox." href="faq/" />
+<CardGrid>
+	<LinkCard title="Privacy Policy" href="policies/privacy/" />
+	<LinkCard title="Terms & Conditions" href="policies/terms/" />
+</CardGrid>
