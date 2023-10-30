@@ -48,8 +48,19 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Docs',
+					items: [
+						{ label: 'About', link: 'about-waterfox/' },
+						{ label: 'FAQ', link: 'faq/' }
+					]
+				},
+				{
+					label: 'Policies',
+					autogenerate: { directory: 'docs/policies' }
+				},
+				{
+					label: 'Releases',
 					collapsed: true,
-					autogenerate: { directory: 'docs' }
+					autogenerate: { directory: 'docs/releases' }
 				}
 			]
 		}),
