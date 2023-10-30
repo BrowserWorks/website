@@ -20,12 +20,11 @@ export default defineConfig({
 		}),
 		starlight({
 			components: {
+				Header: '~/components/Header.astro',
 				MarkdownContent: 'starlight-blog/overrides/MarkdownContent.astro',
 				PageFrame: '~/components/CustomPageFrame.astro',
 				Pagination: '~/components/Pagination.astro',
-				Sidebar: '~/components/Sidebar.astro',
-				// Sidebar: 'starlight-blog/overrides/Sidebar.astro',
-				ThemeSelect: '~/components/NavBar.astro'
+				Sidebar: '~/components/Sidebar.astro'
 			},
 			defaultLocale: 'root', // optional
 			locales: {
@@ -47,10 +46,6 @@ export default defineConfig({
 				twitter: 'https://twitter.com/Waterfoxproject'
 			},
 			sidebar: [
-				// {
-				// 	label: 'Blog',
-				// 	autogenerate: { directory: 'blog' }
-				// },
 				{
 					label: 'Policies',
 					autogenerate: { directory: 'docs/policies' }

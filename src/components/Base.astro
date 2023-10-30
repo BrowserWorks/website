@@ -1,13 +1,13 @@
 ---
-import Header from '@astrojs/starlight/components/Header.astro'
 import { twMerge } from 'tailwind-merge'
 import Footer from './Footer.astro'
+import Header from './Header.astro'
 ---
 
-<header class={twMerge('relative flex flex-col items-center bg-crystal dark:bg-deepsea')}>
+<header class={twMerge('relative flex flex-col items-center')}>
 	<!-- Top bar -->
 	<div
-		class="py-0.75 lg:py-0.75 z-20 grid h-16 w-full grid-cols-[auto] px-1 lg:z-20 lg:grid-cols-[auto] lg:px-1.5 xl:z-20"
+		class="z-20 grid h-16 w-full grid-cols-[auto] px-1 py-1 lg:z-20 lg:grid-cols-[auto] lg:px-1.5 lg:py-1 xl:z-20"
 	>
 		<Header slot="header" {...Astro.props}><slot /></Header>
 	</div>

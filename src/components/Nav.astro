@@ -1,0 +1,20 @@
+---
+import { headerNavigation } from '~/config'
+---
+
+<nav class="tailwind-preflight">
+	{
+		headerNavigation.map(({ href, label }) => (
+			<a {href}>
+				<h4>{label}</h4>
+			</a>
+		))
+	}
+</nav>
+
+<style>
+	nav {
+		display: flex;
+		gap: 1rem;
+	}
+</style>

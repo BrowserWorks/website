@@ -17,6 +17,22 @@ const footerNavigation = [
 	}
 ]
 
+// header nav
+const headerNavigation = [
+	{
+		label: 'Blog',
+		href: '/blog/'
+	},
+	{
+		label: 'Docs',
+		href: '/docs/'
+	},
+	{
+		label: 'Downloads',
+		href: '/downloads/'
+	}
+]
+
 // policies nav (also in footer)
 const policiesNavigation = [
 	{
@@ -47,4 +63,4 @@ const latestLinks = {
 	linux: () => `https://cdn1.waterfox.net/waterfox/releases/latest/linux`
 }
 
-export { downloadLinks, footerNavigation, latestLinks, policiesNavigation }
+export { downloadLinks, footerNavigation, headerNavigation, latestLinks, policiesNavigation }

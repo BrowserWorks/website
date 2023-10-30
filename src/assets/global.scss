@@ -19,19 +19,6 @@
         height: unset;
     }
 
-    .sidebar-pane {
-        background-color: unset;
-        border-inline-end: unset;
-    }
-
-
-    [data-has-sidebar]:not([data-has-sidebar=""]) header {
-        border-bottom: 1px solid transparent;
-        background-color: transparent;
-        -webkit-backdrop-filter: blur(16px);
-        backdrop-filter: blur(16px);
-    }
-
     @keyframes wobble {
         33% {
             transform: translateX(-50px);
