@@ -1,20 +1,88 @@
 ---
+import { Icon } from '@astrojs/starlight/components'
 import { headerNavigation } from '~/config'
 ---
 
 <nav class="tailwind-preflight">
-	{
-		headerNavigation.map(({ href, label }) => (
-			<a {href}>
-				<h4>{label}</h4>
-			</a>
-		))
-	}
+	<div class="lg:hidden">
+		<button class="navbar-burger flex items-center p-3">
+			<Icon name="bars" />
+		</button>
+	</div>
+	<div class="hidden gap-4 lg:flex">
+		{
+			headerNavigation.map(({ href, label }) => (
+				<a {href}>
+					<h4>{label}</h4>
+				</a>
+			))
+		}
+	</div>
 </nav>
+<div class="navbar-menu tailwind-preflight relative z-50 hidden">
+	<nav
+		class="fixed bottom-0 right-0 top-0 flex w-5/6 max-w-sm flex-col overflow-y-auto border-r bg-white px-6 py-6 dark:dark:bg-slate-800"
+	>
+		<div class="mb-8 flex">
+			<button class="navbar-close">
+				<Icon name="close" />
+			</button>
+		</div>
+		<div>
+			<ul>
+				{
+					headerNavigation.map(({ href, label }) => (
+						<li class="mb-1">
+							<a {href}>
+								<h4>{label}</h4>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</nav>
+</div>
 
-<style>
-	nav {
-		display: flex;
-		gap: 1rem;
-	}
-</style>
+<script>
+	// Burger menus
+	document.addEventListener('DOMContentLoaded', function () {
+		// open
+		const burger = document.querySelectorAll('.navbar-burger')
+		const menu = document.querySelectorAll('.navbar-menu')
+
+		if (burger.length && menu.length) {
+			for (var i = 0; i < burger.length; i++) {
+				burger[i].addEventListener('click', function () {
+					for (var j = 0; j < menu.length; j++) {
+						menu[j].classList.toggle('hidden')
+					}
+				})
+			}
+		}
+
+		// close
+		const close = document.querySelectorAll('.navbar-close')
+		const backdrop = document.querySelectorAll('.navbar-backdrop')
+
+		if (close.length) {
+			for (var i = 0; i < close.length; i++) {
+				close[i].addEventListener('click', function () {
+					for (var j = 0; j < menu.length; j++) {
+						menu[j].classList.toggle('hidden')
+					}
+				})
+			}
+		}
+
+		if (backdrop.length) {
+			for (var i = 0; i < backdrop.length; i++) {
+				backdrop[i].addEventListener('click', function () {
+					for (var j = 0; j < menu.length; j++) {
+						menu[j].classList.toggle('hidden')
+					}
+				})
+			}
+		}
+	})
+</script>
