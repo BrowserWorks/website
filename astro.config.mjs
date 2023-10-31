@@ -28,6 +28,7 @@ export default defineConfig({
 				Sidebar: '~/components/Sidebar.astro'
 			},
 			defaultLocale: 'root', // optional
+			favicon: '/favicon.ico',
 			locales: {
 				root: {
 					label: 'English',
