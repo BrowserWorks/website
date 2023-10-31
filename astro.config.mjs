@@ -2,11 +2,11 @@ import starlight from '@astrojs/starlight'
 import { defineConfig } from 'astro/config'
 import blog from 'starlight-blog'
 import svelte from '@astrojs/svelte'
-
 import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://www.waterfox.net',
 	integrations: [
 		blog({
 			authors: {
@@ -20,6 +20,7 @@ export default defineConfig({
 		}),
 		starlight({
 			components: {
+				Head: '~/components/Head.astro',
 				Header: '~/components/Header.astro',
 				MarkdownContent: 'starlight-blog/overrides/MarkdownContent.astro',
 				PageFrame: '~/components/CustomPageFrame.astro',
