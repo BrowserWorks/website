@@ -1,13 +1,35 @@
 ---
 import Default from '@astrojs/starlight/components/Head.astro'
 import type { Props } from '@astrojs/starlight/props'
-import { getOgImageUrl } from '~/utils/getOgImageUrl'
-const { entry } = Astro.props
-const ogImageUrl = getOgImageUrl(entry.slug, !!Astro.params.fallback)
-const imageSrc = ogImageUrl ?? '/default-og-image.png?v=1'
-const canonicalImageSrc = new URL(imageSrc, Astro.site)
+
+// Get the URL and pathname
+const pageUrl = new URL(Astro.url)
+const pathname = pageUrl.pathname
+
+let ogImageUrl
+
+// Check if files with no OG. Do a better way later
+if (
+	pathname === '/' ||
+	pathname === '/index.html' ||
+	pathname === '/blog/' ||
+	pathname === '/blog/index.html'
+) {
+	ogImageUrl = new URL('/index/og.png', pageUrl)
+
+	// Other pages
+} else {
+	// Try custom OG image
+	try {
+		const ogPath = pathname.concat('og.png')
+		ogImageUrl = new URL(ogPath, pageUrl)
+	} catch {
+		// Fallback if custom doesn't exist
+		ogImageUrl = new URL('/index/og.png', pageUrl)
+	}
+}
 ---
 
 <Default {...Astro.props}><slot /></Default>
-<meta property="og:image" content={canonicalImageSrc} />
-<meta name="twitter:image" content={canonicalImageSrc} />
+<meta property="og:image" content={ogImageUrl} />
+<meta name="twitter:image" content={ogImageUrl} />
