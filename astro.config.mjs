@@ -51,8 +51,8 @@ export default defineConfig({
 				{
 					label: 'Docs',
 					items: [
-						{ label: 'About', link: 'about-waterfox/' },
-						{ label: 'FAQ', link: 'faq/' }
+						{ label: 'About', link: 'docs/about-waterfox/' },
+						{ label: 'FAQ', link: 'docs/faq/' }
 					]
 				},
 				{
