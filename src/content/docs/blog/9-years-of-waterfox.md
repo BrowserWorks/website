@@ -2,6 +2,7 @@
 title: 9 Years of Waterfox
 date: 2020-03-27
 author: Alex
+description: Waterfox, a popular browser, is entering its tenth year of service, thanks to its support and code contributors. The company has undergone significant changes, including new infrastructure and team members.
 ---
 
 Waterfox is now entering its tenth year of service. A big thank you to everyone from myself for the support over the years and a shout out to all the code contributors over the years as well!

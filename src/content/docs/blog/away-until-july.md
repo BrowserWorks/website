@@ -2,6 +2,7 @@
 title: Away until 3rd of July + Adobe Issues
 date: 2016-06-22
 author: Alex
+description: Alex is unable to resolve a Flash issue due to their holiday, but will address it when they return.
 ---
 
 Hi all,

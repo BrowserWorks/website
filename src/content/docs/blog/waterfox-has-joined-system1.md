@@ -2,6 +2,7 @@
 title: Waterfox has joined System1
 date: 2020-02-14
 author: Alex
+description: Waterfox now has funding and a development team, so Waterfox can finally start to grow!
 ---
 
 Waterfox now has funding and a development team, so Waterfox can finally start to grow!

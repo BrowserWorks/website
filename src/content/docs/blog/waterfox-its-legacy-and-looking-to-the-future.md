@@ -2,6 +2,7 @@
 title: Waterfox, Its Legacy and Looking to the Future
 date: 2018-04-28
 author: Alex
+description: The 27th of March 2018 marked 7 years since the first release of Waterfox, first posted on the [OCN](http://overclock.net/) forums. It has been quite a journey, not one I had envisioned myself taking.
 ---
 
 The 27th of March 2018 marked 7 years since the first release of Waterfox, first posted on the [OCN](http://overclock.net/) forums. It has been quite a journey, not one I had envisioned myself taking.

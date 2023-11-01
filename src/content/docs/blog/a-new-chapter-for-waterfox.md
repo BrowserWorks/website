@@ -1,6 +1,7 @@
 ---
 title: A New Chapter for Waterfox
 date: 2023-07-03
+description: Waterfox is independent again, allowing the community and founder to shape its future. The founder remains committed to delivering a privacy-focused, customisable browser and thanks the community.
 author: Alex
 ---
 

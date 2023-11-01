@@ -2,6 +2,7 @@
 title: 4 Year Anniversary Waterfox Charity and Storm Search
 date: 2015-05-12
 author: Alex
+description: Alex Kontos, the developer of Waterfox, has announced a new idea for the platform - Charitable Giving.
 ---
 
 Hello everyone! I’m the developer of Waterfox, Alex Kontos. 4 Years ago on the 27th of March I released the very first build of Waterfox for everyone to try out. It was posted over at the lovely community of Overclock.net and since then Waterfox has become known around the world.

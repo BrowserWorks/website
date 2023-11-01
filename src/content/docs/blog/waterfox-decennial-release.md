@@ -2,6 +2,7 @@
 title: Waterfox Decennial Release
 date: 2021-03-23
 author: Alex
+description: The decennial release marks the start of a journey that has evolved from a side project to a major player.
 ---
 
 27th of March marks ten years of surfing the web with Waterfox 🌊

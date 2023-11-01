@@ -2,6 +2,7 @@
 title: An Update on Waterfox Classic
 date: 2021-10-28
 author: Alex
+description: Waterfox Classic and G4 have diverged, with G4 focusing on modern web compatibility and privacy.
 ---
 
 Since Waterfox Classic and Waterfox Current (now G4) diverged, they have both have separate goals.

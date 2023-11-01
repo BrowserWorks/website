@@ -2,6 +2,7 @@
 title: Waterfox 4th Generation Release
 date: 2021-10-19
 author: Alex
+description: 4th Generation of Waterfox, featuring a new website, optimized browser, and a new website for documentation.
 ---
 
 View Release Notes for [G4.0.0](/en/docs/releases/g400)
