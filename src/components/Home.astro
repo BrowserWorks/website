@@ -1,5 +1,6 @@
 ---
 import Layout from '~/components/Base.astro'
+import Button from '~/components/Button.svelte'
 import DownloadButton from '~/components/DownloadButton.astro'
 import Icon from '~/components/Icon.svelte'
 import Browser from '~/components/home/BrowserUI.astro'
@@ -10,6 +11,29 @@ import Section from '~/components/home/Section.astro'
 import Water from '~/components/home/Water.astro'
 import { strings, type Key } from '~/strings'
 ---
+
+<script>
+	import { UAParser } from 'ua-parser-js'
+	import { latestLinks } from '~/config'
+
+	const parser = UAParser(navigator.userAgent)
+	const os = parser.os.name.toLowerCase()
+	const isMacOS = ['macos'].includes(os)
+	const isWindows = ['windows'].includes(os)
+	const isLinux = ['ubuntu', 'linux', 'unix', 'gnu', 'fedora'].includes(os)
+
+	const elements = document.querySelectorAll('[id*="download"]')
+
+	elements.forEach((el) => {
+		if (isMacOS) {
+			el.setAttribute('href', latestLinks.macOS())
+		} else if (isWindows) {
+			el.setAttribute('href', latestLinks.windows())
+		} else if (isLinux) {
+			el.setAttribute('href', latestLinks.linux())
+		}
+	})
+</script>
 
 <Layout bgColor="crystal" class="w-full font-body font-light leading-relaxed text-deepsea">
 	<!-- Home header -->
@@ -28,7 +52,7 @@ import { strings, type Key } from '~/strings'
 				{strings[`home.title`]}
 			</h1>
 			<p class="text-balance font-montserrat text-lg font-normal">{strings[`home.subtitle`]}</p>
-			<DownloadButton />
+			<Button id="download-header">Download</Button>
 		</div>
 
 		<!-- Browser View -->
@@ -63,7 +87,7 @@ import { strings, type Key } from '~/strings'
 			}
 		</div>
 
-		<DownloadButton />
+		<Button id="download-features">Download</Button>
 	</Section>
 
 	<Section color="deepsea">
@@ -173,7 +197,7 @@ import { strings, type Key } from '~/strings'
 			</h2>
 			<div class="flex flex-col items-center gap-8 lg:items-start">
 				<p class="text-balance text-lg" set:html={strings[`surf.content`]} />
-				<DownloadButton />
+				<Button id="download-download">Download</Button>
 			</div>
 		</div>
 	</Section>
@@ -244,7 +268,7 @@ import { strings, type Key } from '~/strings'
 				class="font-montserrat text-4xl font-bold leading-tight lg:text-5xl"
 				set:html={strings[`splash.title`]}
 			/>
-			<DownloadButton />
+			<Button id="download-surf">Download</Button>
 		</div>
 	</Section>
 </Layout>

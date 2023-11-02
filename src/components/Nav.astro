@@ -1,11 +1,17 @@
 ---
 import { Icon } from '@astrojs/starlight/components'
 import { headerNavigation } from '~/config'
+import { useTranslations } from 'node_modules/@astrojs/starlight/utils/translations'
+const { locale } = Astro.props
+const t = useTranslations(locale)
 ---
 
 <nav class="tailwind-preflight">
 	<div class="lg:hidden">
-		<button class="navbar-burger flex items-center p-3">
+		<button
+			aria-label={t('menuButton.accessibleLabel')}
+			class="navbar-burger flex items-center p-3"
+		>
 			<Icon name="bars" />
 		</button>
 	</div>

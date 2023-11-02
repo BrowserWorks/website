@@ -7,18 +7,18 @@ const mobileImageSrc = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAA
 ---
 
 <div
-	class="font-noto pointer-events-none relative z-10 block w-full text-[12px] font-medium text-black opacity-100 lg:shadow-xl lg:after:block"
+	class="pointer-events-none relative z-10 block w-full text-[12px] opacity-100 lg:shadow-xl lg:after:block"
 >
 	<span
 		class="absolute bottom-[5%] left-0 z-10 mb-[20px] w-[130px] -translate-x-1/2 translate-y-1/2 lg:bottom-0 lg:-z-10 lg:h-[408px] lg:w-[429px]"
 	>
-		<img src={LeftSplash.src} />
+		<img src={LeftSplash.src} alt="Left Splash" width="429" height="408" />
 	</span>
 
 	<span
 		class="absolute right-[3%] top-[15%] z-10 mt-[20px] w-[130px] -translate-y-1/2 translate-x-1/2 lg:right-0 lg:top-0 lg:h-[583px] lg:w-[518px]"
 	>
-		<img src={RightSplash.src} />
+		<img src={RightSplash.src} alt="Right Splash" width="518" height="583" />
 	</span>
 
 	<div id="rwd-mobile-ui" class="left-0 top-0 flex h-full w-full flex-col sm:hidden">
@@ -32,6 +32,12 @@ const mobileImageSrc = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAA
 	</div>
 
 	<div id="rwd-desktop-ui" class="left-0 top-0 hidden h-full w-full flex-col sm:flex">
-		<img src={Browser.src} alt="Desktop Browser UI" class="w-full object-contain" />
+		<img
+			src={Browser.src}
+			alt="Desktop Browser UI"
+			width="1280"
+			height="724"
+			class="w-full object-contain"
+		/>
 	</div>
 </div>
