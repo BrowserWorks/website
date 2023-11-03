@@ -1,6 +1,6 @@
 https://www.waterfox.net/*
+Access-Control-Allow-Origin: https://www.waterfox.net
 Cache-Control: no-store, max-age=0
-Clear-Site-Data: "cache","cookies","storage"
 Content-Security-Policy: block-all-mixed-content; object-src 'none'; script-src 'self' 'unsafe-inline'; upgrade-insecure-requests; require-trusted-types-for 'script'
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
