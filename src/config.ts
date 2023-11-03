@@ -28,8 +28,8 @@ const headerNavigation = [
 		href: '/docs/'
 	},
 	{
-		label: 'Downloads',
-		href: '/downloads/'
+		label: 'Download',
+		href: '/download/'
 	}
 ]
 

@@ -11,7 +11,7 @@ import Sidebar from './Sidebar.astro'
 
 // Check if we are on the hompage
 const isHomepage = Astro.props.slug === ''
-const isDownloads = Astro.props.slug === 'downloads'
+const isDownloads = Astro.props.slug === 'download'
 
 const { hasSidebar, locale } = Astro.props
 const t = useTranslations(locale)
