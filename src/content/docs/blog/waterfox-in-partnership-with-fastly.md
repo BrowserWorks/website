@@ -1,4 +1,3 @@
-
 ---
 title: Waterfox in Partnership with Fastly
 date: 2023-11-06
