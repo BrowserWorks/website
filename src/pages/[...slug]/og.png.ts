@@ -15,8 +15,7 @@ export async function GET({ props }: Props) {
 	const { post } = props
 
 	// using custom font files
-	const MontserratBold = fs.readFileSync(path.resolve('./src/fonts/Montserrat-Bold.woff'))
-	const MontserratRegular = fs.readFileSync(path.resolve('./src/fonts/Montserrat-Regular.woff'))
+	const MontserratBold = fs.readFileSync(path.resolve('./src/fonts/Montserrat-Bold.ttf'))
 
 	// Astro doesn't support tsx endpoints so use React-element objects
 	const html = {
