@@ -15,8 +15,8 @@ export const strings = {
 	'rss.releases.description': 'The latest Waterfox releases.',
 
 	/** alt images tags */
-	'alt.logo': (name: string) => `${name} logo`,
-	'alt.illustration': (name: string) => `Illustration for ${name}`,
+	'alt.logo': 'Waterfox logo',
+	'alt.illustration': 'Illustration for Waterfox',
 
 	/** browser ui **/
 	'browser.mobileImageAlt': 'Waterfox mobile',
