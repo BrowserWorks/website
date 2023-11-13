@@ -1,6 +1,6 @@
 ---
 title: Waterfox in Partnership with Fastly
-date: 2023-11-06
+date: 2023-11-13
 description: Waterfox and Fastly join forces for DoOH, enhancing web privacy with encrypted DNS queries and independent third-party operation.
 author: Alex
 ---
