@@ -9,7 +9,7 @@ We've teamed up with the stellar folks at Fastly to help power a new privacy tec
 Whenever you browse the web, your DNS queries get exposed to your ISP or anyone else watching your web traffic. That means they can easily see which sites you visit and profile your interests. Rather invasive, isn't it? 
 ​
 
-Waterfox has partnered with Fastly to integrate secure Oblivious HTTP relays into the browser's DNS resolution — by partnering with Fastly, we were able to use a world-class implementation of this privacy-respecting protocol, that’s also used by many of the world’s leading platforms, including many top internet browsers. This encrypts and relays your DNS traffic through remote servers in a way that completely hides the target of your DNS queries -– and ultimately the site where your browser is planning to connect. Your DNS requests become 100% private.
+Waterfox has partnered with Fastly to integrate secure Oblivious HTTP relays into the browser's DNS resolution — with this partnership, we are able to use a world-class implementation of this privacy-respecting protocol, that’s also used by many of the world’s leading platforms, including many top internet browsers. This encrypts and relays your DNS traffic through remote servers in a way that completely hides the target of your DNS queries -– and ultimately the site where your browser is planning to connect. Your DNS requests become significantly more private and secure.
 
 ​
 It is important that at every stage of the connection each service is run by an independent third party. This prevents any one party from collating data together and unmasking who is making the requests.
@@ -24,7 +24,7 @@ The DNS resolver will be Cloudflare’s https://1.1.1.1 service, which is also a
 For us, this is a huge step in our mission to make Waterfox one of the most privacy-respecting browsers out there. Your data belongs to you, and we'll keep working nonstop to protect it. Teaming up with Fastly brought some serious privacy superpowers to the table. We can't wait for you to try it out!
 
 ​
-Let us know what you think once DNS over Oblivious DNS rolls out in the next Waterfox update. And as always, keep spreading the word to anyone who cares about internet privacy in this age of surveillance. We've got your back!
+Over the weekend, DNS over Oblivious DNS infrastructure was migrated over to Fastly. And as always, keep spreading the word to anyone who cares about internet privacy in this age of surveillance. We've got your back!
 ​
 ## FAQ
 
