@@ -4,9 +4,10 @@ date: 2023-11-06
 description: Waterfox and Fastly join forces for DoOH, enhancing web privacy with encrypted DNS queries and independent third-party operation.
 author: Alex
 ---
-We've teamed up with the stellar folks at Fastly to help power a new privacy technology, DNS over Oblivious HTTP (DoOH).
 
-Whenever you browse the web, your DNS queries get exposed to your ISP or anyone else watching your web traffic. That means they can easily see which sites you visit and profile your interests. Rather invasive, isn't it? 
+We've teamed up with the stellar folks at [Fastly](https://www.fastly.com/) to help power a new privacy technology, DNS over Oblivious HTTP (DoOH).
+
+Whenever you browse the web, your DNS queries get exposed to your ISP or anyone else watching your web traffic. That means they can easily see which sites you visit and profile your interests. Rather invasive, isn't it?
 ​
 
 Waterfox has partnered with Fastly to integrate secure Oblivious HTTP relays into the browser's DNS resolution — with this partnership, we are able to use a world-class implementation of this privacy-respecting protocol, that’s also used by many of the world’s leading platforms, including many top internet browsers. This encrypts and relays your DNS traffic through remote servers in a way that completely hides the target of your DNS queries -– and ultimately the site where your browser is planning to connect. Your DNS requests become significantly more private and secure.
@@ -26,13 +27,14 @@ For us, this is a huge step in our mission to make Waterfox one of the most priv
 ​
 Over the weekend, DNS over Oblivious DNS infrastructure was migrated over to Fastly. And as always, keep spreading the word to anyone who cares about internet privacy in this age of surveillance. We've got your back!
 ​
+
 ## FAQ
 
 **Q:** Do you have access to the relay?
 
 **A:** No, Fastly will independently manage the relay, and we don't have direct control over the code, the service configuration or the TLS certificates. This is critical from a privacy hygiene standpoint.
 
-**Q:** Will Fastly have access to my data? 
+**Q:** Will Fastly have access to my data?
 
 **A:** No, due to the double-blinded nature of the OHTTP service. One layer, Fastly, handles end user identifying metadata (the Relay) while another handles the end user's request data (the Gateway). These two layers communicate but do not collude, and do not pass identifying details about the Client to each other.
 
