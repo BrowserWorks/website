@@ -23,6 +23,7 @@
     "@vercel/og": "^0.5.20",
     "astro": "^3.5.3",
     "clipboard": "^2.0.11",
+    "lodash": "^4.17.21",
     "sass": "^1.69.5",
     "satori": "^0.10.9",
     "satori-html": "^0.3.2",
