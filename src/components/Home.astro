@@ -12,14 +12,8 @@ import { strings, type Key } from '~/strings'
 ---
 
 <script>
-	import { UAParser } from 'ua-parser-js'
+	import { isAndroid, isLinux, isMacOS, isWindows } from 'get-os-name'
 	import { latestLinks } from '~/config'
-
-	const parser = UAParser(navigator.userAgent)
-	const os = parser.os.name.toLowerCase()
-	const isMacOS = ['macos'].includes(os)
-	const isWindows = ['windows'].includes(os)
-	const isLinux = ['ubuntu', 'linux', 'unix', 'gnu', 'fedora'].includes(os)
 
 	const elements = document.querySelectorAll('[id*="download"]')
 
@@ -30,6 +24,11 @@ import { strings, type Key } from '~/strings'
 			el.setAttribute('href', latestLinks.windows())
 		} else if (isLinux) {
 			el.setAttribute('href', latestLinks.linux())
+		} else if (isAndroid) {
+			el.setAttribute(
+				'href',
+				'https://play.google.com/store/apps/details?id=net.waterfox.android.release'
+			)
 		}
 	})
 </script>

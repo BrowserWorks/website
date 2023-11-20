@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import { twMerge } from 'tailwind-merge'
-	import { UAParser } from 'ua-parser-js'
 
 	let player: any
 	let useAnimations = true
@@ -23,8 +22,6 @@
 	}
 
 	onMount(async () => {
-		const { browser } = UAParser(navigator.userAgent)
-
 		// useAnimations = Boolean(
 		// 	['chrome', 'edge', 'brave', 'firefox'].includes(browser.name.toLowerCase())
 		// )
