@@ -1,5 +1,5 @@
 import starlight from '@astrojs/starlight'
-import { defineConfig } from 'astro/config'
+import { defineConfig, squooshImageService } from 'astro/config'
 import blog from 'starlight-blog'
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
@@ -7,6 +7,9 @@ import tailwind from '@astrojs/tailwind'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://www.waterfox.net',
+	image: {
+		service: squooshImageService()
+	},
 	integrations: [
 		blog({
 			authors: {
