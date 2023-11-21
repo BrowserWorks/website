@@ -16,15 +16,19 @@ import { strings, type Key } from '~/strings'
 	import { latestLinks } from '~/config'
 
 	const elements = document.querySelectorAll('[id*="download"]')
+	const isOSNameWindows = isWindows()
+	const isOSNameMacOS = isMacOS()
+	const isOSNameLinux = isLinux()
+	const isOSNameAndroid = isAndroid()
 
 	elements.forEach((el) => {
-		if (isMacOS) {
+		if (isOSNameMacOS) {
 			el.setAttribute('href', latestLinks.macOS())
-		} else if (isWindows) {
+		} else if (isOSNameWindows) {
 			el.setAttribute('href', latestLinks.windows())
-		} else if (isLinux) {
+		} else if (isOSNameLinux) {
 			el.setAttribute('href', latestLinks.linux())
-		} else if (isAndroid) {
+		} else if (isOSNameAndroid) {
 			el.setAttribute(
 				'href',
 				'https://play.google.com/store/apps/details?id=net.waterfox.android.release'
