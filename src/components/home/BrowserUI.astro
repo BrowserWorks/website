@@ -1,9 +1,8 @@
 ---
 import Browser from '~/assets/browser.svg'
 import LeftSplash from '~/assets/left-splash.svg'
+import mobileImage from '~/assets/mobile.png'
 import RightSplash from '~/assets/right-splash.svg'
-
-const mobileImageSrc = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
 ---
 
 <div
@@ -23,11 +22,11 @@ const mobileImageSrc = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAA
 
 	<div id="rwd-mobile-ui" class="left-0 top-0 flex h-full w-full flex-col sm:hidden">
 		<img
-			src={mobileImageSrc}
+			src={mobileImage.src}
 			alt="Mobile Browser UI"
-			width="500"
-			height="500"
-			class="w-full bg-[#F2F2F2] object-contain"
+			width="480"
+			height="480"
+			class="w-full object-contain"
 		/>
 	</div>
 
