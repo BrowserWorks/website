@@ -20,7 +20,7 @@
 		"@astrojs/tailwind": "^5.0.2",
 		"@tailwindcss/typography": "^0.5.10",
 		"@vercel/og": "^0.5.20",
-		"astro": "^3.5.5",
+		"astro": "^3.6.1",
 		"clipboard": "^2.0.11",
 		"get-os-name": "^1.0.3",
 		"lodash": "^4.17.21",
