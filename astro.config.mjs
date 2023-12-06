@@ -1,8 +1,8 @@
 import starlight from '@astrojs/starlight'
-import { defineConfig, squooshImageService } from 'astro/config'
-import blog from 'starlight-blog'
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
+import { defineConfig, squooshImageService } from 'astro/config'
+import blog from 'starlight-blog'
 
 // https://astro.build/config
 export default defineConfig({
@@ -53,6 +53,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Docs',
+					collapsed: true,
 					items: [
 						{ label: 'About', link: 'docs/about-waterfox/' },
 						{ label: 'FAQ', link: 'docs/faq/' }
@@ -60,12 +61,18 @@ export default defineConfig({
 				},
 				{
 					label: 'Policies',
+					collapsed: true,
 					autogenerate: { directory: 'docs/policies' }
 				},
 				{
 					label: 'Releases',
 					collapsed: true,
 					autogenerate: { directory: 'docs/releases' }
+				},
+				{
+					label: 'Support',
+					collapsed: true,
+					autogenerate: { directory: 'support/android' }
 				}
 			]
 		}),
