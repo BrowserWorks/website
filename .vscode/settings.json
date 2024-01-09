@@ -41,9 +41,9 @@
 	"editor.formatOnSave": true,
 	"prettier.enable": true,
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true,
-		"source.fixAll.prettier": true,
-		"source.organizeImports": true
+		"source.fixAll.eslint": "explicit",
+		"source.fixAll.prettier": "explicit",
+		"source.organizeImports": "explicit"
 	},
 	"typescript.tsdk": "node_modules/typescript/lib"
 }
