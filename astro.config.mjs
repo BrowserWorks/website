@@ -72,7 +72,7 @@ export default defineConfig({
 				{
 					label: 'Support',
 					collapsed: true,
-					autogenerate: { directory: 'support/android' }
+					autogenerate: { directory: 'docs/support/android' }
 				}
 			]
 		}),
