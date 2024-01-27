@@ -1,0 +1,82 @@
+---
+import { twMerge } from 'tailwind-merge'
+
+let disabled = false
+let { className } = Astro.props
+---
+
+<div
+	class={twMerge('group/cardFx relative transition-shadow duration-300', className)}
+	role="figure"
+	data-disabled={disabled}
+>
+	<slot />
+
+	<div
+		class={twMerge(
+			'absolute left-0 top-0 h-full w-full rounded-[1.5rem] transition-colors group-hover/cardFx:opacity-100',
+			disabled ? 'hidden' : ''
+		)}
+		style="background-image: radial-gradient(circle at center, rgba(199, 243, 255, 0.2) 0%, rgba(255, 255, 255, 0) 50%);"
+	>
+	</div>
+</div>
+
+<script>
+	requestAnimationFrame(() => {
+		let cardEls = document.querySelectorAll('[role="figure"]')
+
+		for (let cardEl of cardEls as NodeListOf<HTMLElement>) {
+			let glowEl = cardEl.querySelector('.absolute') as HTMLElement
+			let disabled = cardEl.dataset.disabled === 'true'
+
+			if (glowEl) {
+				function rotateToMouse(e) {
+					if (!disabled) {
+						const bounds = cardEl.getBoundingClientRect()
+
+						const mouseX = e.clientX
+						const mouseY = e.clientY
+
+						const leftX = mouseX - bounds.x
+						const topY = mouseY - bounds.y
+
+						const center = {
+							x: leftX - bounds.width / 2,
+							y: topY - bounds.height / 2
+						}
+
+						const distance = Math.sqrt(center.x ** 2 + center.y ** 2)
+
+						cardEl.style.transform = `
+                            rotate3d(${center.y * 0.01}, ${center.x * -0.01}, 0, ${Math.log(distance)}deg)
+                        `
+
+						glowEl.style.backgroundImage = `
+                            radial-gradient(
+                                circle at
+                                    ${center.x * 2 + bounds.width / 2}px
+                                    ${center.y * 2 + bounds.height / 2}px,
+                                rgba(199, 243, 255, 0.2) 0%,
+                                rgba(255, 255, 255, 0) 50%
+                            )
+                        `
+					}
+				}
+
+				function onMouseEnter() {
+					document.addEventListener('mousemove', rotateToMouse)
+				}
+
+				function onMouseLeave() {
+					document.removeEventListener('mousemove', rotateToMouse)
+					cardEl.style.transform = ''
+					glowEl.style.backgroundImage = ''
+				}
+
+				cardEl.addEventListener('mouseenter', onMouseEnter)
+				cardEl.addEventListener('mouseleave', onMouseLeave)
+			}
+		}
+	})
+</script>

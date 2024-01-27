@@ -1,0 +1,15 @@
+---
+import { twMerge } from 'tailwind-merge'
+
+let { file, alt, width, height } = Astro.props
+---
+
+<div
+	role="figure"
+	class={twMerge('lottie h-full w-full opacity-100')}
+	style={`aspect-ratio:${width}/${height};`}
+>
+	<div class={twMerge('h-full w-full opacity-100')}>
+		<img src={`/images/${file}.svg`} class="h-full w-full object-contain" {width} {height} {alt} />
+	</div>
+</div>
