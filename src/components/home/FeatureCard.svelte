@@ -1,31 +1,14 @@
 <script lang="ts">
 	import { twMerge } from 'tailwind-merge'
 	import CardThreeD from '~/components/home/CardThreeD.svelte'
-	import Lottie from '~/components/home/Lottie.svelte'
+	import Illustration from '~/components/home/Illustrations.svelte'
 
-	let lottieEl: any
-	let innerWidth: number = -1
-
-	export let lottie: string
+	export let illustration: string
 	export let alt: string
 	export let title: string
 	export let content: string
 	export let cols: 1 | 2 = 1
-
-	$: isMobile = innerWidth > -1 && innerWidth < 1024
-	$: isMobile && lottieEl?.play()
-	$: !isMobile && lottieEl?.pause()
-
-	function onMouseEnter() {
-		if (innerWidth > 768) lottieEl?.play()
-	}
-
-	function onMouseLeave() {
-		lottieEl?.pause()
-	}
 </script>
-
-<svelte:window bind:innerWidth />
 
 <div
 	style="perspective:1200px"
@@ -36,9 +19,6 @@
 >
 	<CardThreeD
 		class="rounded-[1.5rem] border-[1px] border-transparent bg-white dark:bg-slate-800 shadow-lg max-lg:border-gray-100 md:hover:border-gray-100 md:hover:shadow-2xl"
-		on:mouseenter={onMouseEnter}
-		on:mouseleave={onMouseLeave}
-		disabled={isMobile}
 	>
 		<div class={twMerge('grid items-center gap-6 p-6 lg:p-14')}>
 			<div
@@ -47,14 +27,7 @@
 					cols === 2 && 'lg:row-start-1 last:lg:col-start-2'
 				)}
 			>
-				<Lottie
-					bind:this={lottieEl}
-					file={lottie}
-					{alt}
-					autoplay={isMobile}
-					width={800}
-					height={600}
-				/>
+				<Illustration file={illustration} {alt} width={800} height={600} />
 			</div>
 
 			<div

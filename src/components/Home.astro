@@ -5,13 +5,14 @@ import Icon from '~/components/Icon.svelte'
 import Browser from '~/components/home/BrowserUI.astro'
 import ComparisonTable from '~/components/home/ComparisonTable.svelte'
 import FeatureCard from '~/components/home/FeatureCard.svelte'
-import Lottie from '~/components/home/Lottie.svelte'
+import Illustration from '~/components/home/Illustrations.svelte'
 import Section from '~/components/home/Section.astro'
 import Water from '~/components/home/Water.astro'
 import { strings, type Key } from '~/strings'
 ---
 
 <script>
+	// Imports
 	import { isAndroid, isLinux, isMacOS, isWindows } from 'get-os-name'
 	import { latestLinks } from '~/config'
 
@@ -81,9 +82,9 @@ import { strings, type Key } from '~/strings'
 						title={strings[`feature.${feature}.title`] as Key}
 						content={strings[`feature.${feature}.content`] as Key}
 						alt={strings[`alt.illustration` as Key]}
-						lottie={feature}
+						illustration={feature}
 						cols={feature === 'data' ? 2 : 1}
-						client:visible
+						client:load
 					/>
 				))
 			}
@@ -182,13 +183,12 @@ import { strings, type Key } from '~/strings'
 		class="grid grid-cols-[auto] gap-4 after:absolute after:left-1/2 after:top-full after:block after:h-[3px] after:w-[calc(100%-4rem)] after:max-w-7xl after:-translate-x-1/2 after:bg-indigo after:bg-gradient-to-r after:from-indigo after:via-indigo after:to-mist after:content-[''] lg:grid-cols-[1.1fr_0.9fr] lg:gap-12"
 	>
 		<div class="mx-auto h-full w-full max-w-[38rem] max-lg:max-w-[32rem]">
-			<Lottie
+			<Illustration
 				file="surf"
 				alt={strings[`alt.illustration` as Key]}
 				width={800}
 				height={600}
-				autoplay={true}
-				client:visible
+				client:load
 			/>
 		</div>
 		<div
@@ -225,7 +225,7 @@ import { strings, type Key } from '~/strings'
 				</div>
 			</div>
 			<div class="flex flex-col gap-8 py-4">
-				<p class="text-balance grow text-lg" set:html={`"${strings[`featured.topNewReview`]}"`} />
+				<p class="grow text-balance text-lg" set:html={`"${strings[`featured.topNewReview`]}"`} />
 				<div class="lg:mb-4">
 					<img
 						src="/images/top-new-review-logo.png"
@@ -254,13 +254,12 @@ import { strings, type Key } from '~/strings'
 	<!-- Download -->
 	<Section color="frost" padding="tight" class="grid lg:grid-cols-[0.9fr_1fr] lg:gap-6">
 		<div class="mx-auto h-full w-full max-w-[40rem] max-lg:row-start-2 max-lg:max-w-[32rem]">
-			<Lottie
+			<Illustration
 				file="splash"
 				alt={strings[`alt.illustration` as Key]}
 				width={800}
 				height={600}
-				autoplay={true}
-				client:visible
+				client:load
 			/>
 		</div>
 		<div
