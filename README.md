@@ -1,53 +1,26 @@
-# Starlight Starter Kit: Basics
+# Waterfox Website
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-```
-npm create astro@latest -- --template starlight
-```
+Please use [Bun](https://bun.sh/) if you plan to make any contributions affecting the website (not just content).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
+Welcome to the Waterfox website documentation. This repository contains the source files for the documentation available on the Waterfox website.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Getting Started
 
-## 🚀 Project Structure
+To get started with contributing to the Waterfox website documentation, you'll need to fork this repository and clone it to your local machine. Then, you can make changes to the existing documentation or add new files.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## Contributing
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   │   └── config.ts
-│   └── env.d.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+We welcome contributions from the community! If you'd like to contribute, please follow these steps:
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+1. Fork this repository.
+2. Create a new branch for your changes.
+3. Make your changes in your branch.
+4. Submit a pull request with your changes.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+Please make sure your changes are clear and concise, and include any necessary updates to existing documentation.
 
-Static assets, like favicons, can be placed in the `public/` directory.
+## Support
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+If you need help with contributing to the Waterfox website documentation, please open an issue in this repository and we'll do our best to assist you.
