@@ -1,5 +1,5 @@
 ---
-title: 'Waterfox ⨯ TreeStyleTab: A Collaboration for the Waterfox Sidebar'
+title: 'Waterfox x TreeStyleTab: A Collaboration for the Waterfox Sidebar'
 date: 2024-02-15
 author: Alex
 description: A look at an upcoming feature in Waterfox -- the sidebar!
@@ -59,8 +59,6 @@ It's important to remember that while this native integration brings incredible 
 
 The Waterfox sponsorship allowed the TST developer to focus on crucial features like virtual scrolling and UI enhancements, which significantly improve performance and responsiveness,  particularly noticeable for Waterfox users experiencing these features natively.
 
-#### Open Source & Shared Benefits
-
 While Waterfox played a role in enabling these advancements, it's important to note that the improvements benefit all TST users, regardless of their chosen browser. The virtual scrolling architecture reduces memory usage and enhances rendering speed, making tab management smoother and faster across the board.
 
-**Remember, open source thrives on collaboration, and advancements made for one project often benefit the entire community!**
+**Open source thrives on collaboration, and advancements made for one project often benefit the entire community!**
