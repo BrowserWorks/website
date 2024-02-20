@@ -6,7 +6,7 @@ import Downloads from '~/components/Downloads.svelte'
 const { title, subtitle } = Astro.props.entry.data
 ---
 
-<Layout>
+<Layout {...Astro.props}>
 	<Page {title} {subtitle}>
 		<div class={twMerge('mb-12 flex w-full grow flex-col gap-12 lg:mb-20 lg:flex')}>
 			<Downloads client:idle>
