@@ -21,7 +21,7 @@ const t = useTranslations(locale)
 
 {
 	isHomepage ? (
-		<Home />
+		<Home {...Astro.props} />
 	) : isDownloads ? (
 		<DownloadsPage {...Astro.props} />
 	) : (

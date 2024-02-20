@@ -38,7 +38,11 @@ import { strings, type Key } from '~/strings'
 	})
 </script>
 
-<Layout bgColor="crystal" class="w-full font-body font-light leading-relaxed text-deepsea">
+<Layout
+	bgColor="crystal"
+	class="w-full font-body font-light leading-relaxed text-deepsea"
+	{...Astro.props}
+>
 	<!-- Home header -->
 	<div
 		slot="header"

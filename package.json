@@ -3,7 +3,6 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "postinstall": "bunx patch-package",
     "predev": "bun run src/utils/github.ts",
     "dev": "astro dev",
     "prestart": "bun run src/utils/github.ts",
