@@ -1,0 +1,434 @@
+diff --git a/astro.config.mjs b/astro.config.mjs
+index aa1d23a..282eb53 100644
+--- a/astro.config.mjs
++++ b/astro.config.mjs
+@@ -11,21 +11,10 @@ export default defineConfig({
+ 		service: squooshImageService()
+ 	},
+ 	integrations: [
+-		blog({
+-			authors: {
+-				alex: {
+-					name: 'Alex Kontos',
+-					title: 'Founder',
+-					picture: '/alex.jpg',
+-					url: 'https://www.linkedin.com/in/alex-kontos'
+-				}
+-			}
+-		}),
+ 		starlight({
+ 			components: {
+ 				Head: '~/components/Head.astro',
+ 				Header: '~/components/Header.astro',
+-				MarkdownContent: 'starlight-blog/overrides/MarkdownContent.astro',
+ 				PageFrame: '~/components/CustomPageFrame.astro',
+ 				Pagination: '~/components/Pagination.astro',
+ 				Sidebar: '~/components/Sidebar.astro'
+@@ -50,6 +39,17 @@ export default defineConfig({
+ 				mastodon: 'https://mastodon.social/@Waterfox',
+ 				twitter: 'https://twitter.com/Waterfoxproject'
+ 			},
++			plugins: [blog({
++				authors: {
++					alex: {
++						name: 'Alex Kontos',
++						title: 'Founder',
++						picture: '/alex.jpg',
++						url: 'https://www.linkedin.com/in/alex-kontos'
++					}
++				}
++			}),
++			],
+ 			sidebar: [
+ 				{
+ 					label: 'Docs',
+diff --git a/bun.lockb b/bun.lockb
+index 7e88a3f..41249e9 100755
+Binary files a/bun.lockb and b/bun.lockb differ
+diff --git a/package.json b/package.json
+index 64e19eb..c991f3c 100644
+--- a/package.json
++++ b/package.json
+@@ -15,7 +15,7 @@
+     "deps:update": "bunx npm-check-updates --interactive --format group"
+   },
+   "dependencies": {
+-    "@astrojs/starlight": "^0.18.1",
++    "@astrojs/starlight": "^0.19.0",
+     "@astrojs/starlight-tailwind": "^2.0.1",
+     "@astrojs/svelte": "^5.0.3",
+     "@astrojs/tailwind": "^5.1.0",
+@@ -25,10 +25,10 @@
+     "clipboard": "^2.0.11",
+     "get-os-name": "^1.0.3",
+     "lodash": "^4.17.21",
+-    "sass": "^1.70.0",
++    "sass": "^1.71.0",
+     "sharp": "^0.33.2",
+-    "starlight-blog": "^0.4.0",
+-    "svelte": "^4.2.10",
++    "starlight-blog": "^0.5.0",
++    "svelte": "^4.2.11",
+     "svelte-select": "^5.8.3",
+     "tailwind-merge": "^2.2.1",
+     "tailwindcss": "^3.4.1",
+diff --git a/patches/@astrojs+starlight+0.18.0.patch b/patches/@astrojs+starlight+0.18.0.patch
+deleted file mode 100644
+index e0a834b..0000000
+--- a/patches/@astrojs+starlight+0.18.0.patch
++++ /dev/null
+@@ -1,337 +0,0 @@
+-diff --git a/node_modules/@astrojs/starlight/components/EditLink.astro b/node_modules/@astrojs/starlight/components/EditLink.astro
+-index 74be4c8..985f929 100644
+---- a/node_modules/@astrojs/starlight/components/EditLink.astro
+-+++ b/node_modules/@astrojs/starlight/components/EditLink.astro
+-@@ -1,15 +1,17 @@
+- ---
+--import Icon from '../user-components/Icon.astro';
+- import type { Props } from '../props';
+-+import Icon from '../user-components/Icon.astro';
+-+import { useTranslations } from '../utils/translations';
+- 
+--const { editUrl, labels } = Astro.props;
+-+const { editUrl, locale } = Astro.props
+-+const t = useTranslations(locale)
+- ---
+- 
+- {
+- 	editUrl && (
+- 		<a href={editUrl} class="sl-flex">
+- 			<Icon name="pencil" size="1.2em" />
+--			{labels['page.editLink']}
+-+			{t('page.editLink')}
+- 		</a>
+- 	)
+- }
+-diff --git a/node_modules/@astrojs/starlight/components/FallbackContentNotice.astro b/node_modules/@astrojs/starlight/components/FallbackContentNotice.astro
+-index 44d553a..3e4868d 100644
+---- a/node_modules/@astrojs/starlight/components/FallbackContentNotice.astro
+-+++ b/node_modules/@astrojs/starlight/components/FallbackContentNotice.astro
+-@@ -1,13 +1,15 @@
+- ---
+--import Icon from '../user-components/Icon.astro';
+- import type { Props } from '../props';
+-+import Icon from '../user-components/Icon.astro';
+-+import { useTranslations } from '../utils/translations';
+- 
+--const { labels } = Astro.props;
+-+const { locale } = Astro.props
+-+const t = useTranslations(locale)
+- ---
+- 
+- <p class="sl-flex">
+- 	<Icon name={'warning'} size="1.5em" color="var(--sl-color-orange-high)" /><span
+--		>{labels['i18n.untranslatedContent']}</span
+-+		>{t('i18n.untranslatedContent')}</span
+- 	>
+- </p>
+- 
+-diff --git a/node_modules/@astrojs/starlight/components/LanguageSelect.astro b/node_modules/@astrojs/starlight/components/LanguageSelect.astro
+-index c85292d..d90f1d8 100644
+---- a/node_modules/@astrojs/starlight/components/LanguageSelect.astro
+-+++ b/node_modules/@astrojs/starlight/components/LanguageSelect.astro
+-@@ -11,7 +11,10 @@ function localizedPathname(locale: string | undefined): string {
+- 	return localizedUrl(Astro.url, locale).pathname;
+- }
+- 
+--const { labels } = Astro.props;
+-+import { useTranslations } from '../utils/translations';
+-+
+-+const { locale } = Astro.props
+-+const t = useTranslations(locale)
+- ---
+- 
+- {
+-@@ -19,7 +22,7 @@ const { labels } = Astro.props;
+- 		<starlight-lang-select>
+- 			<Select
+- 				icon="translate"
+--				label={labels['languageSelect.accessibleLabel']}
+-+				label={t('languageSelect.accessibleLabel')}
+- 				value={localizedPathname(Astro.props.locale)}
+- 				options={Object.entries(config.locales).map(([code, locale]) => ({
+- 					value: localizedPathname(code),
+-diff --git a/node_modules/@astrojs/starlight/components/LastUpdated.astro b/node_modules/@astrojs/starlight/components/LastUpdated.astro
+-index 6e5fb84..d7b011f 100644
+---- a/node_modules/@astrojs/starlight/components/LastUpdated.astro
+-+++ b/node_modules/@astrojs/starlight/components/LastUpdated.astro
+-@@ -1,13 +1,15 @@
+- ---
+- import type { Props } from '../props';
+-+import { useTranslations } from '../utils/translations';
+- 
+--const { labels, lang, lastUpdated } = Astro.props;
+-+const { locale, lang, lastUpdated } = Astro.props;
+-+const t = useTranslations(locale)
+- ---
+- 
+- {
+- 	lastUpdated && (
+- 		<p>
+--			{labels['page.lastUpdated']}{' '}
+-+			{t('page.lastUpdated')}{' '}
+- 			<time datetime={lastUpdated.toISOString()}>
+- 				{lastUpdated.toLocaleDateString(lang, { dateStyle: 'medium', timeZone: 'UTC' })}
+- 			</time>
+-diff --git a/node_modules/@astrojs/starlight/components/MobileMenuToggle.astro b/node_modules/@astrojs/starlight/components/MobileMenuToggle.astro
+-index b48e123..f132dee 100644
+---- a/node_modules/@astrojs/starlight/components/MobileMenuToggle.astro
+-+++ b/node_modules/@astrojs/starlight/components/MobileMenuToggle.astro
+-@@ -1,14 +1,16 @@
+- ---
+- import type { Props } from '../props';
+- import Icon from '../user-components/Icon.astro';
+-+import { useTranslations } from '../utils/translations';
+- 
+--const { labels } = Astro.props;
+-+const { locale } = Astro.props
+-+const t = useTranslations(locale)
+- ---
+- 
+- <starlight-menu-button>
+- 	<button
+- 		aria-expanded="false"
+--		aria-label={labels['menuButton.accessibleLabel']}
+-+		aria-label={t('menuButton.accessibleLabel')}
+- 		aria-controls="starlight__sidebar"
+- 		class="sl-flex md:sl-hidden"
+- 	>
+-diff --git a/node_modules/@astrojs/starlight/components/MobileTableOfContents.astro b/node_modules/@astrojs/starlight/components/MobileTableOfContents.astro
+-index 74342e3..f0592aa 100644
+---- a/node_modules/@astrojs/starlight/components/MobileTableOfContents.astro
+-+++ b/node_modules/@astrojs/starlight/components/MobileTableOfContents.astro
+-@@ -2,8 +2,10 @@
+- import Icon from '../user-components/Icon.astro';
+- import TableOfContentsList from './TableOfContents/TableOfContentsList.astro';
+- import type { Props } from '../props';
+-+import { useTranslations } from '../utils/translations';
+- 
+--const { labels, toc } = Astro.props;
+-+const { locale,toc } = Astro.props
+-+const t = useTranslations(locale)
+- ---
+- 
+- {
+-@@ -13,7 +15,7 @@ const { labels, toc } = Astro.props;
+- 				<details id="starlight__mobile-toc">
+- 					<summary id="starlight__on-this-page--mobile" class="sl-flex">
+- 						<div class="toggle sl-flex">
+--							{labels['tableOfContents.onThisPage']}
+-+							{t('tableOfContents.onThisPage')}
+- 							<Icon name={'right-caret'} class="caret" size="1rem" />
+- 						</div>
+- 						<span class="display-current" />
+-diff --git a/node_modules/@astrojs/starlight/components/PageFrame.astro b/node_modules/@astrojs/starlight/components/PageFrame.astro
+-index 3398034..a11d291 100644
+---- a/node_modules/@astrojs/starlight/components/PageFrame.astro
+-+++ b/node_modules/@astrojs/starlight/components/PageFrame.astro
+-@@ -1,15 +1,17 @@
+- ---
+- import MobileMenuToggle from 'virtual:starlight/components/MobileMenuToggle';
+- import type { Props } from '../props';
+-+import { useTranslations } from '../utils/translations';
+- 
+--const { hasSidebar, labels } = Astro.props;
+-+const { hasSidebar, locale } = Astro.props;
+-+const t = useTranslations(locale)
+- ---
+- 
+- <div class="page sl-flex">
+- 	<header class="header"><slot name="header" /></header>
+- 	{
+- 		hasSidebar && (
+--			<nav class="sidebar" aria-label={labels['sidebarNav.accessibleLabel']}>
+-+			<nav class="sidebar" aria-label={t('sidebarNav.accessibleLabel')}>
+- 				<MobileMenuToggle {...Astro.props} />
+- 				<div id="starlight__sidebar" class="sidebar-pane">
+- 					<div class="sidebar-content sl-flex">
+-diff --git a/node_modules/@astrojs/starlight/components/Pagination.astro b/node_modules/@astrojs/starlight/components/Pagination.astro
+-index 0c92c31..ab1533c 100644
+---- a/node_modules/@astrojs/starlight/components/Pagination.astro
+-+++ b/node_modules/@astrojs/starlight/components/Pagination.astro
+-@@ -1,8 +1,12 @@
+- ---
+--import Icon from '../user-components/Icon.astro';
+- import type { Props } from '../props';
+-+import Icon from '../user-components/Icon.astro';
+-+import { useTranslations } from '../utils/translations';
+-+
+-+const { dir, locale, pagination } = Astro.props;
+-+
+-+const t = useTranslations(locale)
+- 
+--const { dir, labels, pagination } = Astro.props;
+- const { prev, next } = pagination;
+- const isRtl = dir === 'rtl';
+- ---
+-@@ -13,7 +17,7 @@ const isRtl = dir === 'rtl';
+- 			<a href={prev.href} rel="prev">
+- 				<Icon name={isRtl ? 'right-arrow' : 'left-arrow'} size="1.5rem" />
+- 				<span>
+--					{labels['page.previousLink']}
+-+					{t('page.previousLink')}
+- 					<br />
+- 					<span class="link-title">{prev.label}</span>
+- 				</span>
+-@@ -25,7 +29,7 @@ const isRtl = dir === 'rtl';
+- 			<a href={next.href} rel="next">
+- 				<Icon name={isRtl ? 'left-arrow' : 'right-arrow'} size="1.5rem" />
+- 				<span>
+--					{labels['page.nextLink']}
+-+					{t('page.nextLink')}
+- 					<br />
+- 					<span class="link-title">{next.label}</span>
+- 				</span>
+-diff --git a/node_modules/@astrojs/starlight/components/Search.astro b/node_modules/@astrojs/starlight/components/Search.astro
+-index ec53fc3..041262a 100644
+---- a/node_modules/@astrojs/starlight/components/Search.astro
+-+++ b/node_modules/@astrojs/starlight/components/Search.astro
+-@@ -3,13 +3,15 @@ import '@pagefind/default-ui/css/ui.css';
+- import Icon from '../user-components/Icon.astro';
+- import project from 'virtual:starlight/project-context';
+- import type { Props } from '../props';
+-+import { useTranslations } from '../utils/translations';
+- 
+--const { labels } = Astro.props;
+-+const { locale } = Astro.props
+-+const t = useTranslations(locale)
+- 
+- const pagefindTranslations = {
+--	placeholder: labels['search.label'],
+-+	placeholder: t['search.label'],
+- 	...Object.fromEntries(
+--		Object.entries(labels)
+-+		Object.entries(t)
+- 			.filter(([key]) => key.startsWith('pagefind.'))
+- 			.map(([key, value]) => [key.replace('pagefind.', ''), value])
+- 	),
+-@@ -24,27 +26,27 @@ const pagefindTranslations = {
+- 		{
+- 			/* The span is `aria-hidden` because it is not shown on small screens. Instead, the icon label is used for accessibility purposes. */
+- 		}
+--		<Icon name="magnifier" label={labels['search.label']} />
+--		<span class="sl-hidden md:sl-block" aria-hidden="true">{labels['search.label']}</span>
+-+		<Icon name="magnifier" label={t['search.label']} />
+-+		<span class="sl-hidden md:sl-block" aria-hidden="true">{t['search.label']}</span>
+- 		<Icon
+- 			name="forward-slash"
+- 			class="sl-hidden md:sl-block"
+--			label={labels['search.shortcutLabel']}
+-+			label={t['search.shortcutLabel']}
+- 		/>
+- 	</button>
+- 
+--	<dialog style="padding:0" aria-label={labels['search.label']}>
+-+	<dialog style="padding:0" aria-label={t['search.label']}>
+- 		<div class="dialog-frame sl-flex">
+- 			{
+- 				/* TODO: Make the layout of this button flexible to accommodate different word lengths. Currently hard-coded for English: “Cancel” */
+- 			}
+- 			<button data-close-modal class="sl-flex md:sl-hidden">
+--				{labels['search.cancelLabel']}
+-+				{t['search.cancelLabel']}
+- 			</button>
+- 			{
+- 				import.meta.env.DEV ? (
+- 					<div style="margin: auto; text-align: center; white-space: pre-line;" dir="ltr">
+--						<p>{labels['search.devWarning']}</p>
+-+						<p>{t['search.devWarning']}</p>
+- 					</div>
+- 				) : (
+- 					<div class="search-container">
+-diff --git a/node_modules/@astrojs/starlight/components/SkipLink.astro b/node_modules/@astrojs/starlight/components/SkipLink.astro
+-index 307c1ef..bf8b58d 100644
+---- a/node_modules/@astrojs/starlight/components/SkipLink.astro
+-+++ b/node_modules/@astrojs/starlight/components/SkipLink.astro
+-@@ -1,11 +1,13 @@
+- ---
+- import { PAGE_TITLE_ID } from '../constants';
+- import type { Props } from '../props';
+-+import { useTranslations } from '../utils/translations';
+- 
+--const { labels } = Astro.props;
+-+const { locale } = Astro.props
+-+const t = useTranslations(locale)
+- ---
+- 
+--<a href={`#${PAGE_TITLE_ID}`}>{labels['skipLink.label']}</a>
+-+<a href={`#${PAGE_TITLE_ID}`}>{t('skipLink.label')}</a>
+- 
+- <style>
+- 	a {
+-diff --git a/node_modules/@astrojs/starlight/components/TableOfContents.astro b/node_modules/@astrojs/starlight/components/TableOfContents.astro
+-index eafd3d8..66427b0 100644
+---- a/node_modules/@astrojs/starlight/components/TableOfContents.astro
+-+++ b/node_modules/@astrojs/starlight/components/TableOfContents.astro
+-@@ -1,15 +1,17 @@
+- ---
+- import TableOfContentsList from './TableOfContents/TableOfContentsList.astro';
+- import type { Props } from '../props';
+-+import { useTranslations } from '../utils/translations';
+- 
+--const { labels, toc } = Astro.props;
+-+const { locale, toc } = Astro.props
+-+const t = useTranslations(locale)
+- ---
+- 
+- {
+- 	toc && (
+- 		<starlight-toc data-min-h={toc.minHeadingLevel} data-max-h={toc.maxHeadingLevel}>
+- 			<nav aria-labelledby="starlight__on-this-page">
+--				<h2 id="starlight__on-this-page">{labels['tableOfContents.onThisPage']}</h2>
+-+				<h2 id="starlight__on-this-page">{t('tableOfContents.onThisPage')}</h2>
+- 				<TableOfContentsList toc={toc.items} />
+- 			</nav>
+- 		</starlight-toc>
+-diff --git a/node_modules/@astrojs/starlight/components/ThemeSelect.astro b/node_modules/@astrojs/starlight/components/ThemeSelect.astro
+-index de88627..9811122 100644
+---- a/node_modules/@astrojs/starlight/components/ThemeSelect.astro
+-+++ b/node_modules/@astrojs/starlight/components/ThemeSelect.astro
+-@@ -1,20 +1,22 @@
+- ---
+- import Select from './Select.astro';
+- import type { Props } from '../props';
+-+import { useTranslations } from '../utils/translations';
+- 
+--const { labels } = Astro.props;
+-+const { locale } = Astro.props
+-+const t = useTranslations(locale)
+- ---
+- 
+- <starlight-theme-select>
+- 	{/* TODO: Can we give this select a width that works well for each language’s strings? */}
+- 	<Select
+- 		icon="laptop"
+--		label={labels['themeSelect.accessibleLabel']}
+-+		label={t('themeSelect.accessibleLabel')}
+- 		value="auto"
+- 		options={[
+--			{ label: labels['themeSelect.dark'], selected: false, value: 'dark' },
+--			{ label: labels['themeSelect.light'], selected: false, value: 'light' },
+--			{ label: labels['themeSelect.auto'], selected: true, value: 'auto' },
+-+			{ label: t('themeSelect.dark'), selected: false, value: 'dark' },
+-+			{ label: t('themeSelect.light'), selected: false, value: 'light' },
+-+			{ label: t('themeSelect.auto'), selected: true, value: 'auto' },
+- 		]}
+- 		width="6.25em"
+- 	/>
+diff --git a/src/content/config.ts b/src/content/config.ts
+index a005209..0b24837 100644
+--- a/src/content/config.ts
++++ b/src/content/config.ts
+@@ -1,8 +1,8 @@
+-import { i18nSchema } from '@astrojs/starlight/schema'
+-import { defineCollection } from 'astro:content'
+-import { docsAndBlogSchema } from 'starlight-blog/schema'
++import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
++import { defineCollection } from 'astro:content';
++import { blogSchema } from 'starlight-blog/schema';
+ 
+ export const collections = {
+-	docs: defineCollection({ schema: docsAndBlogSchema }),
++	docs: defineCollection({ schema: docsSchema({ extend: blogSchema() }) }),
+ 	i18n: defineCollection({ type: 'data', schema: i18nSchema() })
+ }

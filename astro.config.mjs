@@ -11,21 +11,10 @@ export default defineConfig({
 		service: squooshImageService()
 	},
 	integrations: [
-		blog({
-			authors: {
-				alex: {
-					name: 'Alex Kontos',
-					title: 'Founder',
-					picture: '/alex.jpg',
-					url: 'https://www.linkedin.com/in/alex-kontos'
-				}
-			}
-		}),
 		starlight({
 			components: {
 				Head: '~/components/Head.astro',
 				Header: '~/components/Header.astro',
-				MarkdownContent: 'starlight-blog/overrides/MarkdownContent.astro',
 				PageFrame: '~/components/CustomPageFrame.astro',
 				Pagination: '~/components/Pagination.astro',
 				Sidebar: '~/components/Sidebar.astro'
@@ -50,6 +39,17 @@ export default defineConfig({
 				mastodon: 'https://mastodon.social/@Waterfox',
 				twitter: 'https://twitter.com/Waterfoxproject'
 			},
+			plugins: [blog({
+				authors: {
+					alex: {
+						name: 'Alex Kontos',
+						title: 'Founder',
+						picture: '/alex.jpg',
+						url: 'https://www.linkedin.com/in/alex-kontos'
+					}
+				}
+			}),
+			],
 			sidebar: [
 				{
 					label: 'Docs',
