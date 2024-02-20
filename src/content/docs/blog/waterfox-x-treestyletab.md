@@ -1,5 +1,5 @@
 ---
-title: 'Waterfox x TreeStyleTab: A Collaboration for the Waterfox Sidebar'
+title: 'Waterfox × TreeStyleTab: A Collaboration for the Waterfox Sidebar'
 date: 2024-02-15
 author: Alex
 description: A look at an upcoming feature in Waterfox -- the sidebar!
