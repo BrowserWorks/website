@@ -1,7 +1,5 @@
 {
-	"name": "waterfox",
 	"type": "module",
-	"version": "0.0.1",
 	"scripts": {
 		"predev": "bun run src/utils/github.ts",
 		"dev": "astro dev",
@@ -34,10 +32,6 @@
 		"tailwindcss-scoped-preflight": "^2.1.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.5.3",
-		"ncu": "^0.2.1",
-		"prettier": "^3.2.5",
-		"prettier-plugin-astro": "^0.13.0",
-		"prettier-plugin-tailwindcss": "^0.5.11"
+		"@biomejs/biome": "1.5.3"
 	}
 }

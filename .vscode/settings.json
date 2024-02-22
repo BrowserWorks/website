@@ -1,5 +1,4 @@
 {
-	// peacock
 	"workbench.colorCustomizations": {
 		"activityBar.activeBackground": "#6893f0",
 		"activityBar.background": "#6893f0",
@@ -19,31 +18,21 @@
 		"titleBar.inactiveBackground": "#3a72eb99",
 		"titleBar.inactiveForeground": "#e7e7e799"
 	},
-	// astro
 	"files.associations": {
 		"*.mdx": "markdown"
 	},
 	"css.lint.unknownAtRules": "ignore",
 	"scss.lint.unknownAtRules": "ignore",
-	"eslint.validate": [
-		"astro"
-	],
 	"[astro]": {
 		"editor.defaultFormatter": "astro-build.astro-vscode"
 	},
 	"[typescript]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
-	"prettier.documentSelectors": [
-		"**/*.astro",
-		"**/*.ts"
-	],
 	"editor.formatOnSave": true,
-	"prettier.enable": true,
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit",
-		"source.fixAll.prettier": "explicit",
-		"source.organizeImports": "explicit"
+		"quickfix.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
 	},
 	"typescript.tsdk": "node_modules/typescript/lib"
 }
