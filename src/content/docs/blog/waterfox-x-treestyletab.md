@@ -1,11 +1,11 @@
 ---
-title: 'Waterfox × TreeStyleTab: A Collaboration for the Waterfox Sidebar'
+title: 'Waterfox × Tree Style Tab: A Collaboration for the Waterfox Sidebar'
 date: 2024-02-15
 author: Alex
 description: A look at an upcoming feature in Waterfox -- the sidebar!
 ---
 
-I'm happy to announce a collaboration with TreeStyleTab (TST), the popular Firefox add-on that brings a unique and powerful tab management experience to Waterfox. This partnership,  made possible by the sponsorship of the Waterfox project, is bringing a native sidebar solution for Waterfox users, offering improved, advanced functionality without the need for third-party extensions.
+I'm happy to announce a collaboration with Tree Style Tab [(TST)](https://github.com/piroor/treestyletab), the popular Firefox add-on that brings a unique and powerful tab management experience to Waterfox. This partnership,  made possible by the sponsorship of the Waterfox project, is bringing a native sidebar solution for Waterfox users, offering improved, advanced functionality without the need for third-party extensions.
 
 ### What's coming to Waterfox?
 
@@ -49,11 +49,11 @@ This performance boost benefits both Waterfox users and TST itself:
 
 ### Beyond Waterfox: Open Source Collaboration in Action
 
-It's important to remember that while this native integration brings incredible benefits to Waterfox users, it's powered by the **collaborative spirit of open source**. TreeStyleTab itself is an open-source project, meaning its development thrives on community contributions and shared knowledge.
+It's important to remember that while this native integration brings incredible benefits to Waterfox users, it's powered by the collaborative spirit of open source. Tree Style Tab itself is an open-source project, meaning its development thrives on community contributions and shared knowledge.
 
 #### Waterfox's Impact
 
-"[The virtual scrolling architecture] is the largest benefit on the TST project... Current TST keeps DOM nodes as tabs in/around visible area in the sidebar, it improves total performance around rendering and initialization," explains Yuki Hiroshi, the TST developer. He further adds, "Introducing virtual scrolling minimizes the RAM usage from such additional contents."
+"[The virtual scrolling architecture] is the largest benefit on the TST project... Current TST keeps DOM nodes as tabs in/around visible area in the sidebar, it improves total performance around rendering and initialization," explains [Yuki Hiroshi](https://github.com/piroor), the TST developer. He further adds, "Introducing virtual scrolling minimizes the RAM usage from such additional contents."
 
 "Now I could develop TST at work time of my employer company, as a task sponsored by the Waterfox project, so I could take enough time to research how we can introduce virtual scrolling to the existing implementation without breakage."
 
@@ -61,4 +61,4 @@ The Waterfox sponsorship allowed the TST developer to focus on crucial features 
 
 While Waterfox played a role in enabling these advancements, it's important to note that the improvements benefit all TST users, regardless of their chosen browser. The virtual scrolling architecture reduces memory usage and enhances rendering speed, making tab management smoother and faster across the board.
 
-**Open source thrives on collaboration, and advancements made for one project often benefit the entire community!**
+Open source thrives on collaboration, and advancements made for one project often benefit the entire community.
