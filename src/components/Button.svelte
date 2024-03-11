@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { twMerge } from 'tailwind-merge'
 
-	let className = ''
+	export let className: string = ''
 
 	export let href: string | undefined = undefined
 	export let type: 'submit' | 'reset' | 'button' | undefined = 'button'
@@ -11,7 +11,7 @@
 </script>
 
 <svelte:element
-	this='a'
+	this="a"
 	on:click|stopPropagation
 	on:keydown
 	{href}

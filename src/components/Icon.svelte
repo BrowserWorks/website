@@ -1,18 +1,6 @@
 <script lang="ts">
 	import { twMerge } from 'tailwind-merge'
 
-	// global
-	import IconCheck from '~/assets/icons/check.svg?raw'
-	import IconChevron from '~/assets/icons/chevron.svg?raw'
-	import IconCross from '~/assets/icons/cross.svg?raw'
-	import IconDownload from '~/assets/icons/download.svg?raw'
-	import IconDropdown from '~/assets/icons/dropdown.svg?raw'
-	import IconLinux from '~/assets/icons/linux.svg?raw'
-	import IconMacOS from '~/assets/icons/macos.svg?raw'
-	import IconSearch from '~/assets/icons/search.svg?raw'
-	import IconStar from '~/assets/icons/star.svg?raw'
-	import IconTwitter from '~/assets/icons/twitter.svg?raw'
-	import IconWindows from '~/assets/icons/windows.svg?raw'
 	// browser ui
 	import IconAmazon from '~/assets/icons/browser/amazon.svg?raw'
 	import IconArrowDesktop from '~/assets/icons/browser/arrow-desktop.svg?raw'
@@ -34,10 +22,21 @@
 	import IconSearch2 from '~/assets/icons/browser/search.svg?raw'
 	import IconSpotify from '~/assets/icons/browser/spotify.svg?raw'
 	import IconWaterfox from '~/assets/icons/browser/waterfox.svg?raw'
+	// global
+	import IconCheck from '~/assets/icons/check.svg?raw'
+	import IconChevron from '~/assets/icons/chevron.svg?raw'
+	import IconCross from '~/assets/icons/cross.svg?raw'
+	import IconDownload from '~/assets/icons/download.svg?raw'
+	import IconDropdown from '~/assets/icons/dropdown.svg?raw'
+	import IconLinux from '~/assets/icons/linux.svg?raw'
+	import IconMacOS from '~/assets/icons/macos.svg?raw'
+	import IconSearch from '~/assets/icons/search.svg?raw'
+	import IconStar from '~/assets/icons/star.svg?raw'
+	import IconTwitter from '~/assets/icons/twitter.svg?raw'
+	import IconWindows from '~/assets/icons/windows.svg?raw'
 
 	export let name: string
-
-	let className = ''
+	export let className: string = ''
 
 	const map = {
 		// global

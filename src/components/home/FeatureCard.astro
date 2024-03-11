@@ -1,19 +1,20 @@
 ---
 // Import necessary packages
-import { twMerge } from 'tailwind-merge'
-import CardThreeD from '~/components/home/CardThreeD.astro'
-import Illustration from '~/components/home/Illustrations.astro'
+import { twMerge } from "tailwind-merge";
+import CardThreeD from "~/components/home/CardThreeD.astro";
+import Illustration from "~/components/home/Illustrations.astro";
 
 // Define component props
 export interface FeatureCardProps {
-	illustration: string
-	alt: string
-	title: string
-	content: string
-	cols: number
+	illustration: string;
+	alt: string;
+	title: string;
+	content: string;
+	cols: number;
 }
 
-let { illustration, alt, title, content, cols } = Astro.props as FeatureCardProps
+const { illustration, alt, title, content, cols } =
+	Astro.props as FeatureCardProps;
 ---
 
 <div

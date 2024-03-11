@@ -1,9 +1,15 @@
 ---
-import { twMerge } from 'tailwind-merge'
+import { twMerge } from "tailwind-merge";
 
-const { class: className, id, color, width = '7xl', padding = 'normal' } = Astro.props
+const {
+	class: className,
+	id,
+	color,
+	width = "7xl",
+	padding = "normal",
+} = Astro.props;
 
-export { className as class }
+export { className as class };
 ---
 
 <section

@@ -1,38 +1,39 @@
 ---
-import type { Props } from '@astrojs/starlight/props'
+import type { Props } from "@astrojs/starlight/props";
 
-import StarlightSidebar from 'starlight-blog/overrides/Sidebar.astro'
+import StarlightSidebar from "starlight-blog/overrides/Sidebar.astro";
 
-const { sidebar } = Astro.props
-const { slug } = Astro.params
+const { sidebar } = Astro.props;
+const { slug } = Astro.params;
 
-var filteredSublist
-if (slug?.includes('blog')) {
+let filteredSublist;
+
+if (slug?.includes("blog")) {
 	filteredSublist = sidebar.filter((group) => {
 		const entries = group.entries.filter((entry) => {
-			return entry.type === 'link' && entry.href?.includes('blog')
-		})
+			return entry.type === "link" && entry.href?.includes("blog");
+		});
 
 		if (entries.length > 0) {
 			return {
 				...group,
-				entries
-			}
+				entries,
+			};
 		}
-	})
+	});
 } else {
 	filteredSublist = sidebar.filter((group) => {
 		const entries = group.entries.filter((entry) => {
-			return entry.type === 'link' && !entry.href?.includes('blog')
-		})
+			return entry.type === "link" && !entry.href?.includes("blog");
+		});
 
 		if (entries.length > 0) {
 			return {
 				...group,
-				entries
-			}
+				entries,
+			};
 		}
-	})
+	});
 }
 ---
 

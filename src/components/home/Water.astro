@@ -1,14 +1,14 @@
 ---
-import { twMerge } from 'tailwind-merge'
-import Bubbles from '~/components/home/Bubbles.astro'
+import { twMerge } from "tailwind-merge";
+import Bubbles from "~/components/home/Bubbles.astro";
 
-const { class: className } = Astro.props
+const { class: className } = Astro.props;
 
-export { className as class }
+export { className as class };
 
-export let bubbleQty: number | undefined = undefined
-export let bubbleSize: 'small' | 'large' = 'small'
-export let bgAlign: 'center' | 'top' = 'center'
+export const bubbleQty: number | undefined = undefined;
+export const bubbleSize: "small" | "large" = "small";
+export const bgAlign: "center" | "top" = "center";
 ---
 
 <div class={twMerge('absolute left-0 top-0 h-full w-full overflow-hidden', className)}>

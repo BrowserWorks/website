@@ -1,20 +1,20 @@
 ---
-import type { Props } from '@astrojs/starlight/props'
-import { useTranslations } from 'node_modules/@astrojs/starlight/utils/translations'
-import Header from './Header.astro'
+import type { Props } from "@astrojs/starlight/props";
+import { useTranslations } from "node_modules/@astrojs/starlight/utils/translations";
+import Header from "./Header.astro";
 
-import MobileMenuToggle from '@astrojs/starlight/components/MobileMenuToggle.astro'
-import DownloadsPage from './DownloadsPage.astro'
-import Footer from './Footer.astro'
-import Home from './Home.astro'
-import Sidebar from './Sidebar.astro'
+import MobileMenuToggle from "@astrojs/starlight/components/MobileMenuToggle.astro";
+import DownloadsPage from "./DownloadsPage.astro";
+import Footer from "./Footer.astro";
+import Home from "./Home.astro";
+import Sidebar from "./Sidebar.astro";
 
 // Check if we are on the hompage
-const isHomepage = Astro.props.slug === ''
-const isDownloads = Astro.props.slug === 'download'
+const isHomepage = Astro.props.slug === "";
+const isDownloads = Astro.props.slug === "download";
 
-const { hasSidebar, locale } = Astro.props
-const t = useTranslations(locale)
+const { hasSidebar, locale } = Astro.props;
+const t = useTranslations(locale);
 // If we are, render a custom component
 // If not, render the default page frame
 ---

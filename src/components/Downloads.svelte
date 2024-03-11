@@ -17,16 +17,16 @@
 
 	let selected: (typeof items)[number] | undefined = undefined
 	let latest: (typeof items)[number] | undefined = undefined
-	let listOpen: boolean = false
+	let listOpen = false
 	let focused = false
 	let clipboard: ClipboardJS
-	let copied: string = ''
-	let timeout
+	let copied = ''
+	let timeout: NodeJS.Timeout | undefined
 
 	items = releases.map((release) => ({
 		label: release.name,
 		value: String(release.id),
-		stable: !Boolean(release?.prerelease),
+		stable: !release?.prerelease,
 		pubDate: release?.published_at,
 		downloads: release?.downloads || []
 	}))
@@ -47,7 +47,9 @@
 		clipboard.on('success', (e) => {
 			copied = e.trigger.getAttribute('data-uuid') || ''
 			if (timeout) clearTimeout(timeout)
-			timeout = setTimeout(() => (copied = ''), 2000)
+			timeout = setTimeout(() => {
+				copied = ''
+			}, 2000)
 		})
 	})
 
@@ -121,7 +123,7 @@
 			<span class="text-sm">Date</span>
 			<span class="font-bold">
 				{selected?.pubDate &&
-					new Date(selected.pubDate).toLocaleDateString("en-US", {
+					new Date(selected.pubDate).toLocaleDateString('en-US', {
 						dateStyle: 'long'
 					})}
 			</span>
@@ -136,8 +138,8 @@
 				{selected?.label && selected.label === latest?.label
 					? 'Latest'
 					: selected?.stable
-					? 'Latest'
-					: 'Pre-release'}
+						? 'Latest'
+						: 'Pre-release'}
 			</span>
 		</div>
 	</div>
@@ -169,7 +171,10 @@
 				</div>
 			</div>
 			<div>
-				<Button href={link} class="tailwind-preflight flex items-center justify-center gap-2 py-2 text-sm lg:text-sm">
+				<Button
+					href={link}
+					class="tailwind-preflight flex items-center justify-center gap-2 py-2 text-sm lg:text-sm"
+				>
 					<Icon name="download" class="-ml-1 flex h-[18px] w-[18px]" />Download
 					{selected?.label}
 				</Button>

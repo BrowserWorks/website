@@ -1,36 +1,36 @@
 ---
-import { twMerge } from 'tailwind-merge'
-import WaterfoxLogo from '~/assets/icons/browser/waterfox.svg'
-import Icon from '~/components/Icon.svelte'
+import { twMerge } from "tailwind-merge";
+import WaterfoxLogo from "~/assets/icons/browser/waterfox.svg";
+import Icon from "~/components/Icon.svelte";
 
 const browsers = {
-	waterfox: 'Waterfox',
-	chrome: 'Chrome',
-	edge: 'Edge',
-	safari: 'Safari'
-} as const
+	waterfox: "Waterfox",
+	chrome: "Chrome",
+	edge: "Edge",
+	safari: "Safari",
+} as const;
 
 export interface ComparisonTableProps {
 	features: {
 		[feature: string]: {
-			waterfox: boolean
-			chrome: boolean
-			edge: boolean
-			safari: boolean
-		}
-	}
+			waterfox: boolean;
+			chrome: boolean;
+			edge: boolean;
+			safari: boolean;
+		};
+	};
 	locales: {
-		included?: string
-		excluded?: string
-	}
+		included?: string;
+		excluded?: string;
+	};
 }
 
-let { features, locales } = Astro.props as ComparisonTableProps
+const { features, locales } = Astro.props as ComparisonTableProps;
 
 const featuresList = Object.keys(features)?.map((feature) => ({
 	label: feature,
-	...features?.[feature]
-}))
+	...features?.[feature],
+}));
 ---
 
 <table

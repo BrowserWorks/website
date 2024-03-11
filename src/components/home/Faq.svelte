@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { twMerge } from 'tailwind-merge'
-	import Icon from '~/components/Icon.svelte'
+import { twMerge } from "tailwind-merge";
+import Icon from "~/components/Icon.svelte";
 
-	export let items: { heading: string; content: string; expanded?: boolean }[]
+export let items: { heading: string; content: string; expanded?: boolean }[];
 
-	function toggle(index: number) {
-		items[index].expanded = !Boolean(items[index].expanded)
-	}
+function toggle(index: number) {
+	items[index].expanded = !items[index].expanded;
+}
 </script>
 
 <div class="flex w-full flex-col gap-5" itemscope itemtype="https://schema.org/FAQPage">

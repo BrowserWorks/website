@@ -1,7 +1,7 @@
-import { promises as fs } from "fs";
-import * as https from 'https';
+import { promises as fs } from "node:fs";
+import * as https from "node:https";
+import { join } from "node:path";
 import { pick } from "lodash";
-import { join } from "path";
 import { downloadLinks } from "../config";
 
 const { writeFile, mkdir } = fs;
@@ -12,23 +12,29 @@ interface Release {
 	name: string;
 	tag_name: string;
 	published_at: string;
-  }
+}
 
-  interface CleanedRelease extends Pick<Release, 'id' | 'prerelease' | 'name' | 'tag_name' | 'published_at'> {
+interface CleanedRelease
+	extends Pick<
+		Release,
+		"id" | "prerelease" | "name" | "tag_name" | "published_at"
+	> {
 	downloads: {
-	  id: string;
-	  label: string;
-	  link: string;
-	  hash: string;
+		id: string;
+		label: string;
+		link: string;
+		hash: string;
 	}[];
-  }
+}
 
 function request(url: string): Promise<string> {
 	return new Promise((resolve) => {
 		https.get(url, (res) => {
 			let data = "";
 
-			res.on("data", (chunk) => (data += chunk));
+			res.on("data", (chunk) => {
+				data += chunk;
+			});
 
 			res.on("end", () => resolve(data));
 		});
@@ -62,33 +68,33 @@ async function main() {
 
 		const cleanedRelease: CleanedRelease = {
 			...pick(release, [
-			  "id",
-			  "prerelease",
-			  "name",
-			  "tag_name",
-			  "published_at",
+				"id",
+				"prerelease",
+				"name",
+				"tag_name",
+				"published_at",
 			]),
 			downloads: [
-			  {
-				id: "windows",
-				label: "Windows",
-				link: windowsLink,
-				hash: windowsHash,
-			  },
-			  {
-				id: "macos",
-				label: "macOS",
-				link: macOSLink,
-				hash: macHash,
-			  },
-			  {
-				id: "linux",
-				label: "Linux",
-				link: linuxLink,
-				hash: linuxHash,
-			  },
+				{
+					id: "windows",
+					label: "Windows",
+					link: windowsLink,
+					hash: windowsHash,
+				},
+				{
+					id: "macos",
+					label: "macOS",
+					link: macOSLink,
+					hash: macHash,
+				},
+				{
+					id: "linux",
+					label: "Linux",
+					link: linuxLink,
+					hash: linuxHash,
+				},
 			],
-		  };
+		};
 
 		cleanedRelease.downloads = [
 			{

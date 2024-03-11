@@ -1,31 +1,31 @@
 ---
-import Default from '@astrojs/starlight/components/Head.astro'
-import type { Props } from '@astrojs/starlight/props'
+import Default from "@astrojs/starlight/components/Head.astro";
+import type { Props } from "@astrojs/starlight/props";
 
 // Get the URL and pathname
-const pageUrl = new URL(Astro.url)
-const pathname = pageUrl.pathname
+const pageUrl = new URL(Astro.url);
+const pathname = pageUrl.pathname;
 
-let ogImageUrl
+let ogImageUrl: URL;
 
 // Check if files with no OG. Do a better way later
 if (
-	pathname === '/' ||
-	pathname === '/index.html' ||
-	pathname === '/blog/' ||
-	pathname === '/blog/index.html'
+	pathname === "/" ||
+	pathname === "/index.html" ||
+	pathname === "/blog/" ||
+	pathname === "/blog/index.html"
 ) {
-	ogImageUrl = new URL('/index/og.png', pageUrl)
+	ogImageUrl = new URL("/index/og.png", pageUrl);
 
 	// Other pages
 } else {
 	// Try custom OG image
 	try {
-		const ogPath = pathname.concat('og.png')
-		ogImageUrl = new URL(ogPath, pageUrl)
+		const ogPath = pathname.concat("og.png");
+		ogImageUrl = new URL(ogPath, pageUrl);
 	} catch {
 		// Fallback if custom doesn't exist
-		ogImageUrl = new URL('/index/og.png', pageUrl)
+		ogImageUrl = new URL("/index/og.png", pageUrl);
 	}
 }
 ---

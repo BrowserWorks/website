@@ -1,9 +1,9 @@
 ---
-import { Icon } from '@astrojs/starlight/components'
-import { headerNavigation } from '~/config'
-import { useTranslations } from 'node_modules/@astrojs/starlight/utils/translations'
-const { locale } = Astro.props
-const t = useTranslations(locale)
+import { Icon } from "@astrojs/starlight/components";
+import { useTranslations } from "node_modules/@astrojs/starlight/utils/translations";
+import { headerNavigation } from "~/config";
+const { locale } = Astro.props;
+const t = useTranslations(locale);
 ---
 
 <nav class="tailwind-preflight">

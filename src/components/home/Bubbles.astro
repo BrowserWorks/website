@@ -1,34 +1,40 @@
 ---
-import { twMerge } from 'tailwind-merge';
+import { twMerge } from "tailwind-merge";
 const { class: className } = Astro.props;
-export let width = 621
-export let height = 1024
-export let qty: number = 13
-export let size: 'small' | 'large' = 'small'
-const smallBubbles = Math.round(qty * 0.7)
-const largeBubbles = Math.round(qty * 0.3)
+export const width = 621;
+export const height = 1024;
+export const qty = 13;
+export const size: "small" | "large" = "small";
+const smallBubbles = Math.round(qty * 0.7);
+const largeBubbles = Math.round(qty * 0.3);
 
 function random(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1) + min)
+	return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const bubblesL = Array.from({length: largeBubbles}).map((_, i) => {
-  const d = size === 'small' ? random(18, 32) : random(48, 62)
-  return {
-    d,
-    animation: `up ${random(12, 20)}s ${random(100 * i, 250 * i * 2)}ms infinite`,
-    transform: `translateY(${height}px)`
-  }
-})
+const bubblesL = Array.from({ length: largeBubbles }).map((_, i) => {
+	const d = size === "small" ? random(18, 32) : random(48, 62);
+	return {
+		d,
+		animation: `up ${random(12, 20)}s ${random(
+			100 * i,
+			250 * i * 2,
+		)}ms infinite`,
+		transform: `translateY(${height}px)`,
+	};
+});
 
-const bubblesS = Array.from({length: smallBubbles}).map((_, i) => {
-  const d = size === 'small' ? random(18, 32) : random(48, 62)
-  return {
-    d,
-    animation: `up ${random(12, 20)}s ${random(100 * i, 250 * i * 2)}ms infinite`,
-    transform: `translateY(${height}px)`
-  }
-})
+const bubblesS = Array.from({ length: smallBubbles }).map((_, i) => {
+	const d = size === "small" ? random(18, 32) : random(48, 62);
+	return {
+		d,
+		animation: `up ${random(12, 20)}s ${random(
+			100 * i,
+			250 * i * 2,
+		)}ms infinite`,
+		transform: `translateY(${height}px)`,
+	};
+});
 
 export { bubblesL, bubblesS, className as class };
 ---
