@@ -1,5 +1,8 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const { scopedPreflightStyles } = require("tailwindcss-scoped-preflight");
+const {
+	scopedPreflightStyles,
+	isolateInsideOfContainer,
+} = require("tailwindcss-scoped-preflight");
 const starlightPlugin = require("@astrojs/starlight-tailwind");
 const accent = {
 	200: "#b1cce8",
@@ -27,8 +30,7 @@ module.exports = {
 	plugins: [
 		require("@tailwindcss/typography"),
 		scopedPreflightStyles({
-			cssSelector: ".tailwind-preflight",
-			mode: "matched only",
+			isolationStrategy: isolateInsideOfContainer('.tailwind-preflight'),
 		}),
 		starlightPlugin(),
 	],
