@@ -24,7 +24,7 @@
 	"css.lint.unknownAtRules": "ignore",
 	"scss.lint.unknownAtRules": "ignore",
 	"[astro]": {
-		"editor.defaultFormatter": "astro-build.astro-vscode"
+		"editor.defaultFormatter": "biomejs.biome"
 	},
 	"[typescript]": {
 		"editor.defaultFormatter": "biomejs.biome"
