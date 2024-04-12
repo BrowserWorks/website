@@ -30,7 +30,7 @@ module.exports = {
 	plugins: [
 		require("@tailwindcss/typography"),
 		scopedPreflightStyles({
-			isolationStrategy: isolateInsideOfContainer('.tailwind-preflight'),
+			isolationStrategy: isolateInsideOfContainer(".tailwind-preflight"),
 		}),
 		starlightPlugin(),
 	],

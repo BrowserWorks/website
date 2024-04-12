@@ -1,38 +1,49 @@
 ---
 import type { Props } from "@astrojs/starlight/props";
+import type { Badge } from "node_modules/@astrojs/starlight/schemas/badge";
+import type {
+	Link,
+	SidebarEntry,
+} from "node_modules/@astrojs/starlight/utils/navigation.ts";
 
 import StarlightSidebar from "starlight-blog/overrides/Sidebar.astro";
 
-const { sidebar } = Astro.props;
+interface Group {
+	type: "group";
+	label: string;
+	entries: (Link | Group)[];
+	collapsed: boolean;
+	badge: Badge | undefined;
+}
+
+const { sidebar }: { sidebar: SidebarEntry[] } = Astro.props as {
+	sidebar: SidebarEntry[];
+};
 const { slug } = Astro.params;
 
-let filteredSublist;
+let filteredSublist: SidebarEntry[];
 
 if (slug?.includes("blog")) {
-	filteredSublist = sidebar.filter((group) => {
-		const entries = group.entries.filter((entry) => {
-			return entry.type === "link" && entry.href?.includes("blog");
-		});
-
-		if (entries.length > 0) {
-			return {
-				...group,
-				entries,
-			};
+	filteredSublist = sidebar.map((entry: SidebarEntry) => {
+		if (entry.type === "group") {
+			const group = entry as Group;
+			const entries = group.entries.filter((entry: SidebarEntry) => {
+				return entry.type === "link" && entry.href.includes("blog");
+			});
+			return { ...group, entries };
 		}
+		return entry;
 	});
 } else {
-	filteredSublist = sidebar.filter((group) => {
-		const entries = group.entries.filter((entry) => {
-			return entry.type === "link" && !entry.href?.includes("blog");
-		});
-
-		if (entries.length > 0) {
-			return {
-				...group,
-				entries,
-			};
+	filteredSublist = sidebar.map((entry: SidebarEntry) => {
+		if (entry.type === "group") {
+			const group = entry as Group;
+			const entries = group.entries.filter((entry: SidebarEntry) => {
+				return entry.type === "link" && !entry.href.includes("blog");
+			});
+			return { ...group, entries };
 		}
+		return entry;
 	});
 }
 ---

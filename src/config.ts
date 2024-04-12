@@ -58,9 +58,9 @@ const downloadLinks = {
 };
 
 const latestLinks = {
-	windows: () => `https://cdn1.waterfox.net/waterfox/releases/latest/windows`,
-	macOS: () => `https://cdn1.waterfox.net/waterfox/releases/latest/macos`,
-	linux: () => `https://cdn1.waterfox.net/waterfox/releases/latest/linux`,
+	windows: () => "https://cdn1.waterfox.net/waterfox/releases/latest/windows",
+	macOS: () => "https://cdn1.waterfox.net/waterfox/releases/latest/macos",
+	linux: () => "https://cdn1.waterfox.net/waterfox/releases/latest/linux",
 };
 
 export {

@@ -1,62 +1,63 @@
 <script lang="ts">
-	import ClipboardJS from 'clipboard'
-	import { onDestroy, onMount, tick } from 'svelte'
-	import Select from 'svelte-select'
-	import { twMerge } from 'tailwind-merge'
-	import Button from '~/components/Button.svelte'
-	import Icon from '~/components/Icon.svelte'
-	import releases from '~/generated/releases.json'
+import ClipboardJS from "clipboard";
+import { onDestroy, onMount, tick } from "svelte";
+import Select from "svelte-select";
+import { twMerge } from "tailwind-merge";
+import Button from "~/components/Button.svelte";
+import Icon from "~/components/Icon.svelte";
+import releases from "~/generated/releases.json";
 
-	let items: {
-		label: string
-		value: string
-		stable: boolean
-		pubDate: string
-		downloads: { id: string; label: string; link: string; hash: string }[]
-	}[] = []
+let items: {
+	label: string;
+	value: string;
+	stable: boolean;
+	pubDate: string;
+	downloads: { id: string; label: string; link: string; hash: string }[];
+}[] = [];
 
-	let selected: (typeof items)[number] | undefined = undefined
-	let latest: (typeof items)[number] | undefined = undefined
-	let listOpen = false
-	let focused = false
-	let clipboard: ClipboardJS
-	let copied = ''
-	let timeout: NodeJS.Timeout | undefined
+let selected: (typeof items)[number] | undefined = undefined;
+let latest: (typeof items)[number] | undefined = undefined;
+// biome-ignore lint/style/useConst: off
+let listOpen = false;
+let focused = false;
+let clipboard: ClipboardJS;
+let copied = "";
+let timeout: NodeJS.Timeout | undefined;
 
-	items = releases.map((release) => ({
-		label: release.name,
-		value: String(release.id),
-		stable: !release?.prerelease,
-		pubDate: release?.published_at,
-		downloads: release?.downloads || []
-	}))
+items = releases.map((release) => ({
+	label: release.name,
+	value: String(release.id),
+	stable: !release?.prerelease,
+	pubDate: release?.published_at,
+	downloads: release?.downloads || [],
+}));
 
-	latest = items.find((i) => i.stable)
-	selected = latest
-	focused = false
+latest = items.find((i) => i.stable);
+selected = latest;
+focused = false;
 
-	async function reset() {
-		focused = false
-		await tick()
-		selected = latest
-	}
+async function reset() {
+	focused = false;
+	await tick();
+	selected = latest;
+}
 
-	onMount(() => {
-		clipboard = new ClipboardJS('.copy')
+onMount(() => {
+	clipboard = new ClipboardJS(".copy");
 
-		clipboard.on('success', (e) => {
-			copied = e.trigger.getAttribute('data-uuid') || ''
-			if (timeout) clearTimeout(timeout)
-			timeout = setTimeout(() => {
-				copied = ''
-			}, 2000)
-		})
-	})
+	clipboard.on("success", (e) => {
+		copied = e.trigger.getAttribute("data-uuid") || "";
+		if (timeout) clearTimeout(timeout);
+		timeout = setTimeout(() => {
+			copied = "";
+		}, 2000);
+	});
+});
 
-	onDestroy(() => {
-		if (timeout) clearTimeout(timeout)
-		clipboard?.destroy()
-	})
+onDestroy(() => {
+	if (timeout) clearTimeout(timeout);
+	clipboard?.destroy();
+});
 </script>
 
 <div class="relative flex w-full flex-col gap-8">

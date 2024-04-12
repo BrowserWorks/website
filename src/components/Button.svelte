@@ -1,13 +1,16 @@
 <script lang="ts">
-	import { twMerge } from 'tailwind-merge'
+import { twMerge } from "tailwind-merge";
 
-	export let className: string = ''
+// biome-ignore lint/style/useConst: off
+export let className = "";
+// biome-ignore lint/style/useConst: off
+export let href: string | undefined = undefined;
+// biome-ignore lint/style/useConst: off
+export let type: "submit" | "reset" | "button" | undefined = "button";
+// biome-ignore lint/style/useConst: off
+export let id: string | undefined = undefined;
 
-	export let href: string | undefined = undefined
-	export let type: 'submit' | 'reset' | 'button' | undefined = 'button'
-	export let id: string | undefined = undefined
-
-	export { className as class }
+export { className as class };
 </script>
 
 <svelte:element
