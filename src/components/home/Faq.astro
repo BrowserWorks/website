@@ -1,16 +1,16 @@
-<script lang="ts">
+---
 import { twMerge } from "tailwind-merge";
-import Icon from "~/components/Icon.svelte";
+import IconChevron from "~/assets/icons/chevron.svg";
 
-export let items: { heading: string; content: string; expanded?: boolean }[];
+const items = Astro.props.items;
 
-function toggle(index: number) {
+function toggle(index) {
 	items[index].expanded = !items[index].expanded;
 }
-</script>
+---
 
 <div class="flex w-full flex-col gap-5" itemscope itemtype="https://schema.org/FAQPage">
-	{#each items as item, idx}
+	{items.map((item, idx) => (
 		<div
 			itemscope
 			itemprop="mainEntity"
@@ -23,34 +23,35 @@ function toggle(index: number) {
 			<h3>
 				<button
 					type="button"
-					id="accordion-header-{idx}"
+					id={`accordion-header-${idx}`}
 					aria-expanded={item?.expanded}
-					aria-controls="accordion-panel-{idx}"
+					aria-controls={`accordion-panel-${idx}`}
 					class="text-balance flex h-full w-full items-center gap-4 px-5 py-5 text-left font-montserrat font-semibold lg:px-10 lg:py-8"
-					on:click={() => toggle(idx)}
+					onclick={() => toggle(idx)}
 				>
 					<span class="grow" itemprop="name">{item.heading}</span>
-					<Icon
-						name="chevron"
-						class={twMerge('duration-400 transition-all', item?.expanded === true && 'rotate-180')}
-					/>
+					<img
+        src={IconChevron.src} 
+        class={twMerge('duration-400 transition-all transform', item?.expanded === true && 'rotate-180')} 
+        alt="Chevron Icon"
+    />
 				</button>
 			</h3>
 			<section
 				itemscope
 				itemprop="acceptedAnswer"
 				itemtype="https://schema.org/Answer"
-				id="accordion-panel-{idx}"
-				aria-labelledby="accordion-header-{idx}"
+				id={`accordion-panel-${idx}`}
+				aria-labelledby={`accordion-header-${idx}`}
 				class={twMerge(
 					'duration-400 h-full max-h-0 overflow-hidden transition-[max-height]',
 					item?.expanded === true && 'max-h-[50rem]'
 				)}
 			>
 				<p class="px-5 pb-8 text-base leading-relaxed max-lg:text-base lg:px-10" itemprop="text">
-					{@html item.content}
+					{item.content}
 				</p>
 			</section>
 		</div>
-	{/each}
+	))}
 </div>

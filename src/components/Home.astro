@@ -1,7 +1,7 @@
 ---
+import IconStar from "~/assets/icons/star.svg";
 import Layout from "~/components/Base.astro";
-import Button from "~/components/Button.svelte";
-import Icon from "~/components/Icon.svelte";
+import Button from "~/components/Button.astro";
 import Browser from "~/components/home/BrowserUI.astro";
 import ComparisonTable from "~/components/home/ComparisonTable.astro";
 import FeatureCard from "~/components/home/FeatureCard.astro";
@@ -162,11 +162,7 @@ import { type Key, strings } from "~/strings";
 							<div class="flex flex-col gap-6">
 								<div class="flex items-center justify-center gap-1">
 									{Array.from(Array(strings[`review.${review}.stars` as Key]).keys()).map((n) => (
-										<Icon
-											name="star"
-											class="text-gold transition-colors md:group-hover/review:text-sand"
-											style={`transition-delay:${40 + n * 20}ms;`}
-										/>
+									<img src={IconStar.src} class=" text-gold transition-colors md:group-hover/review:text-sand h-[16px] w-[16px]" style={`transition-delay:${40 + n * 20}ms;`} alt="Star Icon" />
 									))}
 								</div>
 								<p

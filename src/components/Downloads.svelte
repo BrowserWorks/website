@@ -3,9 +3,18 @@ import ClipboardJS from "clipboard";
 import { onDestroy, onMount, tick } from "svelte";
 import Select from "svelte-select";
 import { twMerge } from "tailwind-merge";
-import Button from "~/components/Button.svelte";
-import Icon from "~/components/Icon.svelte";
+import downloadSvg from "~/assets/icons/browser/downloads.svg";
+import linuxSvg from "~/assets/icons/linux.svg";
+import macSvg from "~/assets/icons/macos.svg";
+import windowsSvg from "~/assets/icons/windows.svg";
+
 import releases from "~/generated/releases.json";
+
+const svgMap = {
+	windows: windowsSvg,
+	macos: macSvg,
+	linux: linuxSvg,
+};
 
 let items: {
 	label: string;
@@ -158,7 +167,11 @@ onDestroy(() => {
 		<div class="grid w-full gap-x-20 max-lg:gap-y-2 lg:grid-cols-[50%_1fr]">
 			<div class="grid grid-cols-[1fr_auto] items-center lg:grid-cols-[1fr_auto] lg:gap-x-20">
 				<div class="flex items-center gap-2 font-bold">
-					<Icon name={id} class="inline-flex h-[18px] w-[18px] align-bottom" />
+					<img
+						src={svgMap[id]?.src}
+						alt={`${id} icon`}
+						class="not-prose inline-flex h-[18px] w-[18px] align-bottom"
+					/>
 					<span>{label}</span>
 				</div>
 				<div class="w-[4rem] whitespace-nowrap text-center text-xs">
@@ -172,13 +185,21 @@ onDestroy(() => {
 				</div>
 			</div>
 			<div>
-				<Button
+				<a
 					href={link}
-					class="tailwind-preflight flex items-center justify-center gap-2 py-2 text-sm lg:text-sm"
+					class="whitespace-nowrap rounded-full bg-gold px-7 font-montserrat dark:text-deepsea font-semibold no-underline transition-all hover:scale-105 hover:bg-sand tailwind-preflight flex items-center justify-center gap-2 py-2 text-sm lg:text-sm"
+					type="button"
+					id="button"
+					rel={link.startsWith('http') ? 'noopener nofollow' : 'prefetch'}
+					target={link.startsWith('http') ? '_blank' : '_self'}
 				>
-					<Icon name="download" class="-ml-1 flex h-[18px] w-[18px]" />Download
-					{selected?.label}
-				</Button>
+					<img
+						src={downloadSvg.src}
+						alt="Download icon"
+						class="not-prose -ml-1 flex h-[18px] w-[18px]"
+					/>
+					Download {selected?.label}
+				</a>
 			</div>
 		</div>
 	{/each}

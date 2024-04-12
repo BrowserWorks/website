@@ -1,7 +1,8 @@
 ---
 import { twMerge } from "tailwind-merge";
 import WaterfoxLogo from "~/assets/icons/browser/waterfox.svg";
-import Icon from "~/components/Icon.svelte";
+import IconCheck from "~/assets/icons/check.svg";
+import IconCross from "~/assets/icons/cross.svg";
 
 const browsers = {
 	waterfox: "Waterfox",
@@ -100,19 +101,21 @@ const featuresList = Object.keys(features)?.map((feature) => ({
 									col === 0 && 'bg-crystal/40'
 								)}
 							>
-								{feat?.[browser] ? (
-									<Icon
-										name="check"
-										class="duration-50 h-[32px] w-[32px] rounded-full transition-all group-hover/browserfeat:scale-125 group-hover/browserfeat:shadow-xl lg:h-[42px] lg:w-[42px]"
-										title={locales?.included}
-									/>
-								) : (
-									<Icon
-										name="cross"
-										class="duration-50 h-[32px] w-[32px] rounded-full transition-all group-hover/browserfeat:scale-125 group-hover/browserfeat:shadow-xl lg:h-[42px] lg:w-[42px]"
-										title={locales?.included}
-									/>
-								)}
+							{feat?.[browser] ? (
+								<img
+									src={IconCheck.src}
+									class="duration-50 h-[32px] w-[32px] rounded-full transition-all group-hover/browserfeat:scale-125 group-hover/browserfeat:shadow-xl lg:h-[42px] lg:w-[42px]"
+									title={locales?.included}
+									alt="Check Icon"
+								/>
+							) : (
+								<img
+									src={IconCross.src}
+									class="duration-50 h-[32px] w-[32px] rounded-full transition-all group-hover/browserfeat:scale-125 group-hover/browserfeat:shadow-xl lg:h-[42px] lg:w-[42px]"
+									title={locales?.excluded}
+									alt="Cross Icon"
+								/>
+							)}
 							</div>
 						</td>
 					))}

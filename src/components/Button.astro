@@ -1,0 +1,20 @@
+---
+import { twMerge } from "tailwind-merge";
+---
+
+<a
+	type={Astro.props.type || 'button'}
+	href={Astro.props.href}
+	id={Astro.props.id || 'button'}
+	role={Astro.props.href ? 'link' : 'button'}
+	rel={Astro.props.href && Astro.props.href.startsWith('http')
+		? 'noopener nofollow'
+		: Astro.props.href
+			? 'prefetch'
+			: undefined}
+	target={Astro.props.href && Astro.props.href.startsWith('http') ? '_blank' : '_self'}
+	class={twMerge(`whitespace-nowrap rounded-full bg-gold px-7 py-4 font-montserrat text-lg dark:text-deepsea font-semibold no-underline transition-all hover:scale-105 hover:bg-sand lg:text-xl ${Astro.props.className}`)}
+	{...Astro.props}
+>
+	<slot />
+</a>
