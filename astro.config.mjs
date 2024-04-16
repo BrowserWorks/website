@@ -16,7 +16,9 @@ export default defineConfig({
 		service: squooshImageService(),
 	},
 	integrations: [
-		shield({}),
+		shield({
+			sri: { hashesModule: modulePath },
+		}),
 		starlight({
 			components: {
 				Head: "~/components/Head.astro",
