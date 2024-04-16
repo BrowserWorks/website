@@ -1,7 +1,7 @@
 https://www.waterfox.net/*
 Access-Control-Allow-Origin: https://www.waterfox.net
 Cache-Control: no-store, max-age=0
-Content-Security-Policy: upgrade-insecure-requests; script-src 'strict-dynamic'
+Content-Security-Policy: upgrade-insecure-requests;
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Resource-Policy: same-origin
