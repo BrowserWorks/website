@@ -20,7 +20,6 @@
 		"@tailwindcss/typography": "^0.5.12",
 		"@vercel/og": "^0.6.2",
 		"astro": "^4.6.1",
-		"clipboard": "^2.0.11",
 		"get-os-name": "^1.0.3",
 		"lodash": "^4.17.21",
 		"sass": "^1.75.0",
