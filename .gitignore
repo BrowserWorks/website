@@ -21,3 +21,4 @@ pnpm-debug.log*
 
 # generate releases
 src/generated/releases.json
+src/generated/sriHashes.mjs
