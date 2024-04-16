@@ -1,8 +1,13 @@
+import { resolve } from 'node:path'
 import starlight from "@astrojs/starlight";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
+import { shield } from '@kindspells/astro-shield'
 import { defineConfig, squooshImageService } from "astro/config";
 import blog from "starlight-blog";
+
+const rootDir = new URL('.', import.meta.url).pathname
+const modulePath = resolve(rootDir, 'src', 'generated', 'sriHashes.mjs')
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,6 +16,7 @@ export default defineConfig({
 		service: squooshImageService(),
 	},
 	integrations: [
+		shield({}),
 		starlight({
 			components: {
 				Head: "~/components/Head.astro",
