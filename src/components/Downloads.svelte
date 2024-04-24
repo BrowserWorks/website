@@ -1,71 +1,71 @@
 <script lang="ts">
-	import { onMount, tick } from 'svelte'
-	import Select from 'svelte-select'
-	import { twMerge } from 'tailwind-merge'
-	import downloadSvg from '~/assets/icons/browser/downloads.svg'
-	import linuxSvg from '~/assets/icons/linux.svg'
-	import macSvg from '~/assets/icons/macos.svg'
-	import windowsSvg from '~/assets/icons/windows.svg'
+import { onMount, tick } from "svelte";
+import Select from "svelte-select";
+import { twMerge } from "tailwind-merge";
+import downloadSvg from "~/assets/icons/browser/downloads.svg";
+import linuxSvg from "~/assets/icons/linux.svg";
+import macSvg from "~/assets/icons/macos.svg";
+import windowsSvg from "~/assets/icons/windows.svg";
 
-	import releases from '~/generated/releases.json'
+import releases from "~/generated/releases.json";
 
-	const svgMap = {
-		windows: windowsSvg,
-		macos: macSvg,
-		linux: linuxSvg
+const svgMap = {
+	windows: windowsSvg,
+	macos: macSvg,
+	linux: linuxSvg,
+};
+
+let items: {
+	label: string;
+	value: string;
+	stable: boolean;
+	pubDate: string;
+	downloads: { id: string; label: string; link: string; hash: string }[];
+}[] = [];
+
+let selected: (typeof items)[number] | undefined = undefined;
+let latest: (typeof items)[number] | undefined = undefined;
+// biome-ignore lint/style/useConst: off
+let listOpen = false;
+let focused = false;
+let copied = "";
+let timeout: NodeJS.Timeout | undefined;
+
+items = releases.map((release) => ({
+	label: release.name,
+	value: String(release.id),
+	stable: !release?.prerelease,
+	pubDate: release?.published_at,
+	downloads: release?.downloads || [],
+}));
+
+latest = items.find((i) => i.stable);
+selected = latest;
+focused = false;
+
+async function reset() {
+	focused = false;
+	await tick();
+	selected = latest;
+}
+
+onMount(() => {
+	const copyButtons = document.querySelectorAll(".copy");
+
+	for (const button of copyButtons) {
+		button.addEventListener("click", async (e) => {
+			const target = e.target as Element;
+			const uuid = target.getAttribute("data-uuid") || "";
+			const hash = target.getAttribute("data-clipboard-text") || "";
+			copied = uuid;
+			await navigator.clipboard.writeText(hash);
+			if (timeout) clearTimeout(timeout);
+			timeout = setTimeout(() => {
+				copied = "";
+			}, 2000);
+		});
 	}
-
-	let items: {
-		label: string
-		value: string
-		stable: boolean
-		pubDate: string
-		downloads: { id: string; label: string; link: string; hash: string }[]
-	}[] = []
-
-	let selected: (typeof items)[number] | undefined = undefined
-	let latest: (typeof items)[number] | undefined = undefined
-	// biome-ignore lint/style/useConst: off
-	let listOpen = false
-	let focused = false
-	let copied = ''
-	let timeout: NodeJS.Timeout | undefined
-
-	items = releases.map((release) => ({
-		label: release.name,
-		value: String(release.id),
-		stable: !release?.prerelease,
-		pubDate: release?.published_at,
-		downloads: release?.downloads || []
-	}))
-
-	latest = items.find((i) => i.stable)
-	selected = latest
-	focused = false
-
-	async function reset() {
-		focused = false
-		await tick()
-		selected = latest
-	}
-
-	onMount(() => {
-		const copyButtons = document.querySelectorAll('.copy')
-
-		for (const button of copyButtons) {
-			button.addEventListener('click', async (e) => {
-				const target = e.target as Element
-				const uuid = target.getAttribute('data-uuid') || ''
-				const hash = target.getAttribute('data-clipboard-text') || ''
-				copied = uuid
-				await navigator.clipboard.writeText(hash)
-				if (timeout) clearTimeout(timeout)
-				timeout = setTimeout(() => {
-					copied = ''
-				}, 2000)
-			})
-		}
-	})
+});
 </script>
 
 <div class="relative flex w-full flex-col gap-8">
