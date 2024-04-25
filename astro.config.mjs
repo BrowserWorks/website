@@ -43,7 +43,7 @@ export default defineConfig({
 				dark: "~/assets/waterfox-logo-dark.svg",
 			},
 			social: {
-				github: "https://github.com/WaterfoxCo/Waterfox",
+				github: "https://github.com/BrowserWorks/Waterfox",
 				mastodon: "https://mastodon.social/@Waterfox",
 				twitter: "https://twitter.com/Waterfoxproject",
 			},

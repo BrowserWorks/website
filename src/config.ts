@@ -13,7 +13,7 @@ const footerNavigation = [
 	{
 		type: "link",
 		key: "nav.github", // i18n key
-		href: "https://github.com/WaterfoxCo/Waterfox",
+		href: "https://github.com/BrowserWorks/Waterfox",
 	},
 ];
 

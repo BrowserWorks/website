@@ -48,7 +48,7 @@ async function getHash(url) {
 
 async function main() {
 	const apiResponse: string = await request(
-		"https://api.github.com/repos/WaterfoxCo/Waterfox/releases",
+		"https://api.github.com/repos/BrowserWorks/Waterfox/releases",
 	);
 
 	const releases: Release[] = Object.values(JSON.parse(apiResponse));

@@ -11,7 +11,7 @@ G4 has its eyes set to the future - a modern browser, focusing on modern web com
 
 Classic has focused on keeping the tried but tested available. Unfortunately, due to the rapid nature that the web is now expanding at, keeping Classic up to date with that is difficult.
 
-To make sure the projects aren't falling over each other, Waterfox Classic will now be moved out of the main Waterfox development repository and into its own separate repository - updating the previously archived "Waterfox Old", now named [Waterfox-Classic](https://github.com/WaterfoxCo/Waterfox-Classic).
+To make sure the projects aren't falling over each other, Waterfox Classic will now be moved out of the main Waterfox development repository and into its own separate repository - updating the previously archived "Waterfox Old", now named [Waterfox-Classic](https://github.com/BrowserWorks/Waterfox-Classic).
 
 This has the following benefits by not having two versions of Waterfox sharing resources:
 
