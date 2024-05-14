@@ -20,13 +20,13 @@
     "@kindspells/astro-shield": "^1.3.6",
     "@tailwindcss/typography": "^0.5.13",
     "@vercel/og": "^0.6.2",
-    "astro": "^4.8.0",
+    "astro": "^4.8.3",
     "get-os-name": "^1.0.3",
     "lodash": "^4.17.21",
-    "sass": "^1.77.0",
+    "sass": "^1.77.1",
     "sharp": "^0.33.3",
-    "starlight-blog": "^0.7.1",
-    "svelte": "^4.2.16",
+    "starlight-blog": "^0.8.2",
+    "svelte": "^4.2.17",
     "svelte-select": "^5.8.3",
     "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.3",
@@ -34,6 +34,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.3",
-    "wrangler": "^3.53.1"
+    "wrangler": "^3.55.0"
   }
 }
