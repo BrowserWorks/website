@@ -24,8 +24,8 @@ export default defineConfig({
 				Head: "~/components/Head.astro",
 				Header: "~/components/Header.astro",
 				PageFrame: "~/components/CustomPageFrame.astro",
-				Pagination: "~/components/Pagination.astro",
-				Sidebar: "~/components/Sidebar.astro",
+				// Pagination: "~/components/Pagination.astro",
+				// Sidebar: "~/components/Sidebar.astro",
 			},
 			defaultLocale: "root", // optional
 			favicon: "/favicon.ico",
@@ -45,7 +45,7 @@ export default defineConfig({
 			social: {
 				github: "https://github.com/BrowserWorks/Waterfox",
 				mastodon: "https://mastodon.social/@Waterfox",
-				twitter: "https://twitter.com/Waterfoxproject",
+				"x.com": "https://x.com/Waterfoxproject",
 			},
 			plugins: [
 				blog({

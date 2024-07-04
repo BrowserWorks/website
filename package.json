@@ -21,6 +21,7 @@
     "@tailwindcss/typography": "^0.5.13",
     "@vercel/og": "^0.6.2",
     "astro": "^4.11.5",
+    "caniuse-lite": "^1.0.30001640",
     "get-os-name": "^1.0.3",
     "lodash": "^4.17.21",
     "sass": "^1.77.6",
