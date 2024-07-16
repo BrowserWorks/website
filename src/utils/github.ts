@@ -28,22 +28,21 @@ interface CleanedRelease
 }
 
 function request(url: string): Promise<string> {
-	return new Promise((resolve) => {
-		https.get(url, (res) => {
-			let data = "";
-
-			res.on("data", (chunk) => {
-				data += chunk;
-			});
-
-			res.on("end", () => resolve(data));
-		});
+	return new Promise((resolve, reject) => {
+		https
+			.get(url, (res) => {
+				let data = "";
+				res.on("data", (chunk) => {
+					data += chunk;
+				});
+				res.on("end", () => resolve(data));
+			})
+			.on("error", reject);
 	});
 }
 
-async function getHash(url) {
-	const response = await request(url);
-	return response;
+async function getHash(url: string): Promise<string> {
+	return request(`${url}.sha512`);
 }
 
 async function main() {
@@ -51,82 +50,62 @@ async function main() {
 		"https://api.github.com/repos/BrowserWorks/Waterfox/releases",
 	);
 
-	const releases: Release[] = Object.values(JSON.parse(apiResponse));
+	const releases: Release[] = JSON.parse(apiResponse);
 
-	const updatedReleases: CleanedRelease[] = [];
+	const cleanedReleases: CleanedRelease[] = await Promise.all(
+		releases.map(async (release) => {
+			const windowsLink = downloadLinks.windows(release.tag_name);
+			const macOSLink = downloadLinks.macOS(release.tag_name);
+			const linuxLink = downloadLinks.linux(release.tag_name);
 
-	for (const release of releases) {
-		const windowsLink = downloadLinks.windows(release.tag_name);
-		const macOSLink = downloadLinks.macOS(release.tag_name);
-		const linuxLink = downloadLinks.linux(release.tag_name);
+			const hashPromises = [
+				getHash(windowsLink),
+				getHash(macOSLink),
+				getHash(linuxLink),
+			];
 
-		const [windowsHash, macHash, linuxHash] = await Promise.all([
-			getHash(`${windowsLink}.sha512`),
-			getHash(`${macOSLink}.sha512`),
-			getHash(`${linuxLink}.sha512`),
-		]);
+			const [windowsHash, macHash, linuxHash] = await Promise.all(hashPromises);
 
-		const cleanedRelease: CleanedRelease = {
-			...pick(release, [
-				"id",
-				"prerelease",
-				"name",
-				"tag_name",
-				"published_at",
-			]),
-			downloads: [
-				{
-					id: "windows",
-					label: "Windows",
-					link: windowsLink,
-					hash: windowsHash,
-				},
-				{
-					id: "macos",
-					label: "macOS",
-					link: macOSLink,
-					hash: macHash,
-				},
-				{
-					id: "linux",
-					label: "Linux",
-					link: linuxLink,
-					hash: linuxHash,
-				},
-			],
-		};
+			const cleanedRelease: CleanedRelease = {
+				...pick(release, [
+					"id",
+					"prerelease",
+					"name",
+					"tag_name",
+					"published_at",
+				]),
+				downloads: [
+					{
+						id: "windows",
+						label: "Windows",
+						link: windowsLink,
+						hash: windowsHash,
+					},
+					{
+						id: "macos",
+						label: "macOS",
+						link: macOSLink,
+						hash: macHash,
+					},
+					{
+						id: "linux",
+						label: "Linux",
+						link: linuxLink,
+						hash: linuxHash,
+					},
+				],
+			};
 
-		cleanedRelease.downloads = [
-			{
-				id: "windows",
-				label: "Windows",
-				link: windowsLink,
-				hash: windowsHash,
-			},
-			{
-				id: "macos",
-				label: "macOS",
-				link: macOSLink,
-				hash: macHash,
-			},
-			{
-				id: "linux",
-				label: "Linux",
-				link: linuxLink,
-				hash: linuxHash,
-			},
-		];
-
-		updatedReleases.push(cleanedRelease);
-	}
+			return cleanedRelease;
+		}),
+	);
 
 	const targetDir = join(__dirname, "../generated");
-
 	await mkdir(targetDir, { recursive: true });
 
 	await writeFile(
 		join(targetDir, "releases.json"),
-		JSON.stringify(updatedReleases, null, 2),
+		JSON.stringify(cleanedReleases, null, 2),
 	);
 
 	console.log("Done!");
