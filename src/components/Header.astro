@@ -5,26 +5,27 @@ import SiteTitle from "@astrojs/starlight/components/SiteTitle.astro";
 import SocialIcons from "@astrojs/starlight/components/SocialIcons.astro";
 import ThemeSelect from "@astrojs/starlight/components/ThemeSelect.astro";
 import type { Props } from "@astrojs/starlight/props";
+import BMCSocialIcon from "~/assets/icons/bmc.svg";
 import Nav from "./Nav.astro";
 ---
 
 <div class="header sl-flex">
-	<div class="sl-flex">
+	<div class="title-wrapper sl-flex">
 		<SiteTitle {...Astro.props} />
 	</div>
 	<div class="sl-flex">
 		<Search {...Astro.props} />
 	</div>
-	<div class="sl-flex right-group">
+	<div class="sl-hidden md:sl-flex right-group">
 		<Nav {...Astro.props} />
-		<div class="sl-hidden lg:sl-flex social-icons">
-			<a class="sl-flex" href="https://www.buymeacoffee.com/waterfox" target="_blank"><img src="/images/arial-yellow.png" alt="Buy Me A Coffee" style="height: 30px !important;width: 108.5px !important;" ></a>
+		<div class="sl-flex social-icons">
+			<a class="h-[16px] w-[16px]" href="https://www.buymeacoffee.com/waterfox" target="_blank"><img src={BMCSocialIcon.src} alt="Buy Me a Coffee"></a>
 			<SocialIcons {...Astro.props} />
 		</div>
-		<div class="sl-hidden lg:sl-flex">
+		<!-- margin-inline: calc(var(--sl-inline-padding) * -1); causing issues
+		with overlap.
 		<ThemeSelect {...Astro.props} />
-		<LanguageSelect {...Astro.props} />
-		</div>
+		<LanguageSelect {...Astro.props} /> -->
 	</div>
 </div>
 
