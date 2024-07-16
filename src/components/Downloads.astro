@@ -1,0 +1,209 @@
+---
+import downloadSvg from "~/assets/icons/browser/downloads.svg";
+import linuxSvg from "~/assets/icons/linux.svg";
+import macSvg from "~/assets/icons/macos.svg";
+import windowsSvg from "~/assets/icons/windows.svg";
+
+import releases from "~/generated/releases.json";
+
+const svgMap = {
+	windows: windowsSvg,
+	macos: macSvg,
+	linux: linuxSvg,
+};
+
+const items = releases.map((release) => ({
+	label: release.name,
+	value: String(release.id),
+	stable: !release?.prerelease,
+	pubDate: release?.published_at,
+	downloads: release?.downloads || [],
+}));
+
+const stableReleases = items.filter((item) => item.stable);
+const previewReleases = items.filter((item) => !item.stable);
+
+const latest = stableReleases[0];
+const selected = latest;
+---
+
+<div class="relative flex w-full flex-col gap-8">
+    <div class="relative flex w-full max-w-[24rem] items-center lg:ml-2">
+        <label for="version-select" class="sr-only">Select Version</label>
+        <select
+            id="version-select"
+            class="w-full p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+            <optgroup label="Stable Releases">
+                {stableReleases.map(item => (
+                    <option value={item.value} selected={item.value === selected.value}>
+                        {item.label} {item === latest ? '(Latest)' : ''}
+                    </option>
+                ))}
+            </optgroup>
+            {previewReleases.length > 0 && (
+                <optgroup label="Preview Releases">
+                    {previewReleases.map(item => (
+                        <option value={item.value}>
+                            {item.label}
+                        </option>
+                    ))}
+                </optgroup>
+            )}
+        </select>
+    </div>
+
+    <div class="flex w-full flex-col gap-3 rounded-[1.5rem] border-[1px] bg-frost/20 px-8 py-6 shadow-lg lg:flex-row">
+        <div class="flex grow flex-col">
+            <span class="text-sm">Date</span>
+            <span class="font-bold" id="release-date">
+                {selected?.pubDate &&
+                    new Date(selected.pubDate).toLocaleDateString('en-US', {
+                        dateStyle: 'long'
+                    })}
+            </span>
+        </div>
+        <div class="flex grow flex-col">
+            <span class="text-sm">Version</span>
+            <span class="font-bold" id="release-version">{selected?.label}</span>
+        </div>
+        <div class="flex grow flex-col">
+            <span class="text-sm">Release</span>
+            <span class="font-bold" id="release-type">
+                {selected?.label && selected.label === latest?.label
+                    ? 'Latest'
+                    : selected?.stable
+                        ? 'Stable'
+                        : 'Preview'}
+            </span>
+        </div>
+    </div>
+</div>
+
+<div>
+    <slot name="beforeDownloads" />
+</div>
+
+<div id="downloads-container" class="flex w-full flex-col gap-y-4 rounded-[1.5rem] border-[1px] bg-frost/20 px-8 py-6 shadow-xl">
+    {selected?.downloads.map(({ id, label, link, hash }) => {
+        const uuid = `${label} - ${hash}`;
+        return (
+            <div class="grid w-full gap-x-20 max-lg:gap-y-2 lg:grid-cols-[50%_1fr]">
+                <div class="grid grid-cols-[1fr_auto] items-center lg:grid-cols-[1fr_auto] lg:gap-x-20">
+                    <div class="flex items-center gap-2 font-bold">
+                        <img
+                            src={svgMap[id]?.src}
+                            alt={`${id} icon`}
+                            class="not-prose inline-flex h-[18px] w-[18px] align-bottom"
+                        />
+                        <span>{label}</span>
+                    </div>
+                    <div class="w-[4rem] whitespace-nowrap text-center text-xs">
+                        <button data-uuid={uuid} data-clipboard-text={hash} class="copy hover:underline">
+                            Copy hash
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <a
+                        href={link}
+                        class="whitespace-nowrap rounded-full bg-gold px-7 font-montserrat dark:text-deepsea font-semibold no-underline transition-all hover:scale-105 hover:bg-sand tailwind-preflight flex items-center justify-center gap-2 py-2 text-sm lg:text-sm"
+                        type="button"
+                        id="button"
+                        rel={link.startsWith('http') ? 'noopener nofollow' : 'prefetch'}
+                        target={link.startsWith('http') ? '_blank' : '_self'}
+                    >
+                        <img
+                            src={downloadSvg.src}
+                            alt="Download icon"
+                            class="not-prose -ml-1 flex h-[18px] w-[18px]"
+                        />
+                        Download {selected?.label}
+                    </a>
+                </div>
+            </div>
+        );
+    })}
+</div>
+
+<script define:vars={{items, svgMap, downloadSvg}} is:inline>
+    let selected = items.find(item => item.stable);
+
+    function updateSelected(value) {
+        selected = items.find(item => item.value === value);
+        document.getElementById('release-date').textContent = new Date(selected.pubDate).toLocaleDateString('en-US', { dateStyle: 'long' });
+        document.getElementById('release-version').textContent = selected.label;
+        document.getElementById('release-type').textContent = selected.label === items.find(item => item.stable).label ? 'Latest' : (selected.stable ? 'Stable' : 'Preview');
+
+        // Update downloads
+        const downloadsContainer = document.getElementById('downloads-container');
+        downloadsContainer.innerHTML = selected.downloads.map(({ id, label, link, hash }) => {
+            const uuid = `${label} - ${hash}`;
+            return `
+                <div class="grid w-full gap-x-20 max-lg:gap-y-2 lg:grid-cols-[50%_1fr]">
+                    <div class="grid grid-cols-[1fr_auto] items-center lg:grid-cols-[1fr_auto] lg:gap-x-20">
+                        <div class="flex items-center gap-2 font-bold">
+                            <img
+                                src="${svgMap[id]?.src}"
+                                alt="${id} icon"
+                                class="not-prose inline-flex h-[18px] w-[18px] align-bottom"
+                            />
+                            <span>${label}</span>
+                        </div>
+                        <div class="w-[4rem] whitespace-nowrap text-center text-xs">
+                            <button data-uuid="${uuid}" data-clipboard-text="${hash}" class="copy hover:underline">
+                                Copy hash
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <a
+                            href="${link}"
+                            class="whitespace-nowrap rounded-full bg-gold px-7 font-montserrat dark:text-deepsea font-semibold no-underline transition-all hover:scale-105 hover:bg-sand tailwind-preflight flex items-center justify-center gap-2 py-2 text-sm lg:text-sm"
+                            type="button"
+                            id="button"
+                            rel="${link.startsWith('http') ? 'noopener nofollow' : 'prefetch'}"
+                            target="${link.startsWith('http') ? '_blank' : '_self'}"
+                        >
+                            <img
+                                src="${downloadSvg.src}"
+                                alt="Download icon"
+                                class="not-prose -ml-1 flex h-[18px] w-[18px]"
+                            />
+                            Download ${selected.label}
+                        </a>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        // Reattach copy button listeners
+        attachCopyListeners();
+    }
+
+    function attachCopyListeners() {
+        const copyButtons = document.querySelectorAll(".copy");
+        let timeout;
+
+        for (const button of copyButtons) {
+            button.addEventListener("click", async (e) => {
+                const target = e.target;
+                const uuid = target.getAttribute("data-uuid") || "";
+                const hash = target.getAttribute("data-clipboard-text") || "";
+                await navigator.clipboard.writeText(hash);
+                target.textContent = "Copied";
+                if (timeout) clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                    target.textContent = "Copy hash";
+                }, 2000);
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('version-select').addEventListener('change', (e) => {
+            updateSelected(e.target.value);
+        });
+        attachCopyListeners();
+    });
+</script>

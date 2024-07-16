@@ -2,14 +2,14 @@
 import { twMerge } from "tailwind-merge";
 import Layout from "~/components/Base.astro";
 import Page from "~/components/ContentPage.astro";
-import Downloads from "~/components/Downloads.svelte";
+import Downloads from "~/components/Downloads.astro";
 const { title, subtitle } = Astro.props.entry.data;
 ---
 
 <Layout {...Astro.props}>
 	<Page {title} {subtitle}>
 		<div class={twMerge('mb-12 flex w-full grow flex-col gap-12 lg:mb-20 lg:flex')}>
-			<Downloads client:idle>
+			<Downloads>
 				<span slot="beforeDownloads"><h2 class="text-[var(--sl-color-text)]">Links</h2></span>
 			</Downloads>
 			<h2 class="text-[var(--sl-color-text)]">Minimum System Requirements</h2>
