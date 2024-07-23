@@ -1,6 +1,5 @@
 import { resolve } from "node:path";
 import starlight from "@astrojs/starlight";
-import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import { shield } from "@kindspells/astro-shield";
 import { defineConfig, squooshImageService } from "astro/config";
@@ -85,7 +84,6 @@ export default defineConfig({
 				},
 			],
 		}),
-		svelte(),
 		tailwind({
 			applyBaseStyles: false,
 		}),
