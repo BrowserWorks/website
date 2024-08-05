@@ -24,11 +24,11 @@ You can perform searches directly from several places in Waterfox, including the
 
 ### Improve security for users everywhere
 
-**Technical data for updates**: Desktop versions of Watrfox check for browser updates by persistently connecting to Waterfox's update servers. Your Waterfox version, language, specific search configurations and device operating system are used to apply the correct updates. Mobile versions of Firefox may connect to another service if you used one to download and install Firefox. [Learn more](https://support.mozilla.org/kb/how-stop-firefox-automatically-making-connections#w_auto-update-checking).
+**Technical data for updates**: Desktop versions of Waterfox check for browser updates by persistently connecting to Waterfox's update servers. Your Waterfox version, language, specific search configurations and device operating system are used to apply the correct updates. Mobile versions of Firefox may connect to another service if you used one to download and install Firefox. [Learn more](https://support.mozilla.org/kb/how-stop-firefox-automatically-making-connections#w_auto-update-checking).
 
 Note: The above cannot be changed as without this information we cannot provide you with the correct update files.
 
-**Technical data for add-ons blocklist**: Waterfox for Desktop and Android periodically connect to external services to protect you and others from malicious add-ons. Your Watrfox version and language, device operating system, and list of installed add-ons are needed to apply and update the add-ons blocklist. [Learn more](https://support.mozilla.org/kb/how-stop-firefox-making-automatic-connections).
+**Technical data for add-ons blocklist**: Waterfox for Desktop and Android periodically connect to external services to protect you and others from malicious add-ons. Your Waterfox version and language, device operating system, and list of installed add-ons are needed to apply and update the add-ons blocklist. [Learn more](https://support.mozilla.org/kb/how-stop-firefox-making-automatic-connections).
 
 **Webpage and technical data to Certificate Authorities**: When you visit a secure website (usually identified with a URL starting with "HTTPS"), Waterfox validates the website's [certificate](https://support.mozilla.org/kb/secure-website-certificate). This may involve Waterfox sending certain information about the website to the Certificate Authority identified by that website. Opting out increases the risk of your private information being intercepted. [Learn more](https://support.mozilla.org/kb/advanced-settings-browsing-network-updates-encryption#w_certificates-tab).
 
