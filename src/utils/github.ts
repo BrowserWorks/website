@@ -1,7 +1,6 @@
 import { promises as fs } from "node:fs";
 import * as https from "node:https";
 import { join } from "node:path";
-import { pick } from "lodash";
 import { downloadLinks } from "../config";
 
 const { writeFile, mkdir } = fs;
@@ -14,11 +13,12 @@ interface Release {
 	published_at: string;
 }
 
-interface CleanedRelease
-	extends Pick<
-		Release,
-		"id" | "prerelease" | "name" | "tag_name" | "published_at"
-	> {
+interface CleanedRelease {
+	id: number;
+	prerelease: boolean;
+	name: string;
+	tag_name: string;
+	published_at: string;
 	downloads: {
 		id: string;
 		label: string;
@@ -66,14 +66,13 @@ async function main() {
 
 			const [windowsHash, macHash, linuxHash] = await Promise.all(hashPromises);
 
+			const { id, prerelease, name, tag_name, published_at } = release;
 			const cleanedRelease: CleanedRelease = {
-				...pick(release, [
-					"id",
-					"prerelease",
-					"name",
-					"tag_name",
-					"published_at",
-				]),
+				id,
+				prerelease,
+				name,
+				tag_name,
+				published_at,
 				downloads: [
 					{
 						id: "windows",

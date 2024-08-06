@@ -21,7 +21,6 @@
 		"astro": "^4.13.1",
 		"caniuse-lite": "^1.0.30001649",
 		"get-os-name": "^1.0.3",
-		"lodash": "^4.17.21",
 		"sass": "^1.77.8",
 		"sharp": "^0.33.4",
 		"starlight-blog": "^0.11.1",
