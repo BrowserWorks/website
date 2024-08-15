@@ -4,10 +4,10 @@ pages_build_output_dir = "dist"
 compatibility_date = "2024-06-03"
 
 [vars]
-BUN_VERSION = "1.1.21"
+BUN_VERSION = "1.1.24"
 
 [env.production]
 compatibility_date = "2024-06-03"
 
 [env.production.vars]
-BUN_VERSION = "1.1.21"
+BUN_VERSION = "1.1.24"
