@@ -2,21 +2,20 @@ import { resolve } from "node:path";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
 import { shield } from "@kindspells/astro-shield";
-import { defineConfig, squooshImageService } from "astro/config";
+import { defineConfig } from "astro/config";
 import blog from "starlight-blog";
 
 const rootDir = new URL(".", import.meta.url).pathname;
 const modulePath = resolve(rootDir, "src", "generated", "sriHashes.mjs");
 
-// https://astro.build/config
 export default defineConfig({
 	site: "https://www.waterfox.net",
-	image: {
-		service: squooshImageService(),
-	},
 	integrations: [
 		shield({
-			sri: { hashesModule: modulePath },
+			sri: {
+				enableMiddleware: true,
+				hashesModule: modulePath,
+			},
 		}),
 		starlight({
 			components: {
