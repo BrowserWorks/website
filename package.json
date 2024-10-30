@@ -12,24 +12,24 @@
 		"format": "bunx @biomejs/biome check --write *"
 	},
 	"dependencies": {
-		"@astrojs/starlight": "^0.28.3",
+		"@astrojs/starlight": "^0.28.4",
 		"@astrojs/starlight-tailwind": "^2.0.3",
 		"@astrojs/tailwind": "^5.1.2",
 		"@kindspells/astro-shield": "^1.6.1",
 		"@tailwindcss/typography": "^0.5.15",
 		"@vercel/og": "^0.6.3",
-		"astro": "^4.16.0",
-		"caniuse-lite": "^1.0.30001667",
+		"astro": "^4.16.7",
+		"caniuse-lite": "^1.0.30001674",
 		"get-os-name": "^1.0.3",
-		"sass": "^1.79.4",
+		"sass": "^1.80.4",
 		"sharp": "^0.33.5",
 		"starlight-blog": "^0.13.0",
-		"tailwind-merge": "^2.5.3",
-		"tailwindcss": "^3.4.13",
+		"tailwind-merge": "^2.5.4",
+		"tailwindcss": "^3.4.14",
 		"tailwindcss-scoped-preflight": "^3.4.5"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.3",
-		"wrangler": "^3.80.2"
+		"wrangler": "^3.83.0"
 	}
 }
