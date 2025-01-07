@@ -40,6 +40,7 @@ export default defineConfig({
 			social: {
 				github: "https://github.com/BrowserWorks/Waterfox",
 				mastodon: "https://mastodon.social/@Waterfox",
+				reddit: "https://www.reddit.com/r/waterfox",
 				"x.com": "https://x.com/Waterfoxproject",
 			},
 			plugins: [
