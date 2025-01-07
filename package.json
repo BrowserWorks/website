@@ -7,32 +7,33 @@
 		"start": "astro dev",
 		"prebuild": "bun run src/utils/github.ts",
 		"build": "astro build",
+		"postbuild": "bun run src/utils/hashes.ts",
 		"preview": "astro preview",
 		"astro": "astro",
 		"format": "bunx @biomejs/biome check --write *"
 	},
 	"dependencies": {
-		"@astrojs/starlight": "^0.29.2",
+		"@astrojs/starlight": "^0.29.3",
 		"@astrojs/starlight-tailwind": "^2.0.3",
-		"@astrojs/tailwind": "^5.1.2",
+		"@astrojs/tailwind": "^5.1.4",
 		"@kindspells/astro-shield": "^1.7.1",
 		"@tailwindcss/typography": "^0.5.15",
 		"@vercel/og": "^0.6.4",
-		"astro": "^4.16.15",
-		"caniuse-lite": "^1.0.30001684",
+		"astro": "^4.16.18",
+		"caniuse-lite": "^1.0.30001690",
 		"get-os-name": "^1.0.3",
-		"sass": "^1.81.0",
+		"sass": "^1.83.1",
 		"sharp": "^0.33.5",
 		"starlight-blog": "0.13.0",
-		"tailwind-merge": "^2.5.5",
-		"tailwindcss": "^3.4.15",
-		"tailwindcss-scoped-preflight": "^3.4.9"
+		"tailwind-merge": "^2.6.0",
+		"tailwindcss": "^3.4.17",
+		"tailwindcss-scoped-preflight": "^3.4.10"
 	},
 	"overrides": {
 		"starlight-blog": "0.13.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"wrangler": "^3.90.0"
+		"wrangler": "^3.99.0"
 	}
 }
