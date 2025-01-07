@@ -3,7 +3,7 @@ import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
 import { shield } from "@kindspells/astro-shield";
 import { defineConfig } from "astro/config";
-import blog from "starlight-blog";
+import starlightBlog from "starlight-blog";
 
 const rootDir = new URL(".", import.meta.url).pathname;
 const modulePath = resolve(rootDir, "src", "generated", "sriHashes.mjs");
@@ -21,8 +21,6 @@ export default defineConfig({
 				Head: "~/components/Head.astro",
 				Header: "~/components/Header.astro",
 				PageFrame: "~/components/CustomPageFrame.astro",
-				// Pagination: "~/components/Pagination.astro",
-				// Sidebar: "~/components/Sidebar.astro",
 			},
 			defaultLocale: "root", // optional
 			favicon: "/favicon.ico",
@@ -45,7 +43,7 @@ export default defineConfig({
 				"x.com": "https://x.com/Waterfoxproject",
 			},
 			plugins: [
-				blog({
+				starlightBlog({
 					authors: {
 						alex: {
 							name: "Alex Kontos",
