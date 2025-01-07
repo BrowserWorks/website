@@ -27,7 +27,7 @@ export default defineConfig({
 			locales: {
 				root: {
 					label: "English (US)",
-					lang: "en-US",
+					lang: "en",
 				},
 			},
 			customCss: ["~/assets/global.scss", "~/fonts/fonts.css"],
