@@ -13,7 +13,6 @@ export default defineConfig({
 	integrations: [
 		shield({
 			sri: {
-				enableMiddleware: true,
 				hashesModule: modulePath,
 			},
 		}),

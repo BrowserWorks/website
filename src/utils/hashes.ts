@@ -1,45 +1,43 @@
-import fs from "node:fs";
+import fs from "node:fs/promises";
 import path from "node:path";
+import { perResourceSriHashes } from "../generated/sriHashes.mjs";
 
-// Import the hashes
-import {
-	extScriptHashes,
-	extStyleHashes,
-	inlineScriptHashes,
-	inlineStyleHashes,
-	perPageSriHashes,
-	perResourceSriHashes,
-} from "../../src/generated/sriHashes.mjs";
+const headersPath = path.join(process.cwd(), "dist", "_headers");
 
-// Read the existing headers file
-const headersPath = path.join(__dirname, "../../public", "_headers");
-let headers = fs.readFileSync(headersPath, "utf8");
+async function generateCSPHeader() {
+	try {
+		// Collect unique hashes
+		const scriptHashes = new Set(Object.values(perResourceSriHashes.scripts));
+		const styleHashes = new Set(Object.values(perResourceSriHashes.styles));
 
-// Extract the hashes
-const hashes = [
-	...inlineScriptHashes,
-	...inlineStyleHashes,
-	...extScriptHashes,
-	...extStyleHashes,
-	...Object.values(perPageSriHashes).flatMap((page) => [
-		...page.scripts,
-		...page.styles,
-	]),
-	...Object.values(perResourceSriHashes.scripts),
-	...Object.values(perResourceSriHashes.styles),
-];
+		// Generate CSP header
+		const cspHeader =
+			`Content-Security-Policy: default-src 'self'; object-src 'self'; script-src 'self' 'wasm-unsafe-eval' https://www.waterfox.net ${Array.from(
+				scriptHashes,
+			)
+				.map((hash) => `'${hash}'`)
+				.join(
+					" ",
+				)}; connect-src 'self' https://track.example.com; style-src 'self' ${Array.from(
+				styleHashes,
+			)
+				.map((hash) => `'${hash}'`)
+				.join(
+					" ",
+				)}; base-uri 'self'; img-src 'self'; frame-ancestors 'none'; worker-src 'self'; manifest-src 'none'; form-action 'self';`.trim();
 
-// Append the hashes to the existing CSP line
-headers = headers
-	.split("\n")
-	.map((line) => {
-		if (line.startsWith("Content-Security-Policy:")) {
-			const scriptHashes = hashes.map((hash) => `'${hash}'`).join(" ");
-			return `${line} script-src 'self' ${scriptHashes}; style-src ${scriptHashes};`;
-		}
-		return line;
-	})
-	.join("\n");
+		// Read existing _headers file
+		let headersContent = await fs.readFile(headersPath, "utf-8");
 
-// Write the updated headers back to the file
-fs.writeFileSync(headersPath, headers);
+		headersContent += `\n  ${cspHeader}`;
+
+		// Write updated content back to _headers file
+		await fs.writeFile(headersPath, headersContent);
+
+		console.log("CSP header generated and _headers file updated successfully.");
+	} catch (error) {
+		console.error("Error generating CSP header:", error);
+	}
+}
+
+generateCSPHeader();

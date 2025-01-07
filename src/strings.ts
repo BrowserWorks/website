@@ -1,4 +1,4 @@
-export type Key = Extract<keyof strings, string>;
+export type Key = Extract<typeof strings, string>;
 
 export const strings = {
 	/** meta */
