@@ -22,12 +22,12 @@ export default defineConfig({
 				Header: "~/components/Header.astro",
 				PageFrame: "~/components/CustomPageFrame.astro",
 			},
-			defaultLocale: "root", // optional
+			defaultLocale: "root",
 			favicon: "/favicon.ico",
 			locales: {
 				root: {
-					label: "English",
-					lang: "en-US", // lang is required for root locales
+					label: "English (US)",
+					lang: "en-US",
 				},
 			},
 			customCss: ["~/assets/global.scss", "~/fonts/fonts.css"],
