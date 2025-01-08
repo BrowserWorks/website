@@ -1,9 +1,6 @@
 ---
-import type { Props } from "@astrojs/starlight/props";
-import Header from "./Header.astro";
-
 import MobileMenuToggle from "@astrojs/starlight/components/MobileMenuToggle.astro";
-import Sidebar from "starlight-blog/overrides/Sidebar.astro";
+import type { Props } from "@astrojs/starlight/props";
 import DownloadsPage from "./DownloadsPage.astro";
 import Footer from "./Footer.astro";
 import Home from "./Home.astro";
@@ -17,30 +14,29 @@ const { hasSidebar } = Astro.props;
 
 {
 	isHomepage ? (
+	    <header class="header"><slot name="header" /></header>
 		<Home {...Astro.props} />
 	) : isDownloads ? (
+	    <header class="header"><slot name="header" /></header>
 		<DownloadsPage {...Astro.props} />
 	) : (
 		<>
-			<div class="page sl-flex">
-				<header class="header grid h-16 w-full grid-cols-[auto] px-1 py-1 lg:grid-cols-[auto] lg:px-1.5 lg:py-1">
-					<Header slot="header" {...Astro.props} />
-				</header>
-				{hasSidebar && (
+		<div class="page sl-flex">
+			<header class="header"><slot name="header" /></header>
+			{
+				hasSidebar && (
 					<nav class="sidebar" aria-label={Astro.locals.t('sidebarNav.accessibleLabel')}>
 						<MobileMenuToggle {...Astro.props} />
 						<div id="starlight__sidebar" class="sidebar-pane">
 							<div class="sidebar-content sl-flex">
-								<Sidebar slot="sidebar" {...Astro.props} />
+								<slot name="sidebar" />
 							</div>
 						</div>
 					</nav>
-				)}
-				<div class="main-frame">
-					<slot />
-				</div>
-			</div>
-			<Footer class="relative z-10" />
+				)
+			}
+			<div class="main-frame"><slot /></div>
+</div>
 		</>
 	)
 }
@@ -54,26 +50,26 @@ const { hasSidebar } = Astro.props;
 	.header {
 		z-index: var(--sl-z-index-navbar);
 		position: fixed;
-		background: var(--sl-color-bg);
 		inset-inline-start: 0;
 		inset-block-start: 0;
 		width: 100%;
 		height: var(--sl-nav-height);
+		border-bottom: 1px solid var(--sl-color-hairline-shade);
 		padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x);
 		padding-inline-end: var(--sl-nav-pad-x);
+		background-color: var(--sl-color-bg-nav);
 	}
 
-	.right-sidebar {
-		border-inline-start: unset;
+	:global([data-has-sidebar]) .header {
+		padding-inline-end: calc(var(--sl-nav-gap) + var(--sl-nav-pad-x) + var(--sl-menu-button-size));
 	}
 
 	.sidebar-pane {
 		visibility: var(--sl-sidebar-visibility, hidden);
 		position: fixed;
 		z-index: var(--sl-z-index-menu);
-		inset-block: 0;
+		inset-block: var(--sl-nav-height) 0;
 		inset-inline-start: 0;
-		padding-top: var(--sl-nav-height);
 		width: 100%;
 		background-color: var(--sl-color-black);
 		overflow-y: auto;
@@ -104,9 +100,14 @@ const { hasSidebar } = Astro.props;
 	}
 
 	@media (min-width: 50rem) {
+		:global([data-has-sidebar]) .header {
+			padding-inline-end: var(--sl-nav-pad-x);
+		}
 		.sidebar-pane {
 			--sl-sidebar-visibility: visible;
 			width: var(--sl-sidebar-width);
+			background-color: var(--sl-color-bg-sidebar);
+			border-inline-end: 1px solid var(--sl-color-hairline-shade);
 		}
 	}
 </style>

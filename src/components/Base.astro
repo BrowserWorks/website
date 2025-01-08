@@ -4,14 +4,7 @@ import Footer from "./Footer.astro";
 import Header from "./Header.astro";
 ---
 
-<header class={twMerge('relative flex flex-col items-center')}>
-	<!-- Top bar -->
-	<div
-		class="z-20 grid h-16 w-full grid-cols-[auto] px-1 py-1 lg:z-20 lg:grid-cols-[auto] lg:px-1.5 lg:py-1 xl:z-20"
-	>
-		<Header slot="header" {...Astro.props}><slot /></Header>
-	</div>
-
+<header class={twMerge('sticky flex flex-col items-center')}>
 	<slot name="header" />
 </header>
 

@@ -1,0 +1,17 @@
+---
+import type { Props } from "@astrojs/starlight/props";
+import StarlightUtilsSidebar from "@lorenzo_lewis/starlight-utils/components/Sidebar.astro";
+// src/components/Sidebar.astro
+import StarlightBlogSidebar from "starlight-blog/overrides/Sidebar.astro";
+
+const { id } = Astro.props;
+
+// Use the same check that starlight-blog uses to determine if we're on a blog page
+const isBlog = id.startsWith("blog");
+---
+
+{isBlog ? (
+  <StarlightBlogSidebar {...Astro.props} />
+) : (
+  <StarlightUtilsSidebar {...Astro.props} />
+)}

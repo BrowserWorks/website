@@ -46,14 +46,14 @@ import { type Key, strings } from "~/strings";
 	<!-- Home header -->
 	<div
 		slot="header"
-		class="mt-4 flex w-full flex-col items-center gap-8 overflow-hidden px-6 lg:mt-20 lg:gap-12 lg:pb-48"
+		class="sticky z-[var(--sl-z-index-navbar)] mt-4 flex w-full flex-col items-center gap-8 overflow-hidden px-6 lg:gap-12 lg:pb-48 pt-[calc(var(--sl-nav-height)+var(--sl-mobile-toc-height))]"
 	>
 		<!-- Background Water -->
-		<Water class="z-0 bg-crystal dark:bg-deepsea" bubbleQty={12} />
+		<Water class="z-[calc(var(--sl-z-index-navbar)-1)] bg-crystal dark:bg-deepsea" bubbleQty={12} />
 
 		<!-- Heading -->
 		<div
-			class="tailwind-preflight z-10 flex w-full flex-col items-center justify-center gap-5 text-center"
+			class="tailwind-preflight z-[calc(var(--sl-z-index-navbar)-1)] flex w-full flex-col items-center justify-center gap-5 text-center"
 		>
 			<h1 class="text-balance font-montserrat text-4xl font-bold lg:text-5xl">
 				{strings[`home.title`]}
@@ -63,7 +63,7 @@ import { type Key, strings } from "~/strings";
 		</div>
 
 		<!-- Browser View -->
-		<div class="relative z-10 mx-auto block w-full max-w-[1276px] overflow-visible md:px-8">
+		<div class="relative z-[calc(var(--sl-z-index-navbar)-1)] mx-auto block w-full max-w-[1276px] overflow-visible md:px-8">
 			<Browser
 				locales={{
 					mobileImageAlt: strings[`browser.mobileImageAlt`],

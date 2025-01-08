@@ -2,6 +2,7 @@ import { resolve } from "node:path";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
 import { shield } from "@kindspells/astro-shield";
+import starlightUtils from "@lorenzo_lewis/starlight-utils";
 import { defineConfig } from "astro/config";
 import starlightBlog from "starlight-blog";
 
@@ -19,8 +20,8 @@ export default defineConfig({
 		starlight({
 			components: {
 				Head: "~/components/Head.astro",
-				Header: "~/components/Header.astro",
 				PageFrame: "~/components/CustomPageFrame.astro",
+				Sidebar: "~/components/Sidebar.astro",
 			},
 			defaultLocale: "root",
 			favicon: "/favicon.ico",
@@ -54,8 +55,20 @@ export default defineConfig({
 						},
 					},
 				}),
+				starlightUtils({
+					navLinks: {
+						leading: { useSidebarLabelled: "Navigation" },
+					},
+				}),
 			],
 			sidebar: [
+				{
+					label: "Navigation",
+					items: [
+						{ label: "Docs", link: "/docs/" },
+						{ label: "Download", link: "/download/" },
+					],
+				},
 				{
 					label: "Docs",
 					collapsed: true,
