@@ -1,14 +1,13 @@
 ---
 import SocialIcons from "@astrojs/starlight/components/SocialIcons.astro";
+import type { Props } from "@astrojs/starlight/props";
 import { twMerge } from "tailwind-merge";
 import { footerNavigation, policiesNavigation } from "~/config";
 import { type Key, strings } from "~/strings";
-const { class: className } = Astro.props;
-export { className as class };
 ---
 
 <!-- Footer -->
-<footer class={twMerge('tailwind-preflight bg-deepsea px-6 text-white md:px-12', className)}>
+<footer class="tailwind-preflight bg-deepsea px-6 text-white md:px-12">
 	<div class="mx-auto flex w-full max-w-7xl flex-col gap-8 pb-14 pt-16 lg:pb-16 lg:pt-24">
 		<div class="flex flex-col gap-10 max-lg:items-center lg:flex-row lg:gap-12">
 			<div>
@@ -60,7 +59,7 @@ export { className as class };
 				</ul>
 			</nav>
 			<div class="flex flex-row gap-4">
-				<SocialIcons />
+				<SocialIcons {...Astro.props}><slot /></SocialIcons>
 			</div>
 		</div>
 		<div class="h-[2px] w-full bg-white max-lg:hidden"></div>

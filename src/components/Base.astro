@@ -1,10 +1,9 @@
 ---
-import { twMerge } from "tailwind-merge";
+import type { Props } from "@astrojs/starlight/props";
 import Footer from "./Footer.astro";
-import Header from "./Header.astro";
 ---
 
-<header class={twMerge('sticky flex flex-col items-center')}>
+<header class="sticky flex flex-col items-center">
 	<slot name="header" />
 </header>
 
@@ -12,4 +11,4 @@ import Header from "./Header.astro";
 	<slot />
 </main>
 
-<Footer />
+<Footer {...Astro.props} />
