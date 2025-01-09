@@ -31,7 +31,7 @@ export default defineConfig({
 					lang: "en",
 				},
 			},
-			customCss: ["~/assets/global.scss", "~/fonts/fonts.css"],
+			customCss: ["~/assets/global.css", "~/fonts/fonts.css"],
 			title: "Waterfox",
 			logo: {
 				replacesTitle: true,
