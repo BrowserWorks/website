@@ -5,6 +5,8 @@ import { shield } from "@kindspells/astro-shield";
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
 import { defineConfig } from "astro/config";
 import starlightBlog from "starlight-blog";
+import starlightCoolerCredit from "starlight-cooler-credit";
+import { generateSidebar } from "./sidebar.config.mjs";
 
 const rootDir = new URL(".", import.meta.url).pathname;
 const modulePath = resolve(rootDir, "src", "generated", "sriHashes.mjs");
@@ -24,6 +26,9 @@ export default defineConfig({
 				Sidebar: "~/components/Sidebar.astro",
 			},
 			defaultLocale: "root",
+			editLink: {
+				baseUrl: "https://github.com/BrowserWorks/website/edit/main-ssg",
+			},
 			favicon: "/favicon.ico",
 			locales: {
 				root: {
@@ -39,10 +44,10 @@ export default defineConfig({
 				dark: "~/assets/waterfox-logo-dark.svg",
 			},
 			social: {
+				blueSky: "https://bsky.app/profile/waterfox.net",
 				github: "https://github.com/BrowserWorks/Waterfox",
 				mastodon: "https://mastodon.social/@Waterfox",
 				reddit: "https://www.reddit.com/r/waterfox",
-				"x.com": "https://x.com/Waterfoxproject",
 			},
 			plugins: [
 				starlightBlog({
@@ -60,39 +65,20 @@ export default defineConfig({
 						leading: { useSidebarLabelled: "Navigation" },
 					},
 				}),
+				starlightCoolerCredit({
+					customImage: "./src/assets/heart.png",
+					credit: {
+						title: {
+							en: "Donate",
+						},
+						href: "https://buymeacoffee.com/waterfox",
+						description: {
+							en: "Like what we're doing? →",
+						},
+					},
+				}),
 			],
-			sidebar: [
-				{
-					label: "Navigation",
-					items: [
-						{ label: "Docs", link: "/docs/" },
-						{ label: "Download", link: "/download/" },
-					],
-				},
-				{
-					label: "Docs",
-					collapsed: true,
-					items: [
-						{ label: "About", link: "docs/about-waterfox/" },
-						{ label: "FAQ", link: "docs/faq/" },
-					],
-				},
-				{
-					label: "Policies",
-					collapsed: true,
-					autogenerate: { directory: "docs/policies" },
-				},
-				{
-					label: "Releases",
-					collapsed: true,
-					autogenerate: { directory: "docs/releases" },
-				},
-				{
-					label: "Support",
-					collapsed: true,
-					autogenerate: { directory: "docs/support/android" },
-				},
-			],
+			sidebar: await generateSidebar(),
 		}),
 		tailwind({
 			applyBaseStyles: false,

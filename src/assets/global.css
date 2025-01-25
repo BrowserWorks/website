@@ -17,6 +17,12 @@
 		font-family: "Montserrat Variable", system-ui, sans-serif;
 	}
 
+	.inline-image {
+		display: unset !important;
+		margin-top: unset !important;
+		margin-bottom: unset !important;
+	}
+
 	.right-sidebar {
 		border-inline-start: unset;
 	}

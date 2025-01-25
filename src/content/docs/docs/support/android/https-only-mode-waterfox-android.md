@@ -16,7 +16,7 @@ For example, when HTTPS-Only Mode is active and you visit a site with the `**htt
 ## Enable or disable HTTPS-Only Mode
 
 1.  Tap the menu button.
-    ![Settings icon in address bar in android](./waterfox-menu.png)
+    <img alt="Settings icon in address bar in android" class="inline-image" src="./waterfox-menu.png">
 2.  Tap Settings.
 3.  Tap HTTPS-Only Mode.
 4.  Switch the toggle to the left to turn HTTPS-Only Mode off. Switch the toggle to the right to turn it on.
@@ -32,8 +32,10 @@ If you tap Continue to HTTP Site, you accept the risks and will visit an HTTP ve
 
 Tap Go Back (Recommended), or your device's back button, if you want to avoid an unencrypted connection.
 
-:::note[Copyright and Licensing]
-[HTTPS-Only Mode in Firefox for Android](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-android) by Mozilla Contributors is licensed under [CC BY-SA 3.0 Deed](https://creativecommons.org/licenses/by-sa/3.0/deed.en).
+---
+
+:::note[Copyright and Licensing]{icon="document"}
+Modified from [HTTPS-Only Mode in Firefox for Android](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-android) by Mozilla Contributors is licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 
 Article originally written by: [Michele Rodaro](https://support.mozilla.org/en-US/user/michro/), [Marcelo Ghelman](https://support.mozilla.org/en-US/user/marcelo.ghelman/), [Fabi](https://support.mozilla.org/en-US/user/Fabi.L/), [Abby](https://support.mozilla.org/en-US/user/aparise/), [Denys](https://support.mozilla.org/en-US/user/denyshon/)
 :::

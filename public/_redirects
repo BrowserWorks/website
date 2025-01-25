@@ -6,3 +6,8 @@
 /downloads /download/ 301
 /tracking-protection-waterfox-android /enhanced-tracking-protection-android
 /tracking-protection-waterfox-android/ /enhanced-tracking-protection-android/
+/support/WINNT/* /support/
+/support/Darwin/* /support/
+/support/macOS/* /support/
+/support/doh-status /support/dns-over-https#what-does-my-doh-status-mean
+/support/turn-off-etp-desktop /support/enhanced-tracking-protection

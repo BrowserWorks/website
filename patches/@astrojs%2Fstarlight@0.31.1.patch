@@ -1,0 +1,74 @@
+diff --git a/integrations/asides.ts b/integrations/asides.ts
+index 8b888c35057dc1d21b254f005e5eff1ef71c7e22..702762f9e5a9dbea1d29f4671790962a763285b5 100644
+--- a/integrations/asides.ts
++++ b/integrations/asides.ts
+@@ -18,6 +18,10 @@ import type { StarlightConfig } from '../types';
+ import type { createTranslationSystemFromFs } from '../utils/translations-fs';
+ import { pathToLocale } from './shared/pathToLocale';
+ import { localeToLang } from './shared/localeToLang';
++import { Icons } from '../components/Icons';
++import { fromHtml } from 'hast-util-from-html';
++import type { Element } from 'hast';
++import { AstroError } from 'astro/errors';
+ 
+ interface AsidesOptions {
+ 	starlightConfig: Pick<StarlightConfig, 'defaultLocale' | 'locales'>;
+@@ -162,6 +166,7 @@ function remarkAsides(options: AsidesOptions): Plugin<[], Root> {
+ 				return;
+ 			}
+ 			const variant = node.name;
++			const attributes = node.attributes;
+ 			if (!isAsideVariant(variant)) return;
+ 
+ 			// remark-directive converts a container’s “label” to a paragraph added as the head of its
+@@ -183,6 +188,19 @@ function remarkAsides(options: AsidesOptions): Plugin<[], Root> {
+ 				node.children.splice(0, 1);
+ 			}
+ 
++			let iconPath = iconPaths[variant];
++			if (attributes) {
++				if (attributes['icon']) {
++					const iconName = attributes['icon'] as keyof typeof Icons;
++					if (!Object.keys(Icons).includes(iconName)) {
++						throw new AstroError("Icon name should be part of Starlight's icon list.");
++					}
++					const { properties } = fromHtml(Icons[iconName], { fragment: true })
++						.children[0] as Element;
++					iconPath = [s('path', properties)];
++				}
++			}
++
+ 			const aside = h(
+ 				'aside',
+ 				{
+@@ -200,7 +218,7 @@ function remarkAsides(options: AsidesOptions): Plugin<[], Root> {
+ 								fill: 'currentColor',
+ 								class: 'starlight-aside__icon',
+ 							},
+-							iconPaths[variant]
++							iconPath
+ 						),
+ 						...titleNode,
+ 					]),
+diff --git a/user-components/Aside.astro b/user-components/Aside.astro
+index 785a4f20e83357da17207d113ae9d68fbd5f198e..79a3049485dc43bb51d55f670e50539d65900de6 100644
+--- a/user-components/Aside.astro
++++ b/user-components/Aside.astro
+@@ -10,7 +10,7 @@ interface Props {
+ 	title?: string;
+ }
+ 
+-let { type = 'note', title } = Astro.props;
++let { type = 'note', title, icon } = Astro.props;
+ 
+ if (!asideVariants.includes(type)) {
+ 	throw new AstroError(
+@@ -27,7 +27,7 @@ if (!title) {
+ 
+ <aside aria-label={title} class={`starlight-aside starlight-aside--${type}`}>
+ 	<p class="starlight-aside__title" aria-hidden="true">
+-		<Icon name={icons[type]} class="starlight-aside__icon" />{title}
++		<Icon name={icon || icons[type]} class="starlight-aside__icon" />{title}
+ 	</p>
+ 	<div class="starlight-aside__content">
+ 		<slot />
