@@ -12,7 +12,6 @@ const rootDir = new URL(".", import.meta.url).pathname;
 const modulePath = resolve(rootDir, "src", "generated", "sriHashes.mjs");
 
 export default defineConfig({
-	site: "https://www.waterfox.net",
 	integrations: [
 		shield({
 			sri: {
@@ -25,6 +24,7 @@ export default defineConfig({
 				PageFrame: "~/components/CustomPageFrame.astro",
 				Sidebar: "~/components/Sidebar.astro",
 			},
+			customCss: ["~/assets/global.css", "~/fonts/fonts.css"],
 			defaultLocale: "root",
 			editLink: {
 				baseUrl: "https://github.com/BrowserWorks/website/edit/main-ssg",
@@ -36,26 +36,18 @@ export default defineConfig({
 					lang: "en",
 				},
 			},
-			customCss: ["~/assets/global.css", "~/fonts/fonts.css"],
-			title: "Waterfox",
 			logo: {
-				replacesTitle: true,
-				light: "~/assets/waterfox-logo.svg",
 				dark: "~/assets/waterfox-logo-dark.svg",
-			},
-			social: {
-				blueSky: "https://bsky.app/profile/waterfox.net",
-				github: "https://github.com/BrowserWorks/Waterfox",
-				mastodon: "https://mastodon.social/@Waterfox",
-				reddit: "https://www.reddit.com/r/waterfox",
+				light: "~/assets/waterfox-logo.svg",
+				replacesTitle: true,
 			},
 			plugins: [
 				starlightBlog({
 					authors: {
 						alex: {
 							name: "Alex Kontos",
-							title: "Founder",
 							picture: "/alex.jpg",
+							title: "Founder",
 							url: "https://www.linkedin.com/in/alex-kontos",
 						},
 					},
@@ -66,22 +58,30 @@ export default defineConfig({
 					},
 				}),
 				starlightCoolerCredit({
-					customImage: "./src/assets/heart.png",
 					credit: {
-						title: {
-							en: "Donate",
-						},
-						href: "https://buymeacoffee.com/waterfox",
 						description: {
 							en: "Like what we're doing? →",
 						},
+						href: "https://buymeacoffee.com/waterfox",
+						title: {
+							en: "Donate",
+						},
 					},
+					customImage: "./src/assets/heart.png",
 				}),
 			],
 			sidebar: await generateSidebar(),
+			social: {
+				blueSky: "https://bsky.app/profile/waterfox.net",
+				github: "https://github.com/BrowserWorks/Waterfox",
+				mastodon: "https://mastodon.social/@Waterfox",
+				reddit: "https://www.reddit.com/r/waterfox",
+			},
+			title: "Waterfox",
 		}),
 		tailwind({
 			applyBaseStyles: false,
 		}),
 	],
+	site: "https://www.waterfox.net",
 });
