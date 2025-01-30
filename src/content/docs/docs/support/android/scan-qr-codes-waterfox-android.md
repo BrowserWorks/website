@@ -3,7 +3,7 @@ title: Scan QR codes in Waterfox for Android
 label: Scan QR codes in Waterfox for Android
 ---
 
-Firefox for Android has a built-in QR code reader in the address bar, this makes it easy to visit a webpage by scanning a QR code.
+Waterfox for Android has a built-in QR code reader in the address bar, this makes it easy to visit a webpage by scanning a QR code.
 
 ## How to use the QR code reader
 

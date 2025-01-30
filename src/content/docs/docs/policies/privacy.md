@@ -24,7 +24,7 @@ You can perform searches directly from several places in Waterfox, including the
 
 ### Improve security for users everywhere
 
-**Technical data for updates**: Desktop versions of Waterfox check for browser updates by persistently connecting to Waterfox's update servers. Your Waterfox version, language, specific search configurations and device operating system are used to apply the correct updates. Mobile versions of Firefox may connect to another service if you used one to download and install Firefox. [Learn more](https://support.mozilla.org/kb/how-stop-firefox-automatically-making-connections#w_auto-update-checking).
+**Technical data for updates**: Desktop versions of Waterfox check for browser updates by persistently connecting to Waterfox's update servers. Your Waterfox version, language, specific search configurations and device operating system are used to apply the correct updates.
 
 Note: The above cannot be changed as without this information we cannot provide you with the correct update files.
 
@@ -42,15 +42,7 @@ If you have come to Waterfox by clicking on one of our compaigns, the below info
 
 ---
 
-If you use Waterfox Sync with a Firefox account, Waterfox will by necessity have to share certain data with a third party. Please read the privacy policy for Firefox accounts [here](https://www.mozilla.org/privacy/firefox/#optional-features).
-
-### Firefox Accounts
-
-- [Firefox Lockwise](https://support.mozilla.org/kb/firefox-lockwise-and-privacy)
-- [Firefox Monitor](https://www.mozilla.org/privacy/firefox-monitor)
-- [Firefox Notes](https://addons.mozilla.org/firefox/addon/notes-by-firefox/)
-- [Firefox Send](https://send.firefox.com/legal)
-- [Firefox Sync](https://www.mozilla.org/privacy/firefox/#sync)
+If you use Waterfox Sync with a Mozilla account, Waterfox will by necessity have to share certain data with a third party. Please read the privacy policy for Mozilla accounts [here](https://www.mozilla.org/privacy/firefox/#optional-features).
 
 ### Sync
 
