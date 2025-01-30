@@ -20,8 +20,8 @@
 		"@lorenzo_lewis/starlight-utils": "^0.2.0",
 		"@tailwindcss/typography": "^0.5.16",
 		"@vercel/og": "^0.6.5",
-		"astro": "^5.1.10",
-		"caniuse-lite": "^1.0.30001695",
+		"astro": "^5.2.1",
+		"caniuse-lite": "^1.0.30001696",
 		"get-os-name": "^1.0.3",
 		"sharp": "^0.33.5",
 		"starlight-blog": "0.16.1",
@@ -32,7 +32,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"wrangler": "^3.105.1"
+		"wrangler": "^3.107.0"
 	},
 	"patchedDependencies": {
 		"@astrojs/starlight@0.31.1": "patches/@astrojs%2Fstarlight@0.31.1.patch"
