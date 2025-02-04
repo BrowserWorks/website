@@ -1,5 +1,5 @@
 ---
-slug: /support/about-picture-picture-waterfox
+slug: /support/picture-in-picture
 title: "About Picture-in-Picture in Waterfox"
 ---
 

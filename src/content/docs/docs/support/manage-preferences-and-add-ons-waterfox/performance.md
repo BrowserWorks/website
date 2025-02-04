@@ -1,5 +1,5 @@
 ---
-slug: /support/performance-settings
+slug: /support/performance
 title: "Waterfox’s performance settings"
 ---
 

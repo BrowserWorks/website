@@ -1,5 +1,5 @@
 ---
-slug: /support/storage
+slug: /support/storage-permissions
 title: "Manage local site storage settings"
 ---
 
