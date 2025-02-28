@@ -39,6 +39,6 @@ Browsers without formal governance may offer appealing features or privacy claim
 
 This is what I think makes Waterfox fundamentally different from many alternatives. The very fact that we maintain clear policies, respond to user feedback, and operate within legal frameworks creates an accountability that many browser projects simply don't have.
 
-As the browser landscape continues to evolve, we believe that having a clearly defined governance structure and transparent policies isn't just good practice—it's an essential component of user trust. While open source gives developers the freedom to fork code and create new projects at will, users deserve to know who is responsible for the software they rely on daily and how decisions about their privacy are made.
+As the browser landscape continues to evolve, I think that having a clearly defined governance structure and transparent policies isn't just good practice—it's an essential component of user trust. While open source gives developers the freedom to fork code and create new projects at will, users deserve to know who is responsible for the software they rely on daily and how decisions about their privacy are made.
 
 The existence of formal policies, even imperfect ones, represents a commitment to users that their interests matter.
