@@ -1,0 +1,110 @@
+---
+export interface Props {
+	entry: any;
+	url: URL;
+	siteUrl: URL | string;
+	ogImageUrl: URL;
+}
+
+const { entry, url, siteUrl, ogImageUrl } = Astro.props;
+
+if (!entry || !entry.data) return null;
+
+const fullUrl = new URL(url.pathname, siteUrl).toString();
+
+const authorName: string = entry.data.author || "Alex";
+
+const authorUrl = "https://www.linkedin.com/in/alex-kontos";
+
+const publishDate: string = entry.data.date
+	? new Date(String(entry.data.date)).toISOString().split("T")[0]
+	: new Date().toISOString().split("T")[0];
+
+const keywords = entry.data.tags
+	? Array.isArray(entry.data.tags)
+		? entry.data.tags
+		: [entry.data.tags]
+	: ["Waterfox", "Browser", "Privacy"];
+
+const wordCount = entry.body
+	? String(Math.round(entry.body.length / 5))
+	: "500";
+
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	"@id": `${fullUrl}#BlogPosting`,
+	mainEntityOfPage: fullUrl,
+	headline: String(entry.data.title || ""),
+	name: String(entry.data.title || ""),
+	description: String(entry.data.description || ""),
+	datePublished: publishDate,
+	dateModified: publishDate,
+	author: {
+		"@type": "Person",
+		"@id": `${authorUrl}#Person`,
+		name: authorName,
+		url: authorUrl,
+		image: {
+			"@type": "ImageObject",
+			url: `${siteUrl}/alex.jpg`,
+			height: "96",
+			width: "96",
+		},
+	},
+	publisher: {
+		"@type": "Organization",
+		"@id": `${siteUrl}`,
+		name: "BrowserWorks",
+		logo: {
+			"@type": "ImageObject",
+			"@id": `${siteUrl}images/waterfox-icon.svg#logo`,
+			url: `${siteUrl}images/waterfox-icon.svg`,
+			width: "192",
+			height: "192",
+		},
+	},
+	image: {
+		"@type": "ImageObject",
+		"@id": `${ogImageUrl.toString()}#image`,
+		url: ogImageUrl.toString(),
+		height: "630",
+		width: "1200",
+	},
+	url: fullUrl,
+	isPartOf: {
+		"@type": "Blog",
+		"@id": `${siteUrl}/docs/blog/`,
+		name: "Waterfox Blog",
+		publisher: {
+			"@type": "Organization",
+			"@id": `${siteUrl}`,
+			name: "BrowserWorks",
+		},
+	},
+	wordCount: wordCount,
+	keywords: keywords,
+	about: [
+		{
+			"@type": "Thing",
+			"@id": `${siteUrl}/blog/`,
+			name: "Web Browsers",
+			sameAs: [
+				"https://en.wikipedia.org/wiki/Web_browser",
+				"http://www.wikidata.org/entity/Q937",
+			],
+		},
+		{
+			"@type": "Thing",
+			"@id": `${siteUrl}/blog/`,
+			name: "Privacy",
+			sameAs: [
+				"https://en.wikipedia.org/wiki/Privacy",
+				"http://www.wikidata.org/entity/Q9061",
+			],
+		},
+	],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
