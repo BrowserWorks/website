@@ -80,10 +80,6 @@ const selected = latest;
     </div>
 </div>
 
-<div>
-    <slot name="beforeDownloads" />
-</div>
-
 <div id="downloads-container" class="flex w-full flex-col gap-y-4 rounded-[1.5rem] border-[1px] bg-frost/20 px-8 py-6 shadow-xl">
     {selected?.downloads.map(({ id, label, link, hash }) => {
         const uuid = `${label} - ${hash}`;

@@ -90,13 +90,13 @@ async function buildSidebarFromDirectory(basePath, currentPath = "") {
 export async function generateSidebar() {
 	const docsPath = path.join(process.cwd(), "src/content/docs");
 
-	const navigation = {
-		label: "Navigation",
-		items: [
-			{ label: "Docs", link: "/docs/" },
-			{ label: "Download", link: "/download/" },
-		],
-	};
+	// const navigation = {
+	// 	label: "Navigation",
+	// 	items: [
+	// 		{ label: "Docs", link: "/docs/" },
+	// 		{ label: "Download", link: "/download/" },
+	// 	],
+	// };
 
 	const supportSection = await buildSidebarFromDirectory(
 		docsPath,
@@ -116,7 +116,7 @@ export async function generateSidebar() {
 	};
 
 	return [
-		navigation,
+		// navigation,
 		policiesSection,
 		releasesSection,
 		{

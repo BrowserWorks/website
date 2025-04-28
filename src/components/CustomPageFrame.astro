@@ -1,42 +1,36 @@
 ---
 import MobileMenuToggle from "@astrojs/starlight/components/MobileMenuToggle.astro";
-import DownloadsPage from "./DownloadsPage.astro";
 import Home from "./Home.astro";
 
-// Check if we are on the hompage
 const isHomepage = Astro.locals.starlightRoute.id === "";
-const isDownloads = Astro.locals.starlightRoute.id === "download";
 
 const { hasSidebar } = Astro.locals.starlightRoute;
 ---
 
 {
-	isHomepage ? (
-	    <header class="header"><slot name="header" /></header>
-		<Home {...Astro.props} />
-	) : isDownloads ? (
-	    <header class="header"><slot name="header" /></header>
-		<DownloadsPage {...Astro.props} />
-	) : (
-		<>
-		<div class="page sl-flex">
-			<header class="header"><slot name="header" /></header>
-			{
+   	isHomepage ? (
+   	    <header class="header"><slot name="header" /></header>
+  		<Home {...Astro.props} />
+   	) : (
+  		<>
+  		<div class="page sl-flex">
+ 			<header class="header"><slot name="header" /></header>
+ 			{
 				hasSidebar && (
-					<nav class="sidebar" aria-label={Astro.locals.t('sidebarNav.accessibleLabel')}>
-						<MobileMenuToggle {...Astro.props} />
-						<div id="starlight__sidebar" class="sidebar-pane">
-							<div class="sidebar-content sl-flex">
+   					<nav class="sidebar" aria-label={Astro.locals.t('sidebarNav.accessibleLabel')}>
+  						<MobileMenuToggle {...Astro.props} />
+  						<div id="starlight__sidebar" class="sidebar-pane">
+ 							<div class="sidebar-content sl-flex">
 								<slot name="sidebar" />
-							</div>
-						</div>
-					</nav>
+ 							</div>
+  						</div>
+   					</nav>
 				)
-			}
-			<div class="main-frame"><slot /></div>
-</div>
-		</>
-	)
+ 			}
+ 			<div class="main-frame"><slot /></div>
+  		</div>
+  		</>
+   	)
 }
 
 <style>
