@@ -1,7 +1,6 @@
 import { resolve } from "node:path";
 import starlight from "@astrojs/starlight";
 import { shield } from "@kindspells/astro-shield";
-import starlightUtils from "@lorenzo_lewis/starlight-utils";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import starlightBlog from "starlight-blog";
@@ -22,6 +21,7 @@ export default defineConfig({
 			components: {
 				Head: "~/components/Head.astro",
 				PageFrame: "~/components/CustomPageFrame.astro",
+				ThemeSelect: "~/components/overrides/ThemeSelect.astro",
 				// Sidebar: "~/components/Sidebar.astro",
 			},
 			customCss: ["~/assets/global.css", "~/fonts/fonts.css"],
@@ -52,11 +52,6 @@ export default defineConfig({
 						},
 					},
 				}),
-				// starlightUtils({
-				// 	navLinks: {
-				// 		leading: { useSidebarLabelled: "Navigation" },
-				// 	},
-				// }),
 				starlightCoolerCredit({
 					credit: {
 						description: {

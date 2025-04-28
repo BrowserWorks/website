@@ -1,0 +1,23 @@
+---
+import Default from "@astrojs/starlight/components/ThemeSelect.astro";
+---
+
+<div
+    class="hidden border-r border-[color:var(--sl-color-gray-5)] pr-4 md:flex md:items-center gap-4"
+>
+    <a
+        href="/blog/"
+        class="text-[color:var(--sl-color-text-accent)] no-underline">Blog</a
+    >
+    <a
+        href="/docs/"
+        class="text-[color:var(--sl-color-text-accent)] no-underline">Docs</a
+    >
+    <a
+        href="/download/"
+        class="text-[color:var(--sl-color-text-accent)] no-underline"
+        >Download</a
+    >
+</div>
+
+<Default><slot /></Default>
