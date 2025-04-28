@@ -43,7 +43,6 @@ The following commands must be executed as root, or preceded by `**sudo**`.
 
 `ln -s /opt/waterfox/waterfox /usr/local/bin/waterfox`
 
-
 To verify that the installation was successful, you can open the [Troubleshooting Information](/support/use-troubleshooting-information-page-fix-waterfox) page. In the _Application Basics_ section, the value of Application Binary should be `**/opt/firefox/waterfox-bin**`.
 
 ---

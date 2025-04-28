@@ -15,21 +15,21 @@ After you have defined and set your Primary Password, you will be prompted to en
 
 By default, Waterfox does not use Primary Passwords (formerly known as Master password) to protect stored credentials. To define a Primary Password:
 
-1.  Click the menu button  to open the menu panel.
+1.  Click the menu button to open the menu panel.
 2.  Click Logins and Passwords.
 3.  Click the Waterfox logins menu , then click Preferences.
     ![Waterfox logins menu](/assets/docs/2024-01-22-10-47-55-d6f303.png)
-    * The Waterfox Settings Privacy & Security panel will open to the `Logins and Passwords` section.
-    [UseAPrimaryPassword](/assets/docs/2024-03-07-14-52-57-5327dd.png)
+    - The Waterfox Settings Privacy & Security panel will open to the `Logins and Passwords` section.
+      [UseAPrimaryPassword](/assets/docs/2024-03-07-14-52-57-5327dd.png)
 4.  Put a checkmark next to `Use a Primary Password` to open the `Change Primary Password` dialog.
 5.  Enter your Primary Password. The Password quality meter will indicate the difficulty of guessing your defined password. To create a quality password, your Primary Password should include the following:
-    * At least one uppercase letter to add complexity.
-    * Digits embedded within the password, avoiding simple placements at the start or end.
-    * At least one non-alphanumeric character, such as: `@ # $ % ^ & \* ( )`.
-    * A configuration that is easy for you to remember but difficult for others to guess, ensuring that you, and only you, can access this secure information.
-    :::tip
-    Avoid common substitutions or sequences that might seem complex but are widely used and easily guessed, such as "Password1!" or "Password@13". Instead, think of a unique phrase or a combination of words that only you can easily recall.
-    :::
+    - At least one uppercase letter to add complexity.
+    - Digits embedded within the password, avoiding simple placements at the start or end.
+    - At least one non-alphanumeric character, such as: `@ # $ % ^ & \* ( )`.
+    - A configuration that is easy for you to remember but difficult for others to guess, ensuring that you, and only you, can access this secure information.
+      :::tip
+      Avoid common substitutions or sequences that might seem complex but are widely used and easily guessed, such as "Password1!" or "Password@13". Instead, think of a unique phrase or a combination of words that only you can easily recall.
+      :::
 6.  Enter the password a second time to confirm that you have entered it consistently.
     ![ChangePrimaryPassword](/assets/docs/2020-08-05-14-44-04-1bba4a.png)
 7.  To set the Primary Password, click OK.
@@ -44,10 +44,10 @@ Should you decide you don't need your Primary Password anymore, you can delete i
 1.  Click the menu button <img alt="menu button" class="inline-image" src="/assets/docs/icons/menu.svg" /> to open the menu panel.
 2.  Click Logins and Passwords.
 3.  Click the Waterfox logins menu <img alt="three dot icon" class="inline-image" src="/assets/docs/2024-01-22-10-49-58-d6b929.png" />, then click Preferences.
-    * The Waterfox Settings Privacy & Security panel will open to the `Logins and Passwords` section.
+    - The Waterfox Settings Privacy & Security panel will open to the `Logins and Passwords` section.
 4.  Remove the checkmark next to `Use a Primary Password`.
 5.  Enter the current password to confirm your ownership of the account.
-    * If you've forgotten your Primary Password, see Reset your Primary Password if you've forgotten it.
+    - If you've forgotten your Primary Password, see Reset your Primary Password if you've forgotten it.
 6.  Click Remove.
 7.  Click OK in the dialog that appears to confirm its removal.
 8.  Close the Settings page. Any changes you've made will automatically be saved.
@@ -60,12 +60,12 @@ You can also change your Primary Password at any time:
 2.  Click `Logins and Passwords`.
 3.  Click the Waterfox logins menu <img alt="three dot icon" class="inline-image" src="/assets/docs/2024-01-22-10-49-58-d6b929.png" />, then click `Preferences`.
     ![ChangePrimaryPassword](/assets/docs/2020-08-05-14-44-04-1bba4a.png)
-    * The Waterfox Settings `Privacy & Security` panel will open to the `Logins and Passwords` section.
+    - The Waterfox Settings `Privacy & Security` panel will open to the `Logins and Passwords` section.
 4.  Click Change Primary Password….
 5.  Enter the current password to confirm your ownership of the account.
-    * If you've forgotten your Primary Password, see Reset your Primary Password if you've forgotten it.
+    - If you've forgotten your Primary Password, see Reset your Primary Password if you've forgotten it.
 6.  Enter the new Primary Password twice.
-    * Leaving the two fields empty removes your Primary Password.
+    - Leaving the two fields empty removes your Primary Password.
 7.  To accept the changed Primary Password, click `OK`.
 8.  Close the `Settings` page. Any changes you've made will automatically be saved.
 

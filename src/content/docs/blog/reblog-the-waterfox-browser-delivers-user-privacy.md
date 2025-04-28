@@ -1,5 +1,5 @@
 ---
-title: 'Reblog: How the Open-Source Browser Continues to Balance Performance, UX, and Customizability with a Focus on Privacy'
+title: "Reblog: How the Open-Source Browser Continues to Balance Performance, UX, and Customizability with a Focus on Privacy"
 date: 2022-04-19
 description: Waterfox offers a balanced web browsing experience, leveraging privacy and usability, with customizable features, timely releases, and in-store accessibility, with an Android platform in development.
 ---

@@ -1,10 +1,9 @@
 ---
-title: 'Waterfox in 2023: Evolution, Independence, and Forward Momentum'
+title: "Waterfox in 2023: Evolution, Independence, and Forward Momentum"
 date: 2024-01-05
 author: Alex
 description: In 2023, Waterfox embarked on a transformative journey. This pivotal year saw a resurgence of advancements, including a refreshed website, independence, and significant releases.
 ---
-
 
 ## Introduction
 
@@ -44,6 +43,6 @@ A privacy-focused search project, teased earlier, is nearly ready for a closed b
 
 ## Future Endeavours
 
-Looking ahead, Waterfox is set for growth and improving the browsing experience. Plans include improving user privacy, introducing a few new features, and expanding community initiatives. 
+Looking ahead, Waterfox is set for growth and improving the browsing experience. Plans include improving user privacy, introducing a few new features, and expanding community initiatives.
 
 The year 2023 was a milestone-packed journey for Waterfox! As we move forward, I extend my heartfelt thanks to the community for your support. Here's to a great 2024!

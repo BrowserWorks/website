@@ -5,35 +5,35 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 
 @theme {
-	--color-accent-200: #b1cce8;
-	--color-accent-600: #076ebd;
-	--color-accent-900: #0f3456;
-	--color-accent-950: #10253b;
+  --color-accent-200: #b1cce8;
+  --color-accent-600: #076ebd;
+  --color-accent-900: #0f3456;
+  --color-accent-950: #10253b;
 
-	--color-gray-100: #f0f7ff;
-	--color-gray-200: #e2efff;
-	--color-gray-300: #adc4e0;
-	--color-gray-400: #628ec3;
-	--color-gray-500: #2f5a8b;
-	--color-gray-700: #0c3867;
-	--color-gray-800: #00264e;
-	--color-gray-900: #07192d;
+  --color-gray-100: #f0f7ff;
+  --color-gray-200: #e2efff;
+  --color-gray-300: #adc4e0;
+  --color-gray-400: #628ec3;
+  --color-gray-500: #2f5a8b;
+  --color-gray-700: #0c3867;
+  --color-gray-800: #00264e;
+  --color-gray-900: #07192d;
 
-	--color-deepsea: #053361;
-	--color-azure: #51a9ff;
-	--color-turquoise: #8dedcf;
-	--color-mist: #b783ff;
-	--color-gold: #ffc55c;
-	--color-sand: #f2ae46;
-	--color-crystal: #e2eefb;
-	--color-frost: #f6fafe;
-	--color-indigo: #8594ff;
-	--color-deepblue: #2e23de;
-	--color-aqua: #9bc1e7;
-	--color-deepaqua: #3b79b8;
+  --color-deepsea: #053361;
+  --color-azure: #51a9ff;
+  --color-turquoise: #8dedcf;
+  --color-mist: #b783ff;
+  --color-gold: #ffc55c;
+  --color-sand: #f2ae46;
+  --color-crystal: #e2eefb;
+  --color-frost: #f6fafe;
+  --color-indigo: #8594ff;
+  --color-deepblue: #2e23de;
+  --color-aqua: #9bc1e7;
+  --color-deepaqua: #3b79b8;
 
-	--font-body: system-ui, sans-serif;
-	--font-montserrat: "Montserrat Variable", system-ui, sans-serif;
+  --font-body: system-ui, sans-serif;
+  --font-montserrat: "Montserrat Variable", system-ui, sans-serif;
 }
 
 @plugin "@tailwindcss/typography";
@@ -41,93 +41,93 @@
 @source "./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx,vue}";
 
 @layer base {
-	[data-twp] {
-		@import "tailwindcss/preflight.css";
-	}
+  [data-twp] {
+    @import "tailwindcss/preflight.css";
+  }
 
-	[data-twp-reset] {
-		*,
-		::after,
-		::before,
-		::backdrop,
-		::file-selector-button {
-			all: revert-layer;
-		}
-	}
-	html,
-	body {
-		@apply w-full;
-	}
+  [data-twp-reset] {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+      all: revert-layer;
+    }
+  }
+  html,
+  body {
+    @apply w-full;
+  }
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-family: var(--font-montserrat);
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-montserrat);
+  }
 
-	.inline-image {
-		display: unset !important;
-		margin-top: unset !important;
-		margin-bottom: unset !important;
-	}
+  .inline-image {
+    display: unset !important;
+    margin-top: unset !important;
+    margin-bottom: unset !important;
+  }
 
-	.right-sidebar {
-		border-inline-start: unset;
-	}
+  .right-sidebar {
+    border-inline-start: unset;
+  }
 
-	.site-title {
-		height: unset;
-	}
+  .site-title {
+    height: unset;
+  }
 
-	@keyframes wobble {
-		33% {
-			transform: translateX(-50px);
-		}
+  @keyframes wobble {
+    33% {
+      transform: translateX(-50px);
+    }
 
-		66% {
-			transform: translateX(50px);
-		}
-	}
+    66% {
+      transform: translateX(50px);
+    }
+  }
 
-	@keyframes up {
-		0% {
-			opacity: 0;
-		}
+  @keyframes up {
+    0% {
+      opacity: 0;
+    }
 
-		10%,
-		90% {
-			opacity: 1;
-		}
+    10%,
+    90% {
+      opacity: 1;
+    }
 
-		100% {
-			opacity: 0;
-			transform: translateY(-1024px);
-		}
-	}
+    100% {
+      opacity: 0;
+      transform: translateY(-1024px);
+    }
+  }
 
-	.markdown {
-		@apply prose font-body font-light dark:prose-invert flex max-w-[72ch] flex-col prose-h2:mt-[1.8em] prose-h2:mb-[0.7em] prose-h2:text-2xl lg:prose-h2:text-3xl prose-h3:text-xl lg:prose-h3:text-2xl prose-hr:border-mist prose-hr:border-t-2 prose-headings:font-montserrat prose-pre:rounded-2xl;
+  .markdown {
+    @apply prose font-body font-light dark:prose-invert flex max-w-[72ch] flex-col prose-h2:mt-[1.8em] prose-h2:mb-[0.7em] prose-h2:text-2xl lg:prose-h2:text-3xl prose-h3:text-xl lg:prose-h3:text-2xl prose-hr:border-mist prose-hr:border-t-2 prose-headings:font-montserrat prose-pre:rounded-2xl;
 
-		& :not(pre) > code {
-			@apply rounded-md bg-frost/20 px-2 py-1 font-normal border-[1px] border-indigo/80 before:hidden after:hidden lg:whitespace-nowrap;
-		}
-	}
+    & :not(pre) > code {
+      @apply rounded-md bg-frost/20 px-2 py-1 font-normal border-[1px] border-indigo/80 before:hidden after:hidden lg:whitespace-nowrap;
+    }
+  }
 
-	.sticky-nav {
-		@media screen and (min-height: 800px) {
-			@apply sticky;
-		}
-	}
+  .sticky-nav {
+    @media screen and (min-height: 800px) {
+      @apply sticky;
+    }
+  }
 }
 
 @layer utilities {
-	.text-balance {
-		text-wrap: balance;
-	}
-	.text-pretty {
-		text-wrap: pretty;
-	}
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
 }

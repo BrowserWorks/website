@@ -1,38 +1,38 @@
 {
-	"workbench.colorCustomizations": {
-		"activityBar.activeBackground": "#6893f0",
-		"activityBar.background": "#6893f0",
-		"activityBar.foreground": "#15202b",
-		"activityBar.inactiveForeground": "#15202b99",
-		"activityBarBadge.background": "#ae1143",
-		"activityBarBadge.foreground": "#e7e7e7",
-		"commandCenter.border": "#e7e7e799",
-		"sash.hoverBorder": "#6893f0",
-		"statusBar.background": "#3a72eb",
-		"statusBar.foreground": "#e7e7e7",
-		"statusBarItem.hoverBackground": "#6893f0",
-		"statusBarItem.remoteBackground": "#3a72eb",
-		"statusBarItem.remoteForeground": "#e7e7e7",
-		"titleBar.activeBackground": "#3a72eb",
-		"titleBar.activeForeground": "#e7e7e7",
-		"titleBar.inactiveBackground": "#3a72eb99",
-		"titleBar.inactiveForeground": "#e7e7e799"
-	},
-	"files.associations": {
-		"*.mdx": "markdown"
-	},
-	"css.lint.unknownAtRules": "ignore",
-	"scss.lint.unknownAtRules": "ignore",
-	"[astro]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"editor.formatOnSave": true,
-	"editor.codeActionsOnSave": {
-		"quickfix.biome": "explicit",
-		"source.organizeImports.biome": "explicit"
-	},
-	"typescript.tsdk": "node_modules/typescript/lib"
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#6893f0",
+    "activityBar.background": "#6893f0",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#ae1143",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#6893f0",
+    "statusBar.background": "#3a72eb",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#6893f0",
+    "statusBarItem.remoteBackground": "#3a72eb",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#3a72eb",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#3a72eb99",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "files.associations": {
+    "*.mdx": "markdown"
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "[astro]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

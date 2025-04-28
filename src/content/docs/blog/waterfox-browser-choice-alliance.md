@@ -1,5 +1,5 @@
 ---
-title: 'BrowserWorks Is Part of the Browser Choice Alliance'
+title: "BrowserWorks Is Part of the Browser Choice Alliance"
 date: 2024-11-26
 author: Alex
 ---
@@ -13,6 +13,7 @@ Since Waterfox's inception, I've been committed to providing a privacy-focused b
 ## The Challenge We Face
 
 Microsoft employs various techniques to funnel users toward Edge, including:
+
 - Creating obstacles for downloading alternative browsers
 - Reverting default browser settings during updates
 - Forcing links to open in Edge
@@ -23,6 +24,7 @@ These practices don't just affect Waterfox – they impact the entire web ecosys
 ## Our Vision for the Future
 
 By joining the Browser Choice Alliance, we're taking a stand for:
+
 - True user choice in browser selection
 - Transparent and fair competition
 - Privacy-respecting default settings

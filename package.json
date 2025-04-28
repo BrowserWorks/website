@@ -1,37 +1,36 @@
 {
-	"type": "module",
-	"scripts": {
-		"predev": "bun run src/utils/github.ts",
-		"dev": "astro dev",
-		"prestart": "bun run src/utils/github.ts",
-		"start": "astro dev",
-		"prebuild": "bun run src/utils/github.ts",
-		"build": "astro build",
-		"postbuild": "bun run src/utils/hashes.ts",
-		"preview": "astro preview",
-		"astro": "astro",
-		"format": "bunx @biomejs/biome check --write *"
-	},
-	"dependencies": {
-		"@astrojs/starlight": "0.34.1",
-		"@astrojs/starlight-tailwind": "^4.0.1",
-		"@kindspells/astro-shield": "^1.7.1",
-		"@tailwindcss/typography": "^0.5.16",
-		"@tailwindcss/vite": "^4.1.4",
-		"@vercel/og": "^0.6.8",
-		"astro": "5.7.6",
-		"caniuse-lite": "^1.0.30001715",
-		"get-os-name": "^1.0.3",
-		"sharp": "^0.34.1",
-		"starlight-blog": "0.21.0",
-		"starlight-cooler-credit": "^0.4.0",
-		"tailwind-merge": "^3.2.0",
-		"tailwindcss": "^4.1.4"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"prettier": "^3.5.3",
-		"prettier-plugin-astro": "^0.14.1",
-		"wrangler": "^4.13.2"
-	}
+  "type": "module",
+  "scripts": {
+    "predev": "bun run src/utils/github.ts",
+    "dev": "astro dev",
+    "prestart": "bun run src/utils/github.ts",
+    "start": "astro dev",
+    "prebuild": "bun run src/utils/github.ts",
+    "build": "astro build",
+    "postbuild": "bun run src/utils/hashes.ts",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "bunx @biomejs/biome check --write *"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "0.34.1",
+    "@astrojs/starlight-tailwind": "^4.0.1",
+    "@kindspells/astro-shield": "^1.7.1",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.4",
+    "@vercel/og": "^0.6.8",
+    "astro": "5.7.6",
+    "caniuse-lite": "^1.0.30001715",
+    "get-os-name": "^1.0.3",
+    "sharp": "^0.34.1",
+    "starlight-blog": "0.21.0",
+    "starlight-cooler-credit": "^0.4.0",
+    "tailwind-merge": "^3.2.0",
+    "tailwindcss": "^4.1.4"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "wrangler": "^4.13.2"
+  }
 }
