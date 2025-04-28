@@ -1,5 +1,5 @@
 ---
-slug: /support/automatically-fill-your-address-web-forms
+slug: support/automatically-fill-your-address-web-forms
 title: "Automatically fill in your address on web forms"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/xframe-neterror-page
+slug: support/xframe-neterror-page
 title: "Website will not allow Waterfox to display the page if another site has embedded it"
 ---
 

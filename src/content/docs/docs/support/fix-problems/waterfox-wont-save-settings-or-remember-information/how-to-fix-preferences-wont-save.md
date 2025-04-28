@@ -1,5 +1,5 @@
 ---
-slug: /support/how-to-fix-preferences-wont-save
+slug: support/how-to-fix-preferences-wont-save
 title: "How to fix preferences that won’t save"
 ---
 

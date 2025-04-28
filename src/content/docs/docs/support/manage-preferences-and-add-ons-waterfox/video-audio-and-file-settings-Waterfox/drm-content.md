@@ -1,5 +1,5 @@
 ---
-slug: /support/drm-content
+slug: support/drm-content
 title: "Watch DRM content on Waterfox"
 ---
 

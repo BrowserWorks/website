@@ -1,5 +1,5 @@
 ---
-slug: /support/how-do-i-tell-if-my-connection-is-secure
+slug: support/how-do-i-tell-if-my-connection-is-secure
 title: "How do I tell if my connection to a website is secure?"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/waterfox-hangs-or-not-responding
+slug: support/waterfox-hangs-or-not-responding
 title: "Waterfox hangs or is not responding - How to fix"
 ---
 

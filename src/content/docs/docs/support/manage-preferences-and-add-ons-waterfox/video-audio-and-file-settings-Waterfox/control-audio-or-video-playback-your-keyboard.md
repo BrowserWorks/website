@@ -1,5 +1,5 @@
 ---
-slug: /support/control-audio-or-video-playback-your-keyboard
+slug: support/control-audio-or-video-playback-your-keyboard
 title: "Control audio or video playback with your keyboard"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/windows-10-warns-me-use-microsoft-verified-app
+slug: support/windows-10-warns-me-use-microsoft-verified-app
 title: 'Windows 10 warns me to use a "Microsoft-verified" app'
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/remove-synced-device-waterfox-accounts
+slug: support/remove-synced-device-waterfox-accounts
 title: "Remove a synced device from Mozilla Accounts"
 ---
 

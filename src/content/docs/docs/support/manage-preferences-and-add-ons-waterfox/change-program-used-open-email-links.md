@@ -1,5 +1,5 @@
 ---
-slug: /support/change-program-used-open-email-links
+slug: support/change-program-used-open-email-links
 title: "Change the program used to open email links"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/usernames-and-passwords-are-not-saved
+slug: support/usernames-and-passwords-are-not-saved
 title: "Usernames and passwords are not saved"
 ---
 

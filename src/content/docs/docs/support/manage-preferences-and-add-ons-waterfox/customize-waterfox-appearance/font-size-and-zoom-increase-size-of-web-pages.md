@@ -1,5 +1,5 @@
 ---
-slug: /support/font-size-and-zoom-increase-size-of-web-pages
+slug: support/font-size-and-zoom-increase-size-of-web-pages
 title: "Font size and zoom - increase the size of web pages"
 ---
 

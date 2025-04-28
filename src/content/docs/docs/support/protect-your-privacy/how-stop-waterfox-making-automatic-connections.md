@@ -1,5 +1,5 @@
 ---
-slug: /support/how-stop-waterfox-making-automatic-connections
+slug: support/how-stop-waterfox-making-automatic-connections
 title: "How to stop Waterfox from making automatic connections"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/site-information-panel
+slug: support/site-information-panel
 title: "Site Information panel"
 ---
 

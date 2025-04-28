@@ -1,5 +1,5 @@
 ---
-slug: /support/credit-card-autofill
+slug: support/credit-card-autofill
 title: "Automatically fill in credit card data on Web forms"
 ---
 

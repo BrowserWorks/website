@@ -1,5 +1,5 @@
 ---
-slug: /support/personalized-extension-recommendations
+slug: support/personalized-extension-recommendations
 title: "Personalized extension recommendations"
 ---
 

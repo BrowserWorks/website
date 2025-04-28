@@ -1,5 +1,5 @@
 ---
-slug: /support/settings-privacy-browsing-history-do-not-track
+slug: support/settings-privacy-browsing-history-do-not-track
 title: "Settings for privacy, browsing history and do-not-track"
 ---
 

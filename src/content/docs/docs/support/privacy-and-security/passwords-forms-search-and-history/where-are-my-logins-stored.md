@@ -1,5 +1,5 @@
 ---
-slug: /support/where-are-my-logins-stored
+slug: support/where-are-my-logins-stored
 title: "Where are my logins stored?"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/back-and-restore-information-waterfox-profiles
+slug: support/back-and-restore-information-waterfox-profiles
 title: "Back up and restore information in Waterfox profiles"
 ---
 

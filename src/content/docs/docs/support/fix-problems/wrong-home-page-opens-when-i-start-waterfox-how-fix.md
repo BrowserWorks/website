@@ -1,5 +1,5 @@
 ---
-slug: /support/wrong-home-page-opens-when-i-start-waterfox-how-fix
+slug: support/wrong-home-page-opens-when-i-start-waterfox-how-fix
 title: "Wrong home page opens when I start Waterfox - How to fix"
 ---
 

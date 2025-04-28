@@ -1,5 +1,5 @@
 ---
-slug: /support/waterfox-already-running-not-responding
+slug: support/waterfox-already-running-not-responding
 title: '"Waterfox is already running but is not responding" error - How to fix'
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/password-manager-remember-delete-edit-logins
+slug: support/password-manager-remember-delete-edit-logins
 title: "Password Manager - Remember, delete and edit logins and passwords in Waterfox"
 ---
 

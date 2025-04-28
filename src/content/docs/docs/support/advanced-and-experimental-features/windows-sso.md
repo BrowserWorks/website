@@ -1,5 +1,5 @@
 ---
-slug: /support/windows-sso
+slug: support/windows-sso
 title: "How to enable Windows SSO login in Waterfox"
 ---
 

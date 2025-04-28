@@ -1,5 +1,5 @@
 ---
-slug: /support/how-generate-secure-password-waterfox
+slug: support/how-generate-secure-password-waterfox
 title: "How to generate a secure password in Waterfox"
 ---
 

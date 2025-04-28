@@ -1,5 +1,5 @@
 ---
-slug: /support/troubleshooting
+slug: support/troubleshooting
 title: "Troubleshoot and diagnose Waterfox problems"
 ---
 

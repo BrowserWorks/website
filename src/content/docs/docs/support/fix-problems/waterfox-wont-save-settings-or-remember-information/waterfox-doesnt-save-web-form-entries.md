@@ -1,5 +1,5 @@
 ---
-slug: /support/waterfox-doesnt-save-web-form-entries
+slug: support/waterfox-doesnt-save-web-form-entries
 title: "Waterfox doesn’t save web form entries"
 ---
 

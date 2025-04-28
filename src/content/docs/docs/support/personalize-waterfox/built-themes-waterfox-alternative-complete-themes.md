@@ -1,5 +1,5 @@
 ---
-slug: /support/built-themes-waterfox-alternative-complete-themes
+slug: support/built-themes-waterfox-alternative-complete-themes
 title: "Built-in themes in Waterfox - alternative to complete themes"
 ---
 

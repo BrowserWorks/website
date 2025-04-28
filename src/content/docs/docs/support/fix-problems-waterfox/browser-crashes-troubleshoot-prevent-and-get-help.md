@@ -1,5 +1,5 @@
 ---
-slug: /support/browser-crashes-troubleshoot-prevent-and-get-help
+slug: support/browser-crashes-troubleshoot-prevent-and-get-help
 title: "Troubleshoot Waterfox crashes (closing or quitting unexpectedly)"
 ---
 

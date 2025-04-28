@@ -1,5 +1,5 @@
 ---
-slug: /support/Certificate-contains-the-same-serial-number-as-another-certificate
+slug: support/Certificate-contains-the-same-serial-number-as-another-certificate
 title: "Certificate contains the same serial number as another certificate"
 ---
 

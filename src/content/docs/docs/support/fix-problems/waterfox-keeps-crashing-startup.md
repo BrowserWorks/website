@@ -1,5 +1,5 @@
 ---
-slug: /support/waterfox-keeps-crashing-startup
+slug: support/waterfox-keeps-crashing-startup
 title: "Waterfox keeps crashing at startup"
 ---
 

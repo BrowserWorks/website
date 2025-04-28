@@ -1,5 +1,5 @@
 ---
-slug: /support/server-not-found-connection-problem
+slug: support/server-not-found-connection-problem
 title: "Server Not Found - Troubleshoot connection problems"
 ---
 

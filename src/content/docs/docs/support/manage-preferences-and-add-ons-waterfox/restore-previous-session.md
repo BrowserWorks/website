@@ -1,5 +1,5 @@
 ---
-slug: /support/restore-previous-session
+slug: support/restore-previous-session
 title: "Restore previous session - Configure when Waterfox shows your most recent tabs and windows"
 ---
 

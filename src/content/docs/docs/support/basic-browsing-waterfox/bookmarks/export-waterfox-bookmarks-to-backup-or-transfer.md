@@ -1,5 +1,5 @@
 ---
-slug: /support/export-waterfox-bookmarks-to-backup-or-transfer
+slug: support/export-waterfox-bookmarks-to-backup-or-transfer
 title: "Export Waterfox bookmarks to an HTML file to back up or transfer bookmarks"
 ---
 

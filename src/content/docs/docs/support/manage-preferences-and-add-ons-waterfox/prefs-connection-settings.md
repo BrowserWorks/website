@@ -1,5 +1,5 @@
 ---
-slug: /support/prefs-connection-settings
+slug: support/prefs-connection-settings
 title: "Connection settings in Waterfox"
 ---
 

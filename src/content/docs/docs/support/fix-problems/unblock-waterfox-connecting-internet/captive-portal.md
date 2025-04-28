@@ -1,5 +1,5 @@
 ---
-slug: /support/captive-portal
+slug: support/captive-portal
 title: "Captive portal detection"
 ---
 

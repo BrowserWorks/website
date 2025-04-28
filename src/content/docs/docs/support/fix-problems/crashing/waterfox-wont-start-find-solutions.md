@@ -1,5 +1,5 @@
 ---
-slug: /support/waterfox-wont-start-find-solutions
+slug: support/waterfox-wont-start-find-solutions
 title: "Waterfox won’t start - find solutions"
 ---
 

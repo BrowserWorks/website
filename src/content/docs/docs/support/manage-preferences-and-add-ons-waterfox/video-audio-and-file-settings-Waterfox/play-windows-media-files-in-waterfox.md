@@ -1,5 +1,5 @@
 ---
-slug: /support/play-windows-media-files-in-waterfox
+slug: support/play-windows-media-files-in-waterfox
 title: "Play Windows Media files in Waterfox with the Windows Media plugin"
 ---
 

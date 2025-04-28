@@ -1,5 +1,5 @@
 ---
-slug: /support/tips-to-protect-your-online-privacy
+slug: support/tips-to-protect-your-online-privacy
 title: "Tips to protect your online privacy"
 ---
 

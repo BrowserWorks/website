@@ -1,5 +1,5 @@
 ---
-slug: /support/waterfox-protection-against-fingerprinting
+slug: support/waterfox-protection-against-fingerprinting
 title: "Waterfox’s protection against fingerprinting"
 ---
 

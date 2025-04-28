@@ -1,5 +1,5 @@
 ---
-slug: /support/what-to-do-if-waterfox-wont-play-any-sounds
+slug: support/what-to-do-if-waterfox-wont-play-any-sounds
 title: "What to do if Waterfox won’t play any sounds"
 ---
 

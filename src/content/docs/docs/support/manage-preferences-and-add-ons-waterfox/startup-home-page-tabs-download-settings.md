@@ -1,5 +1,5 @@
 ---
-slug: /support/startup-home-page-tabs-download-settings
+slug: support/startup-home-page-tabs-download-settings
 title: "Startup, home page, tabs, and download settings"
 ---
 

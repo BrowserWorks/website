@@ -1,5 +1,5 @@
 ---
-slug: /support/how-do-i-set-sync-my-computer
+slug: support/how-do-i-set-sync-my-computer
 title: "How do I set up Sync on my computer?"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/address-bar-autocomplete-waterfox
+slug: support/address-bar-autocomplete-waterfox
 title: "Address bar autocomplete suggestions in Waterfox"
 ---
 

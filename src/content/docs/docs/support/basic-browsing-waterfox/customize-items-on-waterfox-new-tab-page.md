@@ -1,5 +1,5 @@
 ---
-slug: /support/customize-items-on-waterfox-new-tab-page
+slug: support/customize-items-on-waterfox-new-tab-page
 title: "Customize items on your Waterfox New Tab page"
 ---
 

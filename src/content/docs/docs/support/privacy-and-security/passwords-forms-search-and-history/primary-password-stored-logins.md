@@ -1,5 +1,5 @@
 ---
-slug: /support/primary-password-stored-logins
+slug: support/primary-password-stored-logins
 title: "Use a Primary Password to protect stored logins and passwords"
 ---
 

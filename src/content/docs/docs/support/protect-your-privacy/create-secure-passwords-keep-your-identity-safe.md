@@ -1,5 +1,5 @@
 ---
-slug: /support/create-secure-passwords-keep-your-identity-safe
+slug: support/create-secure-passwords-keep-your-identity-safe
 title: "Create secure passwords to keep your identity safe"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/webauthn-direct-attestation
+slug: support/webauthn-direct-attestation
 title: "Protecting Privacy while using Web Authentication"
 ---
 

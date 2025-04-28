@@ -1,5 +1,5 @@
 ---
-slug: /support/waterfox-says-its-just-updated-every-time-it-starts
+slug: support/waterfox-says-its-just-updated-every-time-it-starts
 title: "Waterfox says it’s just updated every time it starts - how to fix"
 ---
 

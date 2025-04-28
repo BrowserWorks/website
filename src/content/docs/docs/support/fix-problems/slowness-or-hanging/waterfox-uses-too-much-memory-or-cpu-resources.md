@@ -1,5 +1,5 @@
 ---
-slug: /support/waterfox-uses-too-much-memory-or-cpu-resources
+slug: support/waterfox-uses-too-much-memory-or-cpu-resources
 title: "Waterfox uses too much memory or CPU resources - How to fix"
 ---
 

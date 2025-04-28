@@ -1,5 +1,5 @@
 ---
-slug: /support/waterfox-advanced-customization-and-configuration
+slug: support/waterfox-advanced-customization-and-configuration
 title: "Waterfox advanced customization and configuration options"
 ---
 

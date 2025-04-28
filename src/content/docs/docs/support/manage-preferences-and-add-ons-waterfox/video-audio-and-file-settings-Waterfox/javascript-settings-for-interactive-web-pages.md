@@ -1,5 +1,5 @@
 ---
-slug: /support/javascript-settings-for-interactive-web-pages
+slug: support/javascript-settings-for-interactive-web-pages
 title: "JavaScript settings and preferences for interactive web pages"
 ---
 

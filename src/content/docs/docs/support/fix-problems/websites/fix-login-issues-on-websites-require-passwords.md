@@ -1,5 +1,5 @@
 ---
-slug: /support/fix-login-issues-on-websites-require-passwords
+slug: support/fix-login-issues-on-websites-require-passwords
 title: "Fix login issues on websites that require a username and password"
 ---
 

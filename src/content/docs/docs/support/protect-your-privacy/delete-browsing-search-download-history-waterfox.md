@@ -1,5 +1,5 @@
 ---
-slug: /support/delete-browsing-search-download-history-waterfox
+slug: support/delete-browsing-search-download-history-waterfox
 title: "Delete browsing, search and download history on Waterfox"
 ---
 

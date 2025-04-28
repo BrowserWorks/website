@@ -1,5 +1,5 @@
 ---
-slug: /support/i-cant-play-audio-remote-desktop-connection
+slug: support/i-cant-play-audio-remote-desktop-connection
 title: "I can’t play audio on a Remote Desktop Connection"
 ---
 

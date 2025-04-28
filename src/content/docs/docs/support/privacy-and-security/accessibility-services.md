@@ -1,5 +1,5 @@
 ---
-slug: /support/accessibility-services
+slug: support/accessibility-services
 title: "What is the Accessibility Service Indicator?"
 ---
 

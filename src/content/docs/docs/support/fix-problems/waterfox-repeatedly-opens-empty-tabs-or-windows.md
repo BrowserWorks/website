@@ -1,5 +1,5 @@
 ---
-slug: /support/waterfox-repeatedly-opens-empty-tabs-or-windows
+slug: support/waterfox-repeatedly-opens-empty-tabs-or-windows
 title: "Waterfox repeatedly opens empty tabs or windows after you click on a link"
 ---
 

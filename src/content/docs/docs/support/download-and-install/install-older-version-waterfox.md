@@ -1,5 +1,5 @@
 ---
-slug: /support/install-older-version-waterfox
+slug: support/install-older-version-waterfox
 title: "Install an older version of Waterfox"
 ---
 

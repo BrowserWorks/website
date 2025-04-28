@@ -1,5 +1,5 @@
 ---
-slug: /support/fix-printing-problems-waterfox
+slug: support/fix-printing-problems-waterfox
 title: "Fix printing problems in Waterfox"
 ---
 

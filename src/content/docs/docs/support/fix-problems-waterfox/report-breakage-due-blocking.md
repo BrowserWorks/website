@@ -1,5 +1,5 @@
 ---
-slug: /support/report-breakage-due-blocking
+slug: support/report-breakage-due-blocking
 title: "Report breakage due to blocking"
 ---
 

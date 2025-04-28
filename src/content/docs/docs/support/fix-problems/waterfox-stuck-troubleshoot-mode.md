@@ -1,5 +1,5 @@
 ---
-slug: /support/waterfox-stuck-troubleshoot-mode
+slug: support/waterfox-stuck-troubleshoot-mode
 title: "Waterfox is stuck in Troubleshoot Mode"
 ---
 

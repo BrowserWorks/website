@@ -1,5 +1,5 @@
 ---
-slug: /support/global-privacy-control
+slug: support/global-privacy-control
 title: "Global Privacy Control"
 ---
 

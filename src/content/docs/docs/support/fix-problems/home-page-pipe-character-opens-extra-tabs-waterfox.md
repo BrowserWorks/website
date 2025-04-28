@@ -1,5 +1,5 @@
 ---
-slug: /support/home-page-pipe-character-opens-extra-tabs-waterfox
+slug: support/home-page-pipe-character-opens-extra-tabs-waterfox
 title: "Home page with pipe character opens extra tabs when Waterfox starts"
 ---
 

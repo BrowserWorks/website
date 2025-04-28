@@ -1,5 +1,5 @@
 ---
-slug: /support/remove-websites-address-bar-suggestions
+slug: support/remove-websites-address-bar-suggestions
 title: "Remove websites from the address bar suggestions"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/recommendations-waterfox
+slug: support/recommendations-waterfox
 title: "Recommendations from Waterfox"
 ---
 

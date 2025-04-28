@@ -1,5 +1,5 @@
 ---
-slug: /support/websites-dont-load-troubleshoot-and-fix-errors
+slug: support/websites-dont-load-troubleshoot-and-fix-errors
 title: "Websites don’t load - troubleshoot and fix error messages"
 ---
 

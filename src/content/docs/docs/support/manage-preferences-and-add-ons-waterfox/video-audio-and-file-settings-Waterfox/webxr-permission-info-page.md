@@ -1,5 +1,5 @@
 ---
-slug: /support/webxr-permission-info-page
+slug: support/webxr-permission-info-page
 title: "WebXR Permission Info Page"
 ---
 

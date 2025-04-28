@@ -1,5 +1,5 @@
 ---
-slug: /support/disable-or-remove-add-ons
+slug: support/disable-or-remove-add-ons
 title: "Disable or remove Add-ons"
 ---
 

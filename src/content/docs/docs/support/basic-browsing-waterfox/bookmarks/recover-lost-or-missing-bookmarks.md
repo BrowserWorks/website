@@ -1,5 +1,5 @@
 ---
-slug: /support/recover-lost-or-missing-bookmarks
+slug: support/recover-lost-or-missing-bookmarks
 title: "Recover lost or missing Bookmarks"
 ---
 

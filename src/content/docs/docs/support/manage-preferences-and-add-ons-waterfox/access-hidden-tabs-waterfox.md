@@ -1,5 +1,5 @@
 ---
-slug: /support/access-hidden-tabs-waterfox
+slug: support/access-hidden-tabs-waterfox
 title: "Access hidden tabs in Waterfox"
 ---
 

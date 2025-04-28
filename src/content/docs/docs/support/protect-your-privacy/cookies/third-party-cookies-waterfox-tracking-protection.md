@@ -1,5 +1,5 @@
 ---
-slug: /support/third-party-cookies-waterfox-tracking-protection
+slug: support/third-party-cookies-waterfox-tracking-protection
 title: "Third-party cookies and Waterfox tracking protection"
 ---
 

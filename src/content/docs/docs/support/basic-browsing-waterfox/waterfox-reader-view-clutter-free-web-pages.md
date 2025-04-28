@@ -1,5 +1,5 @@
 ---
-slug: /support/waterfox-reader-view-clutter-free-web-pages
+slug: support/waterfox-reader-view-clutter-free-web-pages
 title: "Waterfox Reader View for clutter-free web pages"
 ---
 

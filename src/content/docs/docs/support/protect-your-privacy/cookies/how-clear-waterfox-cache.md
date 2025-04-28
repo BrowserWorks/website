@@ -1,5 +1,5 @@
 ---
-slug: /support/how-clear-waterfox-cache
+slug: support/how-clear-waterfox-cache
 title: "How to clear the Waterfox cache"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/fix-video-audio-problems-waterfox-windows
+slug: support/fix-video-audio-problems-waterfox-windows
 title: "Fix video and audio problems on Waterfox for Windows N editions"
 ---
 

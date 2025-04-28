@@ -1,5 +1,5 @@
 ---
-slug: /support/mixed-content-blocking-waterfox
+slug: support/mixed-content-blocking-waterfox
 title: "Mixed content blocking in Waterfox"
 ---
 

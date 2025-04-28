@@ -1,5 +1,5 @@
 ---
-slug: /support/websites-show-spinning-wheel-never-finish-load
+slug: support/websites-show-spinning-wheel-never-finish-load
 title: "Websites show a spinning wheel and never finish loading"
 ---
 

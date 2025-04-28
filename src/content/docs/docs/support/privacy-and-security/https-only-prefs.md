@@ -1,5 +1,5 @@
 ---
-slug: /support/https-only-prefs
+slug: support/https-only-prefs
 title: "HTTPS-Only Mode in Waterfox"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/bookmark-folders-organize-your-bookmarks
+slug: support/bookmark-folders-organize-your-bookmarks
 title: "Use bookmark folders to organize your bookmarks"
 ---
 

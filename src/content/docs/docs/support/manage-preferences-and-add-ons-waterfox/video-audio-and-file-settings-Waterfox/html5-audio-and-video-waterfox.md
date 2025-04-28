@@ -1,5 +1,5 @@
 ---
-slug: /support/html5-audio-and-video-waterfox
+slug: support/html5-audio-and-video-waterfox
 title: "HTML5 audio and video in Waterfox"
 ---
 

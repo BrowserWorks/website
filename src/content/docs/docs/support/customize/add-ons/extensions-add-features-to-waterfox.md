@@ -1,5 +1,5 @@
 ---
-slug: /support/extensions-add-features-to-waterfox
+slug: support/extensions-add-features-to-waterfox
 title: "Use extensions to add features to Waterfox"
 ---
 

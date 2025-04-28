@@ -1,5 +1,5 @@
 ---
-slug: /support/third-party-trackers
+slug: support/third-party-trackers
 title: "Third-party trackers"
 ---
 

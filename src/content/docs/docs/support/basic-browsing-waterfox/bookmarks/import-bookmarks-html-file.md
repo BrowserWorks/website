@@ -1,5 +1,5 @@
 ---
-slug: /support/import-bookmarks-html-file
+slug: support/import-bookmarks-html-file
 title: "Import Bookmarks from an HTML file"
 ---
 

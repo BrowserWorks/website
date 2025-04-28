@@ -1,5 +1,5 @@
 ---
-slug: /support/configure-windows-firewall-allow-waterfox-access
+slug: support/configure-windows-firewall-allow-waterfox-access
 title: "Configure Windows Firewall to allow Waterfox access to the Internet"
 ---
 

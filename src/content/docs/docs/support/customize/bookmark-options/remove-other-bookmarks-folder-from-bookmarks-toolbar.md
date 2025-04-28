@@ -1,5 +1,5 @@
 ---
-slug: /support/remove-other-bookmarks-folder-from-bookmarks-toolbar
+slug: support/remove-other-bookmarks-folder-from-bookmarks-toolbar
 title: "Remove the Other Bookmarks folder from the Bookmarks Toolbar"
 ---
 

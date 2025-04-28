@@ -1,5 +1,5 @@
 ---
-slug: /support/restore-menu-bar-waterfox
+slug: support/restore-menu-bar-waterfox
 title: "Restore the Menu bar in Waterfox"
 ---
 

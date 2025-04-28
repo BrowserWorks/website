@@ -1,5 +1,5 @@
 ---
-slug: /support/troubleshoot-extensions-themes-to-fix-problems
+slug: support/troubleshoot-extensions-themes-to-fix-problems
 title: "Troubleshoot extensions, themes and hardware acceleration issues to solve common Waterfox problems"
 ---
 

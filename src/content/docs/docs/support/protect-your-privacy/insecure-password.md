@@ -1,5 +1,5 @@
 ---
-slug: /support/insecure-password
+slug: support/insecure-password
 title: "Insecure password warning in Waterfox"
 ---
 

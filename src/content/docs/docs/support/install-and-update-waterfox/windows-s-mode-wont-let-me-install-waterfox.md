@@ -1,5 +1,5 @@
 ---
-slug: /support/windows-s-mode-wont-let-me-install-waterfox
+slug: support/windows-s-mode-wont-let-me-install-waterfox
 title: "Windows in S mode won’t let me install Waterfox"
 ---
 

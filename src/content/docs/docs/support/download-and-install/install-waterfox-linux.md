@@ -1,5 +1,5 @@
 ---
-slug: /support/install-waterfox-linux
+slug: support/install-waterfox-linux
 title: "Install Waterfox on Linux"
 ---
 

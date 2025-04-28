@@ -1,5 +1,5 @@
 ---
-slug: /support/websites-say-cookies-are-blocked-unblock-them
+slug: support/websites-say-cookies-are-blocked-unblock-them
 title: "Websites say cookies are blocked - Unblock them"
 ---
 

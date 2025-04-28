@@ -1,5 +1,5 @@
 ---
-slug: /support/push-notifications-waterfox
+slug: support/push-notifications-waterfox
 title: "Web Push notifications in Waterfox"
 ---
 

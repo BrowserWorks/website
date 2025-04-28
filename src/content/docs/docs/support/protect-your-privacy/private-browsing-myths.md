@@ -1,5 +1,5 @@
 ---
-slug: /support/private-browsing-myths
+slug: support/private-browsing-myths
 title: "Common Myths about Private Browsing"
 ---
 

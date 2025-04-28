@@ -1,5 +1,5 @@
 ---
-slug: /support/warning-unresponsive-script
+slug: support/warning-unresponsive-script
 title: "Warning Unresponsive script - What it means and how to fix it"
 ---
 

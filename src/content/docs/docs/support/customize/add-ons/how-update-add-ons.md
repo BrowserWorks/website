@@ -1,5 +1,5 @@
 ---
-slug: /support/how-update-add-ons
+slug: support/how-update-add-ons
 title: "How to update add-ons"
 ---
 

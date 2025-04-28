@@ -1,5 +1,5 @@
 ---
-slug: /support/add-or-remove-search-engine-waterfox
+slug: support/add-or-remove-search-engine-waterfox
 title: "Add or remove a search engine in Waterfox"
 ---
 

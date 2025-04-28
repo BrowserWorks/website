@@ -1,5 +1,5 @@
 ---
-slug: /support/turn-picture-picture-mode
+slug: support/turn-picture-picture-mode
 title: "Turn picture-in-picture mode controls on and off"
 ---
 

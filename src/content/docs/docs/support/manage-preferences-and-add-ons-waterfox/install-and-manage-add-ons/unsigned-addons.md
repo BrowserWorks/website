@@ -1,5 +1,5 @@
 ---
-slug: /support/unsigned-addons
+slug: support/unsigned-addons
 title: "Add-on signing in Waterfox"
 ---
 

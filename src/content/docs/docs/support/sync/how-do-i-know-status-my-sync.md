@@ -1,5 +1,5 @@
 ---
-slug: /support/how-do-i-know-status-my-sync
+slug: support/how-do-i-know-status-my-sync
 title: "How do I know the status of my sync?"
 ---
 

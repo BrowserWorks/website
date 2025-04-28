@@ -1,5 +1,5 @@
 ---
-slug: /support/error-codes-secure-websites
+slug: support/error-codes-secure-websites
 title: "How to troubleshoot security error codes on secure websites"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/private-browsing-use-waterfox-without-history
+slug: support/private-browsing-use-waterfox-without-history
 title: "Private Browsing - Use Waterfox without saving history"
 ---
 

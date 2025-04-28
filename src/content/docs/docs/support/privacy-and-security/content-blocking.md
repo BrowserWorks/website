@@ -1,5 +1,5 @@
 ---
-slug: /support/content-blocking
+slug: support/content-blocking
 title: "Content blocking"
 ---
 

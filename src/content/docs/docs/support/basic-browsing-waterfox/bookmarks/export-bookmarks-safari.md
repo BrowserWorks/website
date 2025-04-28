@@ -1,5 +1,5 @@
 ---
-slug: /support/export-bookmarks-safari
+slug: support/export-bookmarks-safari
 title: "Export bookmarks to Safari"
 ---
 

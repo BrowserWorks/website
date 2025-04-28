@@ -1,5 +1,5 @@
 ---
-slug: /support/change-fonts-and-colors-websites-use
+slug: support/change-fonts-and-colors-websites-use
 title: "Change the fonts and colors websites use"
 ---
 

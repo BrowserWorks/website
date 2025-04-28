@@ -1,5 +1,5 @@
 ---
-slug: /support/enhanced-tracking-protection
+slug: support/enhanced-tracking-protection
 title: "Enhanced Tracking Protection in Waterfox for desktop"
 ---
 

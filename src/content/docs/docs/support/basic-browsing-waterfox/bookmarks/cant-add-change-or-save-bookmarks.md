@@ -1,5 +1,5 @@
 ---
-slug: /support/cant-add-change-or-save-bookmarks
+slug: support/cant-add-change-or-save-bookmarks
 title: "Can’t add, change or save bookmarks - How to fix"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/assign-shortcuts-search-engines
+slug: support/assign-shortcuts-search-engines
 title: "Assign shortcuts to search engines"
 ---
 

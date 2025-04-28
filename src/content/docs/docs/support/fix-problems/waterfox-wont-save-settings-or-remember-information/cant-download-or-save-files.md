@@ -1,5 +1,5 @@
 ---
-slug: /support/cant-download-or-save-files
+slug: support/cant-download-or-save-files
 title: "What to do if you can’t download or save files"
 ---
 

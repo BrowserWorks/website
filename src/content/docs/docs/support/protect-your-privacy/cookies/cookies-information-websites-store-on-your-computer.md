@@ -1,5 +1,5 @@
 ---
-slug: /support/cookies-information-websites-store-on-your-computer
+slug: support/cookies-information-websites-store-on-your-computer
 title: "Cookies - Information that websites store on your computer"
 ---
 

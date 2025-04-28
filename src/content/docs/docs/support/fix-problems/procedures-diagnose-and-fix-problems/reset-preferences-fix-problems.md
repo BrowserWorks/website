@@ -1,5 +1,5 @@
 ---
-slug: /support/reset-preferences-fix-problems
+slug: support/reset-preferences-fix-problems
 title: "Reset Waterfox preferences to troubleshoot and fix problems"
 ---
 

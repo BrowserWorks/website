@@ -1,5 +1,5 @@
 ---
-slug: /support/customize-your-new-tab-page
+slug: support/customize-your-new-tab-page
 title: "Customize your New Tab page to hide or display content"
 ---
 

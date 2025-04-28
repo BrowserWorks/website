@@ -1,5 +1,5 @@
 ---
-slug: /support/about-config-editor-waterfox
+slug: support/about-config-editor-waterfox
 title: "Configuration Editor for Waterfox"
 ---
 

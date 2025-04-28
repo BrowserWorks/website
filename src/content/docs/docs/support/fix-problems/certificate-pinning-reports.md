@@ -1,5 +1,5 @@
 ---
-slug: /support/certificate-pinning-reports
+slug: support/certificate-pinning-reports
 title: "Certificate Pinning Reports"
 ---
 

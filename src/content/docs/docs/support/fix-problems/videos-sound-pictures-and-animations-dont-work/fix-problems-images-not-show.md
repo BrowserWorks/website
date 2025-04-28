@@ -1,5 +1,5 @@
 ---
-slug: /support/fix-problems-images-not-show
+slug: support/fix-problems-images-not-show
 title: "Fix problems that cause images to not show"
 ---
 

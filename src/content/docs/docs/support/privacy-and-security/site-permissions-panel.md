@@ -1,5 +1,5 @@
 ---
-slug: /support/site-permissions-panel
+slug: support/site-permissions-panel
 title: "Site Permissions panel"
 ---
 

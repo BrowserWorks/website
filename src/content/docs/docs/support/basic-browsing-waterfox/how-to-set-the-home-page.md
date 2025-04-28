@@ -1,5 +1,5 @@
 ---
-slug: /support/how-to-set-the-home-page
+slug: support/how-to-set-the-home-page
 title: "How to set the home page"
 ---
 

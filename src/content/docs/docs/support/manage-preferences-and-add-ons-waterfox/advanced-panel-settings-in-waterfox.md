@@ -1,5 +1,5 @@
 ---
-slug: /support/advanced-panel-settings-in-waterfox
+slug: support/advanced-panel-settings-in-waterfox
 title: "Advanced panel - Accessibility, browsing, network, updates, and other advanced settings in Waterfox"
 ---
 

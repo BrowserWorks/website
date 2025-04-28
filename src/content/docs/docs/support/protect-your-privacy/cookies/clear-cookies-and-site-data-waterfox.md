@@ -1,5 +1,5 @@
 ---
-slug: /support/clear-cookies-and-site-data-waterfox
+slug: support/clear-cookies-and-site-data-waterfox
 title: "Clear cookies and site data in Waterfox"
 ---
 

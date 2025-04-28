@@ -1,5 +1,5 @@
 ---
-slug: /support/update-waterfox-latest-release
+slug: support/update-waterfox-latest-release
 title: "Update Waterfox to the latest release"
 ---
 

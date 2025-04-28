@@ -1,5 +1,5 @@
 ---
-slug: /support/take-screenshots-waterfox
+slug: support/take-screenshots-waterfox
 title: "Take screenshots on Waterfox"
 ---
 

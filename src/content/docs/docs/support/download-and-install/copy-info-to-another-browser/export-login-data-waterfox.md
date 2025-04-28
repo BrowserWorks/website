@@ -1,5 +1,5 @@
 ---
-slug: /support/export-login-data-waterfox
+slug: support/export-login-data-waterfox
 title: "Export login data from Waterfox"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/profiles-where-waterfox-stores-user-data
+slug: support/profiles-where-waterfox-stores-user-data
 title: "Profiles - Where Waterfox stores your bookmarks, passwords and other user data"
 ---
 

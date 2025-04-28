@@ -1,5 +1,5 @@
 ---
-slug: /support/how-do-i-turn-do-not-track-feature
+slug: support/how-do-i-turn-do-not-track-feature
 title: "How do I turn on the Do Not Track feature?"
 ---
 

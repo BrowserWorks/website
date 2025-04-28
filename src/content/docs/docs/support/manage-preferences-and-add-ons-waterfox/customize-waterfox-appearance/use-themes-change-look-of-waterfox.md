@@ -1,5 +1,5 @@
 ---
-slug: /support/use-themes-change-look-of-waterfox
+slug: support/use-themes-change-look-of-waterfox
 title: "Use themes to change the look of Waterfox"
 ---
 

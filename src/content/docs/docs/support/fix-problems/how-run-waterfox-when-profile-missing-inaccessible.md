@@ -1,5 +1,5 @@
 ---
-slug: /support/how-run-waterfox-when-profile-missing-inaccessible
+slug: support/how-run-waterfox-when-profile-missing-inaccessible
 title: "How to run Waterfox when your profile is missing or inaccessible"
 ---
 

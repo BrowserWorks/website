@@ -1,5 +1,5 @@
 ---
-slug: /support/changes-toolbars-and-window-sizes-are-not-saved
+slug: support/changes-toolbars-and-window-sizes-are-not-saved
 title: "Changes to toolbars and window sizes are not saved"
 ---
 

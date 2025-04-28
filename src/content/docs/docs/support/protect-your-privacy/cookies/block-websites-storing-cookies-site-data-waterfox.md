@@ -1,5 +1,5 @@
 ---
-slug: /support/block-websites-storing-cookies-site-data-waterfox
+slug: support/block-websites-storing-cookies-site-data-waterfox
 title: "Block websites from storing cookies and site data in Waterfox"
 ---
 

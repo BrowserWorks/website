@@ -1,5 +1,5 @@
 ---
-slug: /support/use-troubleshooting-information-page-fix-waterfox
+slug: support/use-troubleshooting-information-page-fix-waterfox
 title: "Use the Troubleshooting Information page to help fix Waterfox issues"
 ---
 

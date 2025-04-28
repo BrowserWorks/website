@@ -1,5 +1,5 @@
 ---
-slug: /support/reset-your-primary-password-if-youve-forgotten-it
+slug: support/reset-your-primary-password-if-youve-forgotten-it
 title: "Reset your Primary Password if you’ve forgotten it"
 ---
 

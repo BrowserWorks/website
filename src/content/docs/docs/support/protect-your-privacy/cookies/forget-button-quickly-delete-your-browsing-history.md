@@ -1,5 +1,5 @@
 ---
-slug: /support/forget-button-quickly-delete-your-browsing-history
+slug: support/forget-button-quickly-delete-your-browsing-history
 title: "Forget button - quickly delete your browsing history on Waterfox"
 ---
 

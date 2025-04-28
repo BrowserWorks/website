@@ -1,5 +1,5 @@
 ---
-slug: /support/how-do-i-share-waterfox-between-people-on-computer
+slug: support/how-do-i-share-waterfox-between-people-on-computer
 title: "How do I share Waterfox between people on a computer?"
 ---
 

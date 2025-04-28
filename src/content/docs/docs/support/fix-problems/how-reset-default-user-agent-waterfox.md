@@ -1,5 +1,5 @@
 ---
-slug: /support/how-reset-default-user-agent-waterfox
+slug: support/how-reset-default-user-agent-waterfox
 title: "How to reset the default user agent on Waterfox"
 ---
 

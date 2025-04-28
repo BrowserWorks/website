@@ -1,5 +1,5 @@
 ---
-slug: /support/mute-sound-waterfox-tabs
+slug: support/mute-sound-waterfox-tabs
 title: "Mute sound in Waterfox tabs"
 ---
 

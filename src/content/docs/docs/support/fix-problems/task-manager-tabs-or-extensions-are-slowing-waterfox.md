@@ -1,5 +1,5 @@
 ---
-slug: /support/task-manager-tabs-or-extensions-are-slowing-waterfox
+slug: support/task-manager-tabs-or-extensions-are-slowing-waterfox
 title: "Task Manager - see what tabs or extensions are slowing down Waterfox"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/recovering-important-data-from-an-old-profile
+slug: support/recovering-important-data-from-an-old-profile
 title: "Recovering important data from an old profile"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/cannot-remove-add-on-extension-or-theme
+slug: support/cannot-remove-add-on-extension-or-theme
 title: "Cannot remove an add-on (extension or theme)"
 ---
 

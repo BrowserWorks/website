@@ -1,5 +1,5 @@
 ---
-slug: /support/how-stay-safe-web
+slug: support/how-stay-safe-web
 title: "How to stay safe on the web"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/permission-request-messages-waterfox-extensions
+slug: support/permission-request-messages-waterfox-extensions
 title: "Permission request messages for Waterfox extensions"
 ---
 

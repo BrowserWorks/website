@@ -1,5 +1,5 @@
 ---
-slug: /support/browser-suggest
+slug: support/browser-suggest
 title: "How to customize Waterfox Suggest settings"
 ---
 

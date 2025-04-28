@@ -1,5 +1,5 @@
 ---
-slug: /support/refresh-waterfox-reset-add-ons-and-settings
+slug: support/refresh-waterfox-reset-add-ons-and-settings
 title: "Refresh Waterfox - reset add-ons and settings"
 ---
 

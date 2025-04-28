@@ -1,5 +1,5 @@
 ---
-slug: /support/import-ie-favorites-other-computer
+slug: support/import-ie-favorites-other-computer
 title: "Import Internet Explorer Favorites from another computer"
 ---
 

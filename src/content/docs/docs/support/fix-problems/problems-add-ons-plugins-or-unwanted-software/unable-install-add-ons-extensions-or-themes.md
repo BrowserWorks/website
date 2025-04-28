@@ -1,5 +1,5 @@
 ---
-slug: /support/unable-install-add-ons-extensions-or-themes
+slug: support/unable-install-add-ons-extensions-or-themes
 title: "Unable to install add-ons (extensions or themes)"
 ---
 

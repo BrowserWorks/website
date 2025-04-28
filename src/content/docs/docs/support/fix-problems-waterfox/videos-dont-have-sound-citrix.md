@@ -1,5 +1,5 @@
 ---
-slug: /support/videos-dont-have-sound-citrix
+slug: support/videos-dont-have-sound-citrix
 title: "Videos don’t have sound on Citrix"
 ---
 

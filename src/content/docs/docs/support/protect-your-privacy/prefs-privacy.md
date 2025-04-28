@@ -1,5 +1,5 @@
 ---
-slug: /support/prefs-privacy
+slug: support/prefs-privacy
 title: "Settings for privacy, browsing history and do-not-track"
 ---
 

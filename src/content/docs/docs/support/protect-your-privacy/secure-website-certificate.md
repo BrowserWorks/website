@@ -1,5 +1,5 @@
 ---
-slug: /support/secure-website-certificate
+slug: support/secure-website-certificate
 title: "Secure website certificate"
 ---
 

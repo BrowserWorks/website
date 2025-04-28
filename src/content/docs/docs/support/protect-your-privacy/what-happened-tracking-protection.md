@@ -1,5 +1,5 @@
 ---
-slug: /support/what-happened-tracking-protection
+slug: support/what-happened-tracking-protection
 title: "What happened to Tracking Protection?"
 ---
 

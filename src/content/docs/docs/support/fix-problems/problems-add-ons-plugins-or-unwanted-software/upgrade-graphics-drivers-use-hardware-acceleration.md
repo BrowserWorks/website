@@ -1,5 +1,5 @@
 ---
-slug: /support/upgrade-graphics-drivers-use-hardware-acceleration
+slug: support/upgrade-graphics-drivers-use-hardware-acceleration
 title: "Upgrade your graphics drivers to use hardware acceleration and WebGL"
 ---
 

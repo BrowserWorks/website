@@ -1,5 +1,5 @@
 ---
-slug: /support/bookmarks-toolbar-display-favorite-websites
+slug: support/bookmarks-toolbar-display-favorite-websites
 title: "Bookmarks Toolbar - Display your favorite websites at the top of the Waterfox window"
 ---
 

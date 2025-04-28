@@ -1,5 +1,5 @@
 ---
-slug: /support/trackers-and-scripts-waterfox-blocks-enhanced-track
+slug: support/trackers-and-scripts-waterfox-blocks-enhanced-track
 title: "Trackers and scripts Waterfox blocks in Enhanced Tracking Protection"
 ---
 

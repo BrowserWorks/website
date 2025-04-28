@@ -1,5 +1,5 @@
 ---
-slug: /support/use-waterfox-another-language
+slug: support/use-waterfox-another-language
 title: "Use Waterfox in another language"
 ---
 

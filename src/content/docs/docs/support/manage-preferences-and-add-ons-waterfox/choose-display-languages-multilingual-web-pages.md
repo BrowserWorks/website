@@ -1,5 +1,5 @@
 ---
-slug: /support/choose-display-languages-multilingual-web-pages
+slug: support/choose-display-languages-multilingual-web-pages
 title: "Choose display languages for multilingual web pages"
 ---
 

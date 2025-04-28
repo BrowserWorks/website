@@ -1,5 +1,5 @@
 ---
-slug: /support/edit-or-delete-login-waterfox-password-manager
+slug: support/edit-or-delete-login-waterfox-password-manager
 title: "Edit or delete a login with the Waterfox Password Manager"
 ---
 

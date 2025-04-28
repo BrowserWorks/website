@@ -1,5 +1,5 @@
 ---
-slug: /support/facebook-container-isnt-working
+slug: support/facebook-container-isnt-working
 title: "Facebook Container isn’t working"
 ---
 

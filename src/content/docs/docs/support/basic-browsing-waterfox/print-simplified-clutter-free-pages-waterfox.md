@@ -1,5 +1,5 @@
 ---
-slug: /support/print-simplified-clutter-free-pages-waterfox
+slug: support/print-simplified-clutter-free-pages-waterfox
 title: "Print simplified, clutter-free pages in Waterfox"
 ---
 

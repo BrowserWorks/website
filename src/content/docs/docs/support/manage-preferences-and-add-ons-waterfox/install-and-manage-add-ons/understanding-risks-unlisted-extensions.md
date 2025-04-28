@@ -1,5 +1,5 @@
 ---
-slug: /support/understanding-risks-unlisted-extensions
+slug: support/understanding-risks-unlisted-extensions
 title: "Understanding the risks of installing self-hosted extensions"
 ---
 

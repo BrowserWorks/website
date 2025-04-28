@@ -1,5 +1,5 @@
 ---
-slug: /support/websites-look-wrong-or-appear-differently
+slug: support/websites-look-wrong-or-appear-differently
 title: "Websites look wrong or appear differently than they should"
 ---
 

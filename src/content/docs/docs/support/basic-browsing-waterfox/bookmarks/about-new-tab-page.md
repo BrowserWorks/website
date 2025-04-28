@@ -1,5 +1,5 @@
 ---
-slug: /support/about-new-tab-page
+slug: support/about-new-tab-page
 title: "About the New Tab page"
 ---
 

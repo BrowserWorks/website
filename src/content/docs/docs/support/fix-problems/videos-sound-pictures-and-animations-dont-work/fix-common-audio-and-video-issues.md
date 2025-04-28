@@ -1,5 +1,5 @@
 ---
-slug: /support/fix-common-audio-and-video-issues
+slug: support/fix-common-audio-and-video-issues
 title: "Fix common audio and video issues"
 ---
 

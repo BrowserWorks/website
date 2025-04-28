@@ -1,5 +1,5 @@
 ---
-slug: /support/tab-preferences-and-settings
+slug: support/tab-preferences-and-settings
 title: "Tab preferences and settings"
 ---
 

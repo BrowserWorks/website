@@ -1,5 +1,5 @@
 ---
-slug: /support/waterfox-page-info-window
+slug: support/waterfox-page-info-window
 title: "Waterfox Page Info window"
 ---
 

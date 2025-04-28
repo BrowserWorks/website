@@ -1,5 +1,5 @@
 ---
-slug: /support/extension-changed-my-new-tab-page
+slug: support/extension-changed-my-new-tab-page
 title: "An extension changed my New Tab page or home page"
 ---
 

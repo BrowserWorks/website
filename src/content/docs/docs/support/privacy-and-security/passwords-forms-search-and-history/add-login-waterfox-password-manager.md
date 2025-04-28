@@ -1,5 +1,5 @@
 ---
-slug: /support/add-login-waterfox-password-manager
+slug: support/add-login-waterfox-password-manager
 title: "Add a login with the Waterfox Password Manager"
 ---
 

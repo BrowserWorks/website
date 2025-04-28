@@ -1,5 +1,5 @@
 ---
-slug: /support/text-encoding-no-longer-available-waterfox-menu
+slug: support/text-encoding-no-longer-available-waterfox-menu
 title: "Text Encoding no longer available in the Waterfox menu panel"
 ---
 

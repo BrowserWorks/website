@@ -1,5 +1,5 @@
 ---
-slug: /support/preferences
+slug: support/preferences
 title: "Waterfox options, preferences and settings"
 ---
 

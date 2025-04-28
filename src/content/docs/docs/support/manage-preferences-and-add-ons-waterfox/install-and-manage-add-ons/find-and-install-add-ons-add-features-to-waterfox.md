@@ -1,5 +1,5 @@
 ---
-slug: /support/find-and-install-add-ons-add-features-to-waterfox
+slug: support/find-and-install-add-ons-add-features-to-waterfox
 title: "Find and install add-ons to add features to Waterfox"
 ---
 

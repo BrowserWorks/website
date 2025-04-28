@@ -1,5 +1,5 @@
 ---
-slug: /support/dns-over-https
+slug: support/dns-over-https
 title: "Configure DNS over HTTPS protection levels in Waterfox"
 ---
 

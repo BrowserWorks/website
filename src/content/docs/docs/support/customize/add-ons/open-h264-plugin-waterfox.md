@@ -1,5 +1,5 @@
 ---
-slug: /support/open-h264-plugin-waterfox
+slug: support/open-h264-plugin-waterfox
 title: "Why is there an OpenH264 plugin in Waterfox?"
 ---
 

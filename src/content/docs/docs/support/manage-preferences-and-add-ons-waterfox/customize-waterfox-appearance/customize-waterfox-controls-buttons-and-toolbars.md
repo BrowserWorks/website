@@ -1,5 +1,5 @@
 ---
-slug: /support/customize-waterfox-controls-buttons-and-toolbars
+slug: support/customize-waterfox-controls-buttons-and-toolbars
 title: "Customize Waterfox controls, buttons and toolbars"
 ---
 

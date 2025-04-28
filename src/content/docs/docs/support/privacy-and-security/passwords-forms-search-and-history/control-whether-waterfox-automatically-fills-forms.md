@@ -1,5 +1,5 @@
 ---
-slug: /support/control-whether-waterfox-automatically-fills-forms
+slug: support/control-whether-waterfox-automatically-fills-forms
 title: "Control whether Waterfox automatically fills in forms"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/update-failed-error-message-when-updating
+slug: support/update-failed-error-message-when-updating
 title: "How to fix the Update Failed error message when updating Waterfox"
 ---
 

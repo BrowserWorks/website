@@ -1,5 +1,5 @@
 ---
-slug: /support/search-suggestions-waterfox
+slug: support/search-suggestions-waterfox
 title: "Search suggestions in Waterfox"
 ---
 

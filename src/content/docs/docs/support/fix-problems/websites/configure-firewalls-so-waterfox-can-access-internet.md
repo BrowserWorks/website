@@ -1,5 +1,5 @@
 ---
-slug: /support/configure-firewalls-so-waterfox-can-access-internet
+slug: support/configure-firewalls-so-waterfox-can-access-internet
 title: "Configure firewalls so that Waterfox can access the Internet"
 ---
 

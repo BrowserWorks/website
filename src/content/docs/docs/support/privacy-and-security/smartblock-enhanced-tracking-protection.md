@@ -1,5 +1,5 @@
 ---
-slug: /support/smartblock-enhanced-tracking-protection
+slug: support/smartblock-enhanced-tracking-protection
 title: "SmartBlock for Enhanced Tracking Protection"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/importing-safari-data-waterfox
+slug: support/importing-safari-data-waterfox
 title: "Importing Safari data into Waterfox"
 ---
 

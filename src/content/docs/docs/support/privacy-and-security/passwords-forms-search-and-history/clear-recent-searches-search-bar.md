@@ -1,5 +1,5 @@
 ---
-slug: /support/clear-recent-searches-search-bar
+slug: support/clear-recent-searches-search-bar
 title: "Clear recent searches from the Search bar"
 ---
 

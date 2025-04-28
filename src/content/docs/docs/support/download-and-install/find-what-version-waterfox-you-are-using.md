@@ -1,5 +1,5 @@
 ---
-slug: /support/find-what-version-waterfox-you-are-using
+slug: support/find-what-version-waterfox-you-are-using
 title: "Find what version of Waterfox you are using"
 ---
 

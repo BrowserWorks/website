@@ -1,5 +1,5 @@
 ---
-slug: /support/block-autoplay
+slug: support/block-autoplay
 title: "Allow or block media autoplay in Waterfox"
 ---
 

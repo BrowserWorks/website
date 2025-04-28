@@ -1,5 +1,5 @@
 ---
-slug: /support/diagnose-waterfox-issues-using-troubleshoot-mode
+slug: support/diagnose-waterfox-issues-using-troubleshoot-mode
 title: "Diagnose Waterfox issues using Troubleshoot Mode"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/import-login-data-file
+slug: support/import-login-data-file
 title: "Import login data from a file"
 ---
 

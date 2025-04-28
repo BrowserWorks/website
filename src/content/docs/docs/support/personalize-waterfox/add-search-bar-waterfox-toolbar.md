@@ -1,5 +1,5 @@
 ---
-slug: /support/add-search-bar-waterfox-toolbar
+slug: support/add-search-bar-waterfox-toolbar
 title: "Add the Search bar to your Waterfox toolbar"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/searches-take-you-to-wrong-search-website
+slug: support/searches-take-you-to-wrong-search-website
 title: "What to do when searches take you to the wrong search website"
 ---
 

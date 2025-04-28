@@ -1,5 +1,5 @@
 ---
-slug: /support/identify-problems-third-party-modules-waterfox-windows
+slug: support/identify-problems-third-party-modules-waterfox-windows
 title: "Identify problems caused by third-party modules in Waterfox for Windows"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/recover-user-data-missing-after-waterfox-update
+slug: support/recover-user-data-missing-after-waterfox-update
 title: "Recover user data missing after Waterfox update"
 ---
 

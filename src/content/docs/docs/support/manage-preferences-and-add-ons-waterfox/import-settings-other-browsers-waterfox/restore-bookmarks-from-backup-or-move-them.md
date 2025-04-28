@@ -1,5 +1,5 @@
 ---
-slug: /support/restore-bookmarks-from-backup-or-move-them
+slug: support/restore-bookmarks-from-backup-or-move-them
 title: "Restore bookmarks from backup or move them to another computer"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/tips-assessing-safety-extension
+slug: support/tips-assessing-safety-extension
 title: "Tips for assessing the safety of an extension"
 ---
 

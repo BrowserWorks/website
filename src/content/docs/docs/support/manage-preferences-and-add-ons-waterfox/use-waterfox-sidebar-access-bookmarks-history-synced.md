@@ -1,5 +1,5 @@
 ---
-slug: /support/use-waterfox-sidebar-access-bookmarks-history-synced
+slug: support/use-waterfox-sidebar-access-bookmarks-history-synced
 title: "Use the Waterfox Sidebar to access bookmarks, history and synced tabs"
 ---
 

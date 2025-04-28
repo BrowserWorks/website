@@ -1,5 +1,5 @@
 ---
-slug: /support/fix-problems-connecting-websites-after-updating
+slug: support/fix-problems-connecting-websites-after-updating
 title: "Fix problems connecting to websites after updating Waterfox"
 ---
 

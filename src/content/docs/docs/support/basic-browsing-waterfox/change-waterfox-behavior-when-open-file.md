@@ -1,5 +1,5 @@
 ---
-slug: /support/change-waterfox-behavior-when-open-file
+slug: support/change-waterfox-behavior-when-open-file
 title: "Manage file types and download actions in Waterfox"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/change-your-default-search-settings-waterfox
+slug: support/change-your-default-search-settings-waterfox
 title: "Change your default search settings in Waterfox"
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /support/what-does-your-connection-is-not-secure-mean
+slug: support/what-does-your-connection-is-not-secure-mean
 title: "What do the security warning codes mean?"
 ---
 

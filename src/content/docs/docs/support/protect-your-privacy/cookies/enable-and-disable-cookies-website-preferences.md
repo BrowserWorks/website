@@ -1,5 +1,5 @@
 ---
-slug: /support/enable-and-disable-cookies-website-preferences
+slug: support/enable-and-disable-cookies-website-preferences
 title: "Enable and disable cookies that websites use to track your preferences"
 ---
 

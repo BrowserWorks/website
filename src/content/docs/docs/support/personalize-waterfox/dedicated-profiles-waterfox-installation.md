@@ -1,5 +1,5 @@
 ---
-slug: /support/dedicated-profiles-waterfox-installation
+slug: support/dedicated-profiles-waterfox-installation
 title: "Dedicated profiles per Waterfox installation"
 ---
 
