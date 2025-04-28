@@ -1,8 +1,8 @@
 import { resolve } from "node:path";
 import starlight from "@astrojs/starlight";
-import tailwind from "@astrojs/tailwind";
 import { shield } from "@kindspells/astro-shield";
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import starlightBlog from "starlight-blog";
 import starlightCoolerCredit from "starlight-cooler-credit";
@@ -22,7 +22,7 @@ export default defineConfig({
 			components: {
 				Head: "~/components/Head.astro",
 				PageFrame: "~/components/CustomPageFrame.astro",
-				Sidebar: "~/components/Sidebar.astro",
+				// Sidebar: "~/components/Sidebar.astro",
 			},
 			customCss: ["~/assets/global.css", "~/fonts/fonts.css"],
 			defaultLocale: "root",
@@ -52,11 +52,11 @@ export default defineConfig({
 						},
 					},
 				}),
-				starlightUtils({
-					navLinks: {
-						leading: { useSidebarLabelled: "Navigation" },
-					},
-				}),
+				// starlightUtils({
+				// 	navLinks: {
+				// 		leading: { useSidebarLabelled: "Navigation" },
+				// 	},
+				// }),
 				starlightCoolerCredit({
 					credit: {
 						description: {
@@ -68,20 +68,37 @@ export default defineConfig({
 						},
 					},
 					customImage: "./src/assets/heart.png",
+					customImageAlt: "heart",
 				}),
 			],
 			sidebar: await generateSidebar(),
-			social: {
-				blueSky: "https://bsky.app/profile/waterfox.net",
-				github: "https://github.com/BrowserWorks/Waterfox",
-				mastodon: "https://mastodon.social/@Waterfox",
-				reddit: "https://www.reddit.com/r/waterfox",
-			},
+			social: [
+				{
+					icon: "blueSky",
+					label: "BlueSky",
+					href: "https://bsky.app/profile/waterfox.net",
+				},
+				{
+					icon: "github",
+					label: "GitHub",
+					href: "https://github.com/BrowserWorks/Waterfox",
+				},
+				{
+					icon: "mastodon",
+					label: "Mastodon",
+					href: "https://mastodon.social/@Waterfox",
+				},
+				{
+					icon: "reddit",
+					label: "Reddit",
+					href: "https://www.reddit.com/r/waterfox",
+				},
+			],
 			title: "Waterfox",
-		}),
-		tailwind({
-			applyBaseStyles: false,
 		}),
 	],
 	site: "https://www.waterfox.net",
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });

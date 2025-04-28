@@ -1,8 +1,59 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer base, starlight, theme, components, utilities;
+
+@import "@astrojs/starlight-tailwind";
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+	--color-accent-200: #b1cce8;
+	--color-accent-600: #076ebd;
+	--color-accent-900: #0f3456;
+	--color-accent-950: #10253b;
+
+	--color-gray-100: #f0f7ff;
+	--color-gray-200: #e2efff;
+	--color-gray-300: #adc4e0;
+	--color-gray-400: #628ec3;
+	--color-gray-500: #2f5a8b;
+	--color-gray-700: #0c3867;
+	--color-gray-800: #00264e;
+	--color-gray-900: #07192d;
+
+	--color-deepsea: #053361;
+	--color-azure: #51a9ff;
+	--color-turquoise: #8dedcf;
+	--color-mist: #b783ff;
+	--color-gold: #ffc55c;
+	--color-sand: #f2ae46;
+	--color-crystal: #e2eefb;
+	--color-frost: #f6fafe;
+	--color-indigo: #8594ff;
+	--color-deepblue: #2e23de;
+	--color-aqua: #9bc1e7;
+	--color-deepaqua: #3b79b8;
+
+	--font-body: system-ui, sans-serif;
+	--font-montserrat: "Montserrat Variable", system-ui, sans-serif;
+}
+
+@plugin "@tailwindcss/typography";
+
+@source "./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx,vue}";
 
 @layer base {
+	[data-twp] {
+		@import "tailwindcss/preflight.css";
+	}
+
+	[data-twp-reset] {
+		*,
+		::after,
+		::before,
+		::backdrop,
+		::file-selector-button {
+			all: revert-layer;
+		}
+	}
 	html,
 	body {
 		@apply w-full;
@@ -14,7 +65,7 @@
 	h4,
 	h5,
 	h6 {
-		font-family: "Montserrat Variable", system-ui, sans-serif;
+		font-family: var(--font-montserrat);
 	}
 
 	.inline-image {

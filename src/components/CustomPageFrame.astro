@@ -1,15 +1,13 @@
 ---
 import MobileMenuToggle from "@astrojs/starlight/components/MobileMenuToggle.astro";
-import type { Props } from "@astrojs/starlight/props";
 import DownloadsPage from "./DownloadsPage.astro";
-import Footer from "./Footer.astro";
 import Home from "./Home.astro";
 
 // Check if we are on the hompage
-const isHomepage = Astro.props.slug === "";
-const isDownloads = Astro.props.slug === "download";
+const isHomepage = Astro.locals.starlightRoute.id === "";
+const isDownloads = Astro.locals.starlightRoute.id === "download";
 
-const { hasSidebar } = Astro.props;
+const { hasSidebar } = Astro.locals.starlightRoute;
 ---
 
 {
