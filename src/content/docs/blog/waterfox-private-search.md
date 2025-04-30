@@ -44,6 +44,10 @@ We've also included some features that enhance the search experience in ways big
 - Advanced search operators made more accessible
 - Control over links opening in a new tab
 
+## Beta Limitations
+
+During this initial beta period, we're using Google as our only search backend while we fine-tune our systems and gather user feedback. This allows us to focus on perfecting the core experience before expanding to multiple search providers. In future updates, we plan to add the ability to switch between different search engines according to your preference.
+
 ## NO AI BULLSHIT
 
 Let me be absolutely clear: [Waterfox Private Search](https://search.waterfox.net) does not use AI to "summarise" content or redirect traffic away from original websites. We won't steal views from content creators by scraping their work and presenting it as AI-generated summaries.
@@ -61,6 +65,14 @@ We're planning two approaches to make [Waterfox Private Search](https://search.w
 I want to be transparent: the long-term viability of [Waterfox Private Search](https://search.waterfox.net) as our default option depends entirely on our ability to monetise it in a sufficient, sustainable way. The reality of running a search service is that it requires significant resources – both in terms of infrastructure and ongoing development.
 
 If we can't generate enough revenue through privacy-respecting ads and subscriptions to support these costs, we may need to reconsider our approach. This is the challenge of building privacy-first alternatives to services that are traditionally funded through invasive data collection. We're committed to finding a path that works, but it will require both innovation on our part and support from the community.
+
+## A Note About Ad Blockers
+
+I understand that many Waterfox users are privacy-conscious and commonly use ad blockers. While I fully respect your right to control what loads in your browser, I'd like to gently ask that you consider disabling your ad blocker when using Waterfox Private Search.
+
+The ads we show are contextual (based only on your current search, not your history), non-intrusive, and don't track you across the web. They represent our primary means of making this service sustainable while respecting your privacy.
+
+If you appreciate having a privacy-focused search alternative that isn't controlled by big tech, allowing these minimally invasive ads is one of the most direct ways you can support the project's continued development and independence.
 
 ## The Path Forward
 
