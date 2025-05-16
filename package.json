@@ -13,24 +13,24 @@
     "format": "bunx @biomejs/biome check --write *"
   },
   "dependencies": {
-    "@astrojs/starlight": "0.34.1",
+    "@astrojs/starlight": "0.34.3",
     "@astrojs/starlight-tailwind": "^4.0.1",
     "@kindspells/astro-shield": "^1.7.1",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.5",
+    "@tailwindcss/vite": "^4.1.7",
     "@vercel/og": "^0.6.8",
-    "astro": "5.7.10",
-    "caniuse-lite": "^1.0.30001716",
+    "astro": "5.7.13",
+    "caniuse-lite": "^1.0.30001718",
     "get-os-name": "^1.0.3",
     "sharp": "^0.34.1",
-    "starlight-blog": "0.21.0",
+    "starlight-blog": "0.23.2",
     "starlight-cooler-credit": "^0.4.0",
-    "tailwind-merge": "^3.2.0",
-    "tailwindcss": "^4.1.5"
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss": "^4.1.7"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
-    "wrangler": "^4.13.2"
+    "wrangler": "^4.15.2"
   }
 }
