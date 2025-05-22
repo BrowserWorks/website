@@ -1,0 +1,17 @@
+{
+	"name": "waterfox",
+	"compatibility_date": "2025-05-05",
+	"assets": {
+		"directory": "./dist/"
+	},
+	"routes": [
+		{
+			"pattern": "www.waterfox.net",
+			"custom_domain": true
+		},
+		{
+			"pattern": "waterfox.net",
+			"custom_domain": true
+		}
+	]
+}
