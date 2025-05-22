@@ -13,5 +13,5 @@ X-Content-Type-Options: nosniff
 X-Frame-Options: deny
 X-Permitted-Cross-Domain-Policies: none
 
-https://waterfox.pages.dev/*
+https://waterfox.waterfox.workers.dev/*
 X-Robots-Tag: noindex

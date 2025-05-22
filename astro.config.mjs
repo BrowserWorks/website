@@ -1,6 +1,5 @@
 import { resolve } from "node:path";
 import starlight from "@astrojs/starlight";
-import { shield } from "@kindspells/astro-shield";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import starlightBlog from "starlight-blog";
@@ -12,17 +11,11 @@ const modulePath = resolve(rootDir, "src", "generated", "sriHashes.mjs");
 
 export default defineConfig({
 	integrations: [
-		shield({
-			sri: {
-				hashesModule: modulePath,
-			},
-		}),
 		starlight({
 			components: {
 				Head: "~/components/Head.astro",
 				PageFrame: "~/components/CustomPageFrame.astro",
 				ThemeSelect: "~/components/overrides/ThemeSelect.astro",
-				// Sidebar: "~/components/Sidebar.astro",
 			},
 			customCss: ["~/assets/global.css", "~/fonts/fonts.css"],
 			defaultLocale: "root",
