@@ -1,0 +1,175 @@
+---
+import "~/assets/global.css";
+
+const siteUrl = new URL(Astro.url.pathname, Astro.url.origin).origin;
+---
+
+<html lang="en" class="bg-[#3A3ADD] h-screen">
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="404 Page - Waterfox Private Search" />
+    <meta
+        name="keywords"
+        content="waterfox, search engine, private search, privacy, web search"
+    />
+    <meta name="author" content="Waterfox" />
+    <meta name="robots" content="noindex, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl + Astro.url.pathname} />
+    <meta property="og:title" content="404 - Page Not Found" />
+    <meta
+        property="og:description"
+        content="Sorry, the page you were looking for could not be found."
+    />
+    <meta property="og:image" content={`${siteUrl}/default-og-image.png`} />
+    <meta property="og:image:alt" content="Waterfox Private Search logo" />
+    <meta property="og:site_name" content="Waterfox Private Search" />
+    <meta property="og:locale" content="en" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={siteUrl + Astro.url.pathname} />
+    <meta name="twitter:title" content="404 - Page Not Found" />
+    <meta
+        property="twitter:description"
+        content="Sorry, the page you were looking for could not be found."
+    />
+    <meta name="twitter:image" content={`${siteUrl}/default-og-image.png`} />
+    <meta name="twitter:image:alt" content="Waterfox" />
+    <meta name="application-name" content="Waterfox" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Waterfox" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#053361" />
+    <link rel="canonical" href={siteUrl + Astro.url.pathname} />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <title>404 - Page Not Found | Waterfox</title>
+
+    <body class="overflow-hidden h-screen m-0">
+        <canvas
+            id="rive-container"
+            aria-label="404 Not Found Animation"
+            class="w-full h-full block"></canvas>
+
+        <div
+            class="fixed bottom-4 left-0 right-0 flex flex-col items-center gap-4 z-50"
+        >
+            <div
+                role="alert"
+                class="bg-red-600 text-white p-4 rounded-lg shadow-lg flex flex-col sm:flex-row items-center sm:justify-between gap-3 w-auto max-w-[calc(100%-2rem)] sm:max-w-sm"
+            >
+                <div class="font-medium">Page Not Found</div>
+                <a
+                    href="/"
+                    class="bg-white text-red-700 px-3 py-1.5 rounded-md text-sm font-semibold hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-red-600 focus:ring-white transition-colors"
+                    >→ Home</a
+                >
+            </div>
+
+            <div
+                role="alert"
+                class="bg-black/25 text-slate-200 p-3 rounded-lg shadow-md text-xs w-auto max-w-[calc(100%-2rem)] sm:max-w-sm text-center"
+            >
+                <span>
+                    Animation <a
+                        href="https://dribbble.com/shots/20410283-404-Land"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="404 Land"
+                        class="text-[var(--color-turquoise)] hover:text-[var(--color-mist)] underline"
+                        >'404 Land'</a
+                    > by Laura Calvo licensed under
+                    <a
+                        href="https://creativecommons.org/licenses/by/4.0/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Creative Commons Attribution 4.0 International License"
+                        class="text-[var(--color-turquoise)] hover:text-[var(--color-mist)] underline"
+                        >CC BY 4.0</a
+                    >.
+                </span>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    import riveWASMResourceUrl from "@rive-app/canvas-lite/rive.wasm?url";
+    import { Rive, RuntimeLoader } from "@rive-app/canvas-lite";
+
+    RuntimeLoader.setWasmUrl(riveWASMResourceUrl);
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const canvas = document.getElementById("rive-container");
+
+        const displayFallback = () => {
+            if (canvas) canvas.style.display = "none";
+        };
+
+        if (!(canvas instanceof HTMLCanvasElement)) {
+            console.error(
+                "Rive Error: Could not find canvas element with id 'rive-container'",
+            );
+            displayFallback();
+            return;
+        }
+
+        let riveInstance: Rive | null = null;
+
+        const resizeCanvas = () => {
+            if (
+                canvas.parentElement &&
+                canvas.parentElement.clientWidth > 0 &&
+                canvas.parentElement.clientHeight > 0
+            ) {
+                const dpr = window.devicePixelRatio || 1;
+                const width = canvas.parentElement.clientWidth;
+                const height = canvas.parentElement.clientHeight;
+
+                canvas.width = width * dpr;
+                canvas.height = height * dpr;
+                canvas.style.width = `${width}px`;
+                canvas.style.height = `${height}px`;
+
+                if (riveInstance) {
+                    riveInstance.resizeDrawingSurfaceToCanvas();
+                }
+            }
+        };
+
+        resizeCanvas();
+
+        window.addEventListener("resize", resizeCanvas);
+
+        try {
+            riveInstance = new Rive({
+                src: "/404.riv",
+                canvas: canvas,
+                autoplay: true,
+                stateMachines: "State Machine 1",
+                onLoad: () => {
+                    resizeCanvas();
+                },
+                onLoadError: (error) => {
+                    console.error("Rive onLoadError:", error);
+                    displayFallback();
+                },
+            });
+
+            const cleanup = () => {
+                window.removeEventListener("resize", resizeCanvas);
+                if (riveInstance) {
+                    riveInstance.stop();
+                    riveInstance.cleanup();
+                    riveInstance = null;
+                }
+            };
+
+            window.addEventListener("unload", cleanup);
+        } catch (error) {
+            console.error("Error initializing Rive:", error);
+            displayFallback();
+        }
+    });
+</script>
