@@ -1,13 +1,9 @@
-import { resolve } from "node:path";
 import starlight from "@astrojs/starlight";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import starlightBlog from "starlight-blog";
 import starlightCoolerCredit from "starlight-cooler-credit";
 import { generateSidebar } from "./sidebar.config.mjs";
-
-const rootDir = new URL(".", import.meta.url).pathname;
-const modulePath = resolve(rootDir, "src", "generated", "sriHashes.mjs");
 
 export default defineConfig({
 	integrations: [
