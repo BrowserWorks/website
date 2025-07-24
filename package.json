@@ -13,13 +13,13 @@
 		"deploy": "bun run build && wrangler deploy"
 	},
 	"dependencies": {
-		"@astrojs/starlight": "0.35.0",
+		"@astrojs/starlight": "0.35.1",
 		"@astrojs/starlight-tailwind": "^4.0.1",
 		"@rive-app/canvas-lite": "^2.30.4",
 		"@tailwindcss/typography": "^0.5.16",
 		"@tailwindcss/vite": "^4.1.11",
-		"@vercel/og": "^0.7.2",
-		"astro": "5.12.0",
+		"@vercel/og": "^0.8.5",
+		"astro": "5.12.3",
 		"caniuse-lite": "^1.0.30001727",
 		"get-os-name": "^1.0.3",
 		"sharp": "^0.34.3",
@@ -31,6 +31,6 @@
 	"devDependencies": {
 		"prettier": "^3.6.2",
 		"prettier-plugin-astro": "^0.14.1",
-		"wrangler": "^4.25.0"
+		"wrangler": "^4.26.0"
 	}
 }
