@@ -15,6 +15,7 @@ export default defineConfig({
 			},
 			customCss: ["~/assets/global.css", "~/fonts/fonts.css"],
 			defaultLocale: "root",
+			disable404Route: true,
 			editLink: {
 				baseUrl: "https://github.com/BrowserWorks/website/edit/main-ssg",
 			},
