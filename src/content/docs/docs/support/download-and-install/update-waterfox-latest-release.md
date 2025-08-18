@@ -7,11 +7,15 @@ title: "Update Waterfox to the latest release"
 If you [installed Waterfox from the Microsoft Store](/support/download-waterfox-windows-microsoft-store), then you will receive Waterfox updates through the Microsoft Store. This article only applies if you installed Waterfox by downloading it from Waterfox. To check for Waterfox updates on the Microsoft Store, see [this Microsoft article](https://support.microsoft.com/en-us/account-billing/get-updates-for-apps-and-games-in-microsoft-store-a1fe19c0-532d-ec47-7035-d1c5a1dd464f).
 :::
 
-By default, Waterfox updates automatically. You can always check for updates at any time, in which case an update is downloaded, but it is not installed until you restart Waterfox.
+:::note
+If you use your Linux distribution's packaged version of Waterfox, you will need to wait for an updated package to be released to its package repository. This article only applies if you installed Waterfox manually (without using your distribution's package manager).
+:::
+
+Waterfox updates automatically by default, but you can always check for updates at any time.
 
 ## Update Waterfox
 
-1. Click the menu button <img alt="menu button" class="inline-image" src="/assets/docs/icons/menu.svg" /> at the right side of the Waterfox toolbar, go to Help, and select About Waterfox. The _About Waterfox_ window will open.
+1. Windows and Linux: Click the menu button <img alt="menu button" class="inline-image" src="/assets/docs/icons/menu.svg" /> at the right side of the Waterfox toolbar, go to Help, and select About Waterfox. macOS: In the menu bar, open the Waterfox menu and choose About Waterfox. The _About Waterfox_ window will open.
 2. Waterfox will check for updates automatically. If an update is available, it will be downloaded.
 3. When the download is complete, click Restart to update Waterfox.
 
@@ -25,6 +29,10 @@ All of your data will be preserved.
 
 1. Click the menu button <img alt="menu button" class="inline-image" src="/assets/docs/icons/menu.svg" /> and select Settings.
 2. In the General panel, go to the _Waterfox Updates_ section.
+
+:::note
+Background updates are disabled in Waterfox. Updates are only checked for and installed while Waterfox is open.
+:::
 
 ---
 
