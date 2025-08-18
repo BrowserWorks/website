@@ -19,11 +19,11 @@
 		"@tailwindcss/typography": "^0.5.16",
 		"@tailwindcss/vite": "^4.1.12",
 		"@vercel/og": "^0.8.5",
-		"astro": "5.13.0",
+		"astro": "5.13.2",
 		"caniuse-lite": "^1.0.30001735",
 		"get-os-name": "^1.0.3",
 		"sharp": "^0.34.3",
-		"starlight-blog": "0.24.0",
+		"starlight-blog": "0.24.1",
 		"starlight-cooler-credit": "^0.4.0",
 		"tailwind-merge": "^3.3.1",
 		"tailwindcss": "^4.1.12"
