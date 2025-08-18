@@ -31,5 +31,5 @@ You can change the types of suggestions that are displayed at any time. To do so
 ---
 
 :::note[Copyright and Licensing]{icon="document"}
-Modified from [How to customize Firefox Suggest settings](https://support.mozilla.org/en-US/kb/browser-suggest). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/browser-suggest#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+Modified from [How to customize Firefox Suggest settings](https://support.mozilla.org/en-US/kb/firefox-suggest-faq). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/firefox-suggest-faq#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 :::

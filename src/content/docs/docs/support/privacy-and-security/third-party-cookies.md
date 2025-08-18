@@ -96,5 +96,5 @@ Behavior and available settings may vary by Android version.
 ---
 
 :::note[Copyright and Licensing]{icon="document"}
-Modified from [Third‑party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/third-party-cookies#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+Modified from [Third‑party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 :::

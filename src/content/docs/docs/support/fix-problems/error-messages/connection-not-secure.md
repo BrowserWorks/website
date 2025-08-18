@@ -28,6 +28,5 @@ For specific error codes and steps, see:
 ---
 
 :::note[Copyright and Licensing]{icon="document"}
-Modified from [“Your connection is not secure”] (https://support.mozilla.org/en-US/kb/connection-not-secure). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/connection-not-secure#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+Modified from [“Your connection is not secure”](https://support.mozilla.org/en-US/kb/what-does-your-connection-is-not-secure-mean). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/what-does-your-connection-is-not-secure-mean#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 :::
-

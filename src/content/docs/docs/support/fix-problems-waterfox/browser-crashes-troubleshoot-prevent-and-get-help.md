@@ -83,5 +83,5 @@ If Waterfox crashes repeatedly, check your RAM for errors using for instance the
 ---
 
 :::note[Copyright and Licensing]{icon="document"}
-Modified from [Troubleshoot Firefox crashes (closing or quitting unexpectedly)](https://support.mozilla.org/en-US/kb/browser-crashes-troubleshoot-prevent-and-get-help). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/browser-crashes-troubleshoot-prevent-and-get-help#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+Modified from [Troubleshoot Firefox crashes (closing or quitting unexpectedly)](https://support.mozilla.org/en-US/kb/firefox-crashes-troubleshoot-prevent-and-get-help). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/firefox-crashes-troubleshoot-prevent-and-get-help#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 :::

@@ -78,5 +78,5 @@ This panel lets you set up or manage a Mozilla Account, which is needed to acces
 ---
 
 :::note[Copyright and Licensing]{icon="document"}
-Modified from [Firefox options, preferences and settings](https://support.mozilla.org/en-US/kb/preferences). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/preferences#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+Modified from [Firefox options, preferences and settings](https://support.mozilla.org/en-US/kb/firefox-options-preferences-and-settings). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/firefox-options-preferences-and-settings#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 :::

@@ -35,5 +35,5 @@ For developers looking to learn more about this warning, please see [this page](
 ---
 
 :::note[Copyright and Licensing]{icon="document"}
-Modified from [Insecure password warning in Firefox](https://support.mozilla.org/en-US/kb/insecure-password). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/insecure-password#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+Modified from [Insecure password warning in Firefox](https://support.mozilla.org/en-US/kb/insecure-password-warning-firefox). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/insecure-password-warning-firefox#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 :::

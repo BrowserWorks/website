@@ -29,5 +29,5 @@ To learn more about how Waterfox protects your privacy, see [Enhanced Tracking P
 ---
 
 :::note[Copyright and Licensing]{icon="document"}
-Modified from [Common Myths about Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-myths). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/private-browsing-myths#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+Modified from [Common Myths about Private Browsing](https://support.mozilla.org/en-US/kb/common-myths-about-private-browsing). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/common-myths-about-private-browsing#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 :::

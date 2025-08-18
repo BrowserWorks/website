@@ -87,5 +87,5 @@ The Location Bar is the field where you enter a site's web address (URL). The Lo
 ---
 
 :::note[Copyright and Licensing]{icon="document"}
-Modified from [Settings for privacy, browsing history and do-not-track](https://support.mozilla.org/en-US/kb/prefs-privacy). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/prefs-privacy#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+Modified from [Settings for privacy, browsing history and do-not-track](https://support.mozilla.org/en-US/kb/settings-privacy-browsing-history-do-not-track). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/settings-privacy-browsing-history-do-not-track#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 :::

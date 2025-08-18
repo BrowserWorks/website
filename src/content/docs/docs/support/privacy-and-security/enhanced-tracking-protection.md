@@ -133,5 +133,5 @@ You can also turn off all protections in **Custom** by deselecting all checkboxe
 ---
 
 :::note[Copyright and Licensing]{icon="document"}
-Modified from [Enhanced Tracking Protection in Firefox for desktop](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+Modified from [Enhanced Tracking Protection in Firefox for desktop](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 :::
