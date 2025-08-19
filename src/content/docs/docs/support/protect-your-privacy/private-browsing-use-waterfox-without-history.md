@@ -31,7 +31,7 @@ Private Browsing windows have a purple mask at the top.
 
 - **Visited pages**: Pages will not be added to the list of sites in the History menu, the Library window's history list, nor in the [address bar](/support/address-bar-autocomplete-waterfox) drop-down list.
 - **Form and Search Bar entries**: Nothing you enter into text boxes on web pages nor the [Search bar](/support/add-search-bar-waterfox-toolbar) will be saved for [Form autocomplete](/support/control-whether-waterfox-automatically-fills-forms).
-- **Download List entries**: Files you download will not be listed in the [Downloads Library](/support/where-find-and-manage-downloaded-files-waterfox) after you turn off Private Browsing.
+- **Download List entries**: Files you download will not be listed in the Downloads Library after you turn off Private Browsing.
 - **Cookies**: [Cookies](/support/cookies-information-websites-store-on-your-computer) store information about websites you visit, such as site preferences, and login status. Cookies can also be used by third parties to track you across websites. See the [How do I turn on the Do Not Track feature?](/support/how-do-i-turn-do-not-track-feature) article to learn more about tracking. Cookies set in private windows are held temporarily in memory, separate from regular window cookies, and discarded at the end of your private session (after the last private window is closed).
 - **Cached Web Content** and **Offline Web Content and User Data**: Temporary Internet files ([cached](http://wikipedia.org/wiki/Web_cache) files) and files that websites save for offline use will not be saved.
 

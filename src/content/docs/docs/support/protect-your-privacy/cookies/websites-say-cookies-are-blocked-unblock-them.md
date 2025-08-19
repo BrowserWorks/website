@@ -10,7 +10,7 @@ This article describes how to troubleshoot problems that involve websites report
 Waterfox can be set to not accept cookies. To turn on cookies:
 
 1.  Click the menu button <img alt="menu button" class="inline-image" src="/assets/docs/icons/menu.svg" /> and select Settings.
-2.  Select the Privacy & Security panel. This is where you can view your settings for **[Enhanced Tracking Protection](/support/enhanced-tracking-protection-waterfox-desktop)**, which includes cookies.
+2.  Select the Privacy & Security panel. This is where you can view your settings for **[Enhanced Tracking Protection](/support/enhanced-tracking-protection)**, which includes cookies.
     ![Fx78settingsEnhancedTrackingProtection](/assets/docs/2021-03-30-03-28-19-af0e1d.png)
 
         * If Standard is selected, this is the default setting and, except for trackers, all cookies are enabled. For more information, see [Trackers and scripts Waterfox blocks in Enhanced Tracking Protection](/support/trackers-and-scripts-waterfox-blocks-enhanced-track).

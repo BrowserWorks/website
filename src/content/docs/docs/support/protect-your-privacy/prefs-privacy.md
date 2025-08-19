@@ -27,7 +27,7 @@ The **Waterfox will** setting controls how Waterfox saves information about your
 When **Waterfox will** is set to **Remember history**:
 
 - Waterfox will keep a list of the pages you've visited.
-- A list of files you download will be kept in the [Downloads window](/support/where-find-and-manage-downloaded-files-waterfox).
+- A list of files you download will be kept in the Downloads panel and Library.
 - The text you enter into form fields or the search bar will be remembered so you can use those entries again. For more information, see [Control whether Waterfox automatically fills in forms](/support/control-whether-waterfox-automatically-fills-forms).
 - Waterfox will accept cookies from sites until they expire. For more information on cookies, see [Cookies - Information that websites store on your computer](/support/cookies-information-websites-store-on-your-computer).
 
@@ -41,7 +41,7 @@ Click on:
 When **Waterfox will** is set to **Never remember history**:
 
 - Waterfox will keep no record of your browsing history.
-- The files you download will not be listed in the [Downloads window](/support/where-find-and-manage-downloaded-files-waterfox).
+- The files you download will not be listed in the Downloads panel or Library.
 - The text you enter into form fields or the search bar will not be remembered.
 - Waterfox will accept cookies from sites and delete them when you close Waterfox. For more information on cookies, see [Cookies - Information that websites store on your computer](/support/cookies-information-websites-store-on-your-computer).
 
@@ -58,7 +58,7 @@ When **Waterfox will** is set to **Use custom settings for history**, the follow
 - **Always use private browsing mode**:
   If selected, Waterfox will not remember any new history the next time it starts. For more information, see [Private Browsing - Use Waterfox without saving history](/support/private-browsing-use-waterfox-without-history).
 - **Remember my browsing and download history**:
-  If selected, Waterfox will keep a list of the pages you've visited and the files you've downloaded. For more information about downloaded files, see [Where to find and manage downloaded files in Waterfox](/support/where-find-and-manage-downloaded-files-waterfox).
+  If selected, Waterfox will keep a list of the pages you've visited and the files you've downloaded (visible in the Downloads panel and Library).
 - **Remember search and form history**:
   If selected, the text you enter into form fields or the search bar will be remembered so you can use those entries again. For more information, see [Control whether Waterfox automatically fills in forms](/support/control-whether-waterfox-automatically-fills-forms).
 - **Accept cookies from sites**:

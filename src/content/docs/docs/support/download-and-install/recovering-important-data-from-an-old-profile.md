@@ -94,7 +94,7 @@ This file stores user-installed search engines. For more information, see [Add o
 
 - persdict.dat
 
-This file stores any custom words you have added to Waterfox's dictionary. If you have never added a custom word to the Waterfox dictionary, then you will not have this file. For more information see [How do I use the Waterfox spell checker?](/support/how-do-i-use-waterfox-spell-checker).
+This file stores any custom words you have added to Waterfox's dictionary. If you have never added a custom word to the Waterfox dictionary, then you will not have this file.
 
 ### Autocomplete history
 

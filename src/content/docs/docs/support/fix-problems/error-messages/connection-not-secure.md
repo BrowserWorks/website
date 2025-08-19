@@ -23,7 +23,7 @@ For specific error codes and steps, see:
 ## Related
 
 - [How do I tell if my connection is secure?](/support/how-do-i-tell-if-my-connection-is-secure)
-- [Troubleshoot time-related errors](/support/time-errors)
+Note: Incorrect date/time on your device can cause certificate errors. Verify your system time and timezone are correct.
 
 ---
 

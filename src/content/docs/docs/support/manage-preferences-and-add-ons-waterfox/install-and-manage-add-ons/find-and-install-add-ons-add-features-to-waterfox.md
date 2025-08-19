@@ -16,7 +16,7 @@ These general types of add-ons can be installed:
 - Plugins
   Waterfox automatically downloads and installs the Google Widevine CDM for watching [Digital Rights Management (DRM) controlled content](/support/enable-drm) and an [OpenH264 plugin](/support/open-h364-plugin-waterfox) for video calls.
 - Dictionaries
-  [Waterfox can check your spelling](/support/how-do-i-use-waterfox-spell-checker), but not all locales come with a dictionary installed due to licensing reasons. You can [find and install a dictionary](https://addons.mozilla.org/firefox/language-tools/) for your language. (To change the language of the Waterfox user interface, see the article [Use Waterfox in another language](/support/use-waterfox-another-language).)
+  Waterfox can check your spelling, but not all locales come with a dictionary installed due to licensing reasons. You can [find and install a dictionary](https://addons.mozilla.org/firefox/language-tools/) for your language. (To change the language of the Waterfox user interface, see the article [Use Waterfox in another language](/support/use-waterfox-another-language).)
 - [Search engines](/support/change-your-default-search-settings-waterfox)
   Waterfox comes with a number of search engines already installed. You can access them from the [Search bar (if enabled)](/support/add-search-bar-waterfox-toolbar) or directly from the address bar. If you want additional search engines, you can [install them](/support/add-or-remove-search-engine-waterfox) on the websites directly or from [addons.mozilla.org](https://addons.mozilla.org/firefox/search-tools/).
 

@@ -3,7 +3,7 @@ slug: support/content-blocking
 title: "Content blocking"
 ---
 
-Content blocking was redesigned in [Waterfox version](/support/find-what-version-waterfox-you-are-using) 70 and is now **Enhanced Tracking Protection**. Please see the [Enhanced Tracking Protection in Waterfox for desktop](/support/enhanced-tracking-protection-waterfox-desktop) article.
+Content blocking was redesigned in [Waterfox version](/support/find-what-version-waterfox-you-are-using) 70 and is now **Enhanced Tracking Protection**. Please see the [Enhanced Tracking Protection in Waterfox for desktop](/support/enhanced-tracking-protection) article.
 Please [update your version of Waterfox](/support/update-waterfox-latest-release) for the latest features and security updates.
 
 Content blocking is a collection of Waterfox privacy features that protect you from threats and annoyances on the Web. This includes protections against trackers, which collect your browsing data across multiple websites. Since Waterfox version 67, you can also block harmful scripts including cryptominers and fingerprinters. These privacy protections are mostly invisible, but you’ll know they’re working when you see a shield icon on the left within your address bar.

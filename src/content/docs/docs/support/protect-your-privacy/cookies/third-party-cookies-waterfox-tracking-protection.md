@@ -6,9 +6,9 @@ title: "Third-party cookies and Waterfox tracking protection"
 Third-party cookies are [cookies](/support/cookies-information-websites-store-on-your-computer) set by a website other than the one you are currently on. For example, cnn.com might have a Facebook like button on their site. The like button will set a cookie that can be read by Facebook. That would be considered a third-party cookie. Some advertisers use these types of cookies to track your visits to the various websites on which they advertise. This is called [cross-site tracking](/support/third-party-trackers).
 
 :::note
-Cross-site tracking cookies are now disabled by default for all Waterfox users. See [Enhanced Tracking Protection](/support/enhanced-tracking-protection-waterfox-desktop) for more information about how Waterfox protects you against tracking.
+Cross-site tracking cookies are now disabled by default for all Waterfox users. See [Enhanced Tracking Protection](/support/enhanced-tracking-protection) for more information about how Waterfox protects you against tracking.
 :::
-When third-party cookies are disabled, it can stop some, but not all types of tracking. If you are concerned about tracking, see also [How do I turn on the Do Not Track feature?](/support/how-do-i-turn-do-not-track-feature), [Enhanced Tracking Protection in Waterfox for desktop](/support/enhanced-tracking-protection-waterfox-desktop) and [Trackers and scripts Waterfox blocks in Enhanced Tracking Protection](/support/trackers-and-scripts-waterfox-blocks-enhanced-track).
+When third-party cookies are disabled, it can stop some, but not all types of tracking. If you are concerned about tracking, see also [How do I turn on the Do Not Track feature?](/support/how-do-i-turn-do-not-track-feature), [Enhanced Tracking Protection in Waterfox for desktop](/support/enhanced-tracking-protection) and [Trackers and scripts Waterfox blocks in Enhanced Tracking Protection](/support/trackers-and-scripts-waterfox-blocks-enhanced-track).
 
 ## Disable third-party cookies
 
@@ -17,7 +17,7 @@ To block cross-site trackers or all third-party cookies:
 1.  Click the menu button <img alt="menu button" class="inline-image" src="/assets/docs/icons/menu.svg" /> and select Settings.
 2.  Select the Privacy & Security panel.
     ![Privacy & Security](/assets/docs/2021-04-23-13-58-44-998298.png)
-3.  Under _[Enhanced Tracking Protection](/support/enhanced-tracking-protection-waterfox-desktop)_, select the **Custom** radio button.
+3.  Under _[Enhanced Tracking Protection](/support/enhanced-tracking-protection)_, select the **Custom** radio button.
 4.  Check **Cookies** and use the drop-down menu to select the types of cookies you wish to block. The default setting is _Cross-site tracking cookies — includes social media cookies_.
     ![Fx91settings-ETPcustomCookies](/assets/docs/2022-07-11-03-30-20-310d60.png)
 

@@ -23,7 +23,7 @@ to manage cookies as follows:
 1. Click the menu button <img alt="menu button" class="inline-image" src="/assets/docs/icons/menu.svg" /> and select Settings.
 2. Select the Privacy & Security panel.
 
-Cookie settings are under **[Enhanced Tracking Protection](/support/enhanced-tracking-protection-waterfox-desktop)** and **Cookies and Site Data**.
+Cookie settings are under **[Enhanced Tracking Protection](/support/enhanced-tracking-protection)** and **Cookies and Site Data**.
 
 For instructions on how to manage cookie settings for certain tasks, see:
 

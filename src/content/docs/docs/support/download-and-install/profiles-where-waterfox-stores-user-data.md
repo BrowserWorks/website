@@ -63,7 +63,7 @@ These two files store many of your Waterfox permissions (for instance, which sit
 **Personal dictionary:**
 
 - persdict.dat
-  This file stores any custom words you have added to Waterfox's dictionary. For more information, see [How do I use the Waterfox spell checker?](/support/how-do-i-use-waterfox-spell-checker).
+  This file stores any custom words you have added to Waterfox's dictionary.
 
 **Autocomplete history:**
 

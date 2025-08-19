@@ -21,7 +21,7 @@ The Do Not Track feature is turned off by default, except in [Private Windows](/
 
 1. Click the menu button <img alt="menu button" class="inline-image" src="/assets/docs/icons/menu.svg" /> and select Settings.
 2. Select the Privacy & Security panel.
-   - This takes you to the [Enhanced Tracking Protection](/support/enhanced-tracking-protection-waterfox-desktop) section of your Browser Privacy settings.![Fx70ETP-DoNotTrack](/assets/docs/2019-12-23-05-46-02-fd5055.png)
+   - This takes you to the [Enhanced Tracking Protection](/support/enhanced-tracking-protection) section of your Browser Privacy settings.![Fx70ETP-DoNotTrack](/assets/docs/2019-12-23-05-46-02-fd5055.png)
 3. Under _Send websites a "Do Not Track" signal that you don't want to be tracked_, choose **Always**.
 4. Close the _about:preferences_ page. Any changes you've made will automatically be saved.
 

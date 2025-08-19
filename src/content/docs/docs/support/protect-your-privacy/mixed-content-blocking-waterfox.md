@@ -22,7 +22,7 @@ There are two types of mixed content: mixed passive/display content and mixed ac
 ![Fx89AddressBarPadlock](/assets/docs/2021-05-06-04-29-55-5507f4.png)
 
 :::note
-The shield icon <img alt="Fx89ShieldIcon" class="inline-image" src="/assets/docs/2021-05-06-05-12-06-f2679d.png"> in the address bar tells you which trackers have been blocked on a website. See [Enhanced Tracking Protection in Waterfox for desktop](/support/enhanced-tracking-protection-waterfox-desktop) for more information.
+The shield icon <img alt="Fx89ShieldIcon" class="inline-image" src="/assets/docs/2021-05-06-05-12-06-f2679d.png"> in the address bar tells you which trackers have been blocked on a website. See [Enhanced Tracking Protection in Waterfox for desktop](/support/enhanced-tracking-protection) for more information.
 :::
 
 ### No mixed content: secure

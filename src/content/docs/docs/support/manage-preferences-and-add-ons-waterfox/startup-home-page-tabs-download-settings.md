@@ -17,7 +17,7 @@ page. The General panel allows you to:
 
 - **Always check if Waterfox is your default browser**: Select this setting if you want Waterfox to check whether it is the default browser at startup. Making Waterfox your default browser will ensure Waterfox is used, whenever an application tries to display a web page.
 
-  - If Waterfox is not currently your default browser, click Make Default to make it the default. See [Make Waterfox your default browser](/support/make-waterfox-your-default-browser) for details.
+  - If Waterfox is not currently your default browser, click Make Default to make it the default. See [Make Waterfox your default browser](/support/how-change-your-default-browser-firefox-windows) for details.
 
 - **When Waterfox starts**: Controls what Waterfox displays when you open it.
   - **Show my home page** - Displays the home page, which is set below.

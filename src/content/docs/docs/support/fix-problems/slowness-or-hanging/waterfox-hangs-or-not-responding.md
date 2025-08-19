@@ -96,7 +96,7 @@ Waterfox may hang when downloading files if your download history has grown too 
 2. Click the Clear Downloads button at the top of the Library window.
 3. Download some sample files to see if the hanging has stopped.
 
-For more information about managing your downloads, see [Where to find and manage downloaded files in Waterfox](/support/where-find-and-manage-downloaded-files-waterfox).
+For more information about managing your downloads, use the Downloads panel (down-arrow button) and the Downloads Library.
 
 ### Choose a different download folder
 

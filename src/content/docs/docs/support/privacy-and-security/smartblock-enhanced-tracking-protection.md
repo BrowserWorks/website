@@ -3,7 +3,7 @@ slug: support/smartblock-enhanced-tracking-protection
 title: "SmartBlock for Enhanced Tracking Protection"
 ---
 
-[SmartBlock](https://blog.mozilla.org/security/2021/03/23/introducing-smartblock/) stands in for common tracking scripts, which are blocked by [private browsing mode](/support/private-browsing-use-waterfox-without-history) and [strict tracking protection](/support/enhanced-tracking-protection-waterfox-desktop#adjust-your-global-enhanced-tracking-protection-settings). By doing so, it lets pages load more fully, with less breakage, without you having to do anything — all while keeping those tracking scripts blocked.
+[SmartBlock](https://blog.mozilla.org/security/2021/03/23/introducing-smartblock/) stands in for common tracking scripts, which are blocked by [private browsing mode](/support/private-browsing-use-waterfox-without-history) and [strict tracking protection](/support/enhanced-tracking-protection#adjust-your-global-enhanced-tracking-protection-settings). By doing so, it lets pages load more fully, with less breakage, without you having to do anything — all while keeping those tracking scripts blocked.
 
 The difference can be dramatic:
 

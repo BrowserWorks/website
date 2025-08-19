@@ -7,7 +7,7 @@ Like other browsers, Waterfox’s functionality is influenced by your operating 
 
 Some websites, particularly those using HTML5 Canvas, look at this unique combination of factors and assign you a number, or a “fingerprint”, which makes you identifiable across the Web. This “fingerprint” is potentially used to profile you for targeted content without the use of cookies.
 
-Waterfox already has an [Enhanced Tracking Protection](/support/enhanced-tracking-protection-waterfox-desktop) feature that blocks a list of known "fingerprinters" when your privacy settings are set to Standard (the default) or Strict. **Fingerprinting Protection** is a different, experimental feature under heavy development in Waterfox. It is likely that it may degrade your Web experience so we recommend it only for those willing to test experimental features.
+Waterfox already has an [Enhanced Tracking Protection](/support/enhanced-tracking-protection) feature that blocks a list of known "fingerprinters" when your privacy settings are set to Standard (the default) or Strict. **Fingerprinting Protection** is a different, experimental feature under heavy development in Waterfox. It is likely that it may degrade your Web experience so we recommend it only for those willing to test experimental features.
 
 ## How am I protected?
 

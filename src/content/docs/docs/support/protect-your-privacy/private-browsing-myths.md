@@ -24,7 +24,7 @@ Privacy & Security panel under _Address Bar_.
 
 **Reality:** Private Browsing does not protect you from malware installed on your computer. If you suspect you have malware, [take steps to remove it](/support/troubleshoot-waterfox-issues-caused-malware) to prevent it from happening again.
 
-To learn more about how Waterfox protects your privacy, see [Enhanced Tracking Protection in Waterfox for desktop](/support/enhanced-tracking-protection-waterfox-desktop) and [SmartBlock for Enhanced Tracking Protection](/support/smartblock-enhanced-tracking-protection).
+To learn more about how Waterfox protects your privacy, see [Enhanced Tracking Protection in Waterfox for desktop](/support/enhanced-tracking-protection) and [SmartBlock for Enhanced Tracking Protection](/support/smartblock-enhanced-tracking-protection).
 
 ---
 

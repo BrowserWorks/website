@@ -11,13 +11,13 @@ The [Refresh Waterfox feature](/support/refresh-waterfox-reset-add-ons-and-setti
 
 ## Check the Downloads panel for blocked downloads
 
-Waterfox includes a [download protection](https://blog.mozilla.org/security/2016/08/01/enhancing-download-protection-in-waterfox) feature to protect you from malicious or potentially harmful file downloads. If Waterfox has blocked an unsafe download, you will see a warning message about the file in the Downloads panel, along with options for handling the pending download. You can open the Downloads panel to view completed and pending downloads by clicking on the Downloads button (the down arrow on your toolbar). See the articles [Where to find and manage downloaded files in Waterfox](/support/where-find-and-manage-downloaded-files-waterfox) and [How does built-in Phishing and Malware Protection work?](/support/how-does-phishing-and-malware-protection-work) for more information.
+Waterfox includes a [download protection](https://blog.mozilla.org/security/2016/08/01/enhancing-download-protection-in-waterfox) feature to protect you from malicious or potentially harmful file downloads. If Waterfox has blocked an unsafe download, you will see a warning message about the file in the Downloads panel, along with options for handling the pending download. You can open the Downloads panel to view completed and pending downloads by clicking on the Downloads button (the down arrow on your toolbar). See [How does built-in Phishing and Malware Protection work?](/support/how-does-phishing-and-malware-protection-work) for more information.
 
 ## Clear the download history
 
 Clearing the download history can fix some problems with downloading files:
 
-1. Click the Downloads icon <img alt="download icon 57" class="inline-image" src="/assets/docs/2017-10-27-10-52-24-fd4564.png">, and then click Show all downloads. The [Downloads window](/support/where-find-and-manage-downloaded-files-waterfox) will open.
+1. Click the Downloads icon <img alt="download icon 57" class="inline-image" src="/assets/docs/2017-10-27-10-52-24-fd4564.png">, and then click Show all downloads. to open the Downloads Library.
 2. In the Downloads window, click Clear Downloads.
 3. Close the Downloads window.
 
@@ -62,7 +62,7 @@ To diagnose whether Internet security software is causing problems, you can try 
 
 ## Enable downloads blocked by Security Zone Policy
 
-Downloading an executable file (e.g., an .exe or .msi file) may fail, with the [Downloads window](/support/where-find-and-manage-downloaded-files-waterfox) showing _Canceled_ under the file name.
+Downloading an executable file (e.g., an .exe or .msi file) may fail, with the Downloads Library showing _Canceled_ under the file name.
 
 This happens because Waterfox honors your Windows security settings for downloading applications and other potentially unsafe files from the Internet. To resolve this problem, use the solution given below.
 

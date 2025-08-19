@@ -137,7 +137,7 @@ Waterfox also checks to see if any updates are available for your add-ons (exten
 
 When you start Waterfox, any interrupted downloads from your previous browsing session may be automatically resumed.
 
-1. Press Ctrl + J to open the [Downloads window](/support/where-find-and-manage-downloaded-files-waterfox).
+1. Press Ctrl + J to open the Downloads Library.
 2. Ensure nothing is currently being downloaded.
 
 ### Search plugin icon loading

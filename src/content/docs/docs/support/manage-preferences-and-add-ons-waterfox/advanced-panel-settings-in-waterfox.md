@@ -28,7 +28,7 @@ This article explains the settings available in the **Advanced** panel of the Wa
   1.  Click the Waterfox menu <img alt="menu button" class="inline-image" src="/assets/docs/icons/menu.svg" /> and select Exit.
   2.  Start Waterfox the way you normally do.
 
-- **Check my spelling as I type**: When this setting is enabled, Waterfox will [check your spelling](/support/how-do-i-use-waterfox-spell-checker) and offer possible corrections as you type in web forms. Note that you may need to download a dictionary; to do so, right-click on any text field, enable spellchecking if necessary, and then use the provided Languages menu to download a dictionary.
+- **Check my spelling as I type**: When this setting is enabled, Waterfox will check your spelling and offer possible corrections as you type in web forms. Note that you may need to download a dictionary; to do so, right-click on any text field, enable spellchecking if necessary, and then use the Languages menu to download a dictionary.
 
 ## Data Choices tab
 

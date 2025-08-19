@@ -3,7 +3,7 @@ slug: support/report-breakage-due-blocking
 title: "Report breakage due to blocking"
 ---
 
-[Enhanced Tracking Protection](/support/enhanced-tracking-protection-waterfox-desktop) sometimes causes websites to display or work incorrectly. For example, some buttons may not work, parts of some pages may be missing, and some pages may not load at all. Reporting any problems caused by content blocking helps us improve Waterfox.
+[Enhanced Tracking Protection](/support/enhanced-tracking-protection) sometimes causes websites to display or work incorrectly. For example, some buttons may not work, parts of some pages may be missing, and some pages may not load at all. Reporting any problems caused by content blocking helps us improve Waterfox.
 
 Follow these steps, when necessary, to report a site that isn’t working properly:
 

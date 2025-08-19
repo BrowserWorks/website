@@ -13,15 +13,15 @@ This panel contains the following types of settings:
 
 _General_
 
-**Startup** and **Tabs**: This is where you can [set Waterfox as your default browser](/support/make-waterfox-your-default-browser), set Waterfox to [restore your previous session](/support/restore-previous-session) at startup and [choose how tabs are opened](/support/tab-preferences-and-settings).
+**Startup** and **Tabs**: This is where you can [set Waterfox as your default browser](/support/how-change-your-default-browser-firefox-windows), set Waterfox to [restore your previous session](/support/restore-previous-session) at startup and [choose how tabs are opened](/support/tab-preferences-and-settings).
 
 _Language and Appearance_
 
-**Fonts and Colors**, **Zoom** and **Language**: This is where you can [change the fonts and colors websites use](/support/change-fonts-and-colors-websites-use), where to [change the size of webpage content](/support/font-size-and-zoom-increase-size-of-web-pages), where you can [choose the language to display menus, notifications, messages and other parts of the Waterfox interface](/support/use-waterfox-another-language), where to [choose a preferred display language for web pages](/support/choose-display-languages-multilingual-web-pages) and where you can choose to [use the Waterfox spell checker](/support/how-do-i-use-waterfox-spell-checker).
+**Fonts and Colors**, **Zoom** and **Language**: This is where you can [change the fonts and colors websites use](/support/change-fonts-and-colors-websites-use), where to [change the size of webpage content](/support/font-size-and-zoom-increase-size-of-web-pages), where you can [choose the language to display menus, notifications, messages and other parts of the Waterfox interface](/support/use-waterfox-another-language), and where to [choose a preferred display language for web pages](/support/choose-display-languages-multilingual-web-pages).
 
 _Files and Applications_
 
-**Downloads**, **Applications** and **Digital Rights Management (DRM) Content**: This is where you can [change the download folder Waterfox uses](/support/where-find-and-manage-downloaded-files-waterfox#change-where-downloads-are-saved) to save files, [change the application used or the action taken](/support/change-waterfox-behavior-when-open-file) for different file types and choose whether to [Watch DRM content in Waterfox](/support/enable-drm).
+**Downloads**, **Applications** and **Digital Rights Management (DRM) Content**: This is where you can change the download folder Waterfox uses to save files, [change the application used or the action taken](/support/change-waterfox-behavior-when-open-file) for different file types and choose whether to [watch DRM content in Waterfox](/support/drm-content).
 
 _Waterfox Updates_
 
@@ -29,7 +29,7 @@ This is where you can check your update history or change update settings for Wa
 
 _Performance_
 
-This is where you can customize [performance settings](/support/performance-settings) in Waterfox.
+This is where you can customize [performance settings](/support/performance) in Waterfox.
 
 _Browsing_
 
@@ -37,7 +37,7 @@ This is where you can choose settings for scrolling, using the cursor (Caret Bro
 
 _Network Settings_
 
-This is where you can change [Waterfox connection settings](/support/connection-settings-waterfox) and set a proxy to connect to the Internet.
+This is where you can change [Waterfox connection settings](/support/prefs-connection-settings) and set a proxy to connect to the Internet.
 
 ## Home panel
 
@@ -61,7 +61,7 @@ This panel contains the following types of settings:
 
 _Browser Privacy_
 
-**Enhanced Tracking Protection**, **Cookies and Site Data**, **Forms & Passwords**, **History** and **Address Bar**: This is where you can control settings for the Waterfox [Enhanced Tracking Protection](/support/enhanced-tracking-protection-waterfox-desktop) and [Do Not Track](/support/how-do-i-turn-do-not-track-feature) features, manage [website cookies](/support/cookies-information-websites-store-on-your-computer), [website data storage](/support/storage) and [cached web content](/support/how-clear-waterfox-cache), where you can set how to [fill in forms](/support/control-whether-waterfox-automatically-fills-forms) and [manage passwords](/support/password-manager-remember-delete-edit-logins), manage your browsing, download, search and form history and set [how the address bar works](/support/address-bar-autocomplete-waterfox).
+**Enhanced Tracking Protection**, **Cookies and Site Data**, **Forms & Passwords**, **History** and **Address Bar**: This is where you can control settings for the Waterfox [Enhanced Tracking Protection](/support/enhanced-tracking-protection) and [Do Not Track](/support/how-do-i-turn-do-not-track-feature) features, manage [website cookies](/support/cookies-information-websites-store-on-your-computer), [website data storage](/support/storage-permissions) and [cached web content](/support/how-clear-waterfox-cache), where you can set how to [fill in forms](/support/control-whether-waterfox-automatically-fills-forms) and [manage passwords](/support/password-manager-remember-delete-edit-logins), manage your browsing, download, search and form history and set [how the address bar works](/support/address-bar-autocomplete-waterfox).
 
 _Permissions_
 

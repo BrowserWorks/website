@@ -5,7 +5,7 @@ title: "Trackers and scripts Waterfox blocks in Enhanced Tracking Protection"
 
 This article describes tracking protection features and settings available as of [Waterfox version](/support/find-what-version-waterfox-you-are-using) 70. [This Waterfox blog post](https://blog.mozilla.org/blog/2019/09/03/todays-waterfox-blocks-third-party-tracking-cookies-and-cryptomining-by-default/) describes enhancements to tracking protection in Waterfox version 69. For previous Waterfox versions, see the [Content blocking](/support/content-blocking) article.
 Please [update your version of Waterfox](/support/update-waterfox-latest-release) for the latest features and security updates.
-[Enhanced Tracking Protection in Waterfox](/support/enhanced-tracking-protection-waterfox-desktop) blocks many common trackers and harmful scripts. It reduces the ability of third parties to collect data about your browsing behavior.
+[Enhanced Tracking Protection in Waterfox](/support/enhanced-tracking-protection) blocks many common trackers and harmful scripts. It reduces the ability of third parties to collect data about your browsing behavior.
 
 ## How tracking works
 
@@ -22,7 +22,7 @@ Social networks place trackers on other websites to follow what you do, see, and
 Waterfox blocks the most common trackers from Facebook, Twitter, and LinkedIn that appear on other websites.
 
 - The Standard setting is balanced for protection and performance. Pages will still load normally.
-- The Strict mode blocks more trackers. Go to your global privacy preferences to set your [Enhanced Tracking Protection settings to Strict](/support/enhanced-tracking-protection-waterfox-desktop#strict-enhanced-tracking-protection).
+- The Strict mode blocks more trackers. Go to your global privacy preferences to set your [Enhanced Tracking Protection settings to Strict](/support/enhanced-tracking-protection#strict-enhanced-tracking-protection).
 
 Social media companies will still be able to collect data about you on their own social networks, including Facebook-owned services like Instagram, WhatsApp, and Messenger. Logging in to sites using your Facebook or Twitter account is another way social networks can collect data about you.
 
@@ -57,9 +57,9 @@ Tracking content can include:
 - Videos and photos
 - Buttons
 
-By default, tracking content is blocked in [Private Windows](/support/private-browsing-use-waterfox-without-history) only. To add this protection for all windows, go to the Waterfox menu <img alt="menu button" class="inline-image" src="/assets/docs/icons/menu.svg" />, click Options
+By default, tracking content is blocked in [Private Windows](/support/private-browsing-use-waterfox-without-history) only. To add this protection for all windows, go to the Waterfox menu <img alt="menu button" class="inline-image" src="/assets/docs/icons/menu.svg" />, click Settings
 , select the Privacy & Security panel and choose Strict under **Enhanced Tracking Protection**.
-If parts of a webpage don’t work or the site appears to be broken, click the shield ![etp 70 purple](/assets/docs/2019-09-04-13-35-45-f63cde.png) in the address bar to toggle off protections for that site. This will allow all content to load, including trackers. See [this article's section on how to turn off Enhanced Tracking Protection](/support/enhanced-tracking-protection-waterfox-desktop#what-to-do-if-a-site-seems-broken) for details, and for more information, visit [SmartBlock for Enhanced Tracking Protection](/support/smartblock-enhanced-tracking-protection).
+If parts of a webpage don’t work or the site appears to be broken, click the shield ![etp 70 purple](/assets/docs/2019-09-04-13-35-45-f63cde.png) in the address bar to toggle off protections for that site. This will allow all content to load, including trackers. See [this article's section on how to turn off Enhanced Tracking Protection](/support/enhanced-tracking-protection#what-to-do-if-a-site-seems-broken) for details, and for more information, visit [SmartBlock for Enhanced Tracking Protection](/support/smartblock-enhanced-tracking-protection).
 
 ## Fingerprinters
 
