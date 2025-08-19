@@ -1,6 +1,7 @@
 ---
-title: How to disable Waterfox Theme Customizations
-label: How to disable Waterfox Theme Customizations
+slug: support/disable-waterfox-theming
+title: "How to disable Waterfox Theme Customizations"
+label: "How to disable Waterfox Theme Customizations"
 ---
 
 Waterfox comes with various customizations to the look and feel of the browser. If you prefer a more familiar look and feel to the browser we are based on, you can turn these off.
