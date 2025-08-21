@@ -20,18 +20,29 @@ async function getMarkdownFileInfo(filePath) {
 		const titleMatch = content.match(/title:\s*["'](.+)["']/);
 		const title = titleMatch ? titleMatch[1] : path.basename(filePath, ".md");
 
-		// Get slug from frontmatter
+		// Get slug from frontmatter (optional)
 		const slugMatch = content.match(
 			/^\s*slug:\s*(?:"([^"]+)"|'([^']+)'|([^\n]+))/m,
 		);
-		if (!slugMatch) {
-			return null;
-		}
+		// Derive a fallback slug from the file path (relative to src/content/docs)
+		const docsRoot = path.join(process.cwd(), "src/content/docs");
+		const rel = path.relative(docsRoot, filePath).replace(/\\/g, "/");
+		const fileSlug = rel.replace(/\.md$/, "");
+		const fallbackSlug = fileSlug.startsWith("docs/")
+			? fileSlug.slice(5)
+			: fileSlug;
 
-		// Just use the slug as-is, ensuring it starts with /, stripping optional quotes
-		const rawSlug = slugMatch[1] || slugMatch[2] || slugMatch[3];
-		const slug = (rawSlug || "").trim();
-		const canonicalSlug = slug.startsWith("/") ? slug.slice(1) : slug;
+		// Prefer the frontmatter slug when present; otherwise use the path-derived fallback
+		let canonicalSlug;
+		if (slugMatch) {
+			const rawSlug = slugMatch[1] || slugMatch[2] || slugMatch[3];
+			const fmSlug = (rawSlug || "").trim();
+			canonicalSlug = fmSlug.startsWith("/") ? fmSlug.slice(1) : fmSlug;
+		} else {
+			canonicalSlug = fallbackSlug;
+		}
+		// Detect draft pages (exclude from sidebar)
+		const isDraft = /^\s*draft:\s*true\b/m.test(content);
 
 		// Parse frontmatter badge if present (YAML-style)
 		let badge;
@@ -66,6 +77,7 @@ async function getMarkdownFileInfo(filePath) {
 		return {
 			title,
 			slug: canonicalSlug,
+			draft: isDraft,
 		};
 	} catch {
 		return null;
@@ -87,7 +99,8 @@ async function buildSidebarFromDirectory(basePath, currentPath = "") {
 	for (const file of mdFiles) {
 		const filePath = path.join(basePath, currentPath, file.name);
 		const fileInfo = await getMarkdownFileInfo(filePath);
-		if (fileInfo) {
+		const isProd = process.env.NODE_ENV === "production";
+		if (fileInfo && (isProd ? !fileInfo.draft : true)) {
 			items.push({ slug: fileInfo.slug });
 		}
 	}
@@ -176,6 +189,7 @@ function compareReleaseTitlesDesc(aTitle, bTitle) {
 async function buildReleasesSidebar(baseDocsPath) {
 	const releasesPath = path.join(baseDocsPath, "docs/releases");
 	const entries = await fs.readdir(releasesPath, { withFileTypes: true });
+	const isProd = process.env.NODE_ENV === "production";
 
 	// Top-level releases (non-Android)
 	const topLevelFiles = entries.filter(
@@ -186,7 +200,7 @@ async function buildReleasesSidebar(baseDocsPath) {
 	for (const file of topLevelFiles) {
 		const filePath = path.join(releasesPath, file.name);
 		const info = await getMarkdownFileInfo(filePath);
-		if (info) {
+		if (info && (isProd ? !info.draft : true)) {
 			topLevelInfo.push(info);
 		}
 	}
@@ -233,7 +247,7 @@ async function buildReleasesSidebar(baseDocsPath) {
 			for (const file of androidFiles) {
 				const filePath = path.join(fullDirPath, file.name);
 				const info = await getMarkdownFileInfo(filePath);
-				if (info) {
+				if (info && (isProd ? !info.draft : true)) {
 					androidInfo.push(info);
 				}
 			}
@@ -276,10 +290,11 @@ async function buildReleasesSidebar(baseDocsPath) {
 export async function generateSidebar() {
 	const docsPath = path.join(process.cwd(), "src/content/docs");
 
-	const supportSection = await buildSidebarFromDirectory(
-		docsPath,
-		"docs/support",
-	);
+	const supportSection = {
+		label: "Support",
+		collapsed: true,
+		autogenerate: { directory: "docs/support" },
+	};
 
 	const policiesSection = {
 		label: "Policies",
@@ -295,13 +310,5 @@ export async function generateSidebar() {
 		items: releasesItems,
 	};
 
-	return [
-		policiesSection,
-		releasesSection,
-		{
-			label: "Support",
-			collapsed: true,
-			items: supportSection,
-		},
-	];
+	return [policiesSection, releasesSection, supportSection];
 }
