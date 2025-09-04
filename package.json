@@ -15,12 +15,12 @@
 	"dependencies": {
 		"@astrojs/starlight": "0.35.2",
 		"@astrojs/starlight-tailwind": "^4.0.1",
-		"@rive-app/canvas-lite": "^2.31.2",
+		"@rive-app/canvas-lite": "^2.31.4",
 		"@tailwindcss/typography": "^0.5.16",
 		"@tailwindcss/vite": "^4.1.12",
 		"@vercel/og": "^0.8.5",
-		"astro": "5.13.2",
-		"caniuse-lite": "^1.0.30001735",
+		"astro": "5.13.5",
+		"caniuse-lite": "^1.0.30001739",
 		"get-os-name": "^1.0.3",
 		"sharp": "^0.34.3",
 		"starlight-blog": "0.24.1",
@@ -31,6 +31,6 @@
 	"devDependencies": {
 		"prettier": "^3.6.2",
 		"prettier-plugin-astro": "^0.14.1",
-		"wrangler": "^4.31.0"
+		"wrangler": "^4.33.2"
 	}
 }
