@@ -1,6 +1,12 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
+// Support both .md and .mdx files
+const DOC_EXTS = new Set([".md", ".mdx"]);
+const isDocFile = (name) => DOC_EXTS.has(path.extname(name).toLowerCase());
+const isIndexDoc = (name) =>
+	isDocFile(name) && path.parse(name).name.toLowerCase() === "index";
+
 async function getCategoryLabel(dirPath) {
 	try {
 		const categoryPath = path.join(dirPath, "_category_.json");
@@ -16,18 +22,22 @@ async function getMarkdownFileInfo(filePath) {
 	try {
 		const content = await fs.readFile(filePath, "utf-8");
 
-		// Get title from frontmatter
+		// Determine extension and base name
+		const ext = path.extname(filePath);
+
+		// Get title from frontmatter (fallback to basename without .md/.mdx)
 		const titleMatch = content.match(/title:\s*["'](.+)["']/);
-		const title = titleMatch ? titleMatch[1] : path.basename(filePath, ".md");
+		const title = titleMatch ? titleMatch[1] : path.basename(filePath, ext);
 
 		// Get slug from frontmatter (optional)
 		const slugMatch = content.match(
 			/^\s*slug:\s*(?:"([^"]+)"|'([^']+)'|([^\n]+))/m,
 		);
+
 		// Derive a fallback slug from the file path (relative to src/content/docs)
 		const docsRoot = path.join(process.cwd(), "src/content/docs");
 		const rel = path.relative(docsRoot, filePath).replace(/\\/g, "/");
-		const fileSlug = rel.replace(/\.md$/, "");
+		const fileSlug = rel.replace(/\.(md|mdx)$/i, "");
 		const fallbackSlug = fileSlug.startsWith("docs/")
 			? fileSlug.slice(5)
 			: fileSlug;
@@ -41,10 +51,11 @@ async function getMarkdownFileInfo(filePath) {
 		} else {
 			canonicalSlug = fallbackSlug;
 		}
+
 		// Detect draft pages (exclude from sidebar)
 		const isDraft = /^\s*draft:\s*true\b/m.test(content);
 
-		// Parse frontmatter badge if present (YAML-style)
+		// Parse frontmatter badge if present (YAML-style) — computed but unused for now
 		let badge;
 		const fmMatch = content.match(/^---\s*([\s\S]*?)\n---/);
 		if (fmMatch) {
@@ -90,10 +101,9 @@ async function buildSidebarFromDirectory(basePath, currentPath = "") {
 
 	const items = [];
 
-	// Handle markdown files first
+	// Handle markdown files first (.md + .mdx, excluding index)
 	const mdFiles = entries.filter(
-		(entry) =>
-			entry.isFile() && entry.name.endsWith(".md") && entry.name !== "index.md",
+		(entry) => entry.isFile() && isDocFile(entry.name) && !isIndexDoc(entry.name),
 	);
 
 	for (const file of mdFiles) {
@@ -193,7 +203,7 @@ async function buildReleasesSidebar(baseDocsPath) {
 
 	// Top-level releases (non-Android)
 	const topLevelFiles = entries.filter(
-		(e) => e.isFile() && e.name.endsWith(".md") && e.name !== "index.md",
+		(e) => e.isFile() && isDocFile(e.name) && !isIndexDoc(e.name),
 	);
 
 	const topLevelInfo = [];
@@ -216,9 +226,12 @@ async function buildReleasesSidebar(baseDocsPath) {
 		const dirName = dir.name;
 		const fullDirPath = path.join(releasesPath, dirName);
 
-		// Skip directories that duplicate a top-level markdown filename (e.g., 6.6.0-beta-3 + 6.6.0-beta-3.md)
+		// Skip directories that duplicate a top-level markdown filename (e.g., 6.6.0-beta-3 + 6.6.0-beta-3.{md,mdx})
 		const hasMdSibling = entries.some(
-			(e) => e.isFile() && e.name === `${dirName}.md`,
+			(e) =>
+				e.isFile() &&
+				isDocFile(e.name) &&
+				path.parse(e.name).name === dirName,
 		);
 		if (hasMdSibling) {
 			continue;
@@ -228,7 +241,7 @@ async function buildReleasesSidebar(baseDocsPath) {
 		if (dirName.toLowerCase() !== "android") {
 			const dirEntries = await fs.readdir(fullDirPath, { withFileTypes: true });
 			const hasAnyMd = dirEntries.some(
-				(e) => e.isFile() && e.name.endsWith(".md") && e.name !== "index.md",
+				(e) => e.isFile() && isDocFile(e.name) && !isIndexDoc(e.name),
 			);
 			if (!hasAnyMd) {
 				continue;
@@ -240,7 +253,7 @@ async function buildReleasesSidebar(baseDocsPath) {
 				withFileTypes: true,
 			});
 			const androidFiles = androidEntries.filter(
-				(e) => e.isFile() && e.name.endsWith(".md") && e.name !== "index.md",
+				(e) => e.isFile() && isDocFile(e.name) && !isIndexDoc(e.name),
 			);
 
 			const androidInfo = [];
