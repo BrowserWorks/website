@@ -1,4 +1,5 @@
 ---
+slug: support/android/scan-qr-codes-waterfox-android
 title: Scan QR codes in Waterfox for Android
 label: Scan QR codes in Waterfox for Android
 ---

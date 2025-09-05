@@ -1,4 +1,5 @@
 ---
+slug: support/android/enhanced-tracking-protection-waterfox-android
 title: Enhanced Tracking Protection in Waterfox for Android
 label: Enhanced Tracking Protection in Waterfox for Android
 ---

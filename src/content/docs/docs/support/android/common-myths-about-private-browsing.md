@@ -1,4 +1,5 @@
 ---
+slug: support/android/common-myths-about-private-browsing
 title: Common Myths about Private Browsing
 label: Common Myths about Private Browsing
 ---

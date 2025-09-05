@@ -1,9 +1,12 @@
 ---
+slug: support/android/custom-search-engines
 title: Manage my default search engines in Waterfox for Android
 label: Manage my default search engines in Waterfox for Android
 ---
 
 Waterfox for Android gives you the ability to add, remove, and change a default search engine. There are a variety of search engines available to choose from such as Google and Bing. You can also manually add other search engines and set one of them as your default.
+
+Note: Some search engines are regionally bound and may not be accessible from every location. Make sure the search engine you want is available in your region.
 
 ### Change the default search engine
 
@@ -23,16 +26,17 @@ This will not change your default search engine.
 
 1.  Tap the search engine icon in the address bar.
 2.  Tap **Search Settings**.
-3.  Under the Address bar section toggle any of the following settings:
+3.  Under Search settings, you can toggle any of the following:
 
-- **Autocomplete URLs**: Autocomplete website addresses entered into the address bar.
-- **Show clipboard suggestions**: If the last thing you copied to the clipboard was a link, the option "Fill link from clipboard" shows up when you tap the address bar in a new tab.
+- **Show search suggestions**: Display search suggestions from your default search engine when you enter URLs or keywords in the address bar.
+- **Show in private sessions**: Display search suggestions when searching from the address bar in private browsing sessions. Note: This option is only active if "Show search suggestions" is toggled on.
+- **Show recent searches**: Display recent searches when searching from the address bar.
 - **Search browsing history**: Include your browsing history in searches from the address bar.
 - **Search bookmarks**: Include your bookmarks in searches from the address bar.
-- **Search synchronized tabs**: Search tabs that you have synchronized from another copy of Waterfox using Waterfox Sync.
-- **Show voice search**: Display the microphone icon to be able to perform a web search using voice.
-- **Show search suggestions**: Display search suggestions from your default search engine when you enter URLs or keywords in the address bar.
-- **Show in private sessions**: Display search suggestions when searching from the address bar in private browsing sessions.
+- **Search synced tabs**: Search tabs that you have synchronized from another copy of Waterfox using Waterfox Sync.
+- **Show voice search**: Display the microphone icon to perform a web search using voice.
+- **Autocomplete URLs**: Autocomplete website addresses entered into the address bar.
+- **Show clipboard suggestions**: If the last thing you copied to the clipboard was a link, the option "Fill link from clipboard" shows up when you tap the address bar in a new tab.
 
 ### Add a search engine
 
@@ -48,19 +52,17 @@ This will not change your default search engine.
 - If you don't know which search string to use for a particular search engine, you can access its website in a new tab, do any search and use the resulting URL as a reference. For example, if you go to ecosia.org and search for waterfox, the resulting URL in the address bar will be https://www.ecosia.org/search?q=waterfox. Then the search string must be https://www.ecosia.org/search?q=%s, replacing the query with "%s".
   :::
 
-### Manage search shortcuts
+### Manage alternative search engines
 
 The search engine is added to the predefined list of search engines in alphabetical order.
 
 1.  Tap the search engine icon in the address bar.
-    Tap **Search Settings**.
-2.  Tap **Manage search shortcuts**.
-3.  Select the engines you want to have visible in the search menu.
+2.  Tap **Search Settings**.
+3.  Tap **Manage alternative search engines**.
+4.  Select the engines you want to have visible in the search menu.
 
 ---
 
 :::note[Copyright and Licensing]{icon="document"}
-Modified from [Manage my default search engines in Firefox for Android](https://support.mozilla.org/en-US/kb/manage-my-default-search-engines-firefox-android) by Mozilla Contributors is licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
-
-Article originally written by: [Michele Rodaro](https://support.mozilla.org/en-US/user/michro/), [Mozinet](https://support.mozilla.org/en-US/user/Mozinet/), [scootergrisen](https://support.mozilla.org/en-US/user/scootergrisen/), [Joni](https://support.mozilla.org/en-US/user/heyjoni/), [Artist](https://support.mozilla.org/en-US/user/Artist/), [Paul](https://support.mozilla.org/en-US/user/plwt/), [Marcelo Ghelman](https://support.mozilla.org/en-US/user/marcelo.ghelman/), [Rok](https://support.mozilla.org/en-US/user/zerdo/), [Angela Lazar](https://support.mozilla.org/en-US/user/anlazar/), [mariclekierra3](https://support.mozilla.org/en-US/user/mariclekierra3/), [Lucas Siebert](https://support.mozilla.org/en-US/user/lsiebert/)
+Modified from [Manage my default search engines in Firefox for Android](https://support.mozilla.org/en-US/kb/manage-my-default-search-engines-firefox-android). Original by [Mozilla Contributors](https://support.mozilla.org/en-US/kb/manage-my-default-search-engines-firefox-android#doc-contributors). Licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 :::

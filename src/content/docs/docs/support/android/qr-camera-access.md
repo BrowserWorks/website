@@ -1,9 +1,10 @@
 ---
+slug: support/android/qr-camera-access
 title: Grant camera access to Waterfox for Android
 label: Grant camera access to Waterfox for Android
 ---
 
-Waterfox's built-in QR code reader lets you [visit web pages scanned from a QR code when available](/scan-qr-codes-waterfox-android). Waterfox will need access to your camera in order to scan codes. Here's how to change it in your settings:
+Waterfox's built-in QR code reader lets you [visit web pages scanned from a QR code when available](/support/android/scan-qr-codes-waterfox-android). Waterfox will need access to your camera in order to scan codes. Here's how to change it in your settings:
 
 1.  Open your Android settings by tapping the Settings app on your device.
 2.  Tap Apps & notifications (this might have a different label on your version of Android).

@@ -1,4 +1,5 @@
 ---
+slug: support/android/set-waterfox-android-default
 title: Set Waterfox for Android as the default browser
 label: Set Waterfox for Android as the default browser
 ---

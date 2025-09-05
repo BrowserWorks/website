@@ -1,4 +1,5 @@
 ---
+slug: support/android/how-search-waterfox-android
 title: Searching with Waterfox for Android
 label: Searching with Waterfox for Android
 ---

@@ -1,4 +1,5 @@
 ---
+slug: support/android/https-only-mode-waterfox-android
 title: HTTPS-Only Mode in Waterfox for Android
 label: HTTPS-Only Mode in Waterfox for Android
 ---

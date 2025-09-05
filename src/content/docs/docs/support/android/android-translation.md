@@ -1,5 +1,5 @@
 ---
-slug: support/android-translation
+slug: support/android/android-translation
 title: "Translate websites in Waterfox for Android"
 ---
 

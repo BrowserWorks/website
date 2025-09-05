@@ -1,4 +1,5 @@
 ---
+slug: support/android/how-set-sync-waterfox-android
 title: How to set up Sync in Waterfox for Android
 label: How to set up Sync in Waterfox for Android
 ---
