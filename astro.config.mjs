@@ -84,6 +84,7 @@ export default defineConfig({
 		}),
 	],
 	site: "https://www.waterfox.net",
+	trailingSlash: "always",
 	vite: {
 		plugins: [tailwindcss()],
 	},
