@@ -14,6 +14,15 @@ async function getCategoryLabel(dirPath) {
 		const { label } = JSON.parse(content);
 		return label;
 	} catch {
+		// Fallback to the title from index.md/x if available
+		for (const ext of DOC_EXTS) {
+			const indexPath = path.join(dirPath, `index${ext}`);
+			const info = await getMarkdownFileInfo(indexPath);
+			if (info?.title) {
+				return info.title;
+			}
+		}
+		// Last resort: use directory name
 		return path.basename(dirPath);
 	}
 }
@@ -38,9 +47,7 @@ async function getMarkdownFileInfo(filePath) {
 		const docsRoot = path.join(process.cwd(), "src/content/docs");
 		const rel = path.relative(docsRoot, filePath).replace(/\\/g, "/");
 		const fileSlug = rel.replace(/\.(md|mdx)$/i, "");
-		const fallbackSlug = fileSlug.startsWith("docs/")
-			? fileSlug.slice(5)
-			: fileSlug;
+		const fallbackSlug = fileSlug;
 
 		// Prefer the frontmatter slug when present; otherwise use the path-derived fallback
 		let canonicalSlug;
@@ -89,6 +96,7 @@ async function getMarkdownFileInfo(filePath) {
 			title,
 			slug: canonicalSlug,
 			draft: isDraft,
+			badge,
 		};
 	} catch {
 		return null;
@@ -101,21 +109,7 @@ async function buildSidebarFromDirectory(basePath, currentPath = "") {
 
 	const items = [];
 
-	// Handle markdown files first (.md + .mdx, excluding index)
-	const mdFiles = entries.filter(
-		(entry) => entry.isFile() && isDocFile(entry.name) && !isIndexDoc(entry.name),
-	);
-
-	for (const file of mdFiles) {
-		const filePath = path.join(basePath, currentPath, file.name);
-		const fileInfo = await getMarkdownFileInfo(filePath);
-		const isProd = process.env.NODE_ENV === "production";
-		if (fileInfo && (isProd ? !fileInfo.draft : true)) {
-			items.push({ slug: fileInfo.slug });
-		}
-	}
-
-	// Then handle directories
+	// Handle directories first
 	const directories = entries.filter((entry) => entry.isDirectory());
 
 	for (const dir of directories) {
@@ -137,6 +131,21 @@ async function buildSidebarFromDirectory(basePath, currentPath = "") {
 				collapsed: true,
 				autogenerate: { directory: dirPath },
 			});
+		}
+	}
+
+	// Then handle markdown files (.md + .mdx, excluding index)
+	const mdFiles = entries.filter(
+		(entry) =>
+			entry.isFile() && isDocFile(entry.name) && !isIndexDoc(entry.name),
+	);
+
+	for (const file of mdFiles) {
+		const filePath = path.join(basePath, currentPath, file.name);
+		const fileInfo = await getMarkdownFileInfo(filePath);
+		const isProd = process.env.NODE_ENV === "production";
+		if (fileInfo && (isProd ? !fileInfo.draft : true)) {
+			items.push({ slug: fileInfo.slug });
 		}
 	}
 
@@ -229,9 +238,7 @@ async function buildReleasesSidebar(baseDocsPath) {
 		// Skip directories that duplicate a top-level markdown filename (e.g., 6.6.0-beta-3 + 6.6.0-beta-3.{md,mdx})
 		const hasMdSibling = entries.some(
 			(e) =>
-				e.isFile() &&
-				isDocFile(e.name) &&
-				path.parse(e.name).name === dirName,
+				e.isFile() && isDocFile(e.name) && path.parse(e.name).name === dirName,
 		);
 		if (hasMdSibling) {
 			continue;
@@ -297,22 +304,30 @@ async function buildReleasesSidebar(baseDocsPath) {
 		}
 	}
 
-	return [...topLevelItems, ...groupedDirs];
+	return [...groupedDirs, ...topLevelItems];
 }
 
 export async function generateSidebar() {
 	const docsPath = path.join(process.cwd(), "src/content/docs");
 
+	const supportItems = await buildSidebarFromDirectory(
+		docsPath,
+		"docs/support",
+	);
 	const supportSection = {
 		label: "Support",
 		collapsed: true,
-		autogenerate: { directory: "docs/support" },
+		items: supportItems,
 	};
 
+	const policiesItems = await buildSidebarFromDirectory(
+		docsPath,
+		"docs/policies",
+	);
 	const policiesSection = {
 		label: "Policies",
 		collapsed: true,
-		autogenerate: { directory: "docs/policies" },
+		items: policiesItems,
 	};
 
 	const releasesItems = await buildReleasesSidebar(docsPath);
