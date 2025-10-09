@@ -1,0 +1,40 @@
+---
+title: "6.6.4"
+lastUpdated: 2025-10-09
+slug: "docs/releases/6.6.4"
+sidebar:
+  badge:
+    text: New
+    variant: success
+---
+
+import { Badge } from '@astrojs/starlight/components';
+
+This update restores correct app identification on Linux, fixes search provider issues, adjusts tab grouping defaults, and makes Ecosia the default search engine again while also including Waterfox Private Search.
+
+## 🌳 Ecosia partnership
+
+I'm also happy to announce a renewed partnership with Ecosia, the search engine that uses its profits to fund climate-positive projects. Keeping Ecosia as your default helps create tangible impact while you browse.
+
+- Real-world impact: Ecosia invests the majority of its profits into tree planting, biodiversity, and broader climate solutions, with [transparent monthly reports](https://ecosia.co/finreportsen).
+- More privacy by default: Ecosia does not build cross-platform personal profiles for ad targeting. Personalization features and cookies are opt-in and require your consent.
+- Greener infrastructure: Ecosia runs on renewable energy and is steward-owned to protect its mission for the long term.
+- Quality results you expect: Ecosia is rolling out Google-powered results and ads for a growing number of users by default; otherwise results come via Microsoft Bing. You can choose Microsoft Bing instead within [Ecosia’s settings](https://support.ecosia.org/article/579-search-results-providers).
+- Consent and cookies: In the EU, UK, and certain US states, Google will not set additional cookies without your consent. In other locations, additional cookies may apply depending on your Google account and settings. You are also free to adjust your cookie preferences anytime via the settings page. Learn more in [Ecosia’s privacy policy](https://www.ecosia.org/privacy).
+
+Prefer another provider? You can switch your default search engine in Waterfox any time via [Settings → Search](about:preferences#search).
+
+## <Badge text="New" variant="success" /> Waterfox Private Search
+
+[Waterfox Private Search](https://search.waterfox.net) is now also included in Waterfox and is publically available to sign up for!
+
+It's a subscription based service that offers you an ad-free search experience which directly helps fund Waterfox's development and keeps the privacy ethos and mission at its heart.
+
+## Fixed
+- Mojeek searches now work out of the box (fixed a typo where the query parameter was `p` instead of `q`).
+- When Google Search is set as default, autocomplete should now work.
+- All [security advisories](https://www.mozilla.org/en-US/security/advisories/) due for release on October 14, 2025.
+
+## Changed
+- Linux: Restored the canonical app name and window class to `waterfox`, as it was in Waterfox versions prior to `6.6`.
+- Tab grouping is disabled by default due to an issue where closing/reopening Waterfox could merge all groups into a single group at random. It can be enabled by toggling `browser.tabs.autoGroupNewTabs` to `true` in `about:config`.
