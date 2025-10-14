@@ -19,8 +19,8 @@
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.1.14",
 		"@vercel/og": "^0.8.5",
-		"astro": "5.14.1",
-		"caniuse-lite": "^1.0.30001749",
+		"astro": "5.14.4",
+		"caniuse-lite": "^1.0.30001750",
 		"get-os-name": "^1.0.3",
 		"sharp": "^0.34.4",
 		"starlight-blog": "0.24.2",
@@ -31,6 +31,6 @@
 	"devDependencies": {
 		"prettier": "^3.6.2",
 		"prettier-plugin-astro": "^0.14.1",
-		"wrangler": "^4.42.1"
+		"wrangler": "^4.42.2"
 	}
 }
