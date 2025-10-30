@@ -13,3 +13,4 @@
 /support/turn-off-etp-desktop /support/enhanced-tracking-protection
 /support/Android/your-rights /docs/policies/privacy/
 /support/Android/add-ons-firefox-android /support/android/add-ons-waterfox-android
+/support/Android/* /support/android/:splat
