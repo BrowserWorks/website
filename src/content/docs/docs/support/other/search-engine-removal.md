@@ -9,7 +9,6 @@ Waterfox lets you choose from a number of built-in search engines to set as your
 
 1. [Why did my search engine change?](#why-did-my-search-engine-change)
 2. [Will I be able to reconfigure my preferred search engines after this change takes place?](#will-i-be-able-to-reconfigure-my-preferred-search-engines-after-this-change-takes-place)
-3. [What countries are affected by this change?](#what-countries-are-affected-by-this-change)
 
 ## Why did my search engine change?
 
