@@ -1,0 +1,102 @@
+---
+title: "6.6.6"
+lastUpdated: 2025-12-09
+slug: "docs/releases/6.6.6"
+sidebar:
+  badge:
+    text: New
+    variant: success
+---
+
+A (not so) devilish release 👹
+
+:::note
+A few privacy‑sensitive behaviours from upstream Firefox code were not fully disabled in earlier Waterfox builds as we intended. In particular:
+
+- Region detection could still make a one‑time geo‑IP request to Mozilla’s privacy‑preserving backend to infer your country on first run.
+- Some local ML/AI plumbing was still technically available and, in edge cases, could surface onboarding UI (e.g. AI link previews) even though the actual AI features and settings stayed disabled.
+
+A thanks to the community for surfacing them so we could tighten things up.
+
+This release makes those behaviours explicit and turns them **off** by default.
+:::
+
+## Various fixes
+
+- Private Tab will now use your default selected private search.
+  - The context menu search while in private tab will also open a new private tab instead of normal tab.
+- Fixed an issue where the Bookmarks widget in the status bar would not open submenus, so now all bookmark folders now work correctly when the button is pinned to the status bar.
+- Fixed a minor issue where the “Status Bar” entry in the Toolbars menu would output internal errors to the browser console.
+- Cookie banner handling no longer logs spurious errors when browsing `localhost`, IP addresses, or other internal hosts; in those cases Waterfox now silently falls back to the global setting.
+- Security fixes in [MFSA-2025-94](https://www.mozilla.org/en-US/security/advisories/mfsa2025-94/)
+
+## Region & Geo Detection
+
+### What was happening
+
+Firefox’s `Region` subsystem could still make a one‑time request to Mozilla’s privacy‑preserving geo‑IP service to infer your country on first run. That inferred “home region” is used by multiple subsystems (search, DoH rollout, feature gating, telemetry). The backend is designed to be privacy‑sensitive and only runs once, but it was still an unnecessary external connection we’d rather avoid.
+
+### What we’ve changed
+
+- **Disabled network‑based region lookup**
+  - The URL used for region detection (`browser.region.network.url`) is now empty and locked.
+  - Wi‑Fi–based region hints (`browser.region.network.scan`) was **already disabled** but is now locked as well.
+- **Fixed, non‑dynamic “home region”**
+  - `browser.search.region` is now set to a fixed value (`US`) and locked.
+  - This prevents any background attempts to “correct” or update your region based on IP.
+
+### Why this matters
+
+No calls are made to Mozilla’s region/geo‑IP services for normal browsing and features that still look at region see a stable, non‑changing value instead of one inferred from your network.
+
+## AI & Machine Learning
+
+### What was happening
+
+None of the Firefox AI features or settings (AI link previews, chat integrations, etc.) were enabled in Waterfox, and no AI processing was happening in the background. However, some of the underlying onboarding and Labs migration code for AI link previews would still run and surface onboarding pop‑ups or UI.
+
+The underlying local ML runtime (used for various experimental features in upstream Firefox) was still present and technically enabled at the pref level, even though nothing was using it. Built‑in chatbot integration points were already off in Waterfox, but we’ve clarified and hardened the settings.
+
+### What we’ve changed
+
+- **Core ML engine explicitly disabled**
+  - The main ML engine toggle `browser.ml.enable` now defaults to `false`.
+  - Any feature that tries to create a local ML engine will now cleanly fail up front instead of starting an inference process.
+
+- **AI link previews fully shut off**
+  - `browser.ml.linkPreview.enabled` is now `false` by default (and locked).
+  - Legacy Firefox Labs state for link previews (`browser.ml.linkPreview.labs`) is forced to “not enrolled” and locked.
+  - The opt‑in flag for AI key points (`browser.ml.linkPreview.optin`) is locked to `false`.
+  - This prevents:
+    - The feature from ever turning itself back on due to leftover Labs state.
+    - Onboarding cards or AI link preview pop‑ups from appearing unexpectedly.
+
+- **Chat sidebar integrations remain disabled**
+  - `browser.ml.chat.enabled` stays `false`, keeping built‑in chatbot UI off by default.
+
+### Why this matters
+
+Local ML/AI code paths are no longer reachable unless you **deliberately** override multiple locked prefs. Users migrating profiles from Firefox (including Labs experiments) won’t see old experimental AI features unexpectedly re‑appear in Waterfox.
+
+## Experiments, Studies & “Labs”
+
+### What was happening
+
+Waterfox already disabled Mozilla’s remote experimentation system (Normandy/Nimbus), but some features ran separately from this system (link previews).
+
+### What we’ve changed
+
+- For link previews specifically, we now:
+  - Lock Labs and opt‑in prefs as described above.
+
+### Why this matters
+
+Tours/onboarding for disabled features makes no sense and appears confusing.
+
+:::tip
+Translations remain available
+  - Full‑page and selection translations continue to work as before.
+  - These use a separate engine and are **not** affected by disabling the generic ML runtime.
+:::
+
+If you notice anything that still looks like geo detection, experimentation, or AI features sneaking in where they shouldn’t, please keep telling us as it helps us correct course faster!
